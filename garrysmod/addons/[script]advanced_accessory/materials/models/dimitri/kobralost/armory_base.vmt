@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/dimitri/kobralost/armory_base"
+	"$bumpmap" "models/dimitri/kobralost/armory_base_normal"
+
+	"$envmapmask" "models/dimitri/kobralost/armory_base"
+	"$envmapsaturation" "1"
+	"$envmapcontrast" "1"
+	"$envmaptint" "[1 1 1]"
+}

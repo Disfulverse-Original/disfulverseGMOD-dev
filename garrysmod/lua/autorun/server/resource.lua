@@ -24,3 +24,4 @@ resource.AddWorkshop ( "1090674274" ) -- Enhanced Cocaine Laboratory content
 resource.AddWorkshop ( "1455944872" ) -- Venatuss Character & Clothes content
 resource.AddWorkshop( "3023155302" ) -- The Advanced Hand Swep
 resource.AddWorkshop( "2926057708" ) -- CMENU CONTENT
+resource.AddWorkshop( "2567098902" ) -- Advanced Accessory System content
