@@ -6,11 +6,11 @@ BRICKS_SERVER.ESSENTIALS.LUACFG.F4Commands = { -- The commands that show up in t
     { "General", {
         { "Drop Money", "/dropmoney", { { "number", "How much money do you want to drop?" } } },
         { "Give Money", "/give", { { "number", "How much do you want to give?" } } },
-        { "Change Name", "/rpname", { { "string", "What should your new name be?" } } },
+        --{ "Change Name", "/rpname", { { "string", "What should your new name be?" } } },
         { "Drop Weapon", "/drop" },
         { "Holster Weapon", "/holster" },
-        { "Sell All Doors", "/sellalldoors" },
-        { "Change Job Name", "/job", { { "string", "What should your new job name be?" } } },
+        --{ "Sell All Doors", "/sellalldoors" },
+        --{ "Change Job Name", "/job", { { "string", "What should your new job name be?" } } },
     } },
     { "Police", {
         { "Make Wanted", "/wanted", { { "players", "What player do you want to make wanted?" }, { "string", "What is the reason for them being wanted?" } } },

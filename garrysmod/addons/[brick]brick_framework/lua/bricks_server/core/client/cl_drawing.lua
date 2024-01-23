@@ -36,345 +36,346 @@ end )
 --[[ FONTS ]]--
 local function createFonts()
 	surface.CreateFont( "BRICKS_SERVER_Font90", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 90 ),
 		weight = 5000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font25", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 25 ),
-		weight = 500,
-		outline = false,
-	} )
-
-	surface.CreateFont( "BRICKS_SERVER_Font24", {
-		font = "Montserrat Medium",
-		extended = false,
-		size = BRICKS_SERVER.Func.ScreenScale( 24 ),
-		weight = 500,
-		outline = false,
-	} )
-
-	surface.CreateFont( "BRICKS_SERVER_NoSC_Font24", {
-		font = "Montserrat Medium",
-		extended = false,
-		size = 24,
-		weight = 500,
-		outline = false,
-	} )
-
-	surface.CreateFont( "BRICKS_SERVER_Font23", {
-		font = "Montserrat Medium",
-		extended = false,
-		size = BRICKS_SERVER.Func.ScreenScale( 23 ),
-		weight = 500,
-		outline = false,
-	} )
-
-	surface.CreateFont( "BRICKS_SERVER_Font20", {
-		font = "Montserrat Medium",
-		extended = false,
-		size = BRICKS_SERVER.Func.ScreenScale( 20 ),
-		weight = 500,
-		outline = false,
-	} )
-
-	surface.CreateFont( "BRICKS_SERVER_NoSC_Font20", {
-		font = "Montserrat Medium",
-		extended = false,
-		size = 20,
-		weight = 500,
-		outline = false,
-	} )
-
-	surface.CreateFont( "BRICKS_SERVER_Font17", {
-		font = "Montserrat Medium",
-		extended = false,
-		size = BRICKS_SERVER.Func.ScreenScale( 17 ),
-		weight = 500,
-		outline = false,
-	} )
-
-	surface.CreateFont( "BRICKS_SERVER_NoSC_Font17", {
-		font = "Montserrat Medium",
-		extended = false,
-		size = 17,
-		weight = 500,
-		outline = false,
-	} )
-
-	surface.CreateFont( "BRICKS_SERVER_Font17B", {
-		font = "Montserrat Medium",
-		extended = false,
-		size = BRICKS_SERVER.Func.ScreenScale( 17 ),
 		weight = 5000,
 		outline = false,
 	} )
 
+	surface.CreateFont( "BRICKS_SERVER_Font24", {
+		font = "Roboto",
+		extended = true,
+		size = BRICKS_SERVER.Func.ScreenScale( 24 ),
+		weight = 5000,
+		outline = false,
+	} )
+
+	surface.CreateFont( "BRICKS_SERVER_NoSC_Font24", {
+		font = "Roboto",
+		extended = true,
+		size = 24,
+		weight = 5000,
+		outline = false,
+	} )
+	--ОСНОВНОЙ шрифт
+	surface.CreateFont( "BRICKS_SERVER_Font23", {
+		font = "Roboto",
+		extended = true,
+		size = BRICKS_SERVER.Func.ScreenScale( 22 ),
+		weight = 5000,
+		outline = false,
+	} )
+
+	surface.CreateFont( "BRICKS_SERVER_Font20", {
+		font = "Roboto",
+		extended = true,
+		size = BRICKS_SERVER.Func.ScreenScale( 20 ),
+		weight = 5000,
+		outline = false,
+	} )
+
+	surface.CreateFont( "BRICKS_SERVER_NoSC_Font20", {
+		font = "Roboto",
+		extended = true,
+		size = 20,
+		weight = 5000,
+		outline = false,
+	} )
+	--Редкость
+	surface.CreateFont( "BRICKS_SERVER_Font17", {
+		font = "Roboto",
+		extended = true,
+		size = BRICKS_SERVER.Func.ScreenScale( 20 ),
+		weight = 5000,
+		outline = false,
+	} )
+
+	surface.CreateFont( "BRICKS_SERVER_NoSC_Font17", {
+		font = "Roboto",
+		extended = true,
+		size = 17,
+		weight = 5000,
+		outline = false,
+	} )
+
+	surface.CreateFont( "BRICKS_SERVER_Font17B", {
+		font = "Roboto",
+		extended = true,
+		size = BRICKS_SERVER.Func.ScreenScale( 17 ),
+		weight = 50000,
+		outline = false,
+	} )
+
 	surface.CreateFont( "BRICKS_SERVER_Font18", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 18 ),
-		weight = 500,
+		weight = 5000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font19", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 19 ),
-		weight = 500,
+		weight = 5000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font20B", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 20 ),
-		weight = 500,
+		weight = 5000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font26", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 26 ),
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font30", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
+		weight = 5000,
 		size = BRICKS_SERVER.Func.ScreenScale( 27 ),
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font32", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 32 ),
-		weight = 500,
+		weight = 5000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font33", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 33 ),
-		weight = 500,
+		weight = 5000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_NoSC_Font33", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = 33,
-		weight = 500,
+		weight = 5000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font28B", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 28 ),
-		weight = 650,
+		weight = 6050,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font36B", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 38 ),
-		weight = 650,
+		weight = 6050,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font40", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 40 ),
-		weight = 5000,
+		weight = 50000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_NoSC_Font40", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = 40,
-		weight = 5000,
+		weight = 50000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font45", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 45 ),
-		weight = 500,
+		weight = 5000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font40B", {
-		font = "Montserrat Bold",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 40 ),
-		weight = 5000,
+		weight = 50000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font50", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 70 ),
-		weight = 5000,
+		weight = 50000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font53", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 53 ),
-		weight = 5000,
+		weight = 50000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font20", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 20 ),
-		weight = 500,
+		weight = 5000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font11", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 11 ),
-		weight = 500,
+		weight = 5000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font13", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 13, 10 ),
-		weight = 500,
+		weight = 5000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font15", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 15 ),
-		weight = 500,
+		weight = 5000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font22B", {
-		font = "Montserrat Bold",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 22 ),
-		weight = 500,
+		weight = 5000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font21", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 21 ),
-		weight = 500,
+		weight = 5000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font22", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 22 ),
-		weight = 500,
+		weight = 5000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font23B", {
-		font = "Montserrat Medium",
-		extended = false,
-		size = BRICKS_SERVER.Func.ScreenScale( 23 ),
-		weight = 5000,
+		font = "Roboto",
+		extended = true,
+		size = BRICKS_SERVER.Func.ScreenScale( 22 ),
+		weight = 50000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_HUDFont", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 27 ),
-		weight = 500,
+		weight = 5000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font31", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 31 ),
-		weight = 500,
+		weight = 5000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_HUDFontS", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 25 ),
-		weight = 5000,
+		weight = 50000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_HUDFontB", {
-		font = "Montserrat Medium",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 30 ),
-		weight = 5000,
+		weight = 50000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font100", {
-		font = "Montserrat Bold",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 75 ),
-		weight = 5000,
+		weight = 50000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font50", {
-		font = "Montserrat Bold",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 50 ),
-		weight = 5000,
+		weight = 50000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font30B", {
-		font = "Montserrat Bold",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 30 ),
-		weight = 5000,
+		weight = 50000,
 		outline = false,
 	} )
 
 	surface.CreateFont( "BRICKS_SERVER_Font60B", {
-		font = "Montserrat Bold",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 60 ),
-		weight = 5000,
+		weight = 50000,
 		outline = false,
 	} )
 
 	-- New Fonts
 	surface.CreateFont( "BRS.Font.Bold20", {
-		font = "Montserrat Bold",
-		extended = false,
+		font = "Roboto",
+		extended = true,
 		size = BRICKS_SERVER.Func.ScreenScale( 20 ),
-		weight = 500,
+		weight = 5000,
 		outline = false,
 	} )
 end
