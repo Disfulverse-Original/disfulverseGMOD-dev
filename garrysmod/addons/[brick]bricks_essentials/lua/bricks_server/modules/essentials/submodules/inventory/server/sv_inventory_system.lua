@@ -528,7 +528,10 @@ end
 function BRICKS_SERVER.Func.HolsterWeapon( ply )
 	if( not IsValid( ply ) or not ply:Alive() ) then return end
 
+
+
 	local activeWeapon = ply:GetActiveWeapon()
+
 
 	if( not IsValid( activeWeapon ) ) then return end
 
@@ -544,6 +547,7 @@ function BRICKS_SERVER.Func.HolsterWeapon( ply )
 		return
 	end
 
+
 	local weaponClass = activeWeapon:GetClass()
 	local itemData = { "spawned_weapon", (activeWeapon.WorldModel or BRICKS_SERVER.Func.GetWeaponModel( weaponClass )), weaponClass }
 
@@ -554,11 +558,20 @@ function BRICKS_SERVER.Func.HolsterWeapon( ply )
 		end
 	end
 
-	ply:StripWeapon( weaponClass )
+	DarkRP.notify( ply, 1, 1.5, "Убираем " .. weaponClass .. " в инвентарь." )
 
-	ply:BRS():AddInventoryItem( itemData, 1 )
+	local delaynum = 1.5
 
-	DarkRP.notify( ply, 1, 5, "Weapon holstered!" )
+	timer.Simple(delaynum, function()
+
+		ply:StripWeapon( weaponClass )
+
+		ply:BRS():AddInventoryItem( itemData, 1 )
+
+		DarkRP.notify( ply, 1, 2, "Оружие убрано в инвентарь!" )
+
+	end)
+
 end
 
 hook.Add( "PlayerSay", "BRS.PlayerSay_HolsterWeapon", function( ply, text )
