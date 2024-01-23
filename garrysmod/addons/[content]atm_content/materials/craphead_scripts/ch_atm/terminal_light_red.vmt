@@ -1,0 +1,9 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "craphead_scripts/ch_atm/terminal_lights"
+	"$frame" "1"
+	"$color2" "[1 1 1]"
+	"$blendtintbybasealpha" "1"
+}
+
+

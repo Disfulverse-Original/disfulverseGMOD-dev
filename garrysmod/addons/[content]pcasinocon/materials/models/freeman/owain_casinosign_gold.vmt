@@ -1,0 +1,32 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/freeman/owain_casinosign_diffuse"	
+	"$bumpmap" "models/freeman/owain_casinosign_norm"
+	 "$phongexponenttexture" "models/freeman/owain_casinosign_exponent"
+
+
+	"$model" "1"
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[1.2 0.9 0]"
+
+	"$phong" "1"
+	"$halflambert" "0"
+	"$phongboost" "1"
+	"$phongtint" "[1.2 0.9 0]"
+	"$phongalbedotint" "0"
+	"$phongfresnelranges" "[1 1 1]"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "1"
+	"$rimlightboost" "1"
+	"$rimmask" "1"
+
+	"$normalmapalphaenvmapmask" "1"
+
+
+	"$detail" "models/freeman/owain_casinosign_emissive"
+	"$detailscale" "1"
+	"$detailblendmode" "5"	
+	"$detailblendfactor" "1"
+}

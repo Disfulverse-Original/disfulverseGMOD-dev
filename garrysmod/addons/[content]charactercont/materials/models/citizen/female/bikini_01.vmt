@@ -1,0 +1,7 @@
+"vertexlitgeneric"
+{
+	"$baseTexture" "models\citizen\female\bikini_01"
+	"$halflambert" 1
+	"$model" 1
+
+}

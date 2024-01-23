@@ -1,0 +1,9 @@
+Mon Jan 22 18:05:23 2024	snvlp (STEAM_0:1:96399332) has joined the game
+Mon Jan 22 18:05:23 2024	snvlp (STEAM_0:1:96399332) spawned
+Mon Jan 22 18:06:54 2024	Lucas Rodriger (STEAM_0:1:96399332): !SETMONEY LUCAS RODRIGET 0
+Mon Jan 22 18:11:23 2024	Lucas Rodriger (STEAM_0:1:96399332) disconnected
+Mon Jan 22 18:11:34 2024	snvlp (STEAM_0:1:96399332) has joined the game
+Mon Jan 22 18:11:34 2024	snvlp (STEAM_0:1:96399332) spawned
+Mon Jan 22 18:21:55 2024	Lucas Rodriger was killed by Entity [0][worldspawn] with a unknown
+Mon Jan 22 18:22:40 2024	Lucas Rodriger (STEAM_0:1:96399332) spawned
+Mon Jan 22 18:23:55 2024	Lucas Rodriger (STEAM_0:1:96399332) spawned SENT item_ammo_357

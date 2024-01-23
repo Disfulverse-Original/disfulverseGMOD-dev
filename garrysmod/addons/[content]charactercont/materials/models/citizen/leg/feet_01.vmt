@@ -1,0 +1,29 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\citizen\leg\feet_01"
+
+	$normalmapalphaenvmapmask 1
+						
+	"$envmaptint" "[ 0.005 0.005 0.005]"				
+ 	"$envmapFresnel"  "[5 7 8] "
+	"$envmaptint" "[3.77 0.8 1]"
+
+
+	"$phong" "1"						
+	"$phongboost"	"0.001"
+	"$phongexponent" 3
+
+	"$phongfresnelranges"	"[5 7 8]"
+	"$phongtint" 			"[0.77 0.8 1]"
+	"$PhongAlbedoTint" "1"
+
+	"$rimlightexponent" "3"
+	"$rimlightboost" ".2"
+	"$rimmask" "1"
+
+	$detailscale 7
+	$detailblendfactor 0.15
+	$detailblendmode 0
+
+}
+

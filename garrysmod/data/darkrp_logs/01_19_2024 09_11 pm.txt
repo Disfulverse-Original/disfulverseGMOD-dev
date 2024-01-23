@@ -1,0 +1,10 @@
+Fri Jan 19 21:11:32 2024	snvlp (STEAM_0:1:96399332) has joined the game
+Fri Jan 19 21:11:32 2024	snvlp (STEAM_0:1:96399332) spawned
+Fri Jan 19 21:14:07 2024	Bot01 (BOT) has joined the game
+Fri Jan 19 21:14:07 2024	Bot01 (BOT) spawned
+Fri Jan 19 21:14:08 2024	Bot02 (BOT) has joined the game
+Fri Jan 19 21:14:08 2024	Bot02 (BOT) spawned
+Fri Jan 19 21:14:09 2024	Bot03 (BOT) has joined the game
+Fri Jan 19 21:14:09 2024	Bot03 (BOT) spawned
+Fri Jan 19 21:15:21 2024	Bot03 was killed by snvlp with a weapon_357
+Fri Jan 19 21:15:22 2024	Bot03 (BOT) spawned

@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/dimitri/kobralost/printer/top_base"
+	"$bumpmap"    "models/dimitri/kobralost/printer/top_base_normal"
+
+	"$surfaceprop" "carpet"
+	"$model" 1
+
+    $phong 1
+	//$phongexponent 33
+    $phongexponenttexture "models/dimitri/kobralost/printer/top_base_roughness"
+    $phongboost	6
+    $phongfresnelranges	"[0.3 0.3 0.3]"
+}

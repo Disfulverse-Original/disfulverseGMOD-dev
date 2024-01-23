@@ -1,0 +1,312 @@
+<Logging continued from "data/ulx_logs/01-21-24.txt">
+[00:00:20] Client "snvlp" connected.
+[00:00:31] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 11 seconds).
+[00:00:37] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+
+
+
+[00:06:53] New map: rp_downtown_modern
+[00:07:00] Client "snvlp" connected.
+[00:07:12] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 12 seconds).
+[00:07:18] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+
+
+
+[00:11:22] New map: rp_downtown_modern
+[00:11:26] Client "snvlp" connected.
+[00:11:37] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 11 seconds).
+[00:11:44] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+
+
+
+[00:17:20] New map: rp_downtown_modern
+[00:17:26] Client "snvlp" connected.
+[00:17:39] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 13 seconds).
+
+
+
+[00:18:18] New map: rp_downtown_modern
+[00:18:18] Client "snvlp" connected.
+[00:18:30] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 12 seconds).
+[00:18:36] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+[00:19:14] Dropped "Lucas Rodriger" from server<STEAM_0:1:96399332>
+[00:19:14] Client "snvlp" connected.
+[00:19:26] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 12 seconds).
+
+
+
+[00:23:08] New map: rp_downtown_modern
+[00:23:11] Client "snvlp" connected.
+[00:23:22] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 11 seconds).
+[00:23:29] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+
+
+
+[00:26:22] New map: rp_downtown_modern
+[00:26:38] Client "snvlp" connected.
+[00:26:50] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 12 seconds).
+[00:26:55] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+
+
+
+[00:31:26] New map: rp_downtown_modern
+[00:31:30] Client "snvlp" connected.
+[00:31:42] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 12 seconds).
+[00:31:48] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+[00:31:52] Lucas Rodriger: !menu
+[00:35:50] Dropped "Lucas Rodriger" from server<STEAM_0:1:96399332>
+[00:35:50] Client "snvlp" connected.
+[00:36:02] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 12 seconds).
+
+
+
+[00:38:00] New map: rp_downtown_modern
+[00:38:11] Client "snvlp" connected.
+[00:38:24] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 13 seconds).
+[00:38:30] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+[00:44:36] Dropped "Lucas Rodriger" from server<STEAM_0:1:96399332>
+
+
+
+[17:10:59] New map: rp_downtown_modern
+
+
+
+[17:11:36] New map: rp_downtown_modern
+[17:12:05] Client "snvlp" connected.
+[17:12:26] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 21 seconds).
+[17:12:32] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+[17:13:05] Lucas Rodriger: 54
+
+
+
+[17:57:11] New map: rp_downtown_modern
+[17:57:13] Client "snvlp" connected.
+[17:57:25] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 12 seconds).
+[17:57:30] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+
+
+
+[17:59:05] New map: rp_downtown_modern
+
+
+
+[17:59:49] New map: rp_downtown_modern
+[17:59:58] Client "snvlp" connected.
+[18:00:10] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 12 seconds).
+[18:00:14] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+[18:00:55] Lucas Rodriger: 6523
+[18:02:48] Dropped "Lucas Rodriger" from server<STEAM_0:1:96399332>
+[18:02:48] Client "snvlp" connected.
+[18:02:59] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 11 seconds).
+
+
+
+[18:05:07] New map: rp_downtown_modern
+[18:05:12] Client "snvlp" connected.
+[18:05:23] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 11 seconds).
+[18:05:28] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+[18:06:54] Lucas Rodriger: !SETMONEY LUCAS RODRIGET 0
+[18:11:23] Dropped "Lucas Rodriger" from server<STEAM_0:1:96399332>
+[18:11:23] Client "snvlp" connected.
+[18:11:34] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 11 seconds).
+[18:23:47] Lucas Rodriger<STEAM_0:1:96399332> spawned model models/props_c17/oildrum001.mdl
+[18:23:48] Lucas Rodriger<STEAM_0:1:96399332> spawned model models/props_c17/oildrum001.mdl
+[18:23:55] Lucas Rodriger<STEAM_0:1:96399332> spawned sent item_ammo_357
+
+
+
+[18:37:43] New map: rp_downtown_modern
+[18:38:33] Client "snvlp" connected.
+[18:38:44] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 11 seconds).
+[18:38:50] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+
+
+
+[19:18:06] New map: rp_downtown_modern
+
+
+
+[19:18:37] New map: rp_downtown_modern
+[19:18:41] Client "snvlp" connected.
+[19:18:53] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 12 seconds).
+[19:19:00] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+[19:19:40] Dropped "Lucas Rodriger" from server<STEAM_0:1:96399332>
+[19:19:40] Client "snvlp" connected.
+[19:19:52] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 12 seconds).
+[19:23:27] Dropped "Lucas Rodriger" from server<STEAM_0:1:96399332>
+[19:23:27] Client "snvlp" connected.
+[19:23:44] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 17 seconds).
+[19:28:43] Dropped "Lucas Rodriger" from server<STEAM_0:1:96399332>
+[19:28:44] Client "snvlp" connected.
+
+
+
+[19:29:17] New map: rp_downtown_modern
+[19:30:02] Client "snvlp" connected.
+[19:30:17] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 15 seconds).
+[19:30:22] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+
+
+
+[19:34:19] New map: rp_downtown_modern
+[19:34:24] Client "snvlp" connected.
+[19:34:39] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 15 seconds).
+[19:34:45] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+[19:35:39] Lucas Rodriger: frametime
+[19:35:42] Lucas Rodriger: curtime
+[19:40:50] Dropped "Lucas Rodriger" from server<STEAM_0:1:96399332>
+[19:40:50] Client "snvlp" connected.
+[19:41:02] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 12 seconds).
+
+
+
+[19:42:20] New map: rp_downtown_modern
+[19:42:31] Client "snvlp" connected.
+[19:42:43] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 12 seconds).
+[19:42:49] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+
+
+
+[19:45:32] New map: rp_downtown_modern
+[19:45:54] Client "snvlp" connected.
+[19:46:05] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 11 seconds).
+[19:46:11] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+
+
+
+[19:48:30] New map: rp_downtown_modern
+[19:48:36] Client "snvlp" connected.
+[19:48:47] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 11 seconds).
+[19:48:53] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+[19:50:40] Lucas Rodriger: !missions
+[19:50:49] Lucas Rodriger: !rewards
+[19:54:23] Lucas Rodriger: !MENU
+[19:54:26] Lucas Rodriger removed all access rights from Themself
+[19:55:26] (Console) added Lucas Rodriger to group superadmin
+[19:55:59] Lucas Rodriger: !ticket
+[19:56:07] Lucas Rodriger: /unownalldoors
+[19:56:15] Lucas Rodriger: slevels
+[20:00:52] Dropped "Lucas Rodriger" from server<STEAM_0:1:96399332>
+[20:00:52] Client "snvlp" connected.
+[20:01:05] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 13 seconds).
+
+
+
+[20:02:00] New map: rp_downtown_modern
+[20:02:10] Client "snvlp" connected.
+[20:02:21] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 11 seconds).
+[20:02:26] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+[20:04:31] Lucas Rodriger: /gfvdcze
+[20:06:36] Lucas Rodriger: /givelicense
+[20:20:10] Lucas Rodriger: /lockdown
+[20:20:15] Lucas Rodriger: /unlockdown
+[20:27:55] Dropped "Lucas Rodriger" from server<STEAM_0:1:96399332>
+[20:27:56] Client "snvlp" connected.
+
+
+
+[20:28:24] New map: rp_downtown_modern
+[20:28:41] Client "snvlp" connected.
+[20:28:52] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 11 seconds).
+[20:28:59] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+[21:06:57] Lucas Rodriger: 27
+[21:08:25] Lucas Rodriger: dasdas
+[21:54:04] Lucas Rodriger<STEAM_0:1:96399332> spawned sent item_healthkit
+[21:54:05] Lucas Rodriger<STEAM_0:1:96399332> spawned sent item_healthkit
+[21:54:05] Lucas Rodriger<STEAM_0:1:96399332> spawned sent item_healthkit
+[21:54:05] Lucas Rodriger<STEAM_0:1:96399332> spawned sent item_healthkit
+[21:54:05] Lucas Rodriger<STEAM_0:1:96399332> spawned sent item_healthkit
+[21:54:06] Lucas Rodriger<STEAM_0:1:96399332> spawned sent item_healthkit
+[21:54:13] Lucas Rodriger: 74
+[21:54:16] Lucas Rodriger<STEAM_0:1:96399332> spawned sent item_healthkit
+[21:54:17] Lucas Rodriger<STEAM_0:1:96399332> spawned sent item_healthkit
+[21:54:36] Lucas Rodriger: 63
+[21:58:08] Lucas Rodriger: /me dance
+
+
+
+[22:12:29] New map: rp_downtown_modern
+[22:13:32] Client "snvlp" connected.
+
+
+
+[22:14:10] New map: rp_downtown_modern
+[22:14:18] Client "snvlp" connected.
+[22:14:32] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 14 seconds).
+[22:14:38] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+
+
+
+[22:59:52] New map: rp_downtown_modern
+[23:00:04] Client "snvlp" connected.
+[23:00:17] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 13 seconds).
+[23:00:23] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+[23:08:35] Lucas Rodriger suicided!
+[23:09:19] Dropped "Lucas Rodriger" from server<STEAM_0:1:96399332>
+[23:09:19] Client "snvlp" connected.
+[23:09:35] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 16 seconds).
+[23:09:55] Dropped "Lucas Rodriger" from server<STEAM_0:1:96399332>
+[23:09:55] Client "snvlp" connected.
+[23:10:56] Client "snvlp" connected.
+[23:11:15] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 19 seconds).
+[23:11:16] snvlp<STEAM_0:1:96399332> changed their name to Lucas Rodriger
+[23:20:33] Lucas Rodriger: /givemoney STEAM_0:1:96399332 123213
+[23:20:38] Lucas Rodriger: !givemoney STEAM_0:1:96399332 2312321
+[23:20:42] Lucas Rodriger: /setmoney STEAM_0:1:96399332 4214213421
+[23:21:45] Lucas Rodriger<STEAM_0:1:96399332> changed their name to EXD Lucas Rodriger
+[23:42:10] EXD Lucas Rodriger: /d12341xz
+
+
+
+[23:54:22] New map: rp_downtown_modern
+[23:54:44] Client "snvlp" connected.
+[23:54:54] Client "💜Taborg💜" connected.
+[23:54:59] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 15 seconds).
+[23:55:06] snvlp <STEAM_0:1:96399332> changed their name to Lucas Rodriger
+[23:55:37] Lucas Rodriger: !menu
+[23:55:53] Client "Bot01" connected.
+[23:55:53] Client "Bot01" spawned in server <BOT> (took 125 seconds).
+[23:55:54] Client "Bot02" connected.
+[23:55:54] Client "Bot02" spawned in server <BOT> (took 126 seconds).
+[23:55:54] Client "Bot03" connected.
+[23:55:54] Client "Bot03" spawned in server <BOT> (took 126 seconds).
+[23:55:54] Client "Bot04" connected.
+[23:55:54] Client "Bot04" spawned in server <BOT> (took 126 seconds).
+[23:55:54] Client "Bot05" connected.
+[23:55:54] Client "Bot05" spawned in server <BOT> (took 126 seconds).
+[23:55:54] Client "Bot06" connected.
+[23:55:54] Client "Bot06" spawned in server <BOT> (took 126 seconds).
+[23:55:54] Client "Bot07" connected.
+[23:55:54] Client "Bot07" spawned in server <BOT> (took 126 seconds).
+[23:55:54] Client "Bot08" connected.
+[23:55:54] Client "Bot08" spawned in server <BOT> (took 126 seconds).
+[23:55:55] Bot02<BOT> changed their name to Bot02 
+[23:55:57] Client "Bot09" connected.
+[23:55:57] Client "Bot09" spawned in server <BOT> (took 129 seconds).
+[23:55:58] Client "Bot10" connected.
+[23:55:58] Client "Bot10" spawned in server <BOT> (took 130 seconds).
+[23:55:58] Client "Bot11" connected.
+[23:55:58] Client "Bot11" spawned in server <BOT> (took 130 seconds).
+[23:55:58] Client "Bot12" connected.
+[23:55:58] Client "Bot12" spawned in server <BOT> (took 130 seconds).
+[23:55:58] Client "Bot13" connected.
+[23:55:58] Client "Bot13" spawned in server <BOT> (took 130 seconds).
+[23:55:58] Client "💜Taborg💜" spawned in server <STEAM_0:1:71640014> (took 64 seconds).
+[23:55:58] Client "Bot14" connected.
+[23:55:58] Client "Bot14" spawned in server <BOT> (took 130 seconds).
+[23:56:12] Lucas Rodriger added 💜Taborg💜  to group superadmin
+[23:56:52] 💜Taborg💜 <STEAM_0:1:71640014> changed their name to RENZO EBLANOV
+[23:57:03] Lucas Rodriger: cough
+[23:57:04] RENZO EBLANOV: cough
+[23:57:13] Lucas Rodriger: cough
+[23:57:18] RENZO EBLANOV: taunt
+[23:57:21] Lucas Rodriger: taunt
+[23:57:54] Lucas Rodriger: taugh
+[23:57:57] Lucas Rodriger: cough
+[23:58:13] RENZO EBLANOV: cough
+[23:58:20] Dropped "Lucas Rodriger" from server<STEAM_0:1:96399332>
+[23:58:43] Client "snvlp" connected.
+[23:59:01] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 18 seconds).
+[23:59:09] Lucas Rodriger: cough
+<Logging continued in "data/ulx_logs/01-23-24.txt">

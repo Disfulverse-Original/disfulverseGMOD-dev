@@ -1,0 +1,7 @@
+Sun Jan 21 21:58:46 2024	snvlp (STEAM_0:1:96399332) has joined the game
+Sun Jan 21 21:58:46 2024	snvlp (STEAM_0:1:96399332) spawned
+Sun Jan 21 22:10:16 2024	Lucas Rodriger (STEAM_0:1:96399332): sublimelevels_give_xp
+Sun Jan 21 22:10:17 2024	Lucas Rodriger (STEAM_0:1:96399332): !sublimelevels_give_xp
+Sun Jan 21 22:10:29 2024	Lucas Rodriger (STEAM_0:1:96399332): !sublimelevels_give_xp lucas rodriger 421421421
+Sun Jan 21 22:15:23 2024	Lucas Rodriger (STEAM_0:1:96399332): !menu
+Sun Jan 21 22:18:15 2024	Lucas Rodriger was killed by Entity [0][worldspawn] with a unknown

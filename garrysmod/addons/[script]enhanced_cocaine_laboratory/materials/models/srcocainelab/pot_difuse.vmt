@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	$envmap			env_cubemap
+
+	$normalmapalphaenvmapmask 1
+	"$basetexture" "models/srcocainelab/pot_difuse"
+	"$bumpmap" "models/srcocainelab/pot_normal"
+}

@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/dimitri/kobralost/spawn_purple_trans"
+	"$translucent" 1
+
+	"$model" 1
+}
+

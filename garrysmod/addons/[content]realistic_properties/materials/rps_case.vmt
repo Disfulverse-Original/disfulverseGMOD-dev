@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "rps_case"
+	 $bumpmap "rps_normal"
+}	 

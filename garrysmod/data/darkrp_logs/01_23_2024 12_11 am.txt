@@ -1,0 +1,58 @@
+Tue Jan 23 00:11:43 2024	Bot01 (BOT) has joined the game
+Tue Jan 23 00:11:43 2024	Bot01 (BOT) spawned
+Tue Jan 23 00:11:43 2024	Bot02 (BOT) has joined the game
+Tue Jan 23 00:11:43 2024	Bot02 (BOT) spawned
+Tue Jan 23 00:11:43 2024	Bot03 (BOT) has joined the game
+Tue Jan 23 00:11:43 2024	Bot03 (BOT) spawned
+Tue Jan 23 00:11:44 2024	Bot04 (BOT) has joined the game
+Tue Jan 23 00:11:44 2024	Bot04 (BOT) spawned
+Tue Jan 23 00:11:44 2024	Bot05 (BOT) has joined the game
+Tue Jan 23 00:11:44 2024	Bot05 (BOT) spawned
+Tue Jan 23 00:11:44 2024	Bot06 (BOT) has joined the game
+Tue Jan 23 00:11:44 2024	Bot06 (BOT) spawned
+Tue Jan 23 00:11:44 2024	Bot07 (BOT) has joined the game
+Tue Jan 23 00:11:44 2024	Bot07 (BOT) spawned
+Tue Jan 23 00:11:44 2024	Bot08 (BOT) has joined the game
+Tue Jan 23 00:11:44 2024	Bot08 (BOT) spawned
+Tue Jan 23 00:11:46 2024	Bot09 (BOT) has joined the game
+Tue Jan 23 00:11:46 2024	Bot09 (BOT) spawned
+Tue Jan 23 00:12:14 2024	💜Taborg💜 (STEAM_0:1:71640014) has joined the game
+Tue Jan 23 00:12:14 2024	💜Taborg💜 (STEAM_0:1:71640014) spawned
+Tue Jan 23 00:12:30 2024	snvlp (STEAM_0:1:96399332) has joined the game
+Tue Jan 23 00:12:30 2024	snvlp (STEAM_0:1:96399332) spawned
+Tue Jan 23 00:12:43 2024	Lucas Rodriger (STEAM_0:1:96399332): taunt
+Tue Jan 23 00:12:47 2024	Lucas Rodriger (STEAM_0:1:96399332): taunt
+Tue Jan 23 00:12:48 2024	RENZO EBLANOV (STEAM_0:1:71640014): the end
+Tue Jan 23 00:12:51 2024	Lucas Rodriger (STEAM_0:1:96399332): the end
+Tue Jan 23 00:12:54 2024	RENZO EBLANOV (STEAM_0:1:71640014): jam
+Tue Jan 23 00:12:55 2024	Lucas Rodriger (STEAM_0:1:96399332): cough
+Tue Jan 23 00:12:57 2024	Lucas Rodriger (STEAM_0:1:96399332): cough
+Tue Jan 23 00:12:57 2024	RENZO EBLANOV (STEAM_0:1:71640014): move
+Tue Jan 23 00:12:59 2024	RENZO EBLANOV (STEAM_0:1:71640014): move
+Tue Jan 23 00:13:02 2024	RENZO EBLANOV (STEAM_0:1:71640014): move
+Tue Jan 23 00:13:21 2024	Bot07  was killed by RENZO EBLANOV with a crossbow_bolt
+Tue Jan 23 00:13:25 2024	Bot06  was killed by RENZO EBLANOV with a crossbow_bolt
+Tue Jan 23 00:14:06 2024	Bot07  (BOT) spawned
+Tue Jan 23 00:14:06 2024	Bot07  (BOT) spawned
+Tue Jan 23 00:14:10 2024	Bot06  (BOT) spawned
+Tue Jan 23 00:14:10 2024	Bot06  (BOT) spawned
+Tue Jan 23 00:14:27 2024	Bot09  was killed by RENZO EBLANOV with a crossbow_bolt
+Tue Jan 23 00:14:32 2024	Bot07  was killed by RENZO EBLANOV with a crossbow_bolt
+Tue Jan 23 00:14:37 2024	Bot04  was killed by RENZO EBLANOV with a crossbow_bolt
+Tue Jan 23 00:14:44 2024	RENZO EBLANOV (STEAM_0:1:71640014) spawned SENT item_ammo_crossbow
+Tue Jan 23 00:14:44 2024	RENZO EBLANOV (STEAM_0:1:71640014) spawned SENT item_ammo_crossbow
+Tue Jan 23 00:14:45 2024	RENZO EBLANOV (STEAM_0:1:71640014) spawned SENT item_ammo_crossbow
+Tue Jan 23 00:14:45 2024	RENZO EBLANOV (STEAM_0:1:71640014) spawned SENT item_ammo_crossbow
+Tue Jan 23 00:14:45 2024	RENZO EBLANOV (STEAM_0:1:71640014) spawned SENT item_ammo_crossbow
+Tue Jan 23 00:14:45 2024	RENZO EBLANOV (STEAM_0:1:71640014) spawned SENT item_ammo_crossbow
+Tue Jan 23 00:14:45 2024	RENZO EBLANOV (STEAM_0:1:71640014) spawned SENT item_ammo_crossbow
+Tue Jan 23 00:14:45 2024	RENZO EBLANOV (STEAM_0:1:71640014) spawned SENT item_ammo_crossbow
+Tue Jan 23 00:14:46 2024	RENZO EBLANOV (STEAM_0:1:71640014) spawned SENT item_ammo_crossbow
+Tue Jan 23 00:14:53 2024	Bot01  was killed by RENZO EBLANOV with a crossbow_bolt
+Tue Jan 23 00:14:58 2024	Bot03  was killed by RENZO EBLANOV with a crossbow_bolt
+Tue Jan 23 00:15:12 2024	Bot09  (BOT) spawned
+Tue Jan 23 00:15:12 2024	Bot09  (BOT) spawned
+Tue Jan 23 00:15:17 2024	Bot07  (BOT) spawned
+Tue Jan 23 00:15:17 2024	Bot07  (BOT) spawned
+Tue Jan 23 00:15:22 2024	Bot04  (BOT) spawned
+Tue Jan 23 00:15:22 2024	Bot04  (BOT) spawned

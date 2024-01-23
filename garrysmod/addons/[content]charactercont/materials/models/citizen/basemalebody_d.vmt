@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\citizen\basemalebody_d"
+	"$bumpmap"     "models\citizen\basemalebody_n"
+
+}

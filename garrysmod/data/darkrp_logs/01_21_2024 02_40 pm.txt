@@ -1,0 +1,8 @@
+Sun Jan 21 14:40:35 2024	snvlp (STEAM_0:1:96399332) has joined the game
+Sun Jan 21 14:40:35 2024	snvlp (STEAM_0:1:96399332) spawned
+Sun Jan 21 14:40:41 2024	snvlp was killed by Entity [0][worldspawn] with a unknown
+Sun Jan 21 14:40:55 2024	snvlp (STEAM_0:1:96399332): fdfd
+Sun Jan 21 14:40:58 2024	snvlp (STEAM_0:1:96399332): gfgd
+Sun Jan 21 14:41:26 2024	snvlp (STEAM_0:1:96399332) spawned
+Sun Jan 21 14:44:00 2024	snvlp was killed by Entity [0][worldspawn] with a unknown
+Sun Jan 21 14:44:21 2024	snvlp (STEAM_0:1:96399332) disconnected

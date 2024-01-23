@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "craphead_scripts//ch_atm/suitcard"
+	"$bumpmap" "craphead_scripts//ch_atm/suitcard_norm"
+
+	"$phong" "1"
+	"$phongboost" "2"
+	"$phongexponent" "15"
+	"$phongfresnelranges" "[0.5 0.5 0.5]"
+}

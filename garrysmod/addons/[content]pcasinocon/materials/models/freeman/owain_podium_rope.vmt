@@ -1,0 +1,27 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/freeman/owain_carpodium_diffuse"	
+	"$bumpmap" "models/freeman/owain_carpodium_norm"
+	 "$phongexponenttexture" "models/freeman/owain_carpodium_exponent"
+
+
+	"$model" "1"
+
+	"$phong" "1"
+	"$halflambert" "0"
+	"$phongboost" "0.33"
+	"$phongtint" "[1 1 1.3]"
+	"$phongalbedotint" "0"
+	"$phongfresnelranges" "[1 1 1]"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "1"
+	"$rimlightboost" "0.1"
+	"$rimmask" "1"
+
+	"$nocull" "1"
+
+	"$normalmapalphaenvmapmask" "1"
+
+
+}

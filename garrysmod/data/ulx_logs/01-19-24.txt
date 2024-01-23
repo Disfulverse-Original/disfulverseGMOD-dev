@@ -1,0 +1,25 @@
+[21:29:24] New map: gm_flatgrass
+[21:30:08] Client "snvlp" connected.
+[21:34:29] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 261 seconds).
+
+
+
+[21:37:36] New map: gm_flatgrass
+[21:38:29] Client "snvlp" connected.
+[21:38:44] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 15 seconds).
+[21:39:14] (Console) added snvlp to group superadmin
+
+
+
+[21:40:10] New map: gm_flatgrass
+[21:41:25] Client "snvlp" connected.
+[21:41:35] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 10 seconds).
+[21:42:00] Server is shutting down/changing levels.
+
+
+
+[21:42:17] New map: gm_flatgrass
+[21:44:33] Client "snvlp" connected.
+[21:44:44] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 11 seconds).
+[21:49:47] snvlp: !sublime
+[21:49:50] snvlp: !sublimelevel

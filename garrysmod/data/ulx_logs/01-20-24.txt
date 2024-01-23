@@ -1,0 +1,174 @@
+[21:21:09] New map: gm_flatgrass
+[21:21:14] Client "snvlp" connected.
+[21:21:31] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 17 seconds).
+[21:21:51] Client "Bot01" connected.
+[21:21:51] Client "Bot01" spawned in server <BOT> (took 57 seconds).
+[21:21:51] Client "Bot02" connected.
+[21:21:51] Client "Bot02" spawned in server <BOT> (took 57 seconds).
+[21:21:51] Client "Bot03" connected.
+[21:21:51] Client "Bot03" spawned in server <BOT> (took 57 seconds).
+[21:21:52] Client "Bot04" connected.
+[21:21:52] Client "Bot04" spawned in server <BOT> (took 58 seconds).
+[21:21:52] Client "Bot05" connected.
+[21:21:52] Client "Bot05" spawned in server <BOT> (took 58 seconds).
+[21:21:52] Client "Bot06" connected.
+[21:21:52] Client "Bot06" spawned in server <BOT> (took 58 seconds).
+[21:21:52] Client "Bot07" connected.
+[21:21:52] Client "Bot07" spawned in server <BOT> (took 58 seconds).
+[21:21:52] Client "Bot08" connected.
+[21:21:52] Client "Bot08" spawned in server <BOT> (took 58 seconds).
+[21:21:52] Client "Bot09" connected.
+[21:21:52] Client "Bot09" spawned in server <BOT> (took 58 seconds).
+[21:21:52] Client "Bot10" connected.
+[21:21:52] Client "Bot10" spawned in server <BOT> (took 58 seconds).
+[21:21:53] Client "Bot11" connected.
+[21:21:53] Client "Bot11" spawned in server <BOT> (took 59 seconds).
+[21:22:13] snvlp killed Bot02 using player
+[21:26:24] Server is shutting down/changing levels.
+
+
+
+[21:27:15] New map: gm_flatgrass
+[21:27:18] Client "snvlp" connected.
+[21:27:28] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 10 seconds).
+[21:29:02] Client "Bot01" connected.
+[21:29:02] Client "Bot01" spawned in server <BOT> (took 116 seconds).
+[21:29:03] Client "Bot02" connected.
+[21:29:03] Client "Bot02" spawned in server <BOT> (took 117 seconds).
+[21:29:03] Client "Bot03" connected.
+[21:29:03] Client "Bot03" spawned in server <BOT> (took 117 seconds).
+[21:29:04] Client "Bot04" connected.
+[21:29:04] Client "Bot04" spawned in server <BOT> (took 118 seconds).
+[21:29:05] Client "Bot05" connected.
+[21:29:05] Client "Bot05" spawned in server <BOT> (took 119 seconds).
+[21:29:14] snvlp killed Bot04 using player
+[21:29:41] snvlp: /dropweapon
+[21:30:07] snvlp killed Bot04 using player
+[21:31:05] snvlp killed Bot04 using player
+[21:31:55] snvlp killed Bot04 using player
+[21:32:10] snvlp killed Bot04 using player
+[21:38:48] Client "Bot06" connected.
+[21:38:48] Client "Bot06" spawned in server <BOT> (took 702 seconds).
+[21:38:49] Client "Bot07" connected.
+[21:38:49] Client "Bot07" spawned in server <BOT> (took 703 seconds).
+[21:38:49] Client "Bot08" connected.
+[21:38:49] Client "Bot08" spawned in server <BOT> (took 703 seconds).
+[21:38:49] Client "Bot09" connected.
+[21:38:49] Client "Bot09" spawned in server <BOT> (took 703 seconds).
+[21:38:49] Client "Bot10" connected.
+[21:38:49] Client "Bot10" spawned in server <BOT> (took 703 seconds).
+[21:38:49] Client "Bot11" connected.
+[21:38:49] Client "Bot11" spawned in server <BOT> (took 703 seconds).
+[21:38:50] Client "Bot12" connected.
+[21:38:50] Client "Bot12" spawned in server <BOT> (took 704 seconds).
+[21:38:50] Client "Bot13" connected.
+[21:38:50] Client "Bot13" spawned in server <BOT> (took 704 seconds).
+[21:39:02] snvlp killed Bot10 using player
+[21:40:34] snvlp killed Bot10 using player
+[21:48:00] snvlp kicked all bots from the server
+[21:48:00] Dropped "Bot01" from server<BOT>
+[21:48:00] Dropped "Bot02" from server<BOT>
+[21:48:00] Dropped "Bot03" from server<BOT>
+[21:48:00] Dropped "Bot04" from server<BOT>
+[21:48:00] Dropped "Bot05" from server<BOT>
+[21:48:00] Dropped "Bot06" from server<BOT>
+[21:48:00] Dropped "Bot07" from server<BOT>
+[21:48:00] Dropped "Bot08" from server<BOT>
+[21:48:00] Dropped "Bot09" from server<BOT>
+[21:48:00] Dropped "Bot10" from server<BOT>
+[21:48:00] Dropped "Bot11" from server<BOT>
+[21:48:00] Dropped "Bot12" from server<BOT>
+[21:48:00] Dropped "Bot13" from server<BOT>
+
+
+
+[21:50:03] New map: gm_flatgrass
+[21:50:32] Client "snvlp" connected.
+[21:50:43] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 11 seconds).
+[21:51:23] Client "Bot01" connected.
+[21:51:23] Client "Bot01" spawned in server <BOT> (took 89 seconds).
+[21:51:37] snvlp killed Bot01 using player
+[21:53:53] snvlp<STEAM_0:1:96399332> spawned sent bricks_server_bank_vault
+[21:54:10] snvlp<STEAM_0:1:96399332> spawned sent bricks_server_bank_vault
+[21:54:48] Server is shutting down/changing levels.
+
+
+
+[21:55:07] New map: gm_flatgrass
+[21:56:00] Client "snvlp" connected.
+[21:56:11] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 11 seconds).
+[21:56:32] Client "Bot01" connected.
+[21:56:32] Client "Bot01" spawned in server <BOT> (took 93 seconds).
+[21:56:45] snvlp killed Bot01 using player
+[21:57:00] snvlp killed Bot01 using player
+[21:59:41] snvlp: /looc ds
+
+
+
+[22:05:16] New map: gm_flatgrass
+[22:06:27] Client "snvlp" connected.
+[22:06:38] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 11 seconds).
+
+
+
+[22:09:11] New map: gm_flatgrass
+[22:09:16] Client "snvlp" connected.
+[22:09:25] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 9 seconds).
+
+
+
+[22:11:40] New map: gm_flatgrass
+[22:11:40] Client "snvlp" connected.
+[22:11:40] Client "snvlp" connected.
+[22:11:50] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 10 seconds).
+[22:12:18] snvlp: !menu
+[22:13:36] snvlp suicided!
+
+
+
+[22:21:08] New map: gm_flatgrass
+[22:21:12] Client "snvlp" connected.
+[22:21:23] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 11 seconds).
+[22:27:53] snvlp: !Menu
+
+
+
+[22:37:14] New map: gm_flatgrass
+[22:37:19] Client "snvlp" connected.
+[22:37:30] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 11 seconds).
+
+
+
+[22:39:53] New map: gm_flatgrass
+[22:39:56] Client "snvlp" connected.
+[22:40:07] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 11 seconds).
+
+
+
+[22:40:58] New map: gm_flatgrass
+[22:42:28] Client "snvlp" connected.
+[22:42:39] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 11 seconds).
+
+
+
+[22:43:26] New map: gm_flatgrass
+[22:43:33] Client "snvlp" connected.
+[22:43:43] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 10 seconds).
+
+
+
+[22:54:06] New map: gm_flatgrass
+[22:54:06] Client "snvlp" connected.
+[22:54:16] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 10 seconds).
+
+
+
+[22:55:31] New map: gm_flatgrass
+[22:55:31] Client "snvlp" connected.
+[22:55:41] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 10 seconds).
+
+
+
+[23:47:11] New map: gm_flatgrass
+[23:47:16] Client "snvlp" connected.
+[23:47:26] Client "snvlp" spawned in server <STEAM_0:1:96399332> (took 10 seconds).

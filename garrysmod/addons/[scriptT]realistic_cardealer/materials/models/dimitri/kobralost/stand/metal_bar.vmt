@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/dimitri/kobralost/stand/metal_bar"
+	"$bumpmap"    "models/dimitri/kobralost/stand/metal_bar_normal"
+
+	"$surfaceprop" "carpet"
+	"$model" 1
+
+    $phong 1
+	//$phongexponent 33
+    $phongexponenttexture "models/dimitri/kobralost/stand/metal_bar_roughness"
+    $phongboost	6
+    $phongfresnelranges	"[0.3 0.3 0.3]"
+}

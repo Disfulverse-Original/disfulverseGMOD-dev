@@ -1,0 +1,16 @@
+Tue Jan 23 18:29:58 2024	snvlp (STEAM_0:1:96399332) has joined the game
+Tue Jan 23 18:29:59 2024	snvlp (STEAM_0:1:96399332) spawned
+Tue Jan 23 18:30:38 2024	Lucas Rodriger was killed by Entity [0][worldspawn] with a unknown
+Tue Jan 23 18:30:38 2024	Lucas Rodriger (STEAM_0:1:96399332) spawned
+Tue Jan 23 18:44:15 2024	Lucas Rodriger (STEAM_0:1:96399332) disconnected
+Tue Jan 23 18:45:28 2024	snvlp (STEAM_0:1:96399332) has joined the game
+Tue Jan 23 18:45:28 2024	snvlp (STEAM_0:1:96399332) spawned
+Tue Jan 23 18:45:44 2024	Lucas Rodriger (STEAM_0:1:96399332): 
+Tue Jan 23 18:45:50 2024	Lucas Rodriger (STEAM_0:1:96399332): 
+Tue Jan 23 18:49:47 2024	Lucas Rodriger (STEAM_0:1:96399332): reload
+Tue Jan 23 18:49:51 2024	Lucas Rodriger (STEAM_0:1:96399332): cough
+Tue Jan 23 18:49:53 2024	Lucas Rodriger (STEAM_0:1:96399332): cough
+Tue Jan 23 18:49:56 2024	Lucas Rodriger (STEAM_0:1:96399332): reload
+Tue Jan 23 18:49:58 2024	Lucas Rodriger (STEAM_0:1:96399332): taunt
+Tue Jan 23 18:50:01 2024	Lucas Rodriger (STEAM_0:1:96399332): hit
+Tue Jan 23 18:50:49 2024	Lucas Rodriger (STEAM_0:1:96399332): 

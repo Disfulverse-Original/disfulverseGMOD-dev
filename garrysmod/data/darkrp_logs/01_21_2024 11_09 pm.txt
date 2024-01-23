@@ -1,0 +1,6 @@
+Sun Jan 21 23:09:59 2024	snvlp (STEAM_0:1:96399332) has joined the game
+Sun Jan 21 23:09:59 2024	snvlp (STEAM_0:1:96399332) spawned
+Sun Jan 21 23:10:08 2024	Lucas Rodriger (STEAM_0:1:96399332): 1566
+Sun Jan 21 23:10:17 2024	Lucas Rodriger (STEAM_0:1:96399332): 1611
+Sun Jan 21 23:12:50 2024	Lucas Rodriger (STEAM_0:1:96399332): 2061
+Sun Jan 21 23:15:39 2024	Lucas Rodriger (STEAM_0:1:96399332): 2556

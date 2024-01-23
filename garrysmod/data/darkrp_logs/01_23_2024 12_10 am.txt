@@ -1,0 +1,33 @@
+Tue Jan 23 00:10:06 2024	Bot01 (BOT) has joined the game
+Tue Jan 23 00:10:06 2024	Bot01 (BOT) spawned
+Tue Jan 23 00:10:07 2024	Bot02 (BOT) has joined the game
+Tue Jan 23 00:10:07 2024	Bot02 (BOT) spawned
+Tue Jan 23 00:10:07 2024	Bot03 (BOT) has joined the game
+Tue Jan 23 00:10:07 2024	Bot03 (BOT) spawned
+Tue Jan 23 00:10:07 2024	Bot04 (BOT) has joined the game
+Tue Jan 23 00:10:07 2024	Bot04 (BOT) spawned
+Tue Jan 23 00:10:07 2024	Bot05 (BOT) has joined the game
+Tue Jan 23 00:10:07 2024	Bot05 (BOT) spawned
+Tue Jan 23 00:10:07 2024	Bot06 (BOT) has joined the game
+Tue Jan 23 00:10:07 2024	Bot06 (BOT) spawned
+Tue Jan 23 00:10:07 2024	Bot07 (BOT) has joined the game
+Tue Jan 23 00:10:07 2024	Bot07 (BOT) spawned
+Tue Jan 23 00:10:07 2024	Bot08 (BOT) has joined the game
+Tue Jan 23 00:10:07 2024	Bot08 (BOT) spawned
+Tue Jan 23 00:10:08 2024	Bot09 (BOT) has joined the game
+Tue Jan 23 00:10:08 2024	Bot09 (BOT) spawned
+Tue Jan 23 00:10:08 2024	Bot10 (BOT) has joined the game
+Tue Jan 23 00:10:08 2024	Bot10 (BOT) spawned
+Tue Jan 23 00:10:08 2024	Bot11 (BOT) has joined the game
+Tue Jan 23 00:10:08 2024	Bot11 (BOT) spawned
+Tue Jan 23 00:10:08 2024	Bot12 (BOT) has joined the game
+Tue Jan 23 00:10:08 2024	Bot12 (BOT) spawned
+Tue Jan 23 00:10:08 2024	Bot13 (BOT) has joined the game
+Tue Jan 23 00:10:08 2024	Bot13 (BOT) spawned
+Tue Jan 23 00:10:17 2024	snvlp (STEAM_0:1:96399332) has joined the game
+Tue Jan 23 00:10:17 2024	snvlp (STEAM_0:1:96399332) spawned
+Tue Jan 23 00:10:26 2024	Lucas Rodriger (STEAM_0:1:96399332): cough
+Tue Jan 23 00:10:27 2024	💜Taborg💜 (STEAM_0:1:71640014) has joined the game
+Tue Jan 23 00:10:27 2024	💜Taborg💜 (STEAM_0:1:71640014) spawned
+Tue Jan 23 00:10:31 2024	Lucas Rodriger (STEAM_0:1:96399332): taunt
+Tue Jan 23 00:10:38 2024	Lucas Rodriger (STEAM_0:1:96399332): taunt

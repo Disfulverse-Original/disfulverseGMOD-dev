@@ -1,0 +1,34 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/freeman/owain_casinotext_rear"	
+
+
+	"$model" "1"
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[0.15 0.15 0.15]"
+
+	"$phong" "1"
+	"$halflambert" "0"
+	"$phongboost" "0.05"
+	"$phongtint" "[0.8 0.8 0.8]"
+	"$phongalbedotint" "0"
+	"$phongfresnelranges" "[0 0.5 1]"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "1"
+	"$rimlightboost" "0.05"
+	"$rimmask" "1"
+
+	"$selfillum" "1"
+
+	"$normalmapalphaenvmapmask" "1"
+
+
+	"$detail" "models/freeman/owain_casinotext_rear_emissive"
+	"$detailscale" "1"
+	"$detailblendmode" "5"	
+	"$detailblendfactor" "1"
+
+}
+

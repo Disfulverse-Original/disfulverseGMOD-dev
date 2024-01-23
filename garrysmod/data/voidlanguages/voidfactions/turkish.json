@@ -1,0 +1,448 @@
+{
+    "profile": "Profil",
+    "level": "Seviye",
+    "rank": "Rütbe",
+    "deposit": "Yatır",
+    "rewards": "Ödüller",
+
+    "lastPromote": "Son terfi",
+    "autoPromote": "Otomatik terfi",
+    "rankTemplate": "Rütbe Şablonu",
+    "nextAutoPromote": "Sonraki otomatik terfi",
+    "joined": "Katıldı",
+    "sessionPlaytime": "Oturum süresi",
+    "totalPlaytime": "Toplam Süre",
+    "factionJoined": "Oluşuma katıldı",
+
+    "balance": "Bakiye:",
+    "itemCount": ":x:/:max: ürünler",
+
+    "transactionHistory": "İşlem geçmişi",
+
+    "withdraw": "Çek",
+
+    "currentJob": "Şu anki Meslek",
+    "changeJob": "Mesleğini değiştir",
+    "changeRank": "Rütbeni değiştir",
+
+    "assets": "Varlıklar",
+
+    "createFaction": "Oluşum Oluştur",
+    "joinFaction": "Oluşuma Katıl",
+    
+    "createFactionOrJoin": "Bir oluşum oluşturun veya birine katılın",
+    "noFactionText": "Yeni bir oluşum oluşturarak lideri olabilir ya da başka bir oluşuma katılabilirsiniz.",
+    "factionCreateCost": "Yeni oluşum kurmanın maliyeti :color: :money:.",
+
+    "select": "Seç",
+    "create": "Oluştur",
+
+    "factions": "Oluşumlar",
+    "dynamic": "Dinamik",
+    "static": "Statik",
+
+    "setup": "Kurmak",
+    "options": "Seçenekler",
+
+    "levelUp": "Seviye atladın!",
+    "levelUpMsg": ":level: seviyedesin!",
+
+    "chooseMode": "Modunuzu seçin",
+    "chooseFaction": "Fraksiyonunuzu seçin",
+
+    "suitedForSerious": "SeriousRP için uygundur",
+    "suitedForNonSerious": "SeriousRP için uygun değildir",
+
+    "addFaction": "Yeni oluşum ekle",
+    "addRank": "Yeni rütbe ekle",
+    "addMember": "Üye ekle",
+
+    "newFaction": "Yeni Oluşum",
+    "newRank": "Yeni Rütbe",
+
+    "faction": "Oluşum",
+    "factionName": "Oluşum ismi",
+
+    "editFaction": "Oluşumları düzenle :name:",
+    "editRank": "Rütbeleri düzenle :name:",
+    "editUpgrade": "Yükseltmeleri düzenle :name:",
+    "editReward": "Ödülleri düzenle :name:",
+
+    "reward": "Ödül",
+
+    "general": "Genel",
+    "permissions": "İzinler",
+    "member": "Üye",
+
+    "name": "İsim",
+    "description": "Açıklama",
+    "factionTag": "Oluşum Tagı",
+    "subfactionOf": "Alt Oluşum",
+    "factionColor": "Oluşum Rengi",
+    "icon": "İkon",
+    "factionIcon": "Oluşum İkonu",
+    "maxMembers": "Maksimum Üye",
+
+    "canCaptureTerritory": "Bölgeyi ele geçirebilir",
+    "showOnBoard": "Göster",
+    "inviteRequired": "Katılmak için davet edilmen gerekiyor",
+    "isDefaultFaction": "Varsayılan Oluşum",
+
+    "inviteOnly": "Sadece Davet",
+
+    "noRanksAvailable": "Mevcut rütbe yok!",
+    "none": "Yok",
+
+    "rankTag": "Rütbe Tagı",
+    "job": "Meslek",
+
+    "ranking": "Sıralama",
+    "totalUpgrades": "Toplam yükseltme",
+
+    "showingPagination": ":from:'dan :to:'a gösteriliyor",
+    "page": "Sayfa",
+    "from": "İtibaren",
+
+    "createUpgrade": "Yükseltme oluştur",
+    "deleteUpgrade": "Yükseltme sil",
+
+    "createReward": "Ödül oluştur",
+    "deleteReward": "Ödül sil",
+
+    "upgradeModule": "Yükseltme modulü",
+    "rewardModule": "Ödül Modülü",
+    "moduleValue": "Modül değeri",
+
+    "tools": "Araçlar",
+
+    "upgradeCount": ":x: Yükseltmeler",
+    "rewardCount": ":x: Ödüller",
+
+    "price": "Fiyat",
+
+    "you": "Sen",
+
+    "kick": "At",
+    "inviteMembers": "Üye davet et",
+    "kickMembers": "Üye at",
+
+    "promoteMembers": "Üyeleri terfi et",
+    "demoteMembers": "Üyelerin rütbesini düşür",
+
+    "setRanks": "Rütbeleri ayarla",
+
+    "manageFaction": "Oluşumu yönet",
+    "purchaseUpgrades": "Yükseltmeleri satın al",
+
+    "canWithdrawMoney": "Para çek",
+    "canDepositMoney": "Para yatır",
+    "canWithdrawItems": "Eşya al",
+    "canDepositItems": "Eşya depola",
+
+    "depositMoney": "Para Yatır",
+    "withdrawMoney": "Para Çek",
+
+    "depositMoneyText": "Yatırmak istediğiniz para miktarını giriniz",
+    "withdrawMoneyText": "Çekmek istediğiniz para miktarını giriniz",
+
+    "yes": "Evet",
+    "no": "Hayır",
+
+    "onlyFactionMembers": "Sadece Oluşum Üyeleri",
+    "factionAndSubfactions": "Oluşum ve Alt Oluşumlar",
+    "minimumLevel": "Minimum Seviye",
+
+    "upgradeCreated": "Yükseltme başarıyla oluşturuldu :name:!",
+    "upgradeDeleted": "Yükseltme başarıyla silindi :name:!",
+    "upgradeEdited": "Yükseltme başarıyla düzenlendi :name:!",
+    "deleteUpgradePrompt": "Yükseltmeyi silmek istediğinizden emin misiniz :upgrade:? Bu eylem kalıcıdır!",
+
+    "rewardCreated": "Ödül başarıyla oluşturuldu :name:!",
+    "rewardDeleted": "Ödül başarıyla silindi :name:!",
+    "rewardEdited": "Ödül başarıyla düzenlendi :name:!",
+    "deleteRewardPrompt": "Ödülü silmek istediğinizden emin misiniz :reward:? Bu eylem kalıcıdır!",
+
+    "moveTool": "Taşıyıcı araç",
+    "connectorTool": "Bağlayıcı araç",
+    "addUpgrade": "Yeni yükseltme ekle",
+
+    "moneyRewarded": "Para kazandın",
+    "xpRewarded": "XP kazandın",
+
+    "reward_pointscaptured": "Ele geçirilen Puan",
+    "reward_desc_pointscaptured": "Bunun kilidini açmak için toplamda kaç puan ele geçirilmelidir?",
+
+    "reward_itemsdeposited": "Depolanan Eşya",
+    "reward_desc_itemsdeposited": "Bunun kilidini açmak için aynı anda kaç eşya depolanmalıdır?",
+
+    "reward_moneydeposited": "Yatırılan Para",
+    "reward_desc_moneydeposited": "Bunun kilidini açmak için tek seferde ne kadar para yatırılmalı?",
+
+    "reward_upgradesdeposited": "Açılan Yükseltmeler",
+    "reward_desc_upgradesdeposited": "Bunun kilidini açmak için toplamda kaç yükseltmenin kilidi açılmalıdır?",
+
+    "reward_membersjoined": "Katılan Üyeler",
+    "reward_desc_membersjoined": "Bunun kilidini açmak için bir fraksiyonda aynı anda kaç üye olmalı?",
+
+    "upgr_speedboost": "Hız arttırma",
+    "upgr_desc_speedboost": "Oyuncuların hareket hızını artırır.",
+    "upgr_descval_speedboost": "Bir oyuncu ne kadar hızlı olmalı %?",
+
+    "upgr_weapon": "Kalıcı Silah",
+    "upgr_desc_weapon": "Oyuncuya doğduğunda bir silah verir.",
+    "upgr_descval_weapon": "Silah adı nedir?",
+
+    "upgr_jumpboost": "Zıplama Yüskeltmesi",
+    "upgr_desc_jumpboost": "Oyuncuların zıplama gücünü artırır.",
+    "upgr_descval_jumpboost": "Bir oyuncu %? olarak ne kadar yükseğe zıplamalı?",
+
+    "upgr_morehp": "Daha fazla CAN",
+    "upgr_desc_morehp": "Oyuncuların sağlığını artırır.",
+    "upgr_descval_morehp": "Bir oyuncu sağlığı %? olarak ne kadar artırılmalıdır?",
+
+    "upgr_morearmor": "Daha Fazla Zırh",
+    "upgr_desc_morearmor": "Oyuncuların zırhını artırır.",
+    "upgr_descval_morearmor": "Bir oyuncunun zırhı %? olarak ne kadar artırılmalıdır?",
+
+    "upgr_memberdmgreduce": "Üyeden hasar alma indirimi",
+    "upgr_desc_memberdmgreduce": "Dost ateşi hasarını azaltır.",
+    "upgr_descval_memberdmgreduce": "Dost ateşi hasarı %? olarak ne kadar azaltılmalıdır?",
+
+    "upgr_lockpickspeed": "Daha hızlı Lockpick",
+    "upgr_desc_lockpickspeed": "Lockpick hızını artırır.",
+    "upgr_descval_lockpickspeed": "%? Cinsinden kilit açma süresi ne olmalıdır? (% 0-100)",
+
+    "upgr_maxmembers": "Maksimum Üye",
+    "upgr_desc_maxmembers": "Maksimum üye sayısını artırır.",
+    "upgr_descval_maxmembers": "Ne kadar maksimum üye eklenmelidir?",
+
+    "upgr_maxitems": "Maksimum Öğeler",
+    "upgr_desc_maxitems": "Maksimum öğeleri artırır.",
+    "upgr_descval_maxitems": "Maksimum ne kadar öğe eklenmelidir?",
+
+    "upgr_capturetime": "Ele geçirme zamanı",
+    "upgr_desc_capturetime": "Nokta yakalama azaltılır.",
+    "upgr_descval_capturetime": "Ele geçirme süresinden kaç saniye çıkarılmalı?",
+
+    "success": "Başarı",
+    "error": "Hata",
+    "info": "Bilgi",
+
+    "properties": "Özellikleri",
+
+    "factionCreated": "Oluşum: name: başarıyla oluşturuldu!",
+    "factionUpdated": "Oluşum: name: başarıyla düzenlendi!",
+    "factionDeleted": "Oluşum: name: başarıyla silindi!",
+    "memberCountDemoted": "(:count: üyelerin sıralaması düşürüldü))",
+
+    "rankCreated": "Rank :name: başarıyla yaratıldı!",
+    "rankUpdated": "Rank :name: başarıyla düzenlendi!",
+    "rankDeleted": "Rank :name: başarıyla silindi!",
+    "maxRanksCreated": "Rütbe yaratılamadı :name: çünkü (limit:) limite ulaşıldı!",
+    "maxFactionsCreated": "Oluşum yaratılamadı :name: çünkü limite (:limit:) ulaşıldı",
+    "membersInRankErr": "Rütbe silinemedi :name: çünkü bu rütbeye sahip olan üyelerin var!",
+
+    "memberInvited": "Kişi :name: başarıyla klanınıza davet edildi :faction:!",
+    "memberInvitePending": "Bu kişinin  :name: halihazırda sahip olduğu bir daveti var !",
+    "memberInviteAccepted": "Kişi :name: daveti kabul etti!",
+
+    "memberJoinedFaction": "Şu oluşuma katıldın :faction:",
+    "memberLeftFaction": "Oluşumdan ayrıldın :faction:",
+
+    "memberKicked": "Üye :name: oluşumdan atıldı!",
+    "memberAdded": "Üye :name: başarıyla :faction: oluşumuna katıldı!",
+
+    "itemDeposited": ":name: eşyası başarıyla depolandı!",
+    "itemWithdrawn": ":name: eşyası başarıyla depodan alındı!",
+
+    "moneyDeposited": ":money: para yatırdın!",
+    "moneyWithdrawn": ":money: para çektin!",
+
+    "noFactionMoney": "Oluşumun bu eylem için yeteri kadar fonu yok!",
+
+    "memberRankChanged": ":name:'in rütbesi :rank:'e değiştirildi!",
+    "memberPromoted": "Üye :name:, :rank: rütbesine terfi etti!",
+    "memberDemoted": "Üye :name:, :rank: rütbesine düşürüldü!",
+
+    "youPromoted": ":rank: rütbesine terfi ettin!",
+    "youDemoted": ":rank: rütbesinden tenzil edildin!",
+    "youRankChanged": "Yeni rütben :rank:!",
+
+    "nameShort": "İsim çok kısa!",
+    "nameLong": "İsim çok uzun!",
+    "tagShort": "Tag çok kısa!",
+    "tagLong": "Tag çok uzun!",
+    "maxMembersLimit": "Oluşumuna daha fazla adam alamazsın!",
+    "noJobs": "Bu rütbeye bağlı bir meslek yok!",
+
+    "maxMembersErr": "Oluşum dolu!",
+    "maxRankMembersErr": "Bu rütbe dolu!",
+    "minLevelErr": "Yeteri seviyeye sahip değilsin!",
+
+    "nothingToShow": "Gösterecek bir şey yok!",
+    "thereAreNoMembers": "Hiç üye yok tek başınasın o7!",
+
+    "capturePoint": "Ele geçirme noktası",
+    "capturePointCreated": "Ele geçirme noktası yaratıldı!",
+    "capturePointDeleted": "Ele geçirme noktası silindi!",
+    "capturePointContested": "İtiraz edildi",
+    "capturing": "Ele geçiriliyor",
+    "paused": "Duraklatıldı",
+    "claimed": "Ele Geçirildi",
+    "notClaimed": "Ele Geçirilmedi",
+
+    "pointCapturedByEnemies": "Bölgeni ele geçiriyolar!",
+
+    "unlockedReward": ":reward: ödülü açıldı!",
+
+    "cantJoinNoDefaultFactions": "Bir oluşuma katılmadan önce oluşumunu yapılandır! Yap ve tekrardan bağlan.",
+    "noDefaultFactions": "Varsayılan bir oluşum yok! Özelleştirilmeleri gerek!",
+
+    "deleteRankPrompt": ":rank: rütbesini silmek istediğinizden emin misiniz? Bu kalıcı bir değişikliktir!",
+    "deleteFactionPrompt": ":faction: oluşumunu silmek istediğinizden emin misiniz? Bu kalıcı bir değişikliktir!",
+    "disbandFactionPrompt": "Oluşumunu dağıtmak istiyor musun? Bu kalıcı bir değişikliktir!",
+
+    "disbandFaction": "Oluşumu sil",
+
+    "switch": "Değiştir",
+    "switchType": "Oluşum tipini değiştir",
+    "switchTypePrompt": "Oluşum tiplerini değiştirmek istiyor musun? Bu işlemden sonra tüm oluşumlar gidecek!",
+    "restartingIn": ":time: saniye içerisinde tekrardan başlatılacak!",
+
+    "changingJobRestricted": "Bu meslek için iznin yok!",
+
+    "upgradePurchased": ":name: yükseltmesini satın aldın!",
+
+    "inviteMember": "Yeni bir üye davet et",
+
+    "factionInvite": "Oluşum daveti",
+    "invitedTo": "Davet edildin",
+
+    "memberCount": ":x:/:total: üye",
+    "factionCount": ":x: oluşumlar",
+
+    "unlock": "Kilidi aç",
+    "neededToUnlock": "Kilidinin açılması gerekiyor",
+    "details": "Detaylar",
+    "viewDetails": "Detayları görüntüle",
+    "join": "Katıl",
+    "lastSeen": "Son görülme",
+
+    "ago": ":time: önce",
+    "never": "Asla",
+    "now": "Şimdi",
+
+    "back": "Geri",
+
+    "save": "Kaydet",
+        "deleteFaction": "Oluşumu sil",
+    "deleteRank": "Rütbeyi sil",
+
+    "leave": "Ayrıl",
+    "leaveFaction": "Oluşumdan ayrıl",
+
+    "accept": "Kabul et",
+    "deny": "Reddet",
+    
+    "cancel": "İptal et",
+
+    "clickToAdd": "Eklemek için tıkla",
+
+    "visual": "Görünüş",
+
+    "members": "Üyeler",
+    "actions": "Aksiyonlar",
+
+    "manage": "Yönet",
+    "disband": "Dağıt",
+    "delete": "Sil",
+
+    "loading": "Yükleniyor...",
+
+    "searchByName": "İsme göre ara",
+
+    "kickMember": "Üyeyi at",
+    "kickMemberPrompt": ":name:'i :faction: oluşumundan atmak istediğinize emin misiniz?",
+
+    "cantAfford": "Bunu karşılayamıyorsun!",
+
+    "staticFactionsContent": "Yetkili üyelerin kendi oluşumlarını oluşturma hakları vardır",
+    "dynamicFactionsContent": "Oyuncular kendi oluşumlarını oluşturup istediği gibi kontrol edebilirler. Kimse onlara karışamaz.",
+    "xp_npckilled": "NPC Öldürmeleri",
+    "xp_npckilled_desc": "Bir NPC öldürünce ne kadar XP alıyorsun",
+    "xp_territorycapped": "Ele geçirme noktası ele geçirildi",
+    "xp_territorycapped_desc": "Bir yeri ele geçirince ne kadar XP alıyorsun",
+
+    "xp_territoryminute": "Ele geçirme noktası tutuluyor",
+    "xp_territoryminute_desc": "Ele geçirme noktasında dakikada kaç XP alıyorsun",
+
+    "xp_playtime": "Oynama süresi",
+    "xp_playtime_desc": "Ne kadar süre periyodunda kaç XP alıyorsun",
+
+    "experience": "Tecrübe",
+    "commands": "Komutlar",
+    "xpmodules": "XP Modülleri",
+    "invites": "Davetler",
+    "capturepoints": "Ele geçirme noktası",
+    "upgrades": "Yükseltmeler",
+    "upgradetree": "Yükseltme ağacı",
+    "upgradepoints": "Yükseltme puanları",
+
+    "selectPointToView": "Yükseltmenin bilgisini görmek için onu seç...",
+
+    "settings_language": "Dil",
+    "settings_language_desc": "VoidFactions hangi dili kullanmalı?",
+
+    "settings_menucommand": "Menü komutları",
+    "settings_menucommand_desc": "Menüyü açmak için hangi komutu kullanmalısın?",
+
+    "settings_maxtaglength": "Maksimum tag uzunluğu",
+    "settings_maxtaglength_desc": "Oluşum tagı maksimum ne kadar uzunlukta olsun?",
+
+    "settings_defaultrankname": "Varsayılan lider rütbesi",
+    "settings_defaultrankname_desc": "Varsayılan oluşum lideri rütbesinin ismi ne olsun?",
+
+    "settings_defaultmaxmembers": "Varsayılan maksimum üye",
+    "settings_defaultmaxmembers_desc": "Oluşumu kurarken maksimum üye sayısı kaç olsun?",
+
+    "settings_defaultmaxitems": "Varsayılan maksimum eşya",
+    "settings_defaultmaxitems_desc": "Oluşumu kurarken maksimum eşya sayısı kaç olsun?",
+    "settings_factioncreatecost": "Oluşumu kurma ücreti",
+    "settings_factioncreatecost_desc": "Oluşumu kurma ücreti ne kadar olsun",
+
+    "settings_factioncreatecurrency": "Oluşumu kuru",
+    "settings_factioncreatecurrency_desc": "Hangi kur oluşum kurmak için kullanılsın?",
+
+    "settings_promotecanselect": "Yükseltirken oluşum seç",
+    "settings_promotecanselect_desc": "Statik oluşumlarda oluşum yükseltmeleri açılsın mı?",
+
+    "settings_menubind": "Menü  tuş ataması",
+    "settings_menubind_desc": "Menüyü açmak için hangi tuş kullanılsın?",
+
+    "settings_depositcurrency": "Para kuru",
+    "settings_depositcurrency_desc": "Yatırılan para için hangi kur kullanılsın?",
+
+    "settings_depositinventory": "Eşyaları depola",
+    "settings_depositinventory_desc": "Depolanan eşyalar için hangi envanter kullanılsın?",
+
+    "settings_inviteduration": "Davet süresi",
+    "settings_inviteduration_desc": "Davet ne kadar süre aktif olsun? (seconds)",
+
+    "settings_pointrenderdist": "İşleme mesafesi",
+    "settings_pointrenderdist_desc": "Ne kadar uzaklıkta ele geçirme noktası çizilsin?",
+
+    "settings_showpointdistances": "Mesafeleri göster",
+    "settings_showpointdistances_desc": "Ele geçirme noktaları uzaklıkları gösterilsin mi?",
+
+    "settings_pointcaptime": "Ele geçirme süresi",
+    "settings_pointcaptime_desc": "Bir yeri ele geçirmek ne kadar sürsü? (seconds)",
+
+    "settings_baselevelupxp": "Seviye atlama için gereken XP",
+    "settings_baselevelupxp_desc": "Seviye atlamak için ne kadar XP'ye ihtiyaç duyuyorsun?",
+
+    "settings_levelupmultiplier": "Seviye atlama sayısı",
+    "settings_levelupmultiplier_desc": "Gerekli olan XP ne kadar arttırılsın?",
+
+    "settings_maxlevel": "Maksimum seviye",
+    "settings_maxlevel_desc": "Erişebileceğin maksimum seviye ne olsun?"
+}

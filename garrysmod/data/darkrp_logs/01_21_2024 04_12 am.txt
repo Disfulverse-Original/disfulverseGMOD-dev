@@ -1,0 +1,27 @@
+Sun Jan 21 04:12:02 2024	snvlp (STEAM_0:1:96399332) has joined the game
+Sun Jan 21 04:12:03 2024	snvlp (STEAM_0:1:96399332) spawned
+Sun Jan 21 04:12:12 2024	Bot01 (BOT) has joined the game
+Sun Jan 21 04:12:12 2024	Bot01 (BOT) spawned
+Sun Jan 21 04:12:12 2024	Bot02 (BOT) has joined the game
+Sun Jan 21 04:12:12 2024	Bot02 (BOT) spawned
+Sun Jan 21 04:12:13 2024	Bot03 (BOT) has joined the game
+Sun Jan 21 04:12:13 2024	Bot03 (BOT) spawned
+Sun Jan 21 04:12:13 2024	Bot04 (BOT) has joined the game
+Sun Jan 21 04:12:13 2024	Bot04 (BOT) spawned
+Sun Jan 21 04:12:13 2024	Bot05 (BOT) has joined the game
+Sun Jan 21 04:12:13 2024	Bot05 (BOT) spawned
+Sun Jan 21 04:12:13 2024	Bot06 (BOT) has joined the game
+Sun Jan 21 04:12:13 2024	Bot06 (BOT) spawned
+Sun Jan 21 04:12:13 2024	Bot07 (BOT) has joined the game
+Sun Jan 21 04:12:13 2024	Bot07 (BOT) spawned
+Sun Jan 21 04:12:13 2024	Bot08 (BOT) has joined the game
+Sun Jan 21 04:12:13 2024	Bot08 (BOT) spawned
+Sun Jan 21 04:12:14 2024	Bot09 (BOT) has joined the game
+Sun Jan 21 04:12:14 2024	Bot09 (BOT) spawned
+Sun Jan 21 04:12:14 2024	Bot10 (BOT) has joined the game
+Sun Jan 21 04:12:14 2024	Bot10 (BOT) spawned
+Sun Jan 21 04:12:15 2024	Bot11 (BOT) has joined the game
+Sun Jan 21 04:12:15 2024	Bot11 (BOT) spawned
+Sun Jan 21 04:12:28 2024	Bot02 was killed by snvlp with a weapon_ak472
+Sun Jan 21 04:12:41 2024	Bot02 was killed by snvlp with a weapon_ak472
+Sun Jan 21 04:15:29 2024	Bot02 was killed by snvlp with a weapon_ak472

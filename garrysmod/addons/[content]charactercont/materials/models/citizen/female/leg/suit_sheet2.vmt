@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\citizen\female\leg/suit_sheet2"
+	"$bumpmap" "models\citizen\female\body/suit_sheet_nml"
+// 	"$blendtintbybasealpha" 1
+	"$halflambert" 1
+}

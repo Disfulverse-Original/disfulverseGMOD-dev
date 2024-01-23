@@ -1,0 +1,11 @@
+Mon Jan 22 20:02:21 2024	snvlp (STEAM_0:1:96399332) has joined the game
+Mon Jan 22 20:02:21 2024	snvlp (STEAM_0:1:96399332) spawned
+Mon Jan 22 20:04:31 2024	Lucas Rodriger (STEAM_0:1:96399332): /gfvdcze
+Mon Jan 22 20:06:36 2024	Lucas Rodriger (STEAM_0:1:96399332): /givelicense
+Mon Jan 22 20:20:10 2024	Lucas Rodriger (STEAM_0:1:96399332): /lockdown
+Mon Jan 22 20:20:15 2024	Lucas Rodriger (STEAM_0:1:96399332): /unlockdown
+Mon Jan 22 20:21:18 2024	Lucas Rodriger was killed by Entity [0][worldspawn] with a unknown
+Mon Jan 22 20:21:18 2024	Lucas Rodriger (STEAM_0:1:96399332) spawned
+Mon Jan 22 20:21:56 2024	Lucas Rodriger (STEAM_0:1:96399332): 
+Mon Jan 22 20:23:28 2024	Lucas Rodriger (STEAM_0:1:96399332): 
+Mon Jan 22 20:27:55 2024	Lucas Rodriger (STEAM_0:1:96399332) disconnected

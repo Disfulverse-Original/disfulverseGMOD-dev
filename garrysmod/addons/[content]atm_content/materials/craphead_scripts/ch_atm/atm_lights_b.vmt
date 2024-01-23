@@ -1,0 +1,13 @@
+"UnlitGeneric"
+{
+	"$basetexture" "craphead_scripts/ch_atm/atm_lights_b"
+	"Proxies"
+	{
+		"TextureScroll"
+		{
+			"texturescrollvar" "$baseTextureTransform"
+			"texturescrollrate" 0.2
+			"texturescrollangle" 0
+		}
+	}
+}
