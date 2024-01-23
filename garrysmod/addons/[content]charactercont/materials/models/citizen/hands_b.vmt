@@ -1,6 +1,0 @@
-"VertexLitGeneric"
-{
-	"$basetexture" "models\citizen\hands_b"
-	"$bumpmap"     "models\citizen\hands_n"
-
-}

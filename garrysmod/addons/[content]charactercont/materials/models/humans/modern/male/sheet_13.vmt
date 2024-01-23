@@ -1,5 +1,0 @@
-VertexLitGeneric
-{
-	$baseTexture "models/humans/modern/male/sheet_13"
-	$bumpmap "models/humans/modern/male/sheet_13_n"
-}
