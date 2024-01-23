@@ -8,7 +8,6 @@ resource.AddWorkshop ( "2206993805" ) --slib - Stromic's Library
 resource.AddWorkshop ( "2005357731" ) --[Content] SlownLS - ATM
 resource.AddWorkshop ( "2001211879" ) --realistic house
 resource.AddWorkshop ( "2567098902" ) --accessory
-resource.AddWorkshop ( "1455944872" ) --Character & Clothes
 resource.AddWorkshop ( "2926057708" ) --cmenu content
 resource.AddWorkshop ( "2986127962" ) --map content
 resource.AddWorkshop ( "2986120857" ) --map 
