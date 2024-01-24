@@ -1,7 +1,0 @@
-"VertexlitGeneric"
-{
-	$envmap			env_cubemap
-	"$basetexture" "models/srcocainelab/leafgreen_difuse"
-	"$envmapmask" "models/srcocainelab/leafgreen_specular"
-	"$translucent" 1
-}
