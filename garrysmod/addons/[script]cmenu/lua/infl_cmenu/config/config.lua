@@ -16,7 +16,7 @@ local white = 	Color(255,255,255)
 local black = 	Color(0,0,0)
 local redy = 	Color(236, 136, 22)
 local greeny = Color(87, 255, 3)
-local violet = Color(160, 0 , 160)
+local violet = Color(186, 133, 255)
 local bluz = Color(162 ,162 ,208)
 
 function PIS.Config:AddMenu(id, mat, text, col, commands,cc)
@@ -141,7 +141,7 @@ PIS.Config:AddMenu("Остальное", 			"mill", 		"Разное", 			info, {
 	{name = "Третье лицо", 			mat = "third_person", col = white, func = function() RunConsoleCommand("thirdperson_toggle") end},
 	{name = "Способности", 			mat = "playing_cards", col = yellow, func = function() RunConsoleCommand("say", "!slevels") end},
 	{name = "Фракции", 			mat = "darkweb", col = white, func = function() RunConsoleCommand("say", "!factions") end},
-	--{name = "Миссии", 			mat = "document", col = white, func = function() RunConsoleCommand("say", "!missions") end},
+	{name = "Поддержать проект", 			mat = "document", col = violet, func = function() RunConsoleCommand("say", "!store") end},
 
 
 })
