@@ -1,7 +1,0 @@
-"VertexlitGeneric"
-{
-	"$basetexture" "models/dimitri/kobralost/printer/black"
-
-	"$surfaceprop" "plastic"
-	"$model" 1
-}

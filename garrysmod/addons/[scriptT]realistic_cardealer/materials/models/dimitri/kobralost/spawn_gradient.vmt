@@ -1,8 +1,0 @@
-"VertexlitGeneric"
-{
-	"$basetexture" "models/dimitri/kobralost/spawn_gradient"
-	"$translucent" 1
-
-	"$model" 1
-}
-

@@ -1,6 +1,0 @@
-"VertexlitGeneric"
-{
-	"$basetexture" "models/dimitri/kobralost/printer/printed_paper"
-	"$surfaceprop" "paper"
-	"$model" 1
-}
