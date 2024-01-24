@@ -8,7 +8,7 @@ surface.CreateFont("wepsel", {
 	shadow = true,
 	italic = false,
 	blursize = 0,
-	font = "Kanit"})
+	font = "Roboto"})
 
 surface.CreateFont("small", {
 	size = 22 * 0.7 * scale,
@@ -18,7 +18,7 @@ surface.CreateFont("small", {
 	shadow = true,
 	italic = false,
 	blursize = 0,
-	font = "Kanit"})
+	font = "Roboto"})
 
 local curTab = 0
 local curSlot = 2

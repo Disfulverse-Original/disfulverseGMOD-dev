@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$basetexture" "unioncity2/miscellaneous/bankbuttons"
+	$surfaceprop computer
+	$color "[.45 .45 .45]"
+}

@@ -15,8 +15,7 @@ if (SERVER) then
 	AddCSLuaFile("chatbox/cl_colors.lua")
 	AddCSLuaFile("chatbox/cl_options.lua")
 	AddCSLuaFile("chatbox/sh_obj_player_extend.lua")
-	resource.AddSingleFile("resource/fonts/Exo2-Regular.ttf")
-	resource.AddSingleFile("resource/fonts/Exo2-SemiBold.ttf")
+	resource.AddSingleFile("resource/fonts/Oswald-Medium.ttf")
 
 	include("chatbox/sv_chatbox.lua")
 else

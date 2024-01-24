@@ -1,0 +1,5 @@
+LightmappedGeneric
+{
+	"$basetexture"	"gmod_tower\virus\hospital\hospital_ceilingtile"
+	"$surfaceprop"	"plastic"
+}

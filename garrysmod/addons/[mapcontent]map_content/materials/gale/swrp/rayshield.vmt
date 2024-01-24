@@ -1,0 +1,22 @@
+UnlitGeneric
+{
+	$basetexture "gale/swrp/rayshield"
+	$surfaceprop Ice
+	$alpha 0.33
+	$translucent 1
+	$additive 1
+	$nocull 1
+	$mod2x 1
+	$nodecal 1
+
+	Proxies
+	{
+		AnimatedTexture
+		{
+			animatedtexturevar $basetexture
+			animatedtextureframenumvar $frame
+			animatedtextureframerate 64
+		}
+
+	}
+}

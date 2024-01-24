@@ -1,0 +1,16 @@
+// Made for cubicles in RPD
+
+"LightMappedGeneric"
+{
+      // DIFFUSE
+      "$basetexture" "contagion/carpet/carpet08_diff"
+
+      // NORMAL MAP
+      "$bumpmap" "contagion/carpet/carpet08_norm"
+ 
+
+      // MISC PARAMETERS
+      "$surfaceprop" "carpet"
+
+      "%keywords" "cont, floor, office, carpet"
+}

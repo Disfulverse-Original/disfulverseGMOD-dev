@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "highdef/masseffect/other/group07/plaster01"
+	"$bumpmap" "highdef/masseffect/other/group07/plaster01_SSBump"
+	"$surfaceprop" "Default"
+	"%keywords" "masseffect"
+	"$ssbump" 1
+}

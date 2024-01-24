@@ -1,0 +1,8 @@
+"patch"
+{
+	"include"		"materials/patriot/water/water001a.vmt"
+	"insert"
+	{
+		"$waterdepth"		"6"
+	}
+}

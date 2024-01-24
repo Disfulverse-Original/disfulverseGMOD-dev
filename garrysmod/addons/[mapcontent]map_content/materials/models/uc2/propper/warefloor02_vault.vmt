@@ -1,0 +1,7 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "unioncity2/floors/warefloor02"
+	
+	$color2 "[.85 .85 .85]"
+	$surfaceprop concrete
+}

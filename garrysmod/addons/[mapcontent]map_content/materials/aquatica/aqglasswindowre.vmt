@@ -1,0 +1,9 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "aquatica/aqglasswindowre"
+	"$envmap" "env_cubemap"
+	"$surfaceprop" "glass"
+	"$translucent" 1
+	"$multipass" 1
+        "$envmaptint" "[0.6 0.6 0.6]"
+}

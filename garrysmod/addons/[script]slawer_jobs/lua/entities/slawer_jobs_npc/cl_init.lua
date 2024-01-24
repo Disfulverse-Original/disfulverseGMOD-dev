@@ -14,3 +14,5 @@ function ENT:Draw()
         draw.SimpleTextOutlined(self:GetNPCName(), "Slawer.Jobs:95", 0, -5, color_white, 1, 0, 3, color_black)
     cam.End3D2D()
 end
+
+

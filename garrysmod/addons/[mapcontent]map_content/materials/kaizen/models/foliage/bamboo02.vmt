@@ -1,0 +1,12 @@
+VertexLitGeneric
+{
+	$basetexture "kaizen\models\foliage/bamboo02"
+	$surfaceprop Grass
+
+	$alphatest 1
+	$alphatestreference 0.3
+	$nocull 1
+
+	$flashlightnolambert 1
+	$model 1
+}

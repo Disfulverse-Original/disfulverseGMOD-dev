@@ -9,7 +9,7 @@ end
 function createfonts()
     //
     surface.CreateFont("ahud_25", {
-        font = "Cambria",
+        font = "Roboto",
         size = ahud.GetSize(25),
         antialias = true,
         extended  = true,
@@ -18,7 +18,7 @@ function createfonts()
     })
 
     surface.CreateFont("ahud_17_500", {
-        font = "Cambria",
+        font = "Roboto",
         size = ahud.GetSize(17),
         antialias = true,
         shadow = true,
@@ -26,7 +26,7 @@ function createfonts()
     })
 
     surface.CreateFont("ahud_40", {
-        font = "Cambria",
+        font = "Roboto",
         size = ahud.GetSize(40),
         antialias = true,
         shadow = true,
@@ -34,7 +34,7 @@ function createfonts()
     })
 
     surface.CreateFont("ahud_120", {
-        font = "Cambria",
+        font = "Roboto",
         size = ahud.GetSize(120),
         antialias = true,
         shadow = true,
@@ -42,7 +42,7 @@ function createfonts()
     })
 
     surface.CreateFont("ahud_60", {
-        font = "Cambria",
+        font = "Roboto",
         size = ahud.GetSize(60),
         antialias = true,
         shadow = true,
@@ -50,7 +50,7 @@ function createfonts()
     })
 
     surface.CreateFont("ahud_60B", {
-        font = "Cambria",
+        font = "Roboto",
         size = ahud.GetSize(60),
         antialias = true,
         shadow = true,
@@ -58,8 +58,8 @@ function createfonts()
     })
 
     surface.CreateFont("ahud_17", {
-        font = "Cambria",
-        size = ahud.GetSize(17),
+        font = "Roboto",
+        size = ahud.GetSize(21),
         antialias = true,
         extended  = true,
         shadow = true,

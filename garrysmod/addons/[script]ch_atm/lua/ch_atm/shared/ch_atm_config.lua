@@ -11,16 +11,16 @@ CH_ATM.Config.Language = "ru" -- Set the language of the script.
 --[[
 	Default Config
 --]]
-CH_ATM.Config.AccountStartMoney = 0 -- How much money is there on a bank account when it's created?
+CH_ATM.Config.AccountStartMoney = 12000 -- How much money is there on a bank account when it's created?
 CH_ATM.Config.ATMCurrency = "darkrp" -- What gamemode/currency do you want to store in the ATM? Supported are basewars, bricks_credit_store, darkrp, helix, mtokens, pointshop2, pointshop2_premium, santosrp, sh_pointshop, sh_pointshop_premium, underdone
 
-CH_ATM.Config.NotificationTime = 5 -- Amount of seconds to show notifications
+CH_ATM.Config.NotificationTime = 8 -- Amount of seconds to show notifications
 CH_ATM.Config.DistanceToScreen3D2D = 5000 -- Distance between the player and the 3d2d to draw
 
 CH_ATM.Config.AdminATMChatCommand = "!adminatm" -- Chat command to open ATM admin menu
 
-CH_ATM.Config.WalletLooseOnDeathPercentage = 50 -- How many percetange of the players wallet to loose on death (not bank account)? Set to 0 to disable.
-CH_ATM.Config.MaximumToLooseOnDeath = 999999999 -- How much money can a player maximum loose on death?
+CH_ATM.Config.WalletLooseOnDeathPercentage = 1 -- How many percetange of the players wallet to loose on death (not bank account)? Set to 0 to disable.
+CH_ATM.Config.MaximumToLooseOnDeath = 10000 -- How much money can a player maximum loose on death?
 CH_ATM.Config.DropMoneyOnDeath = true -- Should the money lost be dropped on death? If true it will drop, if false they will just vanish.
 
 CH_ATM.Config.ReplaceATMPropsOnMap = true -- Should we try to replace static ATM props with interactive ATM entities? Only works on some maps.
@@ -127,8 +127,8 @@ CH_ATM.Config.MaximumTransactionsToShow = 10 -- How many transactions should we 
 	XP SUPPORT
 --]]
 CH_ATM.Config.DarkRPLevelSystemEnabled = false -- DARKRP LEVEL SYSTEM BY vrondakis https://github.com/uen/Leveling-System
-CH_ATM.Config.SublimeLevelSystemEnabled = true -- Sublime Levels by HIGH ELO CODERS https://www.gmodstore.com/market/view/6431
-CH_ATM.Config.EssentialsXPSystemEnabled = false -- Brick's Essentials and/or DarkRP Essentials by Brickwall https://www.gmodstore.com/market/view/5352 & https://www.gmodstore.com/market/view/7244
+CH_ATM.Config.SublimeLevelSystemEnabled = false -- Sublime Levels by HIGH ELO CODERS https://www.gmodstore.com/market/view/6431
+CH_ATM.Config.EssentialsXPSystemEnabled = true -- Brick's Essentials and/or DarkRP Essentials by Brickwall https://www.gmodstore.com/market/view/5352 & https://www.gmodstore.com/market/view/7244
 CH_ATM.Config.EXP2SystemEnabled = false -- Elite XP SYstem (EXP2) By Axspeo https://www.gmodstore.com/market/view/4316
 CH_ATM.Config.GlorifiedLevelingXPSystem = false -- GlorifiedLeveling by GlorifiedPig https://www.gmodstore.com/market/view/7254
 

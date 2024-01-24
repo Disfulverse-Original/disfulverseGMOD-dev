@@ -55,7 +55,7 @@ ahud.ColorsTeam = {
 ahud.InvertNotifications = false // Put notifications on the bottom right, rather than on the top right
 
 ahud.dollarIcon = true
-ahud.hideEntInfo = false
+ahud.hideEntInfo = true
 ahud.disableHUDAnimations = false // Disable animations when a number change in HUD, will instantly switch to the new value
 
 ahud.DisableModules = {

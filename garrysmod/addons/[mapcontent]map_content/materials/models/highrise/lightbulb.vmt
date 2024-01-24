@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/highrise/lightbulb"
+	"$surfaceprop" "glass"
+	"$model" 1
+	"$selfillum" 1
+
+}

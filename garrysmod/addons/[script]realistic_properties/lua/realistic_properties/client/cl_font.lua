@@ -9,122 +9,115 @@
 ]]
 
 surface.CreateFont("rps_font_1", {
-	font = "Cambria", 
+	font = "Roboto", 
 	size = ScreenScale( 11.7 ), 
-	weight = 0,
+	weight = 1000,
 	antialias = true,
 	extended = true,
 })
 
 surface.CreateFont("rps_font_2", {
-	font = "Cambria", 
+	font = "Roboto", 
 	size = ScreenScale( 10 ), 
-	weight = 0,
+	weight = 1000,
 	antialias = true,
 	extended = true,
 })
 
 surface.CreateFont("rps_font_3", {
-	font = "Cambria", 
+	font = "Roboto", 
 	size = ScreenScale( 8 ), 
-	weight = 200,
+	weight = 1000,
 	antialias = true,
 	extended = true,
 })
 
 surface.CreateFont("rps_font_4", {
-	font = "Cambria", 
+	font = "Roboto", 
 	size = ScreenScale( 14 ), 
-	weight = 500,
+	weight = 1000,
 	antialias = true,
 	extended = true,
 })
 
 surface.CreateFont("rps_font_5", {
-	font = "Cambria", 
+	font = "Roboto", 
 	size = ScreenScale( 11 ), 
-	weight = 0,
+	weight = 1000,
 	antialias = true,
 	extended = true,
 })
 
 surface.CreateFont("rps_font_6", {
-	font = "Cambria", 
+	font = "Roboto", 
 	size = ScreenScale( 8 ), 
-	weight = 0,
+	weight = 1000,
 	antialias = true,
 	extended = true,
 })
 
 surface.CreateFont("rps_font_7", {
-	font = "Cambria", 
+	font = "Roboto", 
 	size = ScreenScale( 8 ), 
-	weight = 0,
+	weight = 1000,
 	antialias = true,
 	extended = true,
 })
 
 surface.CreateFont("rps_font_8", {
-	font = "Cambria", 
+	font = "Roboto", 
 	size = ScreenScale( 6 ), 
-	weight = 0,
+	weight = 1000,
 	antialias = true,
 	extended = true,
 })
 
 surface.CreateFont("rps_font_9", {
-	font = "Cambria", 
+	font = "Roboto", 
 	size = ScreenScale( 50 ), 
-	weight = 0,
+	weight = 1000,
 	antialias = true,
 	extended = true,
 })
 
 surface.CreateFont("rps_font_10", {
-	font = "Cambria", 
+	font = "Roboto", 
 	size = ScreenScale( 40 ), 
-	weight = 100,
+	weight = 1000,
 	antialias = false,
 	extended = false,
 	shadow = true,
 })
 
 surface.CreateFont("rps_font_105", {
-	font = "Cambria", 
+	font = "Roboto", 
 	size = ScreenScale( 25 ), 
-	weight = 100,
+	weight = 1000,
 	antialias = false,
 	extended = false,
 	shadow = true,
 })
 
 surface.CreateFont("rps_font_11", {
-	font = "Cambria", 
+	font = "Roboto", 
 	size = ScreenScale( 8 ), 
-	weight = 0,
+	weight = 1000,
 	antialias = true,
 	extended = true,
 })
 
 surface.CreateFont("rps_font_12", {
-	font = "Cambria", 
+	font = "Roboto", 
 	size = ScreenScale( 9 ), 
-	weight = 0,
+	weight = 1000,
 	antialias = true,
 	extended = true,
 })
 
 surface.CreateFont("rps_font_13", {
-	font = "Cambria", 
+	font = "Roboto", 
 	size = ScreenScale( 6 ), 
-	weight = 200,
+	weight = 1000,
 	antialias = true,
 	extended = true,
 })
-
-
-
-
-
-
-

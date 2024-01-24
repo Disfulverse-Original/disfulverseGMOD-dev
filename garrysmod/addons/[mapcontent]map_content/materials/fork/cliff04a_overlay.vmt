@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "fork/cliff04a_overlay"
+	"$translucent" 1
+	"$decal" 1
+	"$vertexcolor" "1"
+	"$vertexalpha" "1"
+}

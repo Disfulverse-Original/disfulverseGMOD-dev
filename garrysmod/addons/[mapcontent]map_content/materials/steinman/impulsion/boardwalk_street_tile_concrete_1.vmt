@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "steinman/impulsion/boardwalk_street_tile_concrete_1"
+	"$bumpmap" "steinman/impulsion/boardwalk_street_tile_concrete_normal"
+	"$surfaceprop" "concrete"
+}

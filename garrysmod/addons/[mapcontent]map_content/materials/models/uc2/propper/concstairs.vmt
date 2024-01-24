@@ -1,0 +1,6 @@
+vertexlitgeneric
+{
+$basetexture "unioncity2/miscellaneous/concstairs"
+$color "[.8 .8 .8]"
+$surfaceprop concrete
+}

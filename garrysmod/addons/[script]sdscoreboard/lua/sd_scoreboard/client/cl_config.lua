@@ -3,14 +3,14 @@
 ----------------------------------------------------------------------------------------
 -- Scoreboard version --
 ------------------------
-SD_SCOREBOARD_GMS.Ver = "1.0.5"
+SD_SCOREBOARD_GMS.Ver = "1.1.5"
 -----------
 -- fonts --
 -----------
-surface.CreateFont( "sd_scoreboard_14_100", { font = "Kanit Light", extended  = true, antialias = true, shadow = false, weight = 600, size = 18})
-surface.CreateFont( "sd_scoreboard_16_100", { font = "Kanit Light", extended  = true, antialias = true, shadow = false, weight = 600, size = 20})
-surface.CreateFont( "sd_scoreboard_25_100", { font = "Kanit Light", extended  = true, antialias = true, shadow = false, weight = 600, size = 25})
-surface.CreateFont( "sd_scoreboard_20_100", { font = "Kanit Light", extended  = true, antialias = true, shadow = false, weight = 600, size = 20})
+surface.CreateFont( "sd_scoreboard_14_100", { font = "Roboto", extended  = true, antialias = true, shadow = false, weight = 500, size = 18}) 
+surface.CreateFont( "sd_scoreboard_16_100", { font = "Roboto", extended  = true, antialias = true, shadow = false, weight = 500, size = 20})
+surface.CreateFont( "sd_scoreboard_25_100", { font = "Roboto", extended  = true, antialias = true, shadow = false, weight = 500, size = 25})
+surface.CreateFont( "sd_scoreboard_20_100", { font = "Roboto", extended  = true, antialias = true, shadow = false, weight = 500, size = 20})
 -------------
 -- ConVars --
 -------------
@@ -19,7 +19,7 @@ CreateConVar("sd_scoreboard_fullscreen", 0, FCVAR_ARCHIVE, "Fullscreen")
 CreateConVar("sd_scoreboard_scheme", 2, FCVAR_ARCHIVE, "Color scheme")
 CreateConVar("sd_scoreboard_language", 1, FCVAR_ARCHIVE, "Language")
 ----------
--- Tabs --
+-- Tabs --												
 ----------
 SD_SCOREBOARD_GMS.Tabs = {
 	{

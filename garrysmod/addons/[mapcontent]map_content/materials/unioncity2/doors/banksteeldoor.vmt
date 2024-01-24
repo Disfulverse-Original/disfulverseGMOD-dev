@@ -1,0 +1,15 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "unioncity2/doors/banksteeldoor"
+	
+	$bumpmap "unioncity2/doors/banksteeldoor_n"
+	
+	$envmap env_cubemap
+	$normalmapalphaenvmapmask 1
+	$envmaptint "[.5 .5 .5]"
+	$fresnelreflection 70
+	$envmapcontrast 1.01
+	$envmapsaturation .7
+	
+	$surfaceprop metal_box
+}

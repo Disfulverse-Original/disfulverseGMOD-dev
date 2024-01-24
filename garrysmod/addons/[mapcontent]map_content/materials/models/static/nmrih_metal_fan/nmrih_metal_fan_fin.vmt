@@ -1,0 +1,8 @@
+"vertexlitgeneric"
+{
+	"$baseTexture" "models\static\nmrih_metal_fan\nmrih_metal_fan_fin"
+	"$envmapmask" "models\static\nmrih_metal_fan\nmrih_metal_fan_fin_specular"
+	"$envmap" "env_cubemap"
+
+}
+

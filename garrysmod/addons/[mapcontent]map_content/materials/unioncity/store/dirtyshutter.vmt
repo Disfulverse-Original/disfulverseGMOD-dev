@@ -1,0 +1,14 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "unioncity/store/dirtyshutter"
+	"$bumpmap" "unioncity/store/dirtyshutter_n"
+
+	$envmap env_cubemap
+	$normalmapalphaenvmapmask 1
+	$envmaptint "[0.3 0.3 0.3]"
+	
+	%compilepassbullets 1
+	
+	$surfaceprop metal
+	$alphatest 1
+}

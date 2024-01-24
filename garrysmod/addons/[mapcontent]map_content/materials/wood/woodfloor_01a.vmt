@@ -1,0 +1,16 @@
+"LightMappedGeneric"
+{
+	"$basetexture"	"wood/WoodFloor_01a"	
+	"$surfaceprop" "wood"
+
+//DX9:
+	"LightmappedGeneric_DX9"
+	{
+
+
+		"$bumpmap" "wood/WoodFloor_01a_normal"
+
+
+	}
+
+}

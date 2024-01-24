@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/props_street/gutter"
+	$bumpmap "models/props_street/gutter_n"
+}

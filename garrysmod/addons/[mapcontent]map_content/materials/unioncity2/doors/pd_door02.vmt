@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "unioncity2/doors/pd_door02"
+
+	$surfaceprop wood
+}

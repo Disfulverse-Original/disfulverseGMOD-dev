@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "unioncity/church/wooden_floor_diff"
+	$surfaceprop wood
+}

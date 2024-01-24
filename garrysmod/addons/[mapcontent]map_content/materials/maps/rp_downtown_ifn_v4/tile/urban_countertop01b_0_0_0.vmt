@@ -1,0 +1,8 @@
+"patch"
+{
+	"include"		"materials/TILE/URBAN_COUNTERTOP01B.vmt"
+	"replace"
+	{
+		"$envmap"		"maps/rp_downtown_ifn_v4/c0_0_0"
+	}
+}

@@ -1,0 +1,7 @@
+"LightmappedGeneric"
+{
+$basetexture "unioncity/ceiling/carparkceiling"
+$color "[.5 .5 .5]"
+
+$surfaceprop concrete
+}

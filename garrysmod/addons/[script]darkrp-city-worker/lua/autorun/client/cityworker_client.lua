@@ -64,4 +64,4 @@ net.Receive( "CITYWORKER.RemoveTask", function()
     hook.Remove( "HUDPaint", "CITYWORKER.Task.HUDPaint" )
 end )
 
-surface.CreateFont( "FontCitywork", { font = "Cambria", extended  = true, antialias = true, shadow = false, blursize = 0, weight = 1000, size = 20})
+surface.CreateFont( "FontCitywork", { font = "Roboto", extended  = true, antialias = true, shadow = false, blursize = 0, weight = 1000, size = 20})

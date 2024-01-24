@@ -1,0 +1,5 @@
+"lightmappedGeneric"
+{
+	"$basetexture" "gmod_tower/virus/facility2/tile_ceiling"
+	"$surfaceprop" "plaster"
+}

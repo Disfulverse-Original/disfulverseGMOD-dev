@@ -1,0 +1,7 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "animeworld/city/road0"
+	$surfaceprop concrete
+	
+	// by feromon
+}

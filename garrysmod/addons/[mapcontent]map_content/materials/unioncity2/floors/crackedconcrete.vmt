@@ -1,0 +1,11 @@
+"LightmappedGeneric"
+{
+$basetexture "unioncity2/floors/crackedconcrete"
+
+$detail "detail/azur_concrete_detail_01"
+	$detailscale .7
+	$detailblendfactor 5
+	$color "[.4 .4 .4]"
+
+$surfaceprop concrete
+}

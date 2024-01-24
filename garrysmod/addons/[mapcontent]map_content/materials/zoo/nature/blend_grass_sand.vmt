@@ -1,0 +1,12 @@
+WorldVertexTransition
+{
+	$basetexture "zoo/nature/grass01"
+	$bumpmap "zoo/nature/grass01n"
+	$surfaceprop Grass
+
+	$basetexture2 "zoo/nature/sand02"
+	$bumpmap2 "zoo/nature/sand02n"
+	$surfaceprop2 Dirt
+
+	$blendmodulatetexture "zoo/concrete/blend01"
+}

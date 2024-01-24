@@ -1,0 +1,7 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "unioncity2/floors/floorsquares"
+
+	$color "[.95 1 1.05]"
+	$surfaceprop tile
+}

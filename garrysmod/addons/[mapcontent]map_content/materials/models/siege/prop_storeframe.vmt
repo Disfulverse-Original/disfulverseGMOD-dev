@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+
+	 $model "1"
+	 $basetexturetransform "center 0.5 0.5 scale 1.0 1.0 rotate 0.0 translate 0.0 0.0"
+	 $envmapmasktransform "center 0.5 0.5 scale 1.0 1.0 rotate 0.0 translate 0.0 0.0"
+	 $basetexture "models/siege/D_prop_storeFrame"
+	 $envmap "env_cubemap"
+	 $envmapmask "models/siege/S_prop_storeFrame"
+	 $envmaptint "[.4 .4 .4]"
+	 $envmapcontrast ".4"
+}

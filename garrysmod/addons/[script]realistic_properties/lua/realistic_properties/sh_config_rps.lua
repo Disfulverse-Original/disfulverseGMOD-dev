@@ -54,7 +54,7 @@ Realistic_Properties.DeliverySystem = true -- true == Activate / false == Desact
 
 Realistic_Properties.SaveProps = true -- Save props when the property is rented 
 
-Realistic_Properties.SpawnProps = false -- Desactivate = false / Activate = true spawn props outside property
+Realistic_Properties.SpawnProps = true -- Desactivate = false / Activate = true spawn props outside property
 
 Realistic_Properties.MaxRentalDay = 25 -- Max Rental Day
 
@@ -97,7 +97,7 @@ Realistic_Properties.EntityCompatibility = { -- Here is the entity which is comp
 
 Realistic_Properties.JobCanSpawnProps = { -- Which job can spawn props outside his property when the Realistic_Properties.SpawnProps = false 
     ["Отдел Disag"] = true,
-    ["Staff"] = true,
+    ["Отдел поддержки [ADM]"] = true,
 }
 
 Realistic_Properties.PropertiesDelivery = true -- If when the player don't have property he can buy an entity ( The entity will spawn on him )
@@ -108,8 +108,13 @@ Realistic_Properties.BuyEntitiesWithoutProperties = { -- Which job can buy entit
 }
 
 Realistic_Properties.PoliceJob = { -- Police Job which can see the owner of property 
-    ["Civil Protection"] = true,
-    ["Civil Protection Chef"] = true,
+    ["Отдел Контрразведки MI5"] = true,
+    ["Администратор города [WL]"] = true,
+    ["Детектив"] = true, 
+    ["Отдел Disag [Dis+]"] = true,
+    ["Спецназ CTSFO"] = true,
+    ["Патрульная полиция"] = true,
+    ["Отдел поддержки [ADM]"] = true,
 }
 
 Realistic_Properties.AdminRank = { -- Admin rank 

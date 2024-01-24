@@ -233,22 +233,22 @@ function CITYWORKER.Stop( ply, ent )
     ent.CW_isWorked = false
 end
 
--- Finishing an action successfully. BRICK ESSE INTEGRATION DISFULVERS EDITION
-function CITYWORKER.Finish( ply, ent )
+-- Finishing an action successfully.
+function CITYWORKER.Finish(ply, ent)
     if not ply.CW_isWorking then return end
 
     local pay = ent.time * CITYWORKER.Config[CITYWORKER_DEFINITIONS[ent:GetClass()][1]].Payout
 
-    ply:AddExperience( BRICKS_SERVER.CONFIG.LEVELING["EXP Gained - CityWorker"], "Work Success" )
+    ply:AddExperience(BRICKS_SERVER.CONFIG.LEVELING["EXP Gained - CityWorker"], "Work Success")
 
-    CITYWORKER.Stop( ply, ent )
-    
-    CITYWORKER.Remove( ply )
+    CITYWORKER.Stop(ply, ent)
 
-    local str = string.Replace( CITYWORKER.Config.Language["PAYOUT"], "%s", DarkRP.formatMoney( pay ) )
-    DarkRP.notify( ply, NOTIFY_CLEANUP, 4, str )
+    CITYWORKER.Remove(ply)
 
-    hook.Run( "CITYWORKER.Finish", ply )
+    local str = string.Replace(CITYWORKER.Config.Language["PAYOUT"], "%s", DarkRP.formatMoney(pay))
+    DarkRP.notify(ply, NOTIFY_CLEANUP, 4, str)
+
+    hook.Run("CITYWORKER.Finish", ply)
 end
 
 -- Cancelling a city worker action

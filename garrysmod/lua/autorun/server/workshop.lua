@@ -12,6 +12,3 @@ resource.AddWorkshop ( "2926057708" ) --cmenu content
 resource.AddWorkshop ( "2986127962" ) --map content
 resource.AddWorkshop ( "2986120857" ) --map 
 resource.AddWorkshop( "708845241" ) -- Revival Player Defibrillator | DarkRP Friendly
-resource.AddWorkshop( "3023155302" ) -- The Advanced Hand Swep
-resource.AddWorkshop( "2567098902" ) -- Advanced Accessory System content
-resource.AddWorkshop( "852839002" ) -- Onyx Framework [Resources] CREDIT STORE

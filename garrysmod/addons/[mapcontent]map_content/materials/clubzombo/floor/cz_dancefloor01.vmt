@@ -1,0 +1,23 @@
+"LightmappedGeneric"
+{
+	"$baseTexture" "clubzombo\floor\CZ_dancefloor01"
+	"$surfaceprop" "tile"
+	"$selfillum" "1"
+	$selfillumtint "[4 3 4]"
+	"$bumpmap" "clubzombo/floor/CZ_dancefloor01_ssbump"
+    "$ssbump" "1"
+	"$normalmapalphaenvmapmask" 1
+	"$envmaptint" "[ .24 .24 .24 ]"
+	"$envmap" "env_cubemap"
+	"Proxies" 
+       { 
+         "AnimatedTexture" 
+         { 
+            "animatedTextureVar" "$basetexture" 
+            "animatedTextureFrameNumVar" "$frame" 
+            "animatedTextureFrameRate" "0.3" 
+         }
+    } 
+ }
+
+

@@ -1,0 +1,6 @@
+UnlitGeneric
+{
+$basetexture "Models/props_debris/composite_debris"
+$surfaceprop concrete
+//	"$color" "[ 2 0.9 2 ]"
+}

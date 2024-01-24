@@ -21,7 +21,7 @@ end
 
 surface.CreateFont ("ahud_top", {
     size = 30 * (ahud.overheadScale or 1),
-    font = "Cambria",
+    font = "Roboto",
     weight = 1000
 })
 

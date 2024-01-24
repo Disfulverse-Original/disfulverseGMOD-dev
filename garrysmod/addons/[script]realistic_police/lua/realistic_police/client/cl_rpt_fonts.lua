@@ -50,7 +50,7 @@ surface.CreateFont("rpt_font_5", {
 })
 
 surface.CreateFont("rpt_font_6", {
-  font = "Circular Std Medium",
+  font = "Roboto",
   size = 22.5*(ScrH()/1080),
   weight = 0,
   antialias = true,
@@ -58,7 +58,7 @@ surface.CreateFont("rpt_font_6", {
 })
 
 surface.CreateFont("rpt_font_7", {
-  font = "Circular Std Medium",
+  font = "Roboto",
   size = ScrH()*0.021,
   weight = 0,
   antialias = true,
@@ -66,7 +66,7 @@ surface.CreateFont("rpt_font_7", {
 })
 
 surface.CreateFont("rpt_font_8", {
-  font = "Circular Std Medium",
+  font = "Roboto",
   size = 20*(ScrH()/1080),
   weight = 0,
   antialias = true,
@@ -74,7 +74,7 @@ surface.CreateFont("rpt_font_8", {
 })
 
 surface.CreateFont("rpt_font_9", {
-  font = "Circular Std Medium",
+  font = "Roboto",
   size = 24*(ScrH()/1080),
   weight = 0,
   antialias = true,
@@ -82,7 +82,7 @@ surface.CreateFont("rpt_font_9", {
 })
 
 surface.CreateFont("rpt_font_10", {
-  font = "Circular Std Medium",
+  font = "Roboto",
   size = 36*(ScrH()/1080),
   weight = 0,
   antialias = true,
@@ -90,7 +90,7 @@ surface.CreateFont("rpt_font_10", {
 })
 
 surface.CreateFont("rpt_font_11", {
-  font = "Circular Std Medium",
+  font = "Roboto",
   size = 21*(ScrH()/1080),
   weight = 0,
   antialias = true,
@@ -98,7 +98,7 @@ surface.CreateFont("rpt_font_11", {
 })
 
 surface.CreateFont("rpt_font_12", {
-  font = "Circular Std Medium",
+  font = "Roboto",
   size = 75*(ScrH()/1080),
   weight = 0,
   antialias = true,
@@ -106,7 +106,7 @@ surface.CreateFont("rpt_font_12", {
 })
 
 surface.CreateFont("rpt_font_13", {
-  font = "Circular Std Medium",
+  font = "Roboto",
   size = 45*(ScrH()/1080),
   weight = 0,
   antialias = true,
@@ -114,7 +114,7 @@ surface.CreateFont("rpt_font_13", {
 })
 
 surface.CreateFont("rpt_font_14", {
-  font = "Circular Std Medium",
+  font = "Roboto",
   size = 15*(ScrH()/1080),
   weight = 0,
   antialias = true,
@@ -122,7 +122,7 @@ surface.CreateFont("rpt_font_14", {
 })
 
 surface.CreateFont("rpt_font_15", {
-  font = "Circular Std Medium",
+  font = "Roboto",
   size = 24*(ScrH()/1080),
   weight = 0,
   antialias = true,
@@ -130,7 +130,7 @@ surface.CreateFont("rpt_font_15", {
 })
 
 surface.CreateFont("rpt_font_16", {
-  font = "Circular Std Medium",
+  font = "Roboto",
   size = 15*(ScrH()/1080),
   weight = 0,
   antialias = true,
@@ -138,7 +138,7 @@ surface.CreateFont("rpt_font_16", {
 })
 
 surface.CreateFont("rpt_font_17", {
-  font = "Circular Std Medium",
+  font = "Roboto",
   size = 21*(ScrH()/1080),
   weight = 550,
   antialias = true,
@@ -146,7 +146,7 @@ surface.CreateFont("rpt_font_17", {
 })
 
 surface.CreateFont("rpt_font_18", {
-  font = "Circular Std Medium", 
+  font = "Roboto", 
   size = 24*(ScrH()/1080), 
   weight = 0,
   antialias = true,
@@ -154,7 +154,7 @@ surface.CreateFont("rpt_font_18", {
 })
 
 surface.CreateFont("rpt_font_19", {
-  font = "Circular Std Medium", 
+  font = "Roboto", 
   size = 18*(ScrH()/1080), 
   weight = 0,
   antialias = true,
@@ -178,7 +178,7 @@ surface.CreateFont("rpt_font_21", {
 })
 
 surface.CreateFont("rpt_font_22", {
-  font = "Circular Std Medium",
+  font = "Roboto",
   size = 180*(ScrH()/1080),
   weight = 0,
   blursize = 0,
@@ -188,7 +188,7 @@ surface.CreateFont("rpt_font_22", {
 })
 
 surface.CreateFont("rpt_font_23", {
-  font = "Circular Std Medium",
+  font = "Roboto",
   size = 80*(ScrH()/1080),
   weight = 0,
   blursize = 0,
@@ -198,7 +198,7 @@ surface.CreateFont("rpt_font_23", {
 })
 
 surface.CreateFont("rpt_notify_24", {
-	font = "Arial", 
+	font = "Roboto", 
 	size = 100*(ScrH()/1080), 
 	weight = 1000,
 	antialias = true,

@@ -1,0 +1,18 @@
+"LightMappedGeneric"
+{
+      "$basetexture" "contagion/biotec/wall_biotec_008"
+      
+      // NORMAL MAP
+     "$bumpmap" "contagion/biotec/wall_biotec_008_norm"
+
+      // SPECULAR MAP
+      "$envmap" "env_cubemap"
+      "$normalmapalphaenvmapmask" "1"
+      "$envmaptint" "[.1 .1 .1]"
+      "$envmapcontrast" "0.6"
+
+      // EXTRA PARAMETERS
+      "$surfaceprop" "concrete"
+      "%keywords" "cont, biotec, concrete"
+}
+

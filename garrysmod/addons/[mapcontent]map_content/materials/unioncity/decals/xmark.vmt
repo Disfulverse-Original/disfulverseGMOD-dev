@@ -1,0 +1,10 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "unioncity/decals/xmark"
+	
+	
+	$decal 1
+	$translucent 1
+	
+
+}

@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/props_church/chandelier_d"
+	$alphatest 1
+	$alphatestreference .2
+	$nocull 1
+}
