@@ -98,12 +98,25 @@ function CRATE_StartRobbery( ply, crate )
 			if ply.IsRobbingCrate then
 				CRATE_RobberyFinished( true )		
 				ply.IsRobbingCrate = false
-				
+
+				--ply:ChatPrint("string messagepre")		
+
+				if CH_SupplyCrate.Config.SublimeLevelSystemEnabled then
+					ply:SL_AddExperience( CH_SupplyCrate.Config.XPSuccessfulRobbery, "for successfully robbing the supply crate.")
+					--ply:ChatPrint("string messagesublime")
+					--ply:ChatPrint(CH_SupplyCrate.Config.XPSuccessfulRobbery)
+				end
+
+				if CH_SupplyCrate.Config.BricksLevelSystemEnabled then
+					ply:AddExperience(BRICKS_SERVER.CONFIG.LEVELING["EXP Gained - ROBBERY SUCCESS"], "Robbery")
+					--ply:ChatPrint("string messagebrics")
+				end
+						
 				timer.Simple( 6, function()
 					if IsValid( ply ) then
 						DarkRP.notify( ply, 1, 5, CH_SupplyCrate.Config.Lang["Congratulations! You have successfully robbed the supply crate."][CH_SupplyCrate.Config.Language] )
 						DarkRP.notify( ply, 1, 5, CH_SupplyCrate.Config.Lang["The entirety of the supply crates loot has dropped. Collect it before the cops get it!"][CH_SupplyCrate.Config.Language] )
-						
+						--ply:ChatPrint("string messagefinal")						
 						-- Reward Money
 						if CH_SupplyCrate.Config.EnableMoneyLoot then
 							CRATE_SpawnMoneyBag( ply )
@@ -126,15 +139,13 @@ function CRATE_StartRobbery( ply, crate )
 						
 						-- XP System Support
 						-- Give experience support for Vronkadis DarkRP Level System
+						--[[
 						if CH_SupplyCrate.Config.DarkRPLevelSystemEnabled then
 							ply:addXP( CH_SupplyCrate.Config.XPSuccessfulRobbery, true )
 						end
-						
+						--]]
 						-- Give experience support for Sublime Levels
-						if CH_SupplyCrate.Config.SublimeLevelSystemEnabled then
-							ply:SL_AddExperience( CH_SupplyCrate.Config.XPSuccessfulRobbery, "for successfully robbing the supply crate.")
-						end
-						
+
 						-- Network armorys content (reset it after succesful robbery)
 						CH_SupplyCrate.Content.Money = 0
 						CH_SupplyCrate.Content.Shipments = 0
