@@ -28,7 +28,6 @@ function PANEL:Init()
 	self:SetDrawOnTop(true)
     self:SetDeleteSelf(true)
     self:SetVisible(false)
-    self:SetBackgroundBlur( true )
     self:SetMinimumWidth(onyx.ScaleWide(120))
 
     local padding = onyx.ScaleTall(2)
