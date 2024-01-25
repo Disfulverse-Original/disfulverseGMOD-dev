@@ -12,7 +12,7 @@ function Sublime.Player:SL_AddExperience(amount, source, notify, shouldMultiply,
     shouldMultiply = shouldMultiply == nil and true or shouldMultiply;
     
     local playersNeeded = Sublime.Settings.Get("other", "needed_on_server_before_xp", "number");
-    if (player.GetCount() < playersNeeded and not force) then
+    if (player.GetCount() <= playersNeeded and not force) then
         return false;
     end
 

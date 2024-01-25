@@ -11,32 +11,32 @@ Sublime.Settings = Sublime.Settings or {};
 Sublime.Settings.Table = Sublime.Settings.Table or {
     ["SERVER"] = {
         ["kills"] = {
-            ["player_on_kill_experience"]   = 0,
-            ["headshot_modifier"]           = 1,
-            ["npc_on_kill_experience"]      = 0,
+            ["player_on_kill_experience"]   = 150,
+            ["headshot_modifier"]           = 1.2,
+            ["npc_on_kill_experience"]      = 100,
         },
         
         ["other"] = {
-            ["vip_modifier"]                = 0,
-            ["max_level"]                   = 45,
-            ["xp_for_playing_when"]         = 1800,
-            ["xp_for_playing"]              = 250,
-            ["needed_on_server_before_xp"]  = 5,
+            ["vip_modifier"]                = 2,
+            ["max_level"]                   = 99,
+            ["xp_for_playing_when"]         = 600,
+            ["xp_for_playing"]              = 25,
+            ["needed_on_server_before_xp"]  = 0,
             ["skills_enabled"]              = true,
             ["should_broadcast_levelup"]    = true,
             ["chat_command"]                = "slevels",
             ["sound_on_level"]              = "",
             ["sound_on_xp"]                 = "",
-            ["chat_prefix"]                 = "[Disfulverse Levels]",
-            ["disable_notifications"]       = true,
+            ["chat_prefix"]                 = "[Sublime Levels]",
+            ["disable_notifications"]       = false,
             ["debug_enabled"]               = false,
         },
 
         ["darkrp"] = {
-            ["lottery_winner"]      = 100,
-            ["hitman_completed"]    = 0,
-            ["player_arrested"]     = 0,
-            ["player_taxed"]        = 0,
+            ["lottery_winner"]      = 2000,
+            ["hitman_completed"]    = 300,
+            ["player_arrested"]     = 75,
+            ["player_taxed"]        = 25,
         },
 
         ["ttt"] = {
