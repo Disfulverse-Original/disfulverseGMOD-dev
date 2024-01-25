@@ -1,5 +1,0 @@
-Sun Jan 21 20:27:29 2024	snvlp (STEAM_0:1:96399332) has joined the game
-Sun Jan 21 20:27:29 2024	snvlp (STEAM_0:1:96399332) spawned
-Sun Jan 21 20:30:09 2024	Lucas Rodriger (STEAM_0:1:96399332) spawned SENT ecl_stove
-Sun Jan 21 20:30:11 2024	Lucas Rodriger (STEAM_0:1:96399332) spawned SENT ecl_gas
-Sun Jan 21 20:30:12 2024	Lucas Rodriger (STEAM_0:1:96399332) spawned SENT ecl_pot

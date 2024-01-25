@@ -1,1 +1,0 @@
-{"essentials":[true,{"f4menu":true,"marketplace":true,"zones":true,"printers":true,"deathscreens":false,"swepupgrader":true,"crafting":true,"inventory":true,"logging":true,"boss":true,"boosters":true,"hud":false,"levelling":true}],"default":[true,{"currencies":true}]}

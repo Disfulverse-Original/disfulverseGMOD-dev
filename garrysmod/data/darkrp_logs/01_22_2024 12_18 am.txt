@@ -1,5 +1,0 @@
-Mon Jan 22 00:18:30 2024	snvlp (STEAM_0:1:96399332) has joined the game
-Mon Jan 22 00:18:30 2024	snvlp (STEAM_0:1:96399332) spawned
-Mon Jan 22 00:19:14 2024	Lucas Rodriger (STEAM_0:1:96399332) disconnected
-Mon Jan 22 00:19:26 2024	snvlp (STEAM_0:1:96399332) has joined the game
-Mon Jan 22 00:19:26 2024	snvlp (STEAM_0:1:96399332) spawned
