@@ -66,6 +66,7 @@ hook.Add("DoPlayerDeath", "RevivalDeathInfo", function(ply, attacker, dmginfo)
 
 	ply.LastDeathTime = CurTime()
 	
+	--checkifdeath = true
 	--The weapon the player is holding when they die
 	if IsValid( ply:GetActiveWeapon() ) then
 		ply.ReviveActiveWeapon = ply:GetActiveWeapon():GetClass()
@@ -146,7 +147,7 @@ end)
 --Handles giving players health, ammo, and weapons when they are revived
 hook.Add( "PlayerLoadout", "RevivalLoadout", function( ply )
 	if ( not ply.BeingRevived or not IsValid( ply ) ) then return end
-	
+
 	ply.BeingRevived = nil
 	ply:StripAmmo()
 	ply:SetHealth( 10 )
@@ -169,7 +170,6 @@ end)
 
 
 if CLIENT then
-
 	--Handles hiding the clientside corpse.  It's gross, but here we are.
 	hook.Add( "OnEntityCreated", "RevivalClientRagdollRemove", function( ent )
 		if not GetConVar( "revival_enabled" ):GetBool() then return end

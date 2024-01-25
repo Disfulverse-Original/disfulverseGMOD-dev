@@ -76,7 +76,6 @@ end
 function SWEP:PrimaryAttack()
 	local Owner = self:GetOwner()
 	if ( !self:CanPrimaryAttack() ) then return end
-	
 	local bullet = {} 
 	bullet.Num = self.Primary.NumberofShots 
 	bullet.Src = self.Owner:GetShootPos() 

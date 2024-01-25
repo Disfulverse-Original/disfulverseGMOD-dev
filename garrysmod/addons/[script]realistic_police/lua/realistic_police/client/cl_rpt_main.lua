@@ -555,17 +555,17 @@ net.Receive("RealisticPolice:StunGun", function()
     local Players = net.ReadEntity()
     Players.TimerTazerStart = CurTime() + 5
     timer.Simple(0, function()
-        if IsValid(Players) && IsValid(Players:GetRagdollEntity()) then 
-            Phys = Players:GetRagdollEntity():GetPhysicsObject()
+        if IsValid(Players) && IsValid(ragtazz) then 
+            Phys = ragtazz:GetPhysicsObject()
             
-            hook.Add("Think", "RPT:StunGunThink"..Players:EntIndex(), function()
+            hook.Add("Think", "RPT:StunGunThink"..ragtazz:EntIndex(), function()
                 if IsValid(Players) && Players:IsPlayer() then 
                     if Players.TimerTazerStart > CurTime() then 
                         if IsValid(Phys) then 
                             Phys:ApplyForceOffset( Vector(math.random(-40,40),math.random(-40,40),0), Phys:GetPos() + Vector(0,0,50))
                         end 
                     else 
-                        hook.Remove("Think", "RPT:StunGunThink"..Players:EntIndex())
+                        hook.Remove("Think", "RPT:StunGunThink"..ragtazz:EntIndex())
                     end 
                 end 
             end )

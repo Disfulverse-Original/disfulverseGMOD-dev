@@ -219,41 +219,55 @@ function Realistic_Police.Tazz(ply)
     if not IsValid(ply) or not ply:IsPlayer() then return end 
     if timer.Exists("rpt_stungun_unfreeze"..ply:EntIndex()) then return end 
 
+    local ragtazz = ents.Create("prop_ragdoll")
+    ragtazz:SetPos(ply:GetPos())
+    ragtazz:SetModel(ply:GetModel())
+    ragtazz:SetAngles(ply:GetAngles())
+    ragtazz:SetColor(ply:GetColor())
+    ragtazz.BodyOf = ply
+    ragtazz:Spawn()
+    ragtazz:Activate()
+    ragtazz:SetCollisionGroup(COLLISION_GROUP_DEBRIS_TRIGGER)
+
+
+    ply:Spectate( OBS_MODE_CHASE )
+    ply:SpectateEntity( ragtazz )
+
     -- Save info of the player 
     Realistic_Police.SaveLoadInfo(ply, true, true)
 
-    -- Create the Ragdoll Player 
+    --[[ Create the Ragdoll Player 
     ply:CreateRagdoll()
     timer.Simple(0, function()
-        ply:Spectate( OBS_MODE_CHASE )
-        ply:SpectateEntity( ply:GetRagdollEntity() )
+
         ply:StripWeapons()
         ply:StripAmmo()
     end ) 
+    --]]
+
 
     if IsValid(ply.WeaponRPT["DragedBy"]) then 
         ply.WeaponRPT["DragedBy"] = nil 
     end 
     
     -- Send the animation of the corpse 
-    timer.Create("rpt_stungun_send"..ply:EntIndex(), 1, 1, function()
+    timer.Create("rpt_stungun_send"..ragtazz:EntIndex(), 1, 1, function()
         if IsValid(ply) then 
             net.Start("RealisticPolice:StunGun")
-                net.WriteEntity(ply)
+                net.WriteEntity(ragtazz)
             net.Broadcast()
         end 
     end ) 
 
     -- Timer when the player is not stun 
-    timer.Create("rpt_stungun"..ply:EntIndex(), 5, 1, function()
+    timer.Create("rpt_stungun"..ragtazz:EntIndex(), 5, 1, function()
         if IsValid(ply) then 
 
             -- Unspectacte and Freeze player 
             ply:UnSpectate()
             ply:Spawn()
-
-            if IsValid(ply:GetRagdollEntity()) then 
-                ply:GetRagdollEntity():Remove()
+            if IsValid(ragtazz) then 
+                ragtazz:Remove()
             end 
 
             Realistic_Police.SaveLoadInfo(ply)
