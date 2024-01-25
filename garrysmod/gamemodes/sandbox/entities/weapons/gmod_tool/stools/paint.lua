@@ -1,4 +1,4 @@
-
+TOOL.AddToMenu = false
 TOOL.Category = "Render"
 TOOL.Name = "#tool.paint.name"
 

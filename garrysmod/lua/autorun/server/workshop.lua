@@ -11,4 +11,5 @@ resource.AddWorkshop ( "2567098902" ) --accessory
 resource.AddWorkshop ( "2926057708" ) --cmenu content
 resource.AddWorkshop ( "2986127962" ) --map content
 resource.AddWorkshop ( "2986120857" ) --map 
-resource.AddWorkshop( "708845241" ) -- Revival Player Defibrillator | DarkRP Friendly
+resource.AddWorkshop( "708845241" ) -- Revival Player Defibrillator | DarkRP Friendly 1911629257
+resource.AddWorkshop( "1911629257" ) --supple

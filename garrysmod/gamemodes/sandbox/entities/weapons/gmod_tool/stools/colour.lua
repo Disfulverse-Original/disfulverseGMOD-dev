@@ -1,5 +1,5 @@
 
-TOOL.Category = "Render"
+TOOL.Category = "Construction"
 TOOL.Name = "#tool.colour.name"
 
 TOOL.ClientConVar[ "r" ] = 255

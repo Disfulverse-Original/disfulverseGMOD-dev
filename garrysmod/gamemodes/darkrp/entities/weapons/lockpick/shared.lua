@@ -9,7 +9,7 @@ end
 
 -- Variables that are used on both client and server
 
-SWEP.PrintName = "Lock Pick"
+SWEP.PrintName = "Отмычка"
 SWEP.Author = "DarkRP Developers"
 SWEP.Instructions = "Left or right click to pick a lock"
 SWEP.Contact = ""

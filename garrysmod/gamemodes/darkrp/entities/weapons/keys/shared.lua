@@ -13,7 +13,7 @@ if CLIENT then
     include("cl_menu.lua")
 end
 
-SWEP.PrintName = "Keys"
+SWEP.PrintName = "Ключи"
 SWEP.Author = "DarkRP Developers"
 SWEP.Instructions = "Left click to lock\nRight click to unlock\nReload for door settings or animation menu"
 SWEP.Contact = ""

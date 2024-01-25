@@ -239,3 +239,10 @@ function GM:OnContextMenuClose()
 	hook.Call( "ContextMenuClosed", self )
 
 end
+
+local function DisallowContextMenu( )
+if not LocalPlayer():IsAdmin() then
+return false
+end
+end
+hook.Add( "ContextMenuOpen", "DisallowContextMenu", DisallowContextMenu)

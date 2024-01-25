@@ -13,9 +13,9 @@ if SERVER then
 	SWEP.AutoSwitchTo = false
 	SWEP.AutoSwitchFrom = false
 else
-	SWEP.PrintName = "Hands"
-	SWEP.Category = "JMod | Advanced"
-	SWEP.Slot = 0
+	SWEP.PrintName = "Руки"
+	SWEP.Category = ""
+	SWEP.Slot = 1
 	SWEP.SlotPos = 1
 	SWEP.DrawAmmo = false
 	SWEP.DrawCrosshair = false

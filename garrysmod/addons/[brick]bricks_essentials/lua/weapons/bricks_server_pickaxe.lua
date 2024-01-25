@@ -1,5 +1,5 @@
 if CLIENT then
-	SWEP.PrintName = "Pickaxe"
+	SWEP.PrintName = "Кирка"
 	SWEP.Slot = 1
 	SWEP.SlotPos = 5
 	SWEP.DrawAmmo = false

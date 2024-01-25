@@ -1,5 +1,5 @@
 
-TOOL.Category = "Render"
+TOOL.Category = "Construction"
 TOOL.Name = "#tool.camera.name"
 
 TOOL.ClientConVar[ "locked" ] = "0"

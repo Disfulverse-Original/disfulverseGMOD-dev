@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
 if CLIENT then
-    SWEP.PrintName = "Inventory Pickup"
+    SWEP.PrintName = "Инвентарь"
     SWEP.Slot = 1
     SWEP.SlotPos = 1
     SWEP.DrawAmmo = false

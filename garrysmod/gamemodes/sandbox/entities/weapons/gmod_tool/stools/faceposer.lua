@@ -1,4 +1,4 @@
-
+TOOL.AddToMenu = false
 TOOL.Category = "Poser"
 TOOL.Name = "#tool.faceposer.name"
 

@@ -1,4 +1,4 @@
-
+TOOL.AddToMenu = false
 TOOL.Category = "Construction"
 TOOL.Name = "#tool.emitter.name"
 

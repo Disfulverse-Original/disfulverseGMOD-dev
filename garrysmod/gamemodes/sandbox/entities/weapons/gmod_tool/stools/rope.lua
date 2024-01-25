@@ -1,4 +1,4 @@
-
+TOOL.AddToMenu = false
 TOOL.Category = "Constraints"
 TOOL.Name = "#tool.rope.name"
 

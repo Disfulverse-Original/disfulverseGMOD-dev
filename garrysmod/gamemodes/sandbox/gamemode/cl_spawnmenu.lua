@@ -101,10 +101,10 @@ end
 -----------------------------------------------------------]]
 function GM:AddGamemodeToolMenuCategories()
 
-	spawnmenu.AddToolCategory( "Main", "Constraints",	"#spawnmenu.tools.constraints" )
-	spawnmenu.AddToolCategory( "Main", "Construction",	"#spawnmenu.tools.construction" )
-	spawnmenu.AddToolCategory( "Main", "Poser",			"#spawnmenu.tools.posing" )
-	spawnmenu.AddToolCategory( "Main", "Render",		"#spawnmenu.tools.render" )
+--	spawnmenu.AddToolCategory( "Main", "Constraints",	"#spawnmenu.tools.constraints" )
+--	spawnmenu.AddToolCategory( "Main", "Construction",	"#spawnmenu.tools.construction" )
+--	spawnmenu.AddToolCategory( "Main", "Poser",			"#spawnmenu.tools.posing" )
+--	spawnmenu.AddToolCategory( "Main", "Render",		"#spawnmenu.tools.render" )
 
 end
 

@@ -1,5 +1,5 @@
-
-TOOL.Category = "Constraints"
+TOOL.AddToMenu = false
+TOOL.Category = "Construction"
 TOOL.Name = "#tool.axis.name"
 
 TOOL.ClientConVar[ "forcelimit" ] = 0

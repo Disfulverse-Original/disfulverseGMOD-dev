@@ -1,5 +1,5 @@
 
-TOOL.Category = "Render"
+TOOL.Category = "Construction"
 TOOL.Name = "#tool.material.name"
 
 TOOL.ClientConVar[ "override" ] = "debug/env_cubemap_model"

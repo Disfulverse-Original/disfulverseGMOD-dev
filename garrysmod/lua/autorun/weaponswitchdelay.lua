@@ -1,16 +1,3 @@
-/*----------------------------------------------------------------------
-Leak by Famouse
-
-Play good games:↓
-http://store.steampowered.com/curator/32364216
-
-Subscribe to the channel:↓
-www.youtube.com/c/Famouse
-
-More leaks in the discord:↓ 
-discord.gg/rFdQwzm
-------------------------------------------------------------------------*/
-
 -- SETTINGS
 
 -- Time to equip the weapon in seconds.
@@ -24,7 +11,7 @@ local CountdownTimerDecimals = 1.5
 -- View model when player is switching weapons.
 local ShouldViewModel = true
 -- If ShouldViewModel is true then it will show this model.
-local WeaponSwitchModel = "models/weapons/w_pist_elite.mdl"
+local WeaponSwitchModel = "models/weapons/w_defuser.mdl"
 
 -- Key to cancel the switching. If you want to disable this change it to nil.
 local SwitchingCancelKey = IN_RELOAD
@@ -42,9 +29,9 @@ local function SendChatMessage( ply, weaponName )
 	-- Server side, so make sure to use server sided stuff only.
 	
 	if DarkRP then
-		ply:ConCommand( "say /me pulls out a " .. weaponName .. "!" )
+		ply:ConCommand( "say /me достал " .. weaponName .. "!" )
 	else
-		ply:ChatPrint( "Switched to " .. weaponName .. "!" )
+		ply:ChatPrint( "Сменил на " .. weaponName .. "!" )
 	end
 	
 end
@@ -55,15 +42,7 @@ local FAS_Temp_Fix = false
 
 -- Weapons that will skip the timer.
 local Whitelist = {
-	"weapon_physgun",
-	"weapon_physcannon",
-	"gmod_tool",
-	"keys",
-	"pocket",
-	"gmod_camera",
-	"stunstick",
-	"arrest_stick",
-	"unarrest_stick"
+	""
 }
 
 local DifferentTimeWeapons = {
@@ -508,12 +487,3 @@ local function OnWeaponSwitch(ply, old, new)
 	
 end
 hook.Add("PlayerSwitchWeapon", "WeaponSwitch_Hook", OnWeaponSwitch)
-
-/*------------------------------------------------------------------------
-Donation for leaks
-
-Qiwi Wallet         4890494419811120 
-YandexMoney         410013095053302
-WebMoney(WMR)       R235985364414
-WebMoney(WMZ)       Z309855690994
-------------------------------------------------------------------------*/

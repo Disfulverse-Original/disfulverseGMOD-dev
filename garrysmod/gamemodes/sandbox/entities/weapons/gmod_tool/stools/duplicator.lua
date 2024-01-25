@@ -1,4 +1,4 @@
-
+TOOL.AddToMenu = false
 include( "duplicator/transport.lua" )
 include( "duplicator/arming.lua" )
 

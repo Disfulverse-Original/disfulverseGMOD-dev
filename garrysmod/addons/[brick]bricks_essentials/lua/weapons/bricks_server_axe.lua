@@ -1,5 +1,5 @@
 if CLIENT then
-	SWEP.PrintName = "Axe" -- For english translate this to Pickaxe
+	SWEP.PrintName = "Топор" -- For english translate this to Pickaxe
 	SWEP.Slot = 1
 	SWEP.SlotPos = 5
 	SWEP.DrawAmmo = false
