@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/craphead_scripts\supply_crate\supply/keypad_scr"
+	"$color2" "[1 0 0]"	
+}

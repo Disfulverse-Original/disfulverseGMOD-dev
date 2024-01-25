@@ -8,11 +8,11 @@ CH_SupplyCrate.ScriptVersion = "1.0.5"
 
 -- SET LANGUAGE
 -- Available languages: English: en - Danish: da
-CH_SupplyCrate.Config.Language = "fr" -- Set the language of the script.
+CH_SupplyCrate.Config.Language = "ru" -- Set the language of the script.
 
 -- TEAM CONFIGURATION
 CH_SupplyCrate.Config.RequiredTeams = { -- These are the names of the jobs that counts the police required. The amount of players on these teams are calculated together in the count.
-	"[VIP] Commandant du GIGN",
+	"Патрульная полиция",
 	"Policier",
 	"GIGN",
 	"B.A.C",
@@ -20,7 +20,7 @@ CH_SupplyCrate.Config.RequiredTeams = { -- These are the names of the jobs that 
 }
 
 CH_SupplyCrate.Config.GovernmentTeams = { -- These are your government teams. They will receive messages when robberies start. Use the actual team name, as shown below.
-	"[VIP] Commandant du GIGN",
+	"Патрульная полиция",
 	"Policier",
 	"GIGN",
 	"B.A.C",
@@ -28,7 +28,7 @@ CH_SupplyCrate.Config.GovernmentTeams = { -- These are your government teams. Th
 }
 
 CH_SupplyCrate.Config.AllowedTeams = { -- These are the teams that are allowed to rob the supply crate.
-	"Citoyen",
+	"Мафиози",
 	"Bloodz",
 	"[VIP] Chef Bloodz",
 	"Cripz",
@@ -37,12 +37,12 @@ CH_SupplyCrate.Config.AllowedTeams = { -- These are the teams that are allowed t
 }
 
 -- General settings.
-CH_SupplyCrate.Config.RobberyAliveTime = 3 -- The amount of MINUTES the player must stay alive before he will receive what the supply crate has. IN MINUTES! [Default = 5]
-CH_SupplyCrate.Config.RobberyCooldownTime = 15 -- The amount of MINUTES the supply crate is on a cooldown after a robbery! (Doesn't matter if the robbery failed or not) [Default = 15]
+CH_SupplyCrate.Config.RobberyAliveTime = 0.2 -- The amount of MINUTES the player must stay alive before he will receive what the supply crate has. IN MINUTES! [Default = 5]
+CH_SupplyCrate.Config.RobberyCooldownTime = 0.1 -- The amount of MINUTES the supply crate is on a cooldown after a robbery! (Doesn't matter if the robbery failed or not) [Default = 15]
 CH_SupplyCrate.Config.RobberyDistance = 300000 -- The amount of space the player can move away from the supply crate entity, before the robbery fails. [Default = 300000]
 CH_SupplyCrate.Config.PlayerLimit = 5 -- The amount of players there must be on the server before you can rob the supply crate. [Default = 5]
 CH_SupplyCrate.Config.KillReward = 2500 -- The amount of money a person is rewarded for killing the supply crate robber. [Default = 2500]
-CH_SupplyCrate.Config.PoliceRequired = 3 -- The amount of police officers there must be before a person can rob the supply crate. [Default = 3]
+CH_SupplyCrate.Config.PoliceRequired = 0 -- The amount of police officers there must be before a person can rob the supply crate. [Default = 3]
 
 CH_SupplyCrate.Config.EmitSoundOnRob = true -- Should an alarm go off when the bank vault gets robbed. [Default = true]
 CH_SupplyCrate.Config.TheSound = "ambient/alarms/alarm_citizen_loop1.wav" -- The sound to be played. [Default = ambient/alarms/alarm1.wav - default gmod sound]
@@ -91,7 +91,7 @@ CH_SupplyCrate.Config.RankRestrictions = {
 
 -- XP System Support
 CH_SupplyCrate.Config.DarkRPLevelSystemEnabled = false -- DARKRP LEVEL SYSTEM BY vrondakis https://github.com/uen/Leveling-System
-CH_SupplyCrate.Config.SublimeLevelSystemEnabled = false -- Sublime Levels by HIGH ELO CODERS https://www.gmodstore.com/market/view/6431
+CH_SupplyCrate.Config.SublimeLevelSystemEnabled = true -- Sublime Levels by HIGH ELO CODERS https://www.gmodstore.com/market/view/6431
 
 CH_SupplyCrate.Config.XPSuccessfulRobbery = 25 -- Amount of experience to give on successfully robbing the supply crate.
 CH_SupplyCrate.Config.XPStoppingRobber = 50 -- Amount of experience to give if a cop kills a player robbing the supply crate.

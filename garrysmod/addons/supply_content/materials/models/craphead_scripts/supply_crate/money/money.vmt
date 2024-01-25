@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/craphead_scripts/supply_crate/money/money"
+	"$bumpmap" "models/craphead_scripts/supply_crate/money/money_normal"
+	"$halflambert" "1"
+	"$phong" "1"
+	"$phongboost" "1"
+	"$phongexponent" "20"
+	"$phongfresnelranges" "[1 3 7]"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "15"
+	"$rimlightboost" ".2"	
+}
