@@ -171,6 +171,36 @@ TEAM_BANDITLOCKPICKER = DarkRP.createJob("Взломщик", {
     category = "Криминал",
 })
 
+TEAM_GRABER = DarkRP.createJob("Грабитель [Dis+]", {
+    color = Color(20, 150, 20, 255),
+    model = {
+        "models/half-dead/metroll/f1b1.mdl",
+        "models/half-dead/metroll/f2b1.mdl",
+        "models/half-dead/metroll/f3b1.mdl",
+        "models/half-dead/metroll/f4b1.mdl",
+        "models/half-dead/metroll/f6b1.mdl",
+        "models/half-dead/metroll/f7b1.mdl",
+        "models/half-dead/metroll/m1b1.mdl",
+        "models/half-dead/metroll/m2b1.mdl",
+        "models/half-dead/metroll/m4b1.mdl",
+        "models/half-dead/metroll/m5b1.mdl",
+        "models/half-dead/metroll/m6b1.mdl",
+        "models/half-dead/metroll/m7b1.mdl",
+        "models/half-dead/metroll/m8b1.mdl",
+        "models/half-dead/metroll/m9b1.mdl"
+    },
+    description = [[Это грабитель и он умеет грабить, воровать и убивать, если вы не уверены в своём преступном дельце, позовите этого парня, он порешает.]],
+    weapons = {},
+    command = "11124rr45rrg",
+    max = 2,
+    salary = GAMEMODE.Config.normalsalary,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = true,
+    category = "Криминал",
+})
+
 TEAM_CRYPTMINER = DarkRP.createJob("Крипто-Майнер", {
     color = Color(20, 150, 20, 255),
     model = {
