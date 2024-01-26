@@ -29,6 +29,7 @@ hook.Add("playerArrested", path, function(criminal, _, actor)
     end
 end);
 
+--[[
 hook.Add("onPaidTax", path, function(ply)
     if (not IsValid(ply)) then
         return;
@@ -37,3 +38,4 @@ hook.Add("onPaidTax", path, function(ply)
     local experience = Sublime.Settings.Get("darkrp", "player_taxed", "number");
     ply:SL_AddExperience(experience, "for paying tax, like a good person.");
 end);
+--]]

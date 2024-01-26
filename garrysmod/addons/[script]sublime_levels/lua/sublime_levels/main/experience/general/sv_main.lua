@@ -8,6 +8,8 @@ hook.Add("OnNPCKilled", path, function(npc, attacker)
     end
 end);
 
+
+--[[
 hook.Add("PlayerDeath", path, function(victim, _, attacker)
     if (IsValid(victim) and IsValid(attacker) and attacker:IsPlayer()) then
 
@@ -48,4 +50,4 @@ hook.Add("PlayerDeath", path, function(victim, _, attacker)
         attacker:SL_AddExperience(experience, "for killing a player.");
     end
 end);
-
+--]]
