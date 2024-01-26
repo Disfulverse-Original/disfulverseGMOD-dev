@@ -1,3 +1,3 @@
 # disfulverseGMOD
 Server in Garry's mod based on DRP gamemode.
-![disfulbig](https://github.com/snvlpkinq/disfulverseGMOD/assets/110196698/d255ba95-33f6-4232-9015-e1cdc6ac48de)
+![disfulbig](https://github.com/snvlpkinq/disfulverseGMOD/assets/110196698/ab9ddb27-39d1-4d0d-b889-da7b67586a2b)
