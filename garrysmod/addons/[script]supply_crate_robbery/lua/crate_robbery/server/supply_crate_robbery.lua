@@ -102,7 +102,7 @@ function CRATE_StartRobbery( ply, crate )
 				--ply:ChatPrint("string messagepre")		
 
 				if CH_SupplyCrate.Config.SublimeLevelSystemEnabled then
-					ply:SL_AddExperience( CH_SupplyCrate.Config.XPSuccessfulRobbery, "for successfully robbing the supply crate.")
+					ply:SL_AddExperience( CH_SupplyCrate.Config.XPSuccessfulRobbery, "за успешное ограбление ящика.")
 					--ply:ChatPrint("string messagesublime")
 					--ply:ChatPrint(CH_SupplyCrate.Config.XPSuccessfulRobbery)
 				end

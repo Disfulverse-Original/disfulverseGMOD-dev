@@ -117,11 +117,14 @@ hook.Add("Tick", path, function()
             local ply = players[i];
 
             if (IsValid(ply)) then
-                ply:SL_AddExperience(Sublime.Settings.Get("other", "xp_for_playing", "number"), "for playing on the server.");
+                ply:SL_AddExperience(Sublime.Settings.Get("other", "xp_for_playing", "number"), "за игру на сервере.");
+                --ply:ChatPrint("string message")
+                --ply:ChatPrint(Sublime.Settings.Get("other", "xp_for_playing_when", "number"))
             end
         end
 
         nextXP = CurTime() + Sublime.Settings.Get("other", "xp_for_playing_when", "number");
+
     end
 end);
 

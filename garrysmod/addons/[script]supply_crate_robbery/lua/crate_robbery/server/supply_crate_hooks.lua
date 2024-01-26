@@ -26,7 +26,7 @@ function CRATE_PlayerDeath( ply, inflictor, attacker )
 				--]]
 				-- Give experience support for Sublime Levels
 				if CH_SupplyCrate.Config.SublimeLevelSystemEnabled then
-					attacker:SL_AddExperience( CH_SupplyCrate.Config.XPStoppingRobber, "for successfully killing a robber.")
+					attacker:SL_AddExperience( CH_SupplyCrate.Config.XPStoppingRobber, "за успешную нейтрализацию грабителя.")
 				end
 
 
