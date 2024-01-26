@@ -43,9 +43,9 @@ CH_SupplyCrate.Config.AllowedTeams = { -- These are the teams that are allowed t
 CH_SupplyCrate.Config.RobberyAliveTime = 5 -- The amount of MINUTES the player must stay alive before he will receive what the supply crate has. IN MINUTES! [Default = 5]
 CH_SupplyCrate.Config.RobberyCooldownTime = 30 -- The amount of MINUTES the supply crate is on a cooldown after a robbery! (Doesn't matter if the robbery failed or not) [Default = 30]
 CH_SupplyCrate.Config.RobberyDistance = 300000 -- The amount of space the player can move away from the supply crate entity, before the robbery fails. [Default = 300000]
-CH_SupplyCrate.Config.PlayerLimit = 1 -- The amount of players there must be on the server before you can rob the supply crate. [Default = 6]
+CH_SupplyCrate.Config.PlayerLimit = 6 -- The amount of players there must be on the server before you can rob the supply crate. [Default = 6]
 CH_SupplyCrate.Config.KillReward = 500 -- The amount of money a person is rewarded for killing the supply crate robber. [Default = 500]
-CH_SupplyCrate.Config.PoliceRequired = 0 -- The amount of police officers there must be before a person can rob the supply crate. [Default = 4]
+CH_SupplyCrate.Config.PoliceRequired = 4 -- The amount of police officers there must be before a person can rob the supply crate. [Default = 4]
 
 CH_SupplyCrate.Config.EmitSoundOnRob = true -- Should an alarm go off when the bank vault gets robbed. [Default = true]
 CH_SupplyCrate.Config.TheSound = "ambient/alarms/alarm_citizen_loop1.wav" -- The sound to be played. [Default = ambient/alarms/alarm1.wav - default gmod sound]
