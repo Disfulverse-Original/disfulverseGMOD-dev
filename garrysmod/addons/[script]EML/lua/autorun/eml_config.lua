@@ -69,7 +69,7 @@ EML_Meth_UseSalesman = true;
 -- Type 'methbuyer_remove <name>' to remove NPC from map.
 
 -- Use text above salesman's head?
-EML_Meth_SalesmanText = true;
+EML_Meth_SalesmanText = false;
 -- Salesman name.
 EML_Meth_Salesman_Name = "Скупщик";
 -- Salesman name color.

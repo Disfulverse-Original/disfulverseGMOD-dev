@@ -12,7 +12,7 @@
     ENT.Instructions	= ""
 
     if CLIENT then
-        surface.CreateFont( "rHit.Font.PhoneBox", { font = "BFHUD", size = 57, weight = 800, bold = true } )
+        surface.CreateFont( "rHit.Font.PhoneBox", { font = "Roboto", size = 60, weight = 1000, bold = true, extended = true, antialias = true, } )
         local v = Vector()
 
     	function ENT:Draw()
@@ -23,9 +23,9 @@
         		  ang:RotateAroundAxis(self:GetAngles():Right(), 90)
         		  ang:RotateAroundAxis(self:GetAngles():Forward(), 90)
         		  cam.Start3D2D(self:GetPos() + ang:Up(), Angle(0, LocalPlayer():EyeAngles().y - 90, 90), 0.1)
-            		  Graphics.DrawOutline( v.x - 250, ( v.z / 2 ) - 550, 500, 130, 4, Color(255,255,255,150))
+            		  --Graphics.DrawOutline( v.x - 250, ( v.z / 2 ) - 550, 500, 130, 4, Color(255,255,255,150))
 
-            		  Graphics.DrawText( Executioner.Config.Phone.Text_On_Entity, "rHit.Font.PhoneBox", -10, ( v.z / 2 ) - 520, Color( 120, 62, 62))
+            		  Graphics.DrawText( Executioner.Config.Phone.Text_On_Entity, "rHit.Font.PhoneBox", -10, ( v.z / 2 ) - 485, Color( 255, 255, 255))
         		  cam.End3D2D()
     	    end
     	end

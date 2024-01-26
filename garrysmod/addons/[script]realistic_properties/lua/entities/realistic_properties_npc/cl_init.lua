@@ -11,19 +11,39 @@
 
 include("shared.lua")
 
+surface.CreateFont( "HOMEFONT", {
+ font = "Roboto",
+ size = 118,
+ weight = 700,
+ blursize = 0,
+ scanlines = 0,
+ antialias = true,
+ extended = true
+} )
+
 function ENT:Draw()
-	self:DrawModel()
-	if  Realistic_Properties.Activate3D2DNpc then 
-		local pos = self:GetPos()
-		local ang = self:GetAngles()
-		ang:RotateAroundAxis(ang:Up(), 0)
-		ang:RotateAroundAxis(ang:Forward(), 85)	
-		if LocalPlayer():GetPos():Distance(self:GetPos()) < 500 then
-			cam.Start3D2D(pos + ang:Up()*0, Angle(0, LocalPlayer():EyeAngles().y-90, 90), 0.025)
-			if (self:GetDTInt(1) == 0) then
-				draw.SimpleTextOutlined(Realistic_Properties.NameNpc, "rps_font_9", 0, -3050, Realistic_Properties.Colors["white"] , TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER, 0, Realistic_Properties.Colors["white"] );		
-			end
-			cam.End3D2D()
-		end 
-	end 
+    -- Проверяем, является ли текущий объект (ENT) действительным, и существует ли локальный игрок
+    if not IsValid(self) or not IsValid(LocalPlayer()) then return end
+
+    -- Рисуем модель объекта
+    self:DrawModel()
+
+    -- Получаем позицию и углы объекта
+    local pos = self:GetPos()
+    local ang = self:GetAngles()
+    ang:RotateAroundAxis(ang:Up(), 0)
+    ang:RotateAroundAxis(ang:Forward(), 85)
+    -- Проверяем, находится ли локальный игрок вблизи объекта
+    if LocalPlayer():GetPos():DistToSqr(self:GetPos()) < 50000 then
+        -- Начинаем рисование 3D-текста и элементов
+        cam.Start3D2D(pos + ang:Up() * 0, Angle(0, LocalPlayer():EyeAngles().y - 90, 90), 0.025)
+        -- Рисуем фон с закругленными углами
+        draw.RoundedBoxEx(16, -500, -3100, 1000, 170, Color(21, 41, 56, 255), true, true, false, false)
+        -- Рисуем прямоугольную полосу сверху
+        draw.RoundedBox(0, -500, -2950, 1000, 20, Color(255, 255, 255, 255))
+        -- Рисуем текст "Смена имени" по центру
+        draw.DrawText("Продавец квартир", "HOMEFONT", 0, -3085, Color(255, 255, 255, 255), TEXT_ALIGN_CENTER)
+        -- Завершаем рисование 3D-текста и элементов
+        cam.End3D2D()
+    end
 end 

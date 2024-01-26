@@ -2,8 +2,8 @@ include("shared.lua");
 
 surface.CreateFont("methFont", {
 	font = "Roboto",
-	size = 30,
-	weight = 600,
+	size = 20,
+	weight = 1000,
 	extended = true,
 	blursize = 0,
 	scanlines = 0,
