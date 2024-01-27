@@ -8,13 +8,13 @@ Slawer.Jobs.CFG.EnableNPCTitle = true
 
 -- Theme configuration
 Slawer.Jobs.CFG.Theme = {
-    Primary = Color(30, 30, 30),
-    Secondary = Color(25, 25, 25),
-    Tertiary = Color(35, 35, 35),
-    Quaternary = Color(50, 50, 50),
+    Primary = Color(25, 25, 25,235),
+    Secondary = Color(30, 30, 30,235),
+    Tertiary = Color(45, 45, 45,235),
+    Quaternary = Color(50, 50, 50,235),
     Texts = Color(255, 255, 255),
-    Texts2 = Color(100, 100, 100),
-    Blue = Color(42, 152, 219),
+    Texts2 = Color(245, 245, 245),
+    Blue = Color(94, 125, 247),
     Red = Color(192, 57, 43),
 }
 
