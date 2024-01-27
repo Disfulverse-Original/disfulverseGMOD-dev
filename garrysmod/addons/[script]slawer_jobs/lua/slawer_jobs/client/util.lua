@@ -16,6 +16,6 @@ function Slawer.Jobs:GenerateFonts()
     surface.CreateFont("Slawer.Jobs:SB22", { font = "Roboto", extended  = true, antialias = true, italic = false, weight = 550, size = 22 }) -- job frame iLastH * 0.02
     surface.CreateFont("Slawer.Jobs:SB30", { font = "Roboto", extended  = true, antialias = true, italic = false, weight = 550, size = 30 }) -- iLastH * 0.02
     surface.CreateFont("Slawer.Jobs:B30", { font = "Roboto", extended  = true, antialias = true, italic = false, weight = 550, size = 30 }) -- iLastH * 0.02
-    surface.CreateFont("Slawer.Jobs:SB35", { font = "Roboto", extended  = true, antialias = true, italic = false, weight = 550, size = 35 }) -- job desc name iLastH * 0.022
+    surface.CreateFont("Slawer.Jobs:SB35", { font = "Roboto", extended  = true, antialias = true, italic = false, weight = 550, size = 28 }) -- job desc name iLastH * 0.022
 
 end
