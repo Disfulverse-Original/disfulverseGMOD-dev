@@ -279,7 +279,7 @@ GM.Config.shipmentspawntime             = 10
 -- startinghealth - the health when you spawn.
 GM.Config.startinghealth                = 100
 -- startingmoney - your wallet when you join for the first time.
-GM.Config.startingmoney                 = 250
+GM.Config.startingmoney                 = 2500
 -- stunstickdamage - amount of damage the stunstick will do to entities.
 -- When between 0 and 1, the damage is relative, where 1 takes the entire health of the entity.
 -- When above 1, the damage is absolute
@@ -295,7 +295,7 @@ GM.Config.wallettaxtime                 = 600
 -- wantedtime - Number of seconds for which a player is wanted for.
 GM.Config.wantedtime                    = 650
 -- walkspeed - Sets the max walking speed.
-GM.Config.walkspeed                     = 145
+GM.Config.walkspeed                     = 100
 -- falldamagedamper - The damper on realistic fall damage. Default is 15. Decrease this for more damage.
 GM.Config.falldamagedamper              = 15
 -- falldamageamount - The base damage taken from falling for static fall damage. Default is 10.
