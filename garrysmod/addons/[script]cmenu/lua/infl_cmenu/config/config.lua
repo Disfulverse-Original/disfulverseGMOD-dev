@@ -17,7 +17,8 @@ local black = 	Color(0,0,0)
 local redy = 	Color(236, 136, 22)
 local greeny = Color(87, 255, 3)
 local violet = Color(186, 133, 255)
-local bluz = Color(162 ,162 ,208)
+local lightsteel = Color(176, 196, 222)
+local gold = Color(255, 215, 0)
 
 function PIS.Config:AddMenu(id, mat, text, col, commands,cc)
 	self.Pings[id] = {
@@ -136,12 +137,11 @@ PIS.Config:AddMenu("RP Действия", 			"action", 		"RP Действия", 
 PIS.Config:AddMenu("Остальное", 			"mill", 		"Разное", 			info, {
 
 
-	{name = "Жалоба", 			mat = "logs", col = white, func = function() RunConsoleCommand("say","!ticket") end},
 	{name = "Продать все двери", 		mat = "door", col = white, func = function() RunConsoleCommand("say","/unownalldoors") end},
-	{name = "Третье лицо", 			mat = "third_person", col = white, func = function() RunConsoleCommand("thirdperson_toggle") end},
-	{name = "Способности", 			mat = "playing_cards", col = yellow, func = function() RunConsoleCommand("say", "!slevels") end},
-	{name = "Фракции", 			mat = "darkweb", col = white, func = function() RunConsoleCommand("say", "!factions") end},
-	{name = "Поддержать проект", 			mat = "document", col = violet, func = function() RunConsoleCommand("say", "!store") end},
+	{name = "Вид от 3 лица", 			mat = "third_person", col = white, func = function() RunConsoleCommand("thirdperson_toggle") end},
+	{name = "Организации", 			mat = "organization", col = white, func = function() RunConsoleCommand("say", "!factions") end},
+	{name = "Способности", 			mat = "mill", col = lightsteel, func = function() RunConsoleCommand("say", "!slevels") end},
+	{name = "Поддержать проект", 			mat = "good", col = gold, func = function() RunConsoleCommand("say", "!store") end},
 
 
 })
