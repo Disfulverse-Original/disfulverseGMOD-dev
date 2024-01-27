@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "sterling/smodel_nukebomb"
+	"$bumpmap" "sterling/smodel_nukebomb_norm"
+
+	"$envmap"			"env_cubemap"
+	"$normalmapalphaenvmapmask"	"1"
+	"$envmaptint"			"[0.01 0.01 0.01]"
+
+	"$phong" "1"
+	"$phongBoost" ".5"
+	"$phongexponent" "1.5"	
+	"$phongfresnelranges" "[0.8 0.8 0.8]"	
+}

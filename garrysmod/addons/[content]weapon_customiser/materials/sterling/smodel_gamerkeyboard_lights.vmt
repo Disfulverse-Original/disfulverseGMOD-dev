@@ -1,0 +1,16 @@
+"UnlitTwoTexture"
+{
+	"$basetexture" "sterling/smodel_gamerkeyboard_lights"
+	"$texture2" "sterling/smodel_gamerkeyboard_color"	
+	"$additive" 1
+	"Proxies"
+	{
+
+		"TextureScroll"
+		{
+			"texturescrollvar" "$texture2transform"
+			"texturescrollrate" 0.5
+			"texturescrollangle" 180
+		}
+	}
+}

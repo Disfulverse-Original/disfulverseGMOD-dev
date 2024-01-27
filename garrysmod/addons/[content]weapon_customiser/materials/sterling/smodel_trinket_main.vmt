@@ -1,0 +1,18 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "sterling/smodel_trinket_main"
+	"$bumpmap" "sterling/smodel_trinket_norm"
+
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint" "[.001 .001 .001]"	
+
+	"$phong" "1"
+	"$phongboost" "0.5"
+	"$phongexponent" "7"
+	"$phongfresnelranges" "[1.5 0.5 0.5]"
+
+	"$rimlight" "1"
+	"$rimlightboost"		"2"
+	"$rimlightexponent"		"10"	
+}
