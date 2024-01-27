@@ -1,10 +1,10 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Fine Book"
+SWEP.PrintName = "Книга для штрафов"
 SWEP.Author = "Kobralost"
 SWEP.Purpose = ""
 
-SWEP.Slot = 0
+SWEP.Slot = 2
 SWEP.SlotPos = 4
 
 SWEP.Spawnable = true

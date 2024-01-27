@@ -1,12 +1,12 @@
 
 AddCSLuaFile()
 
-SWEP.PrintName = "HandCuff"
+SWEP.PrintName = "Наручники"
 SWEP.Author = "Kobralost"
 SWEP.Purpose = ""
 
-SWEP.Slot = 0
-SWEP.SlotPos = 4
+SWEP.Slot = 2
+SWEP.SlotPos = 3
 
 SWEP.Spawnable = true
 

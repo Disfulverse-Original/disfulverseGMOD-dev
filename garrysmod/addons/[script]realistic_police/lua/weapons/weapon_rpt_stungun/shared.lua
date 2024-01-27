@@ -1,11 +1,11 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "StunGun"
+SWEP.PrintName = "Шоковый пистолет"
 SWEP.Author = "Kobralost"
 SWEP.Purpose = ""
 
-SWEP.Slot = 0
-SWEP.SlotPos = 4
+SWEP.Slot = 2
+SWEP.SlotPos = 2
 
 SWEP.Spawnable = true
 

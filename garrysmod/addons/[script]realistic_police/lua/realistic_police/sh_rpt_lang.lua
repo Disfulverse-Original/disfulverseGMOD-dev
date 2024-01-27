@@ -19,7 +19,7 @@ Realistic_Police.Lang[1] = {
     ["tr"] = "Sabika Kaydi",
     ["cn"] = "犯罪记录",
     ["fr"] = "Casier Judiciaire",
-	["ru"] = "Уголовное прошлое",
+	["ru"] = "Криминальные записи",
 
 }
 

@@ -24,15 +24,15 @@ Realistic_Police.TrunkPosition = Realistic_Police.TrunkPosition or {}
 
 Realistic_Police.Langage = "ru" -- You can choose fr , en , tr , cn 
 
-Realistic_Police.DefaultJob = true -- Default Job Activate/Desactivate (Camera Repairer )
+Realistic_Police.DefaultJob = false -- Default Job Activate/Desactivate (Camera Repairer )
 
 Realistic_Police.TrunkSystem = true -- Do you want to use the trunk system ? 
 
-Realistic_Police.KeyOpenTablet = KEY_I -- Key for open the tablet into a vehicle  
+Realistic_Police.KeyOpenTablet = KEY_L -- Key for open the tablet into a vehicle  
 
 Realistic_Police.WantedMessage = "Разыскивается" -- Message when you wanted someone with the computer 
 
-Realistic_Police.StungunAmmo = 40 
+Realistic_Police.StungunAmmo = 10 
 
 Realistic_Police.CanConfiscateWeapon = true -- If the functionality for confiscate is activate or desactivate
 
@@ -45,11 +45,11 @@ Realistic_Police.AdminRank = { -- Rank Admin
 
 Realistic_Police.OpenComputer = { -- Which job can open the computer 
     ["Патрульная полиция"] = true,
-    ["Спецназ"] = true, 
+    ["Спецназ CTSFO"] = true, 
 	["Отдел Disag [Dis+]"] = true,
 	["Детектив"] = true,
 	["Администратор города [WL]"] = true,
-	["Отдел Безопасности"] = true,
+	["Отдел Контрразведки MI5"] = true
 }
 
 Realistic_Police.PoliceVehicle = { -- Police Vehicle
@@ -69,52 +69,53 @@ Realistic_Police.TrunkPosition["Chevrolet Tahoe - RAID"] = {
 
 Realistic_Police.MaxReport = 5 -- Max report per persson
 
-Realistic_Police.MaxCriminalRecord = 30 -- Max Criminal Record per persson 
+Realistic_Police.MaxCriminalRecord = 30 -- Max Criminal Record per persson
 
+--[[ нахуя оно надо, эта функция буквально открывает строку гугла
 Realistic_Police.Application[1] = { -- Unique Id 
-    ["Name"] = "Internet", -- Name of the Application 
+    ["Name"] = "Интернет", -- Name of the Application 
     ["Materials"] = Material("rpt_internet.png"), -- Material of the Application 
     ["Function"] = Realistic_Police.FireFox, -- Function Application 
     ["Type"] = "police",  
 }
-
+-- не нужны, ибо дрочная система сидения на жопе
 Realistic_Police.Application[2] = { -- Unique Id 
-    ["Name"] = "Camera", -- Name of the Application 
+    ["Name"] = "Камеры", -- Name of the Application 
     ["Materials"] = Material("rpt_cctv.png"), -- Material of the Application    
     ["Function"] = Realistic_Police.Camera, -- Function Application 
     ["Type"] = "police",  
 }
-
+--]]
 Realistic_Police.Application[3] = { -- Unique Id 
-    ["Name"] = "Criminal Record", -- Name of the Application 
+    ["Name"] = "Криминальные записи", -- Name of the Application 
     ["Materials"] = Material("rpt_law.png"), -- Material of the Application 
     ["Function"] = Realistic_Police.CriminalRecord, -- Function Application 
     ["Type"] = "police",  
 }
 
 Realistic_Police.Application[4] = { -- Unique Id
-    ["Name"] = "Report Menu", -- Name of the Application 
+    ["Name"] = "Составить рапорт", -- Name of the Application 
     ["Materials"] = Material("rpt_cloud.png"), -- Material of the Application   
     ["Function"] = Realistic_Police.ReportMenu, -- Function application 
     ["Type"] = "police",  
 }
 
 Realistic_Police.Application[5] = { -- Unique Id 
-    ["Name"] = "List Report", -- Name of the Application 
+    ["Name"] = "Список рапортов", -- Name of the Application 
     ["Materials"] = Material("rpt_documents.png"), -- Material of the Application  
     ["Function"] = Realistic_Police.ListReport, -- Function Application 
     ["Type"] = "police",   
 }
-
+--[[ лицензирование номеров машин, которых нет на сервере
 Realistic_Police.Application[6] = { -- Unique Id 
     ["Name"] = "License Plate", -- Name of the Application  
     ["Materials"] = Material("rpt_listreport.png"), -- Material of the Application  
     ["Function"] = Realistic_Police.License, -- Function Application 
     ["Type"] = "police",  
 }
-
+--]]
 Realistic_Police.Application[7] = { -- Unique Id 
-    ["Name"] = "Computer CMD", -- Name of the Application  
+    ["Name"] = "Консоль", -- Name of the Application  
     ["Materials"] = Material("rpt_cmd.png"), -- Material of the Application  
     ["Function"] = Realistic_Police.Cmd, -- Function Application  
     ["Type"] = "hacker", 
@@ -165,14 +166,12 @@ Realistic_Police.KeyForOpenTrunk = KEY_E -- https://wiki.facepunch.com/gmod/Enum
 Realistic_Police.KeyTrunkHUD = false -- Activate/desactivate the hud of the vehicle 
 
 Realistic_Police.CanOpenTrunk = {
-    ["Adjoint De Sécurité"] = true,
-	["Gardien De La Paix"] = true,
-	["Brigadier"] = true,
-	["Brigadier-Chef"] = true,
-	["Major"] = true,
-	["Lieutenant"] = true,
-	["Capitaine"] = true,
-	["Commandant"] = true, 
+    ["Патрульная полиция"] = true,
+    ["Спецназ CTSFO"] = true, 
+	["Отдел Disag [Dis+]"] = true,
+	["Детектив"] = true,
+	["Администратор города [WL]"] = true,
+	["Отдел Контрразведки MI5"] = true
 }
 
 Realistic_Police.VehiclePoliceTrunk = {
@@ -211,9 +210,9 @@ Realistic_Police.Trunk["models/props_c17/streetsign001c.mdl"] = {
 -------------------------- HandCuff Configuration----------------------------
 -----------------------------------------------------------------------------
 
-Realistic_Police.MaxDay = 10 -- Max Jail Day 
+Realistic_Police.MaxDay = 30 -- Max Jail Day 
 
-Realistic_Police.DayEqual = 60 -- 1 day = 60 Seconds 
+Realistic_Police.DayEqual = 30 -- 1 day = 30 Seconds 
 
 Realistic_Police.PriceDay = 5000 -- Price to pay with the bailer per day 
 
@@ -225,24 +224,24 @@ Realistic_Police.SurrenderKey = KEY_T -- The key for surrender
 
 Realistic_Police.SurrenderInfoKey = "T" -- The Key 
 
-Realistic_Police.SurrenderActivate = true 
+Realistic_Police.SurrenderActivate = false 
 
 Realistic_Police.CanCuff = { -- Job which can arrest someone
     ["Патрульная полиция"] = true,
-    ["Спецназ"] = true, 
-    ["Отдел Disag [Dis+]"] = true,
-    ["Детектив"] = true,
-    ["Администратор города [WL]"] = true,
-    ["Отдел Безопасности"] = true, 
+    ["Спецназ CTSFO"] = true, 
+	["Отдел Disag [Dis+]"] = true,
+	["Детектив"] = true,
+	["Администратор города [WL]"] = true,
+	["Отдел Контрразведки MI5"] = true
 }
  
 Realistic_Police.CantBeCuff = { -- Job which can't be cuff
     ["Патрульная полиция"] = true,
-    ["Спецназ"] = true, 
-    ["Отдел Disag [Dis+]"] = true,
-    ["Детектив"] = true,
-    ["Администратор города [WL]"] = true,
-    ["Отдел Безопасности"] = true, 
+    ["Спецназ CTSFO"] = true, 
+	["Отдел Disag [Dis+]"] = true,
+	["Детектив"] = true,
+	["Администратор города [WL]"] = true,
+	["Отдел Контрразведки MI5"] = true
 }
 
 Realistic_Police.CantConfiscate = { -- Job which can't be cuff
@@ -258,11 +257,11 @@ Realistic_Police.CantConfiscate = { -- Job which can't be cuff
 
 Realistic_Police.CantBeStun = { -- Job which can't be cuff
     ["Патрульная полиция"] = true,
-    ["Спецназ"] = true, 
-    ["Отдел Disag [Dis+]"] = true,
-    ["Детектив"] = true,
-    ["Администратор города [WL]"] = true,
-    ["Отдел Безопасности"] = true,
+    ["Спецназ CTSFO"] = true, 
+	["Отдел Disag [Dis+]"] = true,
+	["Детектив"] = true,
+	["Администратор города [WL]"] = true,
+	["Отдел Контрразведки MI5"] = true
 }
 
 -----------------------------------------------------------------------------
@@ -291,20 +290,20 @@ Realistic_Police.CameraGiveMoney = 500 -- Money give when a player repair a came
 
 Realistic_Police.JobDeleteReport = { -- Which job can delete Report 
     ["Патрульная полиция"] = true,
-    ["Спецназ"] = true, 
-    ["Отдел Disag [Dis+]"] = true,
-    ["Детектив"] = true,
-    ["Администратор города [WL]"] = true,
-    ["Отдел Безопасности"] = true,
+    ["Спецназ CTSFO"] = true, 
+	["Отдел Disag [Dis+]"] = true,
+	["Детектив"] = true,
+	["Администратор города [WL]"] = true,
+	["Отдел Контрразведки MI5"] = true
 }
 
 Realistic_Police.JobEditReport = { -- Which job can create / edit report 
     ["Патрульная полиция"] = true,
-    ["Спецназ"] = true, 
-    ["Отдел Disag [Dis+]"] = true,
-    ["Детектив"] = true,
-    ["Администратор города [WL]"] = true,
-    ["Отдел Безопасности"] = true,
+    ["Спецназ CTSFO"] = true, 
+	["Отдел Disag [Dis+]"] = true,
+	["Детектив"] = true,
+	["Администратор города [WL]"] = true,
+	["Отдел Контрразведки MI5"] = true
 }
 
 -----------------------------------------------------------------------------
@@ -313,20 +312,20 @@ Realistic_Police.JobEditReport = { -- Which job can create / edit report
 
 Realistic_Police.JobDeleteRecord = { -- Which job can delete Criminal Record
     ["Патрульная полиция"] = true,
-    ["Спецназ"] = true, 
-    ["Отдел Disag [Dis+]"] = true,
-    ["Детектив"] = true,
-    ["Администратор города [WL]"] = true,
-    ["Отдел Безопасности"] = true,
+    ["Спецназ CTSFO"] = true, 
+	["Отдел Disag [Dis+]"] = true,
+	["Детектив"] = true,
+	["Администратор города [WL]"] = true,
+	["Отдел Контрразведки MI5"] = true
 }
 
 Realistic_Police.JobEditRecord = { -- Which job can create / edit Criminal Record  
     ["Патрульная полиция"] = true,
-    ["Спецназ"] = true, 
-    ["Отдел Disag [Dis+]"] = true,
-    ["Детектив"] = true,
-    ["Администратор города [WL]"] = true,
-    ["Отдел Безопасности"] = true, 
+    ["Спецназ CTSFO"] = true, 
+	["Отдел Disag [Dis+]"] = true,
+	["Детектив"] = true,
+	["Администратор города [WL]"] = true,
+	["Отдел Контрразведки MI5"] = true
 }
 
 -----------------------------------------------------------------------------
@@ -341,20 +340,20 @@ Realistic_Police.MaxPenalty = 2 -- Maxe Penalty on the same player
 
 Realistic_Police.JobCanAddFine = { -- Which job can add fine
     ["Патрульная полиция"] = true,
-    ["Спецназ"] = true, 
-    ["Отдел Disag [Dis+]"] = true,
-    ["Детектив"] = true,
-    ["Администратор города [WL]"] = true,
-    ["Отдел Безопасности"] = true,
+    ["Спецназ CTSFO"] = true, 
+	["Отдел Disag [Dis+]"] = true,
+	["Детектив"] = true,
+	["Администратор города [WL]"] = true,
+	["Отдел Контрразведки MI5"] = true
 }
 
 Realistic_Police.JobCantHaveFine = { -- Which job can't receive fine 
     ["Патрульная полиция"] = true,
-    ["Спецназ"] = true, 
-    ["Отдел Disag [Dis+]"] = true,
-    ["Детектив"] = true,
-    ["Администратор города [WL]"] = true,
-    ["Отдел Безопасности"] = true, 
+    ["Спецназ CTSFO"] = true, 
+	["Отдел Disag [Dis+]"] = true,
+	["Детектив"] = true,
+	["Администратор города [WL]"] = true,
+	["Отдел Контрразведки MI5"] = true
 }
 
 Realistic_Police.VehicleCantHaveFine = { -- Which vehicle can't receive fine 
@@ -418,14 +417,14 @@ Realistic_Police.FiningPolice[8] = {
     ["Vehicle"] = false, 
     ["Category"] = "Штраф",
 }
-
+--[[
 Realistic_Police.FiningPolice[9] = { 
     ["Name"] = "Хранение денежных принтеров", -- Unique Name is require  
     ["Price"] = 2500,
     ["Vehicle"] = false, 
     ["Category"] = "Штраф",
 }
-
+--]]
 Realistic_Police.FiningPolice[9] = { 
     ["Name"] = "Убийство", -- Unique Name is require  
     ["Price"] = 10000,
@@ -499,11 +498,11 @@ Realistic_Police.FiningPolice[18] = {
 --------------------------- Hacking System ----------------------------------
 -----------------------------------------------------------------------------
 
-Realistic_Police.NameOs = "OMEGARPOS" -- The name of the os 
+Realistic_Police.NameOs = "Jenga" -- The name of the os 
 
 Realistic_Police.ResolveHack = 120 -- Time which the computer will be repair 
 
-Realistic_Police.WordCount = 1 -- How many word the people have to write for hack the computer
+Realistic_Police.WordCount = 2 -- How many word the people have to write for hack the computer
 
 Realistic_Police.HackerJob = { -- Which are not able to use the computer without hack the computer 
     ["Хакер-взломщик"] = true,

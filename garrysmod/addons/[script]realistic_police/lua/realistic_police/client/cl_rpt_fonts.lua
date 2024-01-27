@@ -42,7 +42,7 @@ surface.CreateFont("rpt_font_4", {
 })
 
 surface.CreateFont("rpt_font_5", {
-  font = "Arial",
+  font = "Roboto",
   size = 16.8*(ScrH()/1080),
   weight = 550,
   antialias = true,
@@ -162,7 +162,7 @@ surface.CreateFont("rpt_font_19", {
 })
 
 surface.CreateFont("rpt_font_20", {
-  font = "LEMON MILK",
+  font = "Roboto",
   size = 20*(ScrH()/1080),
   weight = 800,
   antialias = true,
@@ -170,7 +170,7 @@ surface.CreateFont("rpt_font_20", {
 })
 
 surface.CreateFont("rpt_font_21", {
-  font = "Poiret One",
+  font = "Roboto",
   size = 21*(ScrH()/1080),
   weight = 800,
   antialias = true,

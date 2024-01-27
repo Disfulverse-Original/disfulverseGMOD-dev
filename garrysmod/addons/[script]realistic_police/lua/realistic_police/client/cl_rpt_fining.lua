@@ -115,7 +115,7 @@ function Realistic_Police.OpenFiningMenu(Boolen)
                 surface.SetDrawColor(Realistic_Police.Colors["gray100"])
                 surface.DrawOutlinedRect( 5, 0, w-10, RpRespY*0.05 )
             end 
-            draw.DrawText("Category : "..v, "rpt_font_7", DButton1[k]:GetWide()/2.05, RpRespY*0.013,  Realistic_Police.Colors["white"], TEXT_ALIGN_CENTER)
+            draw.DrawText("Категория : "..v, "rpt_font_7", DButton1[k]:GetWide()/2.05, RpRespY*0.013,  Realistic_Police.Colors["white"], TEXT_ALIGN_CENTER)
         end
         local ParentDScrollPanel = {}
         DButton1[k].DoClick = function()
