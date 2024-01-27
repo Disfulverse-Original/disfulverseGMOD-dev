@@ -106,6 +106,9 @@ NC.BlackList = { --If "UseWhiteList" is false, it uses this
 
 NC.InnappropriateName = { --Names that are unable to be used
 "anal",
+"server",
+"disfulverse",
+"govno",
 "anus",
 "arse",
 "ass",
@@ -185,13 +188,16 @@ NC.InnappropriateName = { --Names that are unable to be used
 }
 
 --Colors.
-NC.Color.Header = Color(49,50,55,255)
-NC.Color.MainPage = Color(255,255,255,255)
-NC.Color.MainPageSecondary = Color(236,236,236,255)
-NC.Color.Primary = Color(81,201,215, 255)
-NC.Color.MainPageText = Color(91,91,100,255)
-NC.Color.HeaderText = Color(255,255,255,255)
-NC.Color.CloseButton = Color(238,105,110, 255)
+NC.Color.Header = Color(15, 15, 16, 245)
+NC.Color.MainPage = Color(26, 26, 26, 245)
+NC.Color.MainPageSecondary = Color(26, 26, 26)
+NC.Color.Primary = Color(81, 201, 215)
+NC.Color.MainPageText = Color(255, 255, 255)
+NC.Color.HeaderText = Color(255, 255, 255)
+NC.Color.EntryText = Color(5, 5, 5) 
+NC.Color.CloseButton = Color(217, 76, 88)
+NC.Color.AcceptButton = Color(81, 102, 237)
+
 
 NC.Color.NPCName = Color(150, 150, 150, 255)
 
@@ -242,7 +248,7 @@ NC.Language.NameTaken1 = "' занято. Пожалуйста, попробуй
 NC.Language.NameChanged = " изменил(а) свое имя на "
 NC.Language.NameSetupTitle = "Настройка имени в RP"
 NC.Language.NameSetupWelcome = "Добро пожаловать на "..NC.ServerName..","
-NC.Language.NameSetupInfo = "Пожалуйста, установите ролевое имя для себя."
+NC.Language.NameSetupInfo = "Пожалуйста, установите себе ролевое имя."
 NC.Language.NameSetupConfirmation = "Хотите установить ваше имя как"
 NC.Language.AdminChangeInfo = "Пожалуйста, введите допустимое имя для этого игрока."
 NC.Language.AdminButton1 = "Изменить"

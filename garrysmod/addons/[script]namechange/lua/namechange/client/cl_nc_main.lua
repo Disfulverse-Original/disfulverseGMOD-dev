@@ -1,43 +1,68 @@
 surface.CreateFont( "RCNPC_TitleText", {
 	font = "Roboto",
-	size = 24,
+	size = 21,
+	extended = true,
 	weight = 1000
 } )
 surface.CreateFont( "RCNPC_WelcomeText", {
 	font = "Roboto",
-	size = 28,
+	size = 30,
+	extended = true,
 	weight = 1000
 } )
 surface.CreateFont( "RCNPC_InfoText", {
 	font = "Roboto",
-	size = 21,
+	size = 17,
+	extended = true,
 	weight = 1000
 } )
 surface.CreateFont( "RCNPC_InvalidText", {
 	font = "Roboto",
-	size = 21,
+	size = 15,
+	extended = true,
 	weight = 1000
 } )
 surface.CreateFont( "RCNPC_AdminText", {
 	font = "Roboto",
-	size = 16,
+	size = 15,
+	extended = true,
 	weight = 1000
 } )
 surface.CreateFont( "RCNPC_EntryTitle", {
 	font = "Roboto",
-	size = 22,
+	size = 20,
+	extended = true,
 	weight = 1000
 } )
 
 surface.CreateFont( "RCNPC_EntryText", {
 	font = "Roboto",
-	size = 20,
+	size = 17,
+	extended = true,
 	weight = 1000
 } )
 
+local blur = Material("pp/blurscreen")
+local function drawBlur( x, y, w, h, amount )
+	surface.SetDrawColor( 255, 255, 255, 255 )
+	surface.SetMaterial( blur )
+
+	for i = 1, 6 do
+		blur:SetFloat( "$blur", ( i / 3 ) * ( amount or 6 ) )
+		blur:Recompute()
+
+		render.UpdateScreenEffectTexture()
+		render.SetScissorRect( x, y, x + w, y + h, true )
+			surface.DrawTexturedRect( 0, 0, ScrW(), ScrH() )
+		render.SetScissorRect( 0, 0, 0, 0, false )
+	end
+end
+
+
+
 net.Receive("NC_OpenNCMenu", function()
 	local ply = net.ReadEntity()
-	if !IsValid(NameChangePanel) then
+	if (!IsValid(NameChangePanel)) then
 		local FirstName
 		local LastName
 		local OnlyOne
@@ -49,15 +74,17 @@ net.Receive("NC_OpenNCMenu", function()
 		NameChangePanel:SetVisible( true )
 		NameChangePanel:SetDraggable( false )
 		NameChangePanel:ShowCloseButton( false )
+		NameChangePanel:SetBackgroundBlur( true )
 		NameChangePanel:MakePopup()
 		NameChangePanel.Paint = function(self, w, h)
+			Derma_DrawBackgroundBlur(self, self.startTime)
 			draw.RoundedBoxEx( 4, 0, 0, w, 30, NC.Color.Header, true, true, false, false )
 			draw.RoundedBoxEx( 4, 0, 30, w, h-30, NC.Color.MainPage, false, false, true, true )
 			draw.SimpleText( NC.Language.MainTitle, "RCNPC_TitleText", NameChangePanel:GetWide()/2, 3, NC.Color.HeaderText, TEXT_ALIGN_CENTER )
 			draw.SimpleText( NC.Language.WelcomeMessage..LocalPlayer():getDarkRPVar("rpname")..",", "RCNPC_WelcomeText", NameChangePanel:GetWide()/2, 35, NC.Color.MainPageText, TEXT_ALIGN_CENTER )
-			draw.SimpleText( NC.Language.InfoText, "RCNPC_InfoText", NameChangePanel:GetWide()/2, 65, NC.Color.MainPageText, TEXT_ALIGN_CENTER )
+			draw.SimpleText( NC.Language.InfoText, "RCNPC_InfoText", NameChangePanel:GetWide()/2, 67, NC.Color.MainPageText, TEXT_ALIGN_CENTER )
 			if NC.EntryType == "two" then
-				draw.SimpleText( NC.Language.FirstName, "RCNPC_EntryTitle", NameChangePanel:GetWide()/2, 103, NC.Color.MainPageText, TEXT_ALIGN_CENTER )
+				draw.SimpleText( NC.Language.FirstName, "RCNPC_EntryTitle", NameChangePanel:GetWide()/2, 103, NC.Color.HeaderText, TEXT_ALIGN_CENTER )
 				if NC.UseWhiteList then
 					if not CheckIfNameHasRightChar(FirstName:GetValue()) then
 						draw.SimpleText( NC.Language.InvalidCharacter..GetInvalidChar(FirstName:GetValue()), "RCNPC_InvalidText", NameChangePanel:GetWide()/2, 160, Color(255, 20, 10, 255), TEXT_ALIGN_CENTER )
@@ -83,7 +110,7 @@ net.Receive("NC_OpenNCMenu", function()
 						draw.SimpleText( NC.Language.GoodName, "RCNPC_InvalidText", NameChangePanel:GetWide()/2, 160, Color(0, 204, 0, 255), TEXT_ALIGN_CENTER )
 					end
 				end
-				draw.SimpleText( NC.Language.LastName, "RCNPC_EntryTitle", NameChangePanel:GetWide()/2, 188, NC.Color.MainPageText, TEXT_ALIGN_CENTER )
+				draw.SimpleText( NC.Language.LastName, "RCNPC_EntryTitle", NameChangePanel:GetWide()/2, 188, NC.Color.HeaderText, TEXT_ALIGN_CENTER )
 				if NC.UseWhiteList then
 					if not CheckIfNameHasRightChar(LastName:GetValue()) then
 						draw.SimpleText( NC.Language.InvalidCharacter..GetInvalidChar(FirstName:GetValue()), "RCNPC_InvalidText", NameChangePanel:GetWide()/2, 243, Color(255, 20, 10, 255), TEXT_ALIGN_CENTER )
@@ -110,7 +137,7 @@ net.Receive("NC_OpenNCMenu", function()
 					end
 				end
 			elseif NC.EntryType == "one" then
-				draw.SimpleText( "Name", "RCNPC_EntryTitle", NameChangePanel:GetWide()/2, NameChangePanel:GetTall()/2-40, NC.Color.MainPageText, TEXT_ALIGN_CENTER )
+				draw.SimpleText( "Name", "RCNPC_EntryTitle", NameChangePanel:GetWide()/2, NameChangePanel:GetTall()/2-40, NC.Color.HeaderText, TEXT_ALIGN_CENTER )
 				if NC.UseWhiteList then
 					if not CheckIfNameHasRightChar(OnlyOne:GetValue()) then
 						draw.SimpleText( NC.Language.InvalidCharacter..GetInvalidChar(FirstName:GetValue()), "RCNPC_InvalidText", NameChangePanel:GetWide()/2, NameChangePanel:GetTall()/2+16, Color(255, 20, 10, 255), TEXT_ALIGN_CENTER )
@@ -141,7 +168,7 @@ net.Receive("NC_OpenNCMenu", function()
 					end
 				end
 			elseif NC.EntryType == "prefix" then
-				draw.SimpleText( NC.Language.Prefix, "RCNPC_EntryTitle", NameChangePanel:GetWide()/2, 103, NC.Color.MainPageText, TEXT_ALIGN_CENTER )
+				draw.SimpleText( NC.Language.Prefix, "RCNPC_EntryTitle", NameChangePanel:GetWide()/2, 103, NC.Color.EntryText, TEXT_ALIGN_CENTER )
 				if NC.UseWhiteList then
 					if Prefix:GetValue() == NC.Language.Selection then
 						draw.SimpleText( NC.Language.PrefixInfo, "RCNPC_InvalidText", NameChangePanel:GetWide()/2, 160, Color(255, 20, 10, 255), TEXT_ALIGN_CENTER )
@@ -161,7 +188,7 @@ net.Receive("NC_OpenNCMenu", function()
 						draw.SimpleText( NC.Language.GoodName, "RCNPC_InvalidText", NameChangePanel:GetWide()/2, 160, Color(0, 204, 0, 255), TEXT_ALIGN_CENTER )
 					end
 				end
-				draw.SimpleText( NC.Language.OneEntry, "RCNPC_EntryTitle", NameChangePanel:GetWide()/2, 188, NC.Color.MainPageText, TEXT_ALIGN_CENTER )
+				draw.SimpleText( NC.Language.OneEntry, "RCNPC_EntryTitle", NameChangePanel:GetWide()/2, 188, NC.Color.EntryText, TEXT_ALIGN_CENTER )
 				if NC.UseWhiteList then
 					if not CheckIfNameHasRightChar(LastName:GetValue()) then
 						draw.SimpleText( NC.Language.InvalidCharacter..GetInvalidChar(FirstName:GetValue()), "RCNPC_InvalidText", NameChangePanel:GetWide()/2, 243, Color(255, 20, 10, 255), TEXT_ALIGN_CENTER )
@@ -199,7 +226,7 @@ net.Receive("NC_OpenNCMenu", function()
 			FirstName:SetSize( 200, 28 )
 			FirstName:SetPos( (NameChangePanel:GetWide()/2)-(FirstName:GetWide()/2), 128 )
 			FirstName:SetFont("RCNPC_EntryText")
-			FirstName:SetTextColor(NC.Color.MainPageText)
+			FirstName:SetTextColor(NC.Color.EntryText)
 		end
 
 		if NC.EntryType == "prefix" then
@@ -217,7 +244,7 @@ net.Receive("NC_OpenNCMenu", function()
 			LastName:SetSize( 200, 28 )
 			LastName:SetPos( (NameChangePanel:GetWide()/2)-(LastName:GetWide()/2), 213 )
 			LastName:SetFont("RCNPC_EntryText")
-			LastName:SetTextColor(NC.Color.MainPageText)
+			LastName:SetTextColor(NC.Color.EntryText)
 		end
 
 		if NC.EntryType == "one" then
@@ -225,7 +252,7 @@ net.Receive("NC_OpenNCMenu", function()
 			OnlyOne:SetSize( 200, 28 )
 			OnlyOne:SetPos( (NameChangePanel:GetWide()/2)-(OnlyOne:GetWide()/2), NameChangePanel:GetTall()/2-14 )
 			OnlyOne:SetFont("RCNPC_EntryText")
-			OnlyOne:SetTextColor(NC.Color.MainPageText)
+			OnlyOne:SetTextColor(NC.Color.EntryText)
 		end
 
 		local ChangeButton = vgui.Create( "DButton", NameChangePanel )
@@ -234,7 +261,7 @@ net.Receive("NC_OpenNCMenu", function()
 		ChangeButton:SetText( "" )
 		ChangeButton:SetTextColor( NC.Color.CloseButton )
 		ChangeButton.Paint = function(self, w, h)
-			draw.RoundedBox( 0, 0, 0, w, h, NC.Color.Primary )
+			draw.RoundedBox( 0, 0, 0, w, h, NC.Color.AcceptButton )
 			draw.SimpleText( NC.Language.ChangeButton, "RCNPC_EntryTitle", w/2, 15, NC.Color.HeaderText, TEXT_ALIGN_CENTER )
 		end
 		ChangeButton.DoClick = function()
@@ -441,25 +468,11 @@ end)
 
 local BGBlur
 
-local blur = Material("pp/blurscreen")
-local function drawBlur( x, y, w, h, amount )
-	surface.SetDrawColor( 255, 255, 255, 255 )
-	surface.SetMaterial( blur )
 
-	for i = 1, 6 do
-		blur:SetFloat( "$blur", ( i / 3 ) * ( amount or 6 ) )
-		blur:Recompute()
-
-		render.UpdateScreenEffectTexture()
-		render.SetScissorRect( x, y, x + w, y + h, true )
-			surface.DrawTexturedRect( 0, 0, ScrW(), ScrH() )
-		render.SetScissorRect( 0, 0, 0, 0, false )
-	end
-end
 
 net.Receive("NC_OpenJoinMenu", function()
 	local ply = net.ReadEntity()
-	if !IsValid(BGBlur) then
+	if (!IsValid(BGBlur)) then
 		BGBlur = vgui.Create( "DPanel" )
 		BGBlur:SetPos( 0, 0 )
 		BGBlur:SetSize( ScrW(), ScrH() )
@@ -472,7 +485,7 @@ net.Receive("NC_OpenJoinMenu", function()
 	local LastName
 	local OnlyOne
 	local Prefix
-	if !IsValid(NameChangePanel) then
+	if (!IsValid(NameChangePanel)) then
 		local NameChangePanel = vgui.Create( "DFrame" )
 		NameChangePanel:SetSize( 525, 350 )
 		NameChangePanel:Center()
@@ -486,9 +499,9 @@ net.Receive("NC_OpenJoinMenu", function()
 			draw.RoundedBoxEx( 4, 0, 30, w, h-30, NC.Color.MainPage, false, false, true, true )
 			draw.SimpleText( NC.Language.NameSetupTitle, "RCNPC_TitleText", NameChangePanel:GetWide()/2, 3, NC.Color.HeaderText, TEXT_ALIGN_CENTER )
 			draw.SimpleText( NC.Language.NameSetupWelcome, "RCNPC_WelcomeText", NameChangePanel:GetWide()/2, 35, NC.Color.MainPageText, TEXT_ALIGN_CENTER )
-			draw.SimpleText( NC.Language.NameSetupInfo, "RCNPC_InfoText", NameChangePanel:GetWide()/2, 65, NC.Color.MainPageText, TEXT_ALIGN_CENTER )
+			draw.SimpleText( NC.Language.NameSetupInfo, "RCNPC_InfoText", NameChangePanel:GetWide()/2, 67, NC.Color.MainPageText, TEXT_ALIGN_CENTER )
 			if NC.EntryType == "two" then
-				draw.SimpleText( NC.Language.FirstName, "RCNPC_EntryTitle", NameChangePanel:GetWide()/2, 103, NC.Color.MainPageText, TEXT_ALIGN_CENTER )
+				draw.SimpleText( NC.Language.FirstName, "RCNPC_EntryTitle", NameChangePanel:GetWide()/2, 103, NC.Color.HeaderText, TEXT_ALIGN_CENTER )
 				if NC.UseWhiteList then
 					if not CheckIfNameHasRightChar(FirstName:GetValue()) then
 						draw.SimpleText( NC.Language.InvalidCharacter..GetInvalidChar(FirstName:GetValue()), "RCNPC_InvalidText", NameChangePanel:GetWide()/2, 160, Color(255, 20, 10, 255), TEXT_ALIGN_CENTER )
@@ -514,7 +527,7 @@ net.Receive("NC_OpenJoinMenu", function()
 						draw.SimpleText( NC.Language.GoodName, "RCNPC_InvalidText", NameChangePanel:GetWide()/2, 160, Color(0, 204, 0, 255), TEXT_ALIGN_CENTER )
 					end
 				end
-				draw.SimpleText( NC.Language.LastName, "RCNPC_EntryTitle", NameChangePanel:GetWide()/2, 188, NC.Color.MainPageText, TEXT_ALIGN_CENTER )
+				draw.SimpleText( NC.Language.LastName, "RCNPC_EntryTitle", NameChangePanel:GetWide()/2, 188, NC.Color.HeaderText, TEXT_ALIGN_CENTER )
 				if NC.UseWhiteList then
 					if not CheckIfNameHasRightChar(LastName:GetValue()) then
 						draw.SimpleText( NC.Language.InvalidCharacter..GetInvalidChar(LastName:GetValue()), "RCNPC_InvalidText", NameChangePanel:GetWide()/2, 243, Color(255, 20, 10, 255), TEXT_ALIGN_CENTER )
@@ -541,7 +554,7 @@ net.Receive("NC_OpenJoinMenu", function()
 					end
 				end
 			elseif NC.EntryType == "one" then
-				draw.SimpleText( "Name", "RCNPC_EntryTitle", NameChangePanel:GetWide()/2, NameChangePanel:GetTall()/2-40, NC.Color.MainPageText, TEXT_ALIGN_CENTER )
+				draw.SimpleText( "Name", "RCNPC_EntryTitle", NameChangePanel:GetWide()/2, NameChangePanel:GetTall()/2-40, NC.Color.HeaderText, TEXT_ALIGN_CENTER )
 				if NC.UseWhiteList then
 					if not CheckIfNameHasRightChar(OnlyOne:GetValue()) then
 						draw.SimpleText( NC.Language.InvalidCharacter..GetInvalidChar(FirstName:GetValue()), "RCNPC_InvalidText", NameChangePanel:GetWide()/2, NameChangePanel:GetTall()/2+16, Color(255, 20, 10, 255), TEXT_ALIGN_CENTER )
@@ -572,7 +585,7 @@ net.Receive("NC_OpenJoinMenu", function()
 					end
 				end
 			elseif NC.EntryType == "prefix" then
-				draw.SimpleText( NC.Language.Prefix, "RCNPC_EntryTitle", NameChangePanel:GetWide()/2, 103, NC.Color.MainPageText, TEXT_ALIGN_CENTER )
+				draw.SimpleText( NC.Language.Prefix, "RCNPC_EntryTitle", NameChangePanel:GetWide()/2, 103, NC.Color.EntryText, TEXT_ALIGN_CENTER )
 				if NC.UseWhiteList then
 					if Prefix:GetValue() == NC.Language.Selection then
 						draw.SimpleText( NC.Language.PrefixInfo, "RCNPC_InvalidText", NameChangePanel:GetWide()/2, 160, Color(255, 20, 10, 255), TEXT_ALIGN_CENTER )
@@ -592,7 +605,7 @@ net.Receive("NC_OpenJoinMenu", function()
 						draw.SimpleText( NC.Language.GoodName, "RCNPC_InvalidText", NameChangePanel:GetWide()/2, 160, Color(0, 204, 0, 255), TEXT_ALIGN_CENTER )
 					end
 				end
-				draw.SimpleText( NC.Language.OneEntry, "RCNPC_EntryTitle", NameChangePanel:GetWide()/2, 188, NC.Color.MainPageText, TEXT_ALIGN_CENTER )
+				draw.SimpleText( NC.Language.OneEntry, "RCNPC_EntryTitle", NameChangePanel:GetWide()/2, 188, NC.Color.EntryText, TEXT_ALIGN_CENTER )
 				if NC.UseWhiteList then
 					if not CheckIfNameHasRightChar(LastName:GetValue()) then
 						draw.SimpleText( NC.Language.InvalidCharacter..GetInvalidChar(FirstName:GetValue()), "RCNPC_InvalidText", NameChangePanel:GetWide()/2, 243, Color(255, 20, 10, 255), TEXT_ALIGN_CENTER )
@@ -630,7 +643,7 @@ net.Receive("NC_OpenJoinMenu", function()
 			FirstName:SetSize( 200, 28 )
 			FirstName:SetPos( (NameChangePanel:GetWide()/2)-(FirstName:GetWide()/2), 128 )
 			FirstName:SetFont("RCNPC_EntryText")
-			FirstName:SetTextColor(NC.Color.MainPageText)
+			FirstName:SetTextColor(RCNPC_EntryText)
 		end
 
 		if NC.EntryType == "prefix" then
@@ -648,7 +661,7 @@ net.Receive("NC_OpenJoinMenu", function()
 			LastName:SetSize( 200, 28 )
 			LastName:SetPos( (NameChangePanel:GetWide()/2)-(LastName:GetWide()/2), 213 )
 			LastName:SetFont("RCNPC_EntryText")
-			LastName:SetTextColor(NC.Color.MainPageText)
+			LastName:SetTextColor(RCNPC_EntryText)
 		end
 
 		if NC.EntryType == "one" then
@@ -656,7 +669,7 @@ net.Receive("NC_OpenJoinMenu", function()
 			OnlyOne:SetSize( 200, 28 )
 			OnlyOne:SetPos( (NameChangePanel:GetWide()/2)-(OnlyOne:GetWide()/2), NameChangePanel:GetTall()/2-14 )
 			OnlyOne:SetFont("RCNPC_EntryText")
-			OnlyOne:SetTextColor(NC.Color.MainPageText)
+			OnlyOne:SetTextColor(RCNPC_EntryText)
 		end
 
 		local ChangeButton = vgui.Create( "DButton", NameChangePanel )
@@ -665,12 +678,12 @@ net.Receive("NC_OpenJoinMenu", function()
 		ChangeButton:SetText( "" )
 		ChangeButton:SetTextColor( NC.Color.CloseButton )
 		ChangeButton.Paint = function(self, w, h)
-			draw.RoundedBox( 0, 0, 0, w, h, NC.Color.Primary )
+			draw.RoundedBox( 0, 0, 0, w, h, NC.Color.AcceptButton )
 			draw.SimpleText( NC.Language.ChangeButton, "RCNPC_EntryTitle", w/2, 15, NC.Color.HeaderText, TEXT_ALIGN_CENTER )
 		end
 		ChangeButton.DoClick = function()
 			if NC.EntryType == "two" then
-				if FirstName:GetValue() != "" and LastName:GetValue() != "" then
+				if (FirstName:GetValue() != "" and LastName:GetValue() != "") then
 					if not TooLongName("first", FirstName:GetValue()) and not TooLongName("last", LastName:GetValue()) then
 						if not TooShortName("first", FirstName:GetValue()) and not TooShortName("last", LastName:GetValue()) then
 							if NC.UseWhiteList then
@@ -722,7 +735,7 @@ net.Receive("NC_OpenJoinMenu", function()
 					NCRequestBox(NC.Language.ErrorNonValidName, "", NC.Language.ErrorOk, function() return end)
 				end
 			elseif NC.EntryType == "one" then
-				if OnlyOne:GetValue() != "" then
+				if (OnlyOne:GetValue() != "") then
 					if not TooLongName("first", OnlyOne:GetValue()) then
 						if not TooShortName("first", OnlyOne:GetValue()) then
 							if NC.UseWhiteList then
@@ -835,7 +848,7 @@ end)
 local function NameInputWindow(selected)
 	NC.Language.AdminChangeInfo = "Please enter a valid name for this player."
 	NC.Language.AdminButton1 = "Change"
-	if !IsValid(RequestInput) then
+	if (!IsValid(RequestInput)) then
 		local RequestInput = vgui.Create( "DFrame" )
 		RequestInput:SetSize( 400, 140 )
 		RequestInput:Center()
@@ -854,7 +867,7 @@ local function NameInputWindow(selected)
 		name:SetSize( 200, 28 )
 		name:SetPos( (RequestInput:GetWide()/2)-(name:GetWide()/2), 60 )
 		name:SetFont("RCNPC_EntryText")
-		name:SetTextColor(NC.Color.MainPageText)
+		name:SetTextColor(RCNPC_EntryText)
 
 		local Button1 = vgui.Create( "DButton", RequestInput )
 		Button1:SetSize( 76, 30 )
@@ -862,7 +875,7 @@ local function NameInputWindow(selected)
 		Button1:SetText( "" )
 		Button1:SetTextColor( NC.Color.CloseButton )
 		Button1.Paint = function(self, w, h)
-			draw.RoundedBox( 0, 0, 0, w, h, NC.Color.Primary )
+			draw.RoundedBox( 0, 0, 0, w, h, NC.Color.AcceptButton )
 			draw.SimpleText( NC.Language.AdminButton1, "RCNPC_EntryTitle", Button1:GetWide()/2, 5, NC.Color.HeaderText, TEXT_ALIGN_CENTER )
 		end
 		Button1.DoClick = function()
