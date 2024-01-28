@@ -22,7 +22,7 @@ local SwitchingCancelKeyName = "Reload"
 local CanSwitchToWsWhileSwitching = false
 
 -- Send a chat message to the player when the weapon is switched.
-local EnableSendChatMessage = true
+local EnableSendChatMessage = false
 local function SendChatMessage( ply, weaponName )
 	-- If you do not know what this does, leave it as it is.
 	-- Feel free to change this to anything you'd like.
