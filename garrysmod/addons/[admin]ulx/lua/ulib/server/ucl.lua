@@ -72,6 +72,13 @@ local defaultGroupsText = -- To populate initially or when the user deletes it
 	"inherit_from"	"admin"
 }
 
+"disfulversed"
+{
+	"allow"
+	{
+	}
+}
+
 "user"
 {
 	"allow"
