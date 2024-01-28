@@ -1,5 +1,3 @@
--- SETTINGS
-
 -- Time to equip the weapon in seconds.
 local EquipTime = 1.5
 
@@ -56,11 +54,11 @@ local ReducedTimeGroups = {
 	-- Group, Reduced time (e.g. 0.5 makes it half the normal time, Reduced time times the normal time)
 	-- This will also reduce the time of different time weapons.
 	{"EXAMPLEGROUP1", 2},
-	{"superadmin", 0.2}
+	{"superadmin", 0.6}
 }
 
 -- Color of the text.
-local TextColor = Color(255, 255, 255, 255)
+local TextColor = Color(255, 255, 255)
 
 -- Change the color of the text to black or white depending on the pixel color of the screen.
 -- This lags a lot, so do not enable this.
@@ -68,7 +66,7 @@ local ChangeColorText = false
 
 -- Size of the delay bar.
 local barWidth = 200
-local barHeight = 6
+local barHeight = 5
 
 -- If you find any bugs or encounter any problems feel free to contact me.
 -- http://steamcommunity.com/id/ikefi
@@ -372,13 +370,13 @@ if CLIENT then
 				end
 			end
 			
-			if ShowCountdownTimer then
-				draw.SimpleText(math.Round(NewEquipTime - (TimerW*NewEquipTime), CountdownTimerDecimals), "Default", (ScrW()/2) + (bw/2) + 10, (ScrH()/2) + 10, TextColor, TEXT_ALIGN_LEFT, TEXT_ALIGN_BOTTOM)
-			end
+			--[[if ShowCountdownTimer then
+   				draw.SimpleText(math.Round(NewEquipTime - (TimerW*NewEquipTime), CountdownTimerDecimals), "RobotoFont", (ScrW()/2) + (bw/2) + 10, (ScrH()/2) + 10, TextColor, TEXT_ALIGN_LEFT, TEXT_ALIGN_BOTTOM)
+			end]]
 			
-			draw.SimpleText("Меняем на " .. WeaponName, "Default", (ScrW()/2), (ScrH()/2) + bh + 18, TextColor, TEXT_ALIGN_CENTER)
+			draw.SimpleText("Меняем на " .. WeaponName, "RobotoFont", (ScrW()/2), (ScrH()/2) + bh + 18, TextColor, TEXT_ALIGN_CENTER)
 			if SwitchingCancelKeyName and FirstSwitch then
-				draw.SimpleText("Отмените, нажав " .. SwitchingCancelKeyName, "Default", (ScrW()/2), (ScrH()/2) + bh + 30, TextColor, TEXT_ALIGN_CENTER)
+    			draw.SimpleText("Отмените, нажав " .. SwitchingCancelKeyName, "RobotoFont", (ScrW()/2), (ScrH()/2) + bh + 30, TextColor, TEXT_ALIGN_CENTER)
 			end
 		end
 		
