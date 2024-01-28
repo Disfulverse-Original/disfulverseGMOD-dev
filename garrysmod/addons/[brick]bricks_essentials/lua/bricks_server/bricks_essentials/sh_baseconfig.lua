@@ -8,18 +8,18 @@
 --[[ MODULES CONFIG ]]--
 BRICKS_SERVER.BASECONFIG.MODULES = BRICKS_SERVER.BASECONFIG.MODULES or {}
 BRICKS_SERVER.BASECONFIG.MODULES["essentials"] = { true, {
-    ["boosters"] = true,
+    ["boosters"] = false,
     ["boss"] = true,
     ["crafting"] = true,
     ["deathscreens"] = false,
     ["f4menu"] = true,
-    --["hud"] = false,
+    --["hud"] = false, -- удалены
     ["inventory"] = true,
     ["levelling"] = true,
     ["logging"] = true,
     ["marketplace"] = true,
     ["printers"] = true,
-    ["swepupgrader"] = true,
+    ["swepupgrader"] = false,
     ["zones"] = true
 } }
 
@@ -40,37 +40,37 @@ BRICKS_SERVER.BASECONFIG.F4.Tabs = {
     [3] = { "Inventory", "inventory_24.png", { 
         { "Main", 3 }, 
         { "Printers", 4 }, 
-        { "Boosters", 5 }
+        --{ "Boosters", 5 }
     } },
     [4] = { "Crafting", "crafting_24.png", 6 },
     [5] = { "Profile", "profile_24.png", { 
         { "Statistics", 7 }, 
         { "Logs", 8 }
     } },
-    [6] = { true },
-    [7] = { "Discord", "discord_24.png", "https://discord.gg/crBpKpR" },
-    [8] = { "Donate", "donate_24.png", "https://www.blackrockgaming.co.uk/donate" },
+    --[6] = { true },
+    --[7] = { "Discord", "discord_24.png", "https://discord.gg/crBpKpR" },
+    --[8] = { "Donate", "donate_24.png", "https://www.blackrockgaming.co.uk/donate" },
 }
 
 --[[ LEVELING ]]--
 BRICKS_SERVER.BASECONFIG.LEVELING = {}
 BRICKS_SERVER.BASECONFIG.LEVELING["Max Level"] = 100
-BRICKS_SERVER.BASECONFIG.LEVELING["Original EXP Required"] = 150
+BRICKS_SERVER.BASECONFIG.LEVELING["Original EXP Required"] = 1000
 BRICKS_SERVER.BASECONFIG.LEVELING["EXP Required Increase"] = 1.1
-BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Killing NPC"] = 50
+BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Killing NPC"] = 150
 BRICKS_SERVER.BASECONFIG.LEVELING["Playing On Server Reward Time"] = 300
-BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Playing On Server"] = 50
-BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Lockpick"] = 4
+BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Playing On Server"] = 100
+BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Lockpick"] = 25
 BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Entered Lottery"] = 10
 BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Lottery Won"] = 100
-BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Hit Completed"] = 25
-BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Rock Mined"] = 25
-BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Tree Chopped"] = 25
-BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Garbage Searched"] = 25
-BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Money Printing"] = 10
-BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Armory Robbery"] = 20
-BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Laundering"] = 20
-BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - CityWorker"] = 20
+BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Hit Completed"] = 500
+BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Rock Mined"] = 75
+BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Tree Chopped"] = 75
+BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Garbage Searched"] = 50
+BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Money Printing"] = 0
+BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Armory Robbery"] = 0
+BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Laundering"] = 0
+BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - CityWorker"] = 100
 BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - ROBBERY SUCCESS"] = 300
 BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - ROBBERY KILL"] = 300
 BRICKS_SERVER.BASECONFIG.LEVELING.JobLevels = {}
@@ -81,63 +81,67 @@ BRICKS_SERVER.BASECONFIG.LEVELING.AmmoLevels = {}
 --[[ PRINTERS ]]--
 BRICKS_SERVER.BASECONFIG.PRINTERS = {}
 BRICKS_SERVER.BASECONFIG.PRINTERS["Max Level"] = 100
-BRICKS_SERVER.BASECONFIG.PRINTERS["Original EXP Required"] = 150
+BRICKS_SERVER.BASECONFIG.PRINTERS["Original EXP Required"] = 1000
 BRICKS_SERVER.BASECONFIG.PRINTERS["EXP Required Increase"] = 1.1
-BRICKS_SERVER.BASECONFIG.PRINTERS["Printer EXP Per Print"] = 5
+BRICKS_SERVER.BASECONFIG.PRINTERS["Printer EXP Per Print"] = 30
 BRICKS_SERVER.BASECONFIG.PRINTERS["Money Increase Per Level"] = 0.01
 BRICKS_SERVER.BASECONFIG.PRINTERS["Ink Lost Per Print"] = 2
-BRICKS_SERVER.BASECONFIG.PRINTERS["Replace Cooldown"] = 30
+BRICKS_SERVER.BASECONFIG.PRINTERS["Replace Cooldown"] = 180
 BRICKS_SERVER.BASECONFIG.PRINTERS.Tiers = {
     [1] = {
-        Name = "Silver",
+        Name = "Принтер Т1",
         UpgradeCost = 0,
         ModelColor = Color( 192, 192, 192 ),
         ScreenColor = Color( 192, 192, 192 ),
         Health = 150,
         MaxInk = 150,
-        PrintAmount = 100,
-        MoneyStorage = 1500,
-        PrintSpeed = 10
+        PrintAmount = 50,
+        MoneyStorage = 20000,
+        PrintSpeed = 60
     },
     [2] = {
-        Name = "Gold",
-        UpgradeCost = 1000,
+        Name = "Принтер Т2",
+        UpgradeCost = 20000,
         ModelColor = Color( 238, 191, 39 ),
         ScreenColor = Color( 234, 213, 39 ),
         Health = 150,
         MaxInk = 150,
-        PrintAmount = 90,
-        MoneyStorage = 15000,
-        PrintSpeed = 8
+        PrintAmount = 150,
+        MoneyStorage = 30000,
+        PrintSpeed = 30
     },
     [3] = {
-        Name = "Diamond",
-        UpgradeCost = 5000,
+        Name = "Принтер Т3",
+        UpgradeCost = 30000,
         ModelColor = Color( 16, 231, 255 ),
         ScreenColor = Color( 74, 255, 245 ),
         Health = 150,
         MaxInk = 150,
-        PrintAmount = 150,
-        MoneyStorage = 50000,
-        PrintSpeed = 5
+        PrintAmount = 250,
+        MoneyStorage = 40000,
+        PrintSpeed = 15
     },
     [4] = {
-        Name = "Obsidian",
-        UpgradeCost = 25000,
+        Name = "Принтер Т4",
+        UpgradeCost = 40000,
         ModelColor = Color( 65, 34, 119 ),
         ScreenColor = Color( 83, 63, 112 ),
         Health = 150,
         MaxInk = 150,
-        PrintAmount = 200,
-        MoneyStorage = 100000,
-        PrintSpeed = 3
+        PrintAmount = 300,
+        MoneyStorage = 50000,
+        PrintSpeed = 5
     }
 }
 BRICKS_SERVER.BASECONFIG.PRINTERS.PrinterSlots = {
-    [1] = {},
-    [2] = {
+    [1] = {
         Price = 10000,
+        Level = 30,       
     },
+    [2] = {
+        Group = "VIP",
+    },
+--[[ 
     [3] = {
         Price = 20000,
         Level = 5,
@@ -145,6 +149,7 @@ BRICKS_SERVER.BASECONFIG.PRINTERS.PrinterSlots = {
     [4] = {
         Group = "VIP",
     },
+--]]
 }
 
 --[[ INVENTORY ]]--
@@ -152,21 +157,22 @@ BRICKS_SERVER.BASECONFIG.INVENTORY = BRICKS_SERVER.BASECONFIG.INVENTORY or {}
 BRICKS_SERVER.BASECONFIG.INVENTORY["Max Item Stack"] = 10
 BRICKS_SERVER.BASECONFIG.INVENTORY["Inventory Slots"] = {
     ["Staff"] = 40,
-    ["VIP++"] = 35,
-    ["VIP+"] = 30,
-    ["VIP"] = 25,
-    ["Default"] = 20
+    --["VIP++"] = 35,
+    --["VIP+"] = 30,
+    ["VIP"] = 35,
+    ["Default"] = 15
 }
 BRICKS_SERVER.BASECONFIG.INVENTORY["Bank Slots"] = {
     ["Staff"] = 40,
-    ["VIP++"] = 35,
-    ["VIP+"] = 30,
-    ["VIP"] = 25,
+    --["VIP++"] = 35,
+    --["VIP+"] = 30,
+    ["VIP"] = 40,
     ["Default"] = 20
 }
 
 --[[ BOOSTERS ]]--
 BRICKS_SERVER.BASECONFIG.BOOSTERS = {
+--[[
     [1] = {
         Title = "2X EXP",
         Type = 1,
@@ -195,6 +201,7 @@ BRICKS_SERVER.BASECONFIG.BOOSTERS = {
         Time = 60,
         Icon = "https://i.imgur.com/BfzvXDH.png"
     }
+--]]
 }
 
 --[[ CRAFTING ]]--
@@ -245,11 +252,13 @@ BRICKS_SERVER.BASECONFIG.CRAFTING.GarbageTypes = {
     ["Scrap"] = 50
 }
 BRICKS_SERVER.BASECONFIG.CRAFTING.Skills = {
+--[[
     ["woodcutting"] = {
         MaxLevel = 50,
         BaseExperience = 100,
         ExpMultiplier = 1.5
     }
+--]]
 }
 
 --[[ NPCS ]]--
@@ -479,7 +488,8 @@ BRICKS_SERVER.BASECONFIG.BOSS.NPCs[1] = {
     }
 }
 
---[[ DEATHSCREENS ]]--
+--[[
+--[[ DEATHSCREENS
 BRICKS_SERVER.BASECONFIG.DEATHSCREENS = {}
 BRICKS_SERVER.BASECONFIG.DEATHSCREENS["Default Playercard"] = "https://i.imgur.com/dJ71grf.png"
 BRICKS_SERVER.BASECONFIG.DEATHSCREENS.Cards = {
@@ -621,3 +631,4 @@ BRICKS_SERVER.BASECONFIG.SWEPUPGRADES.Blacklist = {
     ["bricks_server_axe"] = true,
     ["bricks_server_pickaxe"] = true
 }
+--]]

@@ -13,8 +13,8 @@ BRICKS_SERVER.BASECONFIG.MODULES["default"] = { true, {
 
 --[[ GENERAL CONFIG ]]--
 BRICKS_SERVER.BASECONFIG.GENERAL = BRICKS_SERVER.BASECONFIG.GENERAL or {}
-BRICKS_SERVER.BASECONFIG.GENERAL["Donate Link"] = "https://www.blackrockgaming.co.uk/donate"
-BRICKS_SERVER.BASECONFIG.GENERAL["Server Name"] = "BRG"
+BRICKS_SERVER.BASECONFIG.GENERAL["Donate Link"] = ""
+BRICKS_SERVER.BASECONFIG.GENERAL["Server Name"] = "Disfulverse"
 BRICKS_SERVER.BASECONFIG.GENERAL["3D2D Display Distance"] = 500000
 BRICKS_SERVER.BASECONFIG.GENERAL["Use Textured Gradients (Better FPS)"] = true
 BRICKS_SERVER.BASECONFIG.GENERAL.AdminPermissions = { 
@@ -24,9 +24,7 @@ BRICKS_SERVER.BASECONFIG.GENERAL.AdminPermissions = {
 }
 BRICKS_SERVER.BASECONFIG.GENERAL.Groups = {
     [1] = { "Staff", { ["moderator"] = true, ["admin"] = true, ["superadmin"] = true } },
-    [2] = { "VIP++", { ["vip++"] = true, ["superadmin"] = true }, Color(201,176,55) },
-    [3] = { "VIP+", { ["vip+"] = true, ["vip++"] = true, ["superadmin"] = true }, Color(180,180,180) },
-    [4] = { "VIP", { ["vip"] = true, ["vip+"] = true, ["vip++"] = true, ["superadmin"] = true }, Color(173,138,86) },
+    [2] = { "Dis+", { ["disfulversed"] = true }, Color(112, 46, 255) },
     [5] = { "User", {}, Color(201, 70, 70), true }
 }
 BRICKS_SERVER.BASECONFIG.GENERAL.Rarities = {
@@ -40,7 +38,7 @@ BRICKS_SERVER.BASECONFIG.GENERAL.Rarities = {
 
 --[[ LANGUAGE CONFIG ]]--
 BRICKS_SERVER.BASECONFIG.LANGUAGE = {}
-BRICKS_SERVER.BASECONFIG.LANGUAGE.Language = "english"
+BRICKS_SERVER.BASECONFIG.LANGUAGE.Language = "russian"
 BRICKS_SERVER.BASECONFIG.LANGUAGE.Languages = {}
 
 --[[ THEME CONFIG ]]--
