@@ -1,26 +1,24 @@
 if CLIENT then
-    SWEP.PrintName = "Кирка T1"
-    SWEP.Slot = 0
-    SWEP.SlotPos = 5
-    SWEP.DrawAmmo = false
-    SWEP.DrawCrosshair = true
+	SWEP.PrintName = "Топор Т2" -- For english translate this to Pickaxe
+	SWEP.Slot = 0
+	SWEP.SlotPos = 5
+	SWEP.DrawAmmo = false
+	SWEP.DrawCrosshair = true
 end
 
 -- Variables that are used on both client and server
 
 SWEP.Author = "Brickwall"
-SWEP.Instructions = "Left click to hit rocks."
+SWEP.Instructions = "Left click to hit wood."
 SWEP.Contact = ""
 SWEP.Purpose = ""
 
 SWEP.ViewModelFOV = 85
 SWEP.ViewModelFlip = false
-
--- Измените путь к модели с учетом вашего цвета
-SWEP.ViewModel = Model("models/sterling/c_crafting_pickaxe.mdl")
-SWEP.WorldModel = Model("models/sterling/w_crafting_pickaxe.mdl")
-
+SWEP.ViewModel = Model("models/sterling/c_crafting_axe.mdl")
+SWEP.WorldModel = Model("models/sterling/w_crafting_axe.mdl")
 SWEP.HoldType = "melee";
+
 SWEP.UseHands = true
 
 SWEP.Spawnable = true	
@@ -35,19 +33,20 @@ SWEP.Primary.Damage = 1;
 SWEP.Primary.Delay = 1;
 SWEP.Primary.Ammo = "";
 
--- Добавьте эту строку для установки цвета модельки
-SWEP.Color = Color(0, 0, 255, 255)
-
+--[[-------------------------------------------------------
+Name: SWEP:Initialize()
+Desc: Called when the weapon is first loaded
+---------------------------------------------------------]]
 function SWEP:Initialize()
-    self:SendWeaponAnim(ACT_VM_HOLSTER);
+	self:SendWeaponAnim(ACT_VM_HOLSTER);
 end
 
 function SWEP:DoHitEffects()
 	local trace = self.Owner:GetEyeTraceNoCursor();
 	
-	if (((trace.Hit or trace.HitWorld) and self.Owner:GetShootPos():Distance(trace.HitPos) <= 64) and IsValid(trace.Entity) and trace.Entity:GetClass() == "bricks_server_rock" ) then
+	if (((trace.Hit or trace.HitWorld) and self.Owner:GetShootPos():Distance(trace.HitPos) <= 64)) then
 		self:SendWeaponAnim(ACT_VM_HITCENTER);
-		self:EmitSound("physics/concrete/rock_impact_hard5.wav");
+		self:EmitSound("weapons/crossbow/hitbod2.wav");
 
 		local bullet = {}
 		bullet.Num    = 1
@@ -79,7 +78,7 @@ function SWEP:PrimaryAttack()
 	self:SetNextPrimaryFire(CurTime() + self.Primary.Delay);
 	self:DoAnimations();
 	self:DoHitEffects();
-	
+
 	self:SendWeaponAnim( ACT_VM_PRIMARYATTACK_1 )
 	
 	if (SERVER) then
@@ -91,10 +90,8 @@ function SWEP:PrimaryAttack()
 		
 		if (self.Owner:GetShootPos():Distance(trace.HitPos) <= 64) then
 			if (IsValid(trace.Entity)) then
-				if( trace.Entity:GetClass() == "bricks_server_rock" ) then
-					if( BRICKS_SERVER.CONFIG.CRAFTING.RockTypes[trace.Entity:GetRockType() or ""] ) then
-						trace.Entity:HitRock( 7, self.Owner ) --8 hits
-					end
+				if( trace.Entity:GetClass() == "bricks_server_tree" ) then
+					trace.Entity:HitTree( 16.6, self.Owner ) --6 hits
 				end
 			end;
 		end;
@@ -107,5 +104,3 @@ end
 
 function SWEP:SecondaryAttack()
 end
-
-

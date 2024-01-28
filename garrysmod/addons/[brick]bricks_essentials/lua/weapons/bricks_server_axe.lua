@@ -1,6 +1,6 @@
 if CLIENT then
-	SWEP.PrintName = "Топор" -- For english translate this to Pickaxe
-	SWEP.Slot = 1
+	SWEP.PrintName = "Обычный топор" -- For english translate this to Pickaxe
+	SWEP.Slot = 0
 	SWEP.SlotPos = 5
 	SWEP.DrawAmmo = false
 	SWEP.DrawCrosshair = true
@@ -91,7 +91,7 @@ function SWEP:PrimaryAttack()
 		if (self.Owner:GetShootPos():Distance(trace.HitPos) <= 64) then
 			if (IsValid(trace.Entity)) then
 				if( trace.Entity:GetClass() == "bricks_server_tree" ) then
-					trace.Entity:HitTree( 34, self.Owner )
+					trace.Entity:HitTree( 10, self.Owner ) --10 hits
 				end
 			end;
 		end;
