@@ -51,29 +51,36 @@ local function formatEXP( number )
 end
 
 local lerpExperience = 0
-hook.Add( "HUDPaint", "BRS.HUDPaint_LevellingHUD", function()
+
+hook.Add( "DrawOverlay", "BRS.HUDPaint_LevellingHUD", function()
 	if( not BRS_SHOWINGBOSS ) then
-		local width, height = ScrW()*0.2, 10
+		local width, height = ScrW()*0.15, 10
 		local y = 14
 
-		draw.RoundedBox( 5, (ScrW()/2)-(width/2), y, width, height, BRICKS_SERVER.Func.GetTheme( 3 ))
+		local black = Color(15,15,15,175)
+		local linecolor = Color(90, 94, 214, 200)
+		local textcolor = Color (245,245,245,225)
+
+
+
+		draw.RoundedBox( 5, (ScrW()/2)-(width/2), y, width, height, black)
 
 		lerpExperience = Lerp( RealFrameTime()*2, lerpExperience, BRICKS_SERVER.Func.GetCurLevelExp( LocalPlayer() ) )
 		if( BRS_LEVEL != BRICKS_SERVER.CONFIG.LEVELING["Max Level"] ) then
-			draw.RoundedBox( 5, (ScrW()/2)-(width/2), y, width*math.Clamp( (lerpExperience/BRICKS_SERVER.Func.GetExpToLevel( BRS_LEVEL, BRS_LEVEL+1 )), 0, 1 ), height, BRICKS_SERVER.Func.GetTheme( 5 ) )
+			draw.RoundedBox( 5, (ScrW()/2)-(width/2), y, width*math.Clamp( (lerpExperience/BRICKS_SERVER.Func.GetExpToLevel( BRS_LEVEL, BRS_LEVEL+1 )), 0, 1 ), height, linecolor )
 		else
-			draw.RoundedBox( 5, (ScrW()/2)-(width/2), y, width, height, BRICKS_SERVER.Func.GetTheme( 5 ) )
+			draw.RoundedBox( 5, (ScrW()/2)-(width/2), y, width, height, linecolor )
 		end
 
 		draw.SimpleText( BRS_LEVEL, "BRICKS_SERVER_HUDFont", (ScrW()/2)-(width/2)-5-1, y+(height/2)-1, Color( 0, 0, 0 ), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER )
-		draw.SimpleText( BRS_LEVEL, "BRICKS_SERVER_HUDFont", (ScrW()/2)-(width/2)-5, y+(height/2)-2, Color( 255, 255, 255 ), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER )
+		draw.SimpleText( BRS_LEVEL, "BRICKS_SERVER_HUDFont", (ScrW()/2)-(width/2)-5, y+(height/2)-2, textcolor, TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER )
 
 		if( BRS_LEVEL != BRICKS_SERVER.CONFIG.LEVELING["Max Level"] ) then
 			draw.SimpleText( BRS_LEVEL+1, "BRICKS_SERVER_HUDFont", (ScrW()/2)+(width/2)+5-1, y+(height/2)-1, Color( 0, 0, 0 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER )
-			draw.SimpleText( BRS_LEVEL+1, "BRICKS_SERVER_HUDFont", (ScrW()/2)+(width/2)+5, y+(height/2)-2, Color( 255, 255, 255 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER )
+			draw.SimpleText( BRS_LEVEL+1, "BRICKS_SERVER_HUDFont", (ScrW()/2)+(width/2)+5, y+(height/2)-2, textcolor, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER )
 		else
 			draw.SimpleText( "MAX", "BRICKS_SERVER_HUDFont", (ScrW()/2)+(width/2)+5-1, y+(height/2)-1, Color( 0, 0, 0 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER )
-			draw.SimpleText( "MAX", "BRICKS_SERVER_HUDFont", (ScrW()/2)+(width/2)+5, y+(height/2)-2, Color( 255, 255, 255 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER )
+			draw.SimpleText( "MAX", "BRICKS_SERVER_HUDFont", (ScrW()/2)+(width/2)+5, y+(height/2)-2, textcolor, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER )
 		end
 
 		local expStatus = formatEXP( BRS_EXPERIENCE ) .. "/" .. formatEXP( BRICKS_SERVER.Func.GetExpToLevel( 0, BRS_LEVEL+1 ) ) .. " [" .. math.Round((BRICKS_SERVER.Func.GetCurLevelExp( LocalPlayer() )/BRICKS_SERVER.Func.GetExpToLevel( BRS_LEVEL, BRS_LEVEL+1 ))*100) .. "%]"
@@ -81,6 +88,6 @@ hook.Add( "HUDPaint", "BRS.HUDPaint_LevellingHUD", function()
 			expStatus = formatEXP( BRS_EXPERIENCE )
 		end
 		draw.SimpleText( expStatus, "BRICKS_SERVER_HUDFontS", ScrW()/2-1, y+height+2+1, Color( 0, 0, 0 ), TEXT_ALIGN_CENTER, 0 )
-		draw.SimpleText( expStatus, "BRICKS_SERVER_HUDFontS", ScrW()/2, y+height+2, Color( 255, 255, 255 ), TEXT_ALIGN_CENTER, 0 )
+		draw.SimpleText( expStatus, "BRICKS_SERVER_HUDFontS", ScrW()/2, y+height+2, textcolor, TEXT_ALIGN_CENTER, 0 )
 	end
 end )

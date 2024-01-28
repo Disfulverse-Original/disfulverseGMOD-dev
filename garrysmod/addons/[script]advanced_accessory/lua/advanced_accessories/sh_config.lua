@@ -60,10 +60,10 @@ AAS.WhitelistJobToChangeModel = {
 AAS.ModelChangerKey = KEY_F7
 
 --[[ If you want to reload item when you come back to the server ]]
-AAS.LoadItemsSaved = true
+AAS.LoadItemsSaved = false
 
 --[[ If you want to reload the model when you come back to the server ]]
-AAS.LoadModelSaved = true
+AAS.LoadModelSaved = false
 
 --[[ Refund pourcentage of the accessory ]]
 AAS.SellValue = 50

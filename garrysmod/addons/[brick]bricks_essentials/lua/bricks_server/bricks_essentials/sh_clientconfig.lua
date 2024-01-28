@@ -22,7 +22,8 @@ if( BRICKS_SERVER.Func.IsSubModuleEnabled( "essentials", "inventory" ) ) then
     BRICKS_SERVER.BASECLIENTCONFIG.HolsterBind = { "Inventory Holster Bind", "bind", 0 }
 end
 
--- HUD --
+--[[ HUD
 if( BRICKS_SERVER.Func.IsSubModuleEnabled( "essentials", "hud" ) ) then
     BRICKS_SERVER.BASECLIENTCONFIG.HUDAgenda = { "Enable Agenda HUD", "bool", 1 }
 end
+--]]

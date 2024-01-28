@@ -120,7 +120,7 @@ local tbl = {
         value_to = 0,
         lastchange = 0,
     },
-
+--[[
     {
         char = "J",
         value = function(p)
@@ -135,7 +135,7 @@ local tbl = {
         value_to = 0,
         lastchange = 0,
     },
-
+--]]
     {
         char = "y",
         check_enable = function(p)

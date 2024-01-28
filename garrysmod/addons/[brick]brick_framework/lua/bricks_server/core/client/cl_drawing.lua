@@ -309,7 +309,7 @@ local function createFonts()
 	surface.CreateFont( "BRICKS_SERVER_HUDFont", {
 		font = "Roboto",
 		extended = true,
-		size = BRICKS_SERVER.Func.ScreenScale( 27 ),
+		size = BRICKS_SERVER.Func.ScreenScale( 25.5 ),
 		weight = 5000,
 		outline = false,
 	} )
@@ -325,7 +325,7 @@ local function createFonts()
 	surface.CreateFont( "BRICKS_SERVER_HUDFontS", {
 		font = "Roboto",
 		extended = true,
-		size = BRICKS_SERVER.Func.ScreenScale( 25 ),
+		size = BRICKS_SERVER.Func.ScreenScale( 21 ),
 		weight = 50000,
 		outline = false,
 	} )

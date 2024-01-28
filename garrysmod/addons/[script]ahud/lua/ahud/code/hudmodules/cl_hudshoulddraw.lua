@@ -16,6 +16,8 @@ local hideHUDElements = {
     ["TTTInfoPanel"] = true
 }
 
+
+
 hook.Add("HUDShouldDraw", "AHud_OverrideDarkRP", function(name)
     if hideHUDElements[name] then return false end
 end)

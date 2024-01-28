@@ -3,6 +3,12 @@ local radioState = false
 local recievedAudioState = false
 local lply = LocalPlayer()
 
+surface.CreateFont("rsrp_policeradio30", {
+    font = "Roboto",
+    extended = true,
+    antialias = true,
+    size = 16
+})
 
 net.Receive("rsrp_policeradio_updatechannel", function()
     currentChannel = RSRP.PoliceRadio.Channels[net.ReadInt(11)]
@@ -42,10 +48,3 @@ hook.Add("PlayerEndVoice", "rsrp_policeradio_endsound", function()
         surface.PlaySound("riverside_policeradio/sendingmessage.wav")
     end
 end)
-
-surface.CreateFont("rsrp_policeradio30", {
-    font = "Roboto",
-    extended = true,
-    antialias = true,
-    size = 16
-})
