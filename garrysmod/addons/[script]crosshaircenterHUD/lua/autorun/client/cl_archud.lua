@@ -1,5 +1,16 @@
 AddCSLuaFile()
 
+surface.CreateFont( "ARXHUDFONT", {
+    font = "Roboto", --  Use the font-name which is shown to you by your operating system Font Viewer, not the file name
+    extended = true,
+    size = 15,
+    weight = 250
+} )
+
+
+
+
+
 print('arx hud cs loaded!')
 
 local ReloadStyle = GetConVar("darky_arc_ReloadStyle")
@@ -169,7 +180,7 @@ hook.Add("HUDPaint", "darky_ammo_counter", function()
                     if HPNumbers:GetBool() then
                         SHPTextAlpha = Lerp(0.1, SHPTextAlpha, HPTextAlpha)
                         local SHPTextcolor = ColorAlpha(HPColor, SHPTextAlpha*255)
-                        draw.SimpleText(""..math.Round(SHP), "Roboto-Light", w-20-Arcd, h-20-Arcd, SHPTextcolor, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+                        draw.SimpleText(""..math.Round(SHP), "ARXHUDFONT", w-20-Arcd, h-20-Arcd, SHPTextcolor, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
                     end
 
                     if DrawRegen:GetBool() then
@@ -284,14 +295,14 @@ hook.Add("HUDPaint", "darky_ammo_counter", function()
                         SRAlpha = Lerp(0.1, SRAlpha, ReloadAlpha)
                         local SRcolor = ColorAlpha(SColor, SRAlpha*255)
                         if CurClip-MaxClip == 1 and MaxClip>6 and AmmoNumbers:GetBool() then
-                            draw.SimpleText(""..(math.Round(SClip)-1).." + 1", "Roboto-Light", w + 30 + Arcd, h + 5 + Arcd, SRcolor, TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER)
+                            draw.SimpleText(""..(math.Round(SClip)-1).." + 1", "ARXHUDFONT", w + 30 + Arcd, h + 5 + Arcd, SRcolor, TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER)
                         elseif MaxClip>6 and AmmoNumbers:GetBool() then
-                            draw.SimpleText(""..math.Round(SClip), "Roboto-Light", w + 30 + Arcd, h + 5 + Arcd, SRcolor, TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER)
+                            draw.SimpleText(""..math.Round(SClip), "ARXHUDFONT", w + 30 + Arcd, h + 5 + Arcd, SRcolor, TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER)
                         end
                         if DrawAmmoReserve:GetBool() and MaxClip>1 then
                             local Reserve = LocalPlayer():GetAmmoCount(Weapon:GetPrimaryAmmoType())
                             if Reserve>0 then
-                                draw.SimpleText("/"..Reserve, "Roboto-Light", w + 30 + Arcd, h + 25 + Arcd, SRcolor, TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER)
+                                draw.SimpleText("/"..Reserve, "ARXHUDFONT", w + 30 + Arcd, h + 25 + Arcd, SRcolor, TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER)
                             end
                         end
                     end
