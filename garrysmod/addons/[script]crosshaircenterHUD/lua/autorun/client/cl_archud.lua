@@ -276,6 +276,7 @@ hook.Add("HUDPaint", "darky_ammo_counter", function()
                         --  cool polygons for cool effect
                             for i = 0, MaxClip do
                                 surface.SetDrawColor(255, 255, 255)
+                                local w, h = ScrW(), ScrH()
                                 local offset = math.Clamp(18-MaxClip/0.5, 1, 4)/2
                                 surface.DrawPoly({
                                     {x = w + Arcd, y = h + Arcd},
