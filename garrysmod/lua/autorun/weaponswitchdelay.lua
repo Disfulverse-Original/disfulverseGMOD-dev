@@ -376,9 +376,9 @@ if CLIENT then
 				draw.SimpleText(math.Round(NewEquipTime - (TimerW*NewEquipTime), CountdownTimerDecimals), "Default", (ScrW()/2) + (bw/2) + 10, (ScrH()/2) + 10, TextColor, TEXT_ALIGN_LEFT, TEXT_ALIGN_BOTTOM)
 			end
 			
-			draw.SimpleText("Switching to " .. WeaponName, "Default", (ScrW()/2), (ScrH()/2) + bh + 18, TextColor, TEXT_ALIGN_CENTER)
+			draw.SimpleText("Меняем на " .. WeaponName, "Default", (ScrW()/2), (ScrH()/2) + bh + 18, TextColor, TEXT_ALIGN_CENTER)
 			if SwitchingCancelKeyName and FirstSwitch then
-				draw.SimpleText("Cancel by pressing " .. SwitchingCancelKeyName, "Default", (ScrW()/2), (ScrH()/2) + bh + 30, TextColor, TEXT_ALIGN_CENTER)
+				draw.SimpleText("Отмените, нажав " .. SwitchingCancelKeyName, "Default", (ScrW()/2), (ScrH()/2) + bh + 30, TextColor, TEXT_ALIGN_CENTER)
 			end
 		end
 		
