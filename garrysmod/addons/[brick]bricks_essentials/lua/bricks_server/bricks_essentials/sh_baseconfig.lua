@@ -35,17 +35,17 @@ BRICKS_SERVER.BASECONFIG.GENERAL.AmmoGroups = {}
 --[[ F4 CONFIG ]]--
 BRICKS_SERVER.BASECONFIG.F4 = {}
 BRICKS_SERVER.BASECONFIG.F4.Tabs = {
-    [1] = { "Jobs", "jobs_24.png", 1 },
-    [2] = { "Shop", "shop_24.png", 2 },
-    [3] = { "Inventory", "inventory_24.png", { 
-        { "Main", 3 }, 
-        { "Printers", 4 }, 
+    [1] = { "Профессии", "jobs_24.png", 1 },
+    [2] = { "Поставки", "shop_24.png", 2 },
+    [3] = { "Инвентарь", "inventory_24.png", { 
+        { "Главная", 3 }, 
+        { "Принтеры", 4 }, 
         --{ "Boosters", 5 }
     } },
-    [4] = { "Crafting", "crafting_24.png", 6 },
-    [5] = { "Profile", "profile_24.png", { 
-        { "Statistics", 7 }, 
-        { "Logs", 8 }
+    [4] = { "Крафтинг", "crafting_24.png", 6 },
+    [5] = { "Профиль", "profile_24.png", { 
+        { "Статистика", 7 }, 
+        { "Логи", 8 }
     } },
     --[6] = { true },
     --[7] = { "Discord", "discord_24.png", "https://discord.gg/crBpKpR" },
@@ -211,14 +211,14 @@ BRICKS_SERVER.BASECONFIG.CRAFTING["Tree Respawn Time"] = 60
 BRICKS_SERVER.BASECONFIG.CRAFTING["Garbage Respawn Time"] = 60
 BRICKS_SERVER.BASECONFIG.CRAFTING["Garbage Collect Time"] = 3
 BRICKS_SERVER.BASECONFIG.CRAFTING["Resource Despawn Time"] = 300
-BRICKS_SERVER.BASECONFIG.CRAFTING["Add Resources Directly To Inventory"] = false
+BRICKS_SERVER.BASECONFIG.CRAFTING["Add Resources Directly To Inventory"] = true
 BRICKS_SERVER.BASECONFIG.CRAFTING.Resources = {
-    ["Wood"] = { "models/2rek/brickwall/bwall_log_1.mdl" },
-    ["Plastic"] = { "models/2rek/brickwall/bwall_plastic_1.mdl" },
-    ["Scrap"] = { "models/2rek/brickwall/bwall_scrap_1.mdl" },
-    ["Iron"] = { "models/2rek/brickwall/bwall_ore_1.mdl", Color( 0, 0, 0 ) },
-    ["Diamond"] = { "models/2rek/brickwall/bwall_ore_1.mdl", Color( 0, 246, 255 ) },
-    ["Ruby"] = { "models/2rek/brickwall/bwall_ore_1.mdl", Color( 255, 0, 0 ) },
+    ["Дерево"] = { "models/2rek/brickwall/bwall_log_1.mdl" },
+    ["Пластик"] = { "models/2rek/brickwall/bwall_plastic_1.mdl" },
+    ["Части"] = { "models/2rek/brickwall/bwall_scrap_1.mdl" },
+    ["Железо"] = { "models/2rek/brickwall/bwall_ore_1.mdl", Color( 0, 0, 0 ) },
+    ["Алмаз"] = { "models/2rek/brickwall/bwall_ore_1.mdl", Color( 0, 246, 255 ) },
+    ["Рубин"] = { "models/2rek/brickwall/bwall_ore_1.mdl", Color( 255, 0, 0 ) },
 }
 BRICKS_SERVER.BASECONFIG.CRAFTING.Craftables = {
     [1] = {
@@ -240,16 +240,16 @@ BRICKS_SERVER.BASECONFIG.CRAFTING.Craftables = {
     }
 }
 BRICKS_SERVER.BASECONFIG.CRAFTING.RockTypes = {
-    ["Iron"] = 50,
-    ["Diamond"] = 20,
-    ["Ruby"] = 10
+    ["Железо"] = 75,
+    ["Алмаз"] = 3,
+    ["Рубин"] = 7
 }
 BRICKS_SERVER.BASECONFIG.CRAFTING.TreeTypes = {
-    ["Wood"] = 50
+    ["Дерево"] = 75
 }
 BRICKS_SERVER.BASECONFIG.CRAFTING.GarbageTypes = {
-    ["Plastic"] = 50,
-    ["Scrap"] = 50
+    ["Пластик"] = 80,
+    ["Части"] = 10
 }
 BRICKS_SERVER.BASECONFIG.CRAFTING.Skills = {
 --[[

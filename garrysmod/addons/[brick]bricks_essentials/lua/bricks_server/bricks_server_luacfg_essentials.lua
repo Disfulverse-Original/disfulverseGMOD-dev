@@ -1,7 +1,7 @@
 --[[ LUA CONFIG ]]--
 BRICKS_SERVER.ESSENTIALS.LUACFG = {}
 BRICKS_SERVER.ESSENTIALS.LUACFG.UseMySQL = false -- Whether or not MySQL should be used (enter your details in bricks-essentials/lua/bricks_server/bricks_essentials/sv_mysql.lua)
-
+--[[
 BRICKS_SERVER.ESSENTIALS.LUACFG.F4Commands = { -- The commands that show up in the F4 menu, 1st value is the title, 2nd is the table of commands and 3rd is a custom check
     { "General", {
         { "Drop Money", "/dropmoney", { { "number", "How much money do you want to drop?" } } },
@@ -24,7 +24,7 @@ BRICKS_SERVER.ESSENTIALS.LUACFG.F4Commands = { -- The commands that show up in t
         end
     end }
 }
-
+--]]
 BRICKS_SERVER.ESSENTIALS.LUACFG.ItemDescriptions = { -- Give an item a custom description, put the class of the weapon or name of the resource
     ["weapon_crowbar"] = "A bar used to pry things open!",
     ["bricks_server_axe"] = "Used to chop wood.",

@@ -1,3 +1,4 @@
+--[[
 local playerMeta = FindMetaTable( "Player" )
 
 function playerMeta:GetCraftingSkills()
@@ -12,3 +13,4 @@ end
 function BRICKS_SERVER.Func.GetCraftingSkillProgress( skillKey, level, experience )
     return experience/BRICKS_SERVER.Func.GetCraftingSkillReqExp( skillKey, level+1 )
 end
+--]]

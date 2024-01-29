@@ -78,13 +78,13 @@ function PANEL:FillTabs()
     avatarIcon:SetPos( (height-avatarBackSize)/2+distance, (height-avatarBackSize)/2+distance )
     avatarIcon:SetSize( avatarBackSize-(2*distance), avatarBackSize-(2*distance) )
     avatarIcon:SetPlayer( LocalPlayer(), 64 )
-
+--[[
     local commandsButton = vgui.Create( "DButton", self.sheet.Navigation )
     commandsButton:SetSize( 16, 16 )
     commandsButton:SetPos( BRICKS_SERVER.DEVCONFIG.MainNavWidth-commandsButton:GetWide()-5, 12 )
     commandsButton:SetText( "" )
     local changeAlpha = 100
-    local settingsMat = Material( "materials/bricks_server/settings_16.png" )
+    --local settingsMat = Material( "materials/bricks_server/settings_16.png" )
     commandsButton.Paint = function( self2, w, h )
         if( self2:IsDown() ) then
             changeAlpha = math.Clamp( changeAlpha+10, 100, 225 )
@@ -99,13 +99,14 @@ function PANEL:FillTabs()
             surface.SetMaterial( settingsMat )
             surface.DrawTexturedRect( 0, 0, w, h )
         surface.SetAlphaMultiplier( 1 )
+
     end
     commandsButton.DoClick = function()
         if( IsValid( self.navCover ) ) then
             self.navCover:Remove()
         else
             local lastPage = self.sheet.ActiveButton
-            self.sheet:SetActiveButton( self.settingsPageButton )
+            --self.sheet:SetActiveButton( self.settingsPageButton )
             
             self.navCover = vgui.Create( "DPanel", self.sheet.Navigation )
             self.navCover:SetPos( 0, 0 )
@@ -134,7 +135,7 @@ function PANEL:FillTabs()
             avatarIcon:SetPos( (height-avatarBackSize)/2+distance, (height-avatarBackSize)/2+distance )
             avatarIcon:SetSize( avatarBackSize-(2*distance), avatarBackSize-(2*distance) )
             avatarIcon:SetPlayer( LocalPlayer(), 64 )
-
+--[[
             local commandsButtonTop = vgui.Create( "DButton", self.navCover )
             commandsButtonTop:SetSize( 16, 16 )
             commandsButtonTop:SetPos( BRICKS_SERVER.DEVCONFIG.MainNavWidth-commandsButtonTop:GetWide()-5, 12 )
@@ -263,9 +264,10 @@ function PANEL:FillTabs()
                     end
                 end
             end
+
         end
     end
-
+--]]
     for k, v in pairs( (BRICKS_SERVER.CONFIG.F4 or {}).Tabs or {} ) do
         local f4TabTable = (BRICKS_SERVER.DEVCONFIG.F4Tabs[v[3] or 0] or {})
         if( not istable( v[3] ) and f4TabTable[2] ) then
