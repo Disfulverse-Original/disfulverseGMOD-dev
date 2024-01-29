@@ -24,8 +24,7 @@ resource.AddWorkshop( "3148801741" ) --ARCCW DISFULVERSE MISC
 resource.AddWorkshop( "3149061543" ) --[Disfulverse] Models I
 resource.AddWorkshop( "3149068041" ) --[Disfulverse] Models II
 resource.AddWorkshop( "3149077248" ) --[Disfulverse] Models III
---misc
-resource.AddWorkshop( "3149367030" ) -- DisfulVerseMaterialCmenu
+
 
 
 
