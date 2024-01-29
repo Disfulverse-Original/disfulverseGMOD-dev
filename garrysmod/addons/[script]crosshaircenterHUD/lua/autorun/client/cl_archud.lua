@@ -14,7 +14,7 @@ surface.CreateFont( "ARXHUDFONT", {
 print('arx hud cs loaded!')
 
 local ReloadStyle = GetConVar("darky_arc_ReloadStyle")
-local HPStyle = GetConVar("darky_arc_HPStyle")
+--local HPStyle = GetConVar("darky_arc_HPStyle")
 
 local DynamicHUD = GetConVar("darky_arc_DynamicHUD")
 local AmmoSegments = GetConVar("darky_arc_AmmoSegments")
@@ -22,20 +22,20 @@ local AmmoSegments = GetConVar("darky_arc_AmmoSegments")
 local DrawAmmo = GetConVar("darky_arc_DrawAmmo")
 local DrawAmmoReserve = GetConVar("darky_arc_DrawAmmoReserve")
 local DrawAmmoOnSingle = GetConVar("darky_arc_DrawAmmoOnSingle")
-local DrawRegen = GetConVar("darky_arc_DrawRegen")
+--local DrawRegen = GetConVar("darky_arc_DrawRegen")
 local DrawHeat = GetConVar("darky_arc_DrawHeat")
 local DraconicHeat = GetConVar("darky_arc_DrawDraconicHeat")
 
-local HPNumbers = GetConVar("darky_arc_HPNumbers")
+--local HPNumbers = GetConVar("darky_arc_HPNumbers")
 local AmmoNumbers = GetConVar("darky_arc_AmmoNumbers")
 
 local DrawHud = GetConVar("darky_arc_DrawHud")
 local ArcDistance = GetConVar("darky_arc_ArcDistance")
 local ClickSoundOnLowAmmo = GetConVar("darky_arc_ClickSoundOnLowAmmo")
 
-local WakeUpOnContext = GetConVar("darky_arc_WakeUpOnContext")
-local WakeUpOnZoom = GetConVar("darky_arc_WakeUpOnZoom")
-local HideOnWalk = GetConVar("darky_arc_HideOnWalk")
+--local WakeUpOnContext = GetConVar("darky_arc_WakeUpOnContext")
+--local WakeUpOnZoom = GetConVar("darky_arc_WakeUpOnZoom")
+--local HideOnWalk = GetConVar("darky_arc_HideOnWalk")
 
 local AmmoColorR = GetConVar("darky_arc_AmmoColorR")
 local AmmoColorG = GetConVar("darky_arc_AmmoColorG")
@@ -150,6 +150,7 @@ hook.Add("HUDPaint", "darky_ammo_counter", function()
             local Weapon = LocalPlayer():GetActiveWeapon()
             local Arcd = ArcDistance:GetInt()
             if Weapon:IsValid() then
+            --[[
                 if HPStyle:GetInt()>0 then
                     local MaxHP = LocalPlayer():GetMaxHealth()
                     local HP = LocalPlayer():Health()
@@ -191,7 +192,7 @@ hook.Add("HUDPaint", "darky_ammo_counter", function()
                         draw.drawArc(w - Arcd, h - Arcd, 50, val2, val2+regen, 7.5, 3, ColorAlpha(ReloadColor2,HPAlpha*120)) --x, y, radius, angle1, angle2, step, thickness
                    end
                 end
-
+			--]]
                 if Weapon:GetMaxClip1() >=1 and DrawAmmo:GetBool() and Weapon:GetPrimaryAmmoType() ~= -1 then
                     local MaxClip = Weapon:GetMaxClip1()
                     local CurClip = Weapon:Clip1()
@@ -409,7 +410,7 @@ hook.Add("Think", "darky_amc_think", function()
     end
 end)
 
-
+--[[
 hook.Add("OnContextMenuOpen", "darky_amc_c_wakeup", function()
     if WakeUpOnContext:GetBool() then
         timer.Remove("DarkyHP_AFK_1")
@@ -420,17 +421,11 @@ hook.Add("OnContextMenuOpen", "darky_amc_c_wakeup", function()
         timer.Create("DarkyHP_AFK_2", 20, 1, function() HPState = 0 end)
     end
 end)
-
+--]]
+--[[
 hook.Add("KeyPress", "darky_amc_keypress", function(ply, key)
-    if WakeUpOnZoom:GetBool() and key == IN_ZOOM then
-        timer.Remove("DarkyHP_AFK_1")
-        timer.Remove("DarkyHP_AFK_2")
-        HPState = 1
-        HPTextAlpha = 1
-        timer.Create("DarkyHP_AFK_4", 3, 1, function() HPTextAlpha = 0 end)
-        timer.Create("DarkyHP_AFK_2", 20, 1, function() HPState = 0 end)
-    end
-    if HideOnWalk:GetBool() and key == IN_WALK then
+
+	if HideOnWalk:GetBool() and key == IN_WALK then
         timer.Remove("DarkyHP_AFK_1")
         timer.Remove("DarkyHP_AFK_2")
         timer.Remove("DarkyHP_AFK_3")
@@ -439,13 +434,27 @@ hook.Add("KeyPress", "darky_amc_keypress", function(ply, key)
         HPTextAlpha = 0
         ReloadAlpha = 0
     end
+
+    if WakeUpOnZoom:GetBool() and key == IN_ZOOM then
+        timer.Remove("DarkyHP_AFK_1")
+        timer.Remove("DarkyHP_AFK_2")
+        HPState = 1
+        HPTextAlpha = 1
+        timer.Create("DarkyHP_AFK_4", 3, 1, function() HPTextAlpha = 0 end)
+        timer.Create("DarkyHP_AFK_2", 20, 1, function() HPState = 0 end)
+    end
+
+
 end)
+--]]
 --  We gonna recieve regeneration messages
+--[[
 net.Receive("regen_hp", function()
     if LocalPlayer():IsValid() then
         LocalPlayer().DHPRegen = net.ReadUInt(8)
     end
 end)
+--]]
 
 local hide = {
 	["CHudHealth"] = true,

@@ -5,34 +5,34 @@ end
 
 
 
-CreateClientConVar("darky_arc_ReloadStyle", 1, true, false, "darky archud convar", 0, 3)
-CreateClientConVar("darky_arc_HPStyle", 2, true, false, "darky archud convar", 0, 2)
+CreateClientConVar("darky_arc_ReloadStyle", 1, true, false, "darky archud convar", 1, 1)
+--CreateClientConVar("darky_arc_HPStyle", 0, true, false, "darky archud convar", 0, 2)
 
-CreateClientConVar("darky_arc_DynamicHUD", 1, true, false, "darky archud convar", 0, 1)
-CreateClientConVar("darky_arc_AmmoSegments", 1, true, false, "darky archud convar", 0, 1)
+CreateClientConVar("darky_arc_DynamicHUD", 1, true, false, "darky archud convar", 1, 1)
+CreateClientConVar("darky_arc_AmmoSegments", 1, true, false, "darky archud convar", 1, 1)
 
-CreateClientConVar("darky_arc_DrawAmmo", 1, true, false, "darky archud convar", 0, 1)
-CreateClientConVar("darky_arc_DrawAmmoReserve", 1, true, false, "darky archud convar", 0, 1)
-CreateClientConVar("darky_arc_DrawAmmoOnSingle", 1, true, false, "darky archud convar", 0, 1)
-CreateClientConVar("darky_arc_DrawRegen", 1, true, false, "darky archud convar", 0, 1)
-CreateClientConVar("darky_arc_DrawHeat", 1, true, false, "darky archud convar", 0, 1)
-CreateClientConVar("darky_arc_DrawDraconicHeat", 1, true, false, "darky archud convar", 0, 1)
+CreateClientConVar("darky_arc_DrawAmmo", 1, true, false, "darky archud convar", 1, 1)
+CreateClientConVar("darky_arc_DrawAmmoReserve", 1, true, false, "darky archud convar", 1, 1)
+CreateClientConVar("darky_arc_DrawAmmoOnSingle", 1, true, false, "darky archud convar", 1, 1)
+--CreateClientConVar("darky_arc_DrawRegen", 0, true, false, "darky archud convar", 0, 1)
+CreateClientConVar("darky_arc_DrawHeat", 1, true, false, "darky archud convar", 1, 1)
+CreateClientConVar("darky_arc_DrawDraconicHeat", 1, true, false, "darky archud convar", 1, 1)
 
-CreateClientConVar("darky_arc_HPNumbers", 1, true, false, "darky archud convar", 0, 1)
-CreateClientConVar("darky_arc_AmmoNumbers", 1, true, false, "darky archud convar", 0, 1)
+--CreateClientConVar("darky_arc_HPNumbers", 0, true, false, "darky archud convar", 0, 1)
+CreateClientConVar("darky_arc_AmmoNumbers", 1, true, false, "darky archud convar", 1, 1)
 
-CreateClientConVar("darky_arc_DrawHud", 0, true, false, "darky archud convar", 0, 1)
+CreateClientConVar("darky_arc_DrawHud", 0, true, false, "darky archud convar", 0, 0)
 
-CreateClientConVar("darky_arc_WakeUpOnContext", 0, true, false, "darky archud convar", 0, 1)
-CreateClientConVar("darky_arc_WakeUpOnZoom", 0, true, false, "darky archud convar", 0, 1)
-CreateClientConVar("darky_arc_HideOnWalk", 0, true, false, "darky archud convar", 0, 1)
+--CreateClientConVar("darky_arc_WakeUpOnContext", 0, true, false, "darky archud convar", 0, 1)
+--CreateClientConVar("darky_arc_WakeUpOnZoom", 0, true, false, "darky archud convar", 0, 1)
+--CreateClientConVar("darky_arc_HideOnWalk", 0, true, false, "darky archud convar", 0, 1)
 
 CreateClientConVar("darky_arc_AmmoColorR", 255, true, false, "darky archud convar", 0, 255)
 CreateClientConVar("darky_arc_AmmoColorG", 255, true, false, "darky archud convar", 0, 255)
 CreateClientConVar("darky_arc_AmmoColorB", 255, true, false, "darky archud convar", 0, 255)
 
 CreateClientConVar("darky_arc_ArcDistance", 70, true, false, "darky archud convar", 69, 70)
-CreateClientConVar("darky_arc_ClickSoundOnLowAmmo", 1, true, false, "darky archud convar", 0, 1)
+CreateClientConVar("darky_arc_ClickSoundOnLowAmmo", 1, true, false, "darky archud convar", 1, 1)
 
 CreateClientConVar("darky_arc_HPColorR", 100, true, false, "darky archud convar", 0, 255)
 CreateClientConVar("darky_arc_HPColorG", 220, true, false, "darky archud convar", 0, 255)
@@ -84,11 +84,12 @@ hook.Add("PopulateToolMenu", "darky_archud", function()
         comboreload:AddChoice("3: Smooth indicator on ammo arch from last ammo in magazine to end", 3)
         labelreload:SetSize(0, 100)
 
-        panel:CheckBox("#darky_arc_DrawRegen", "darky_arc_DrawRegen")
-        panel:CheckBox("#darky_arc_HPNumbers", "darky_arc_HPNumbers")
-        panel:CheckBox("#darky_arc_WakeUpOnContext", "darky_arc_WakeUpOnContext")
-        panel:CheckBox("#darky_arc_WakeUpOnZoom", "darky_arc_WakeUpOnZoom")
-        panel:CheckBox("#darky_arc_HideOnWalk", "darky_arc_HideOnWalk")
+        --panel:CheckBox("#darky_arc_DrawRegen", "darky_arc_DrawRegen")
+        --panel:CheckBox("#darky_arc_HPNumbers", "darky_arc_HPNumbers")
+        --panel:CheckBox("#darky_arc_WakeUpOnContext", "darky_arc_WakeUpOnContext")
+        --panel:CheckBox("#darky_arc_WakeUpOnZoom", "darky_arc_WakeUpOnZoom")
+        --panel:CheckBox("#darky_arc_HideOnWalk", "darky_arc_HideOnWalk")
+--[[
         local DLabel2 = vgui.Create("DLabel", panel)
         DLabel2:SetText("#darky_arc_HPStyle")
         DLabel2:Dock(TOP)
@@ -100,6 +101,7 @@ hook.Add("PopulateToolMenu", "darky_archud", function()
         combohp:AddChoice("1: Only health bar", 1)
         combohp:AddChoice("2: Health bar with armor bar", 2)
         labelhp:SetSize(0, 0)
+--]]
 
         local MixerAmmo = vgui.Create("DColorMixer", panel)
         MixerAmmo:SetLabel("#darky_arc_color_ammo")
