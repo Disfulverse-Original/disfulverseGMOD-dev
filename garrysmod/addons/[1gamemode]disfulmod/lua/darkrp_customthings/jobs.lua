@@ -513,7 +513,7 @@ TEAM_STAFF = DarkRP.createJob("Отдел поддержки [ADM]", {
     hasLicense = true,
     candemote = false,
     customCheck = function(ply) 
-        return CLIENT or table.HasValue({"dis+", "admin", "superadmin"}, ply:GetUserGroup()) 
+        return CLIENT or table.HasValue({"admin", "superadmin"}, ply:GetUserGroup()) 
     end,
     CustomCheckFailMsg = "Только Администраторы могут взять эту роль!",
     category = "NONRP",
