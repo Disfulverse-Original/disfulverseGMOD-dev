@@ -1,22 +1,20 @@
 TEAM_CITIZEN = DarkRP.createJob("Безработный", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/earl_rp/citizens/player/female_01.mdl",
-        "models/earl_rp/citizens/player/female_02.mdl",
-        "models/earl_rp/citizens/player/female_04.mdl",
-        "models/earl_rp/citizens/player/female_06.mdl",
-        "models/earl_rp/citizens/player/female_19.mdl",
-        "models/earl_rp/citizens/player/female_bms_1.mdl",
-        "models/earl_rp/citizens/player/female_bms_2.mdl",
-        "models/earl_rp/citizens/player/male_01.mdl",
-        "models/earl_rp/citizens/player/male_02.mdl",
-        "models/earl_rp/citizens/player/male_03.mdl",
-        "models/earl_rp/citizens/player/male_04.mdl",
-        "models/earl_rp/citizens/player/male_05.mdl",
-        "models/earl_rp/citizens/player/male_06.mdl",
-        "models/earl_rp/citizens/player/male_07.mdl",
-        "models/earl_rp/citizens/player/male_08.mdl",
-        "models/earl_rp/citizens/player/male_09.mdl"
+        "models/player/Group01/male_09.mdl",
+        "models/player/Group01/male_08.mdl",
+        "models/player/Group01/male_07.mdl",
+        "models/player/Group01/male_06.mdl",
+        "models/player/Group01/male_05.mdl",
+        "models/player/Group01/male_01.mdl",
+        "models/player/Group01/male_03.mdl",
+        "models/player/Group01/male_04.mdl",
+        "models/player/Group01/female_01.mdl",
+        "models/player/Group01/female_02.mdl",
+        "models/player/Group01/female_03.mdl",
+        "models/player/Group01/female_05.mdl",
+        "models/player/Group01/female_06.mdl",
+        "models/player/Group01/female_04.mdl"
     },
     description = [[Безработный гражданин - вы средняя прослойка этого мира, вы просто гражданин, может вам нужно найти работу?]],
     weapons = {},
@@ -50,22 +48,7 @@ TEAM_RUN = DarkRP.createJob("Бегущий", {
 TEAM_PRODOR = DarkRP.createJob("Продавец оружия", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/earl_rp/citizens/player/female_01.mdl",
-        "models/earl_rp/citizens/player/female_02.mdl",
-        "models/earl_rp/citizens/player/female_04.mdl",
-        "models/earl_rp/citizens/player/female_06.mdl",
-        "models/earl_rp/citizens/player/female_19.mdl",
-        "models/earl_rp/citizens/player/female_bms_1.mdl",
-        "models/earl_rp/citizens/player/female_bms_2.mdl",
-        "models/earl_rp/citizens/player/male_01.mdl",
-        "models/earl_rp/citizens/player/male_02.mdl",
-        "models/earl_rp/citizens/player/male_03.mdl",
-        "models/earl_rp/citizens/player/male_04.mdl",
-        "models/earl_rp/citizens/player/male_05.mdl",
-        "models/earl_rp/citizens/player/male_06.mdl",
-        "models/earl_rp/citizens/player/male_07.mdl",
-        "models/earl_rp/citizens/player/male_08.mdl",
-        "models/earl_rp/citizens/player/male_09.mdl"
+        "models/player/guerilla.mdl"
     },
     description = [[Занимайтесь распространением всякого оружия.]],
     weapons = {},
@@ -82,22 +65,7 @@ TEAM_PRODOR = DarkRP.createJob("Продавец оружия", {
 TEAM_ZARUB = DarkRP.createJob("Контрабандист [Dis+]", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/earl_rp/citizens/player/female_01.mdl",
-        "models/earl_rp/citizens/player/female_02.mdl",
-        "models/earl_rp/citizens/player/female_04.mdl",
-        "models/earl_rp/citizens/player/female_06.mdl",
-        "models/earl_rp/citizens/player/female_19.mdl",
-        "models/earl_rp/citizens/player/female_bms_1.mdl",
-        "models/earl_rp/citizens/player/female_bms_2.mdl",
-        "models/earl_rp/citizens/player/male_01.mdl",
-        "models/earl_rp/citizens/player/male_02.mdl",
-        "models/earl_rp/citizens/player/male_03.mdl",
-        "models/earl_rp/citizens/player/male_04.mdl",
-        "models/earl_rp/citizens/player/male_05.mdl",
-        "models/earl_rp/citizens/player/male_06.mdl",
-        "models/earl_rp/citizens/player/male_07.mdl",
-        "models/earl_rp/citizens/player/male_08.mdl",
-        "models/earl_rp/citizens/player/male_09.mdl"
+        "models/player/leet.mdl"
     },
     description = [[Поставка дорогих редких вещей, может работать на всех сразу, в зависимости от того кто больше платит.]],
     weapons = {},
@@ -108,26 +76,30 @@ TEAM_ZARUB = DarkRP.createJob("Контрабандист [Dis+]", {
     vote = false,
     hasLicense = false,
     candemote = true,
+    customCheck = function(ply) 
+        return CLIENT or table.HasValue({"dis+", "admin", "superadmin"}, ply:GetUserGroup()) 
+    end,
+    CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
     category = "Нейтральные",
 })
--- СЮДА !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 TEAM_BANDIT = DarkRP.createJob("Бандит", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/half-dead/metroll/f1b1.mdl",
-        "models/half-dead/metroll/f2b1.mdl",
-        "models/half-dead/metroll/f3b1.mdl",
-        "models/half-dead/metroll/f4b1.mdl",
-        "models/half-dead/metroll/f6b1.mdl",
-        "models/half-dead/metroll/f7b1.mdl",
-        "models/half-dead/metroll/m1b1.mdl",
-        "models/half-dead/metroll/m2b1.mdl",
-        "models/half-dead/metroll/m4b1.mdl",
-        "models/half-dead/metroll/m5b1.mdl",
-        "models/half-dead/metroll/m6b1.mdl",
-        "models/half-dead/metroll/m7b1.mdl",
-        "models/half-dead/metroll/m8b1.mdl",
-        "models/half-dead/metroll/m9b1.mdl"
+        "models/player/Group03/male_04.mdl",
+        "models/player/Group03/male_05.mdl",
+        "models/player/Group03/male_07.mdl",
+        "models/player/Group03/male_08.mdl",
+        "models/player/Group03/male_09.mdl",
+        "models/player/Group03/male_01.mdl",
+        "models/player/Group03/male_02.mdl",
+        "models/player/Group03/female_01.mdl",
+        "models/player/Group03/female_02.mdl",
+        "models/player/Group03/female_03.mdl",
+        "models/player/Group03/female_04.mdl",
+        "models/player/Group03/female_05.mdl",
+        "models/player/Group03/female_06.mdl",
+        "models/player/Group03/female_06.mdl"
     },
     description = [[Основной костяк преступного мира, занимаются уже вещами посерьёзнее, грабёж, вооруженные захваты, налёты и тому прочее.]],
     weapons = {},
@@ -144,20 +116,20 @@ TEAM_BANDIT = DarkRP.createJob("Бандит", {
 TEAM_BANDITLOCKPICKER = DarkRP.createJob("Взломщик", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/half-dead/metroll/f1b1.mdl",
-        "models/half-dead/metroll/f2b1.mdl",
-        "models/half-dead/metroll/f3b1.mdl",
-        "models/half-dead/metroll/f4b1.mdl",
-        "models/half-dead/metroll/f6b1.mdl",
-        "models/half-dead/metroll/f7b1.mdl",
-        "models/half-dead/metroll/m1b1.mdl",
-        "models/half-dead/metroll/m2b1.mdl",
-        "models/half-dead/metroll/m4b1.mdl",
-        "models/half-dead/metroll/m5b1.mdl",
-        "models/half-dead/metroll/m6b1.mdl",
-        "models/half-dead/metroll/m7b1.mdl",
-        "models/half-dead/metroll/m8b1.mdl",
-        "models/half-dead/metroll/m9b1.mdl"
+        "models/player/Group03/male_04.mdl",
+        "models/player/Group03/male_05.mdl",
+        "models/player/Group03/male_07.mdl",
+        "models/player/Group03/male_08.mdl",
+        "models/player/Group03/male_09.mdl",
+        "models/player/Group03/male_01.mdl",
+        "models/player/Group03/male_02.mdl",
+        "models/player/Group03/female_01.mdl",
+        "models/player/Group03/female_02.mdl",
+        "models/player/Group03/female_03.mdl",
+        "models/player/Group03/female_04.mdl",
+        "models/player/Group03/female_05.mdl",
+        "models/player/Group03/female_06.mdl",
+        "models/player/Group03/female_06.mdl"
     },
     description = [[Часть преступного мира, по воле случая обучился в мелкой моторике и использовании монтировки для взлома.]],
     weapons = {},
@@ -174,11 +146,9 @@ TEAM_BANDITLOCKPICKER = DarkRP.createJob("Взломщик", {
 TEAM_GRABER = DarkRP.createJob("Грабитель [Dis+]", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/player/suits/robber_open.mdl",
-        "models/player/suits/robber_shirt.mdl",
-        "models/player/suits/robber_shirt_2.mdl",
         "models/player/suits/robber_tie.mdl",
-        "models/player/suits/robber_tuckedtie.mdl"
+        "models/player/suits/robber_shirt.mdl",
+        "models/player/suits/robber_open.mdl"
     },
     description = [[Это грабитель и он умеет грабить, воровать и убивать, если вы не уверены в своём преступном дельце, позовите этого парня, он порешает.]],
     weapons = {},
@@ -189,6 +159,10 @@ TEAM_GRABER = DarkRP.createJob("Грабитель [Dis+]", {
     vote = false,
     hasLicense = false,
     candemote = true,
+    customCheck = function(ply) 
+        return CLIENT or table.HasValue({"dis+", "admin", "superadmin"}, ply:GetUserGroup()) 
+    end,
+    CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
     category = "Криминал",
 })
 
@@ -226,31 +200,14 @@ TEAM_CRYPTMINER = DarkRP.createJob("Крипто-Майнер", {
 TEAM_MAF = DarkRP.createJob("Мафиози", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/player/suits/group1/male_01_shirt_tie.mdl",        
-        "models/player/suits/group1/male_02_shirt_tie.mdl",
-        "models/player/suits/group1/male_03_shirt_tie.mdl",
-        "models/player/suits/group1/male_04_shirt_tie.mdl",
-        "models/player/suits/group1/male_05_shirt_tie.mdl",
-        "models/player/suits/group1/male_06_shirt_tie.mdl",
-        "models/player/suits/group1/male_07_shirt_tie.mdl",
-        "models/player/suits/group1/male_08_shirt_tie.mdl",
-        "models/player/suits/group2/male_01_shirt.mdl",        
-        "models/player/suits/group2/male_02_shirt.mdl",
-        "models/player/suits/group2/male_03_shirt.mdl",
-        "models/player/suits/group2/male_04_shirt.mdl",
-        "models/player/suits/group2/male_05_shirt.mdl",
-        "models/player/suits/group2/male_06_shirt.mdl",
-        "models/player/suits/group2/male_07_shirt.mdl",
-        "models/player/suits/group2/male_08_shirt.mdl",
-        "models/player/suits/group3/male_01_open.mdl",
-        "models/player/suits/group3/male_02_open.mdl",
-        "models/player/suits/group3/male_03_open.mdl",
-        "models/player/suits/group3/male_04_open.mdl",
-        "models/player/suits/group3/male_05_open.mdl",
-        "models/player/suits/group3/male_06_open.mdl",
-        "models/player/suits/group3/male_07_open.mdl",
+        "models/player/suits/group3/male_09_open.mdl",        
+        "models/player/suits/group2/male_01_open.mdl",
         "models/player/suits/group3/male_08_open.mdl",
-        "models/player/suits/group3/male_09_open.mdl"
+        "models/player/suits/group2/male_01_open.mdl",
+        "models/player/suits/group2/male_02_shirt.mdl",
+        "models/player/suits/group1/male_09_shirt.mdl",
+        "models/player/suits/group1/male_02_shirt.mdl",
+        "models/player/suits/group1/male_08_shirt.mdl"
 
     },
     description = [[Высшая каста преступного мира на сервере. Занимаются насильным, принудительным взиманием налогов среди торговцев, держателей бизнесов, да и простых граждан. Регулируют все процессы внутри криминального сообщества.]],
@@ -310,6 +267,9 @@ TEAM_BARACH = DarkRP.createJob("Барахольщик [Dis+]", {
     vote = false,
     hasLicense = false,
     candemote = true,
+    customCheck = function(ply) 
+        return CLIENT or table.HasValue({"dis+", "admin", "superadmin"}, ply:GetUserGroup()) 
+    end,
     category = "Криминал",
 })
 
@@ -327,6 +287,10 @@ TEAM_MAF41 = DarkRP.createJob("Головорез Мафии [Dis+]", {
     vote = false,
     hasLicense = false,
     candemote = true,
+    customCheck = function(ply) 
+        return CLIENT or table.HasValue({"dis+", "admin", "superadmin"}, ply:GetUserGroup()) 
+    end,
+    CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
     category = "Криминал",
 })
 
@@ -392,6 +356,10 @@ TEAM_PMC = DarkRP.createJob("Оператор ЧВК [Dis+]", {
     vote = false,
     hasLicense = true,
     candemote = false,
+    customCheck = function(ply) 
+        return CLIENT or table.HasValue({"dis+", "admin", "superadmin"}, ply:GetUserGroup()) 
+    end,
+    CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
     category = "Мародёры",
 })
 
@@ -452,6 +420,10 @@ TEAM_DISAG = DarkRP.createJob("Отдел Disag [Dis+]", {
     vote = false,
     hasLicense = true,
     candemote = false,
+    customCheck = function(ply) 
+        return CLIENT or table.HasValue({"dis+", "admin", "superadmin"}, ply:GetUserGroup()) 
+    end,
+    CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
     category = "Правительство",
 })
 
@@ -480,7 +452,7 @@ TEAM_DET = DarkRP.createJob("Детектив", {
     category = "Правительство",
 })
 
-TEAM_MAYOR = DarkRP.createJob("Администратор города [WL]", {
+TEAM_MAYOR = DarkRP.createJob("Администратор города", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/player/suits/group1/male_07_open.mdl",
@@ -512,12 +484,12 @@ TEAM_MAYOR = DarkRP.createJob("Администратор города [WL]", {
 TEAM_OTDELBEZ = DarkRP.createJob("Отдел Контрразведки MI5", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/arty/codmw2022/mp/kortac/horangi/dead/horangiarc9_pm.mdl"
+        "models/bread/cod/characters/kortac/horangi_kpop.mdl"
     },
     description = [[Защита Мэра и Администрации города. Занимаются серьёзными невоенными делами. Расследованиями внутри гос. структур, а так же поиском особо опасных преступников. Сотрудничают с Отделом Разведки.]],
     weapons = {},
     command = "wkloldd",
-    max = 4,
+    max = 1,
     salary = GAMEMODE.Config.normalsalary,
     admin = 0,
     vote = false,
@@ -529,22 +501,7 @@ TEAM_OTDELBEZ = DarkRP.createJob("Отдел Контрразведки MI5", {
 TEAM_STAFF = DarkRP.createJob("Отдел поддержки [ADM]", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/earl_rp/citizens/player/female_01.mdl",
-        "models/earl_rp/citizens/player/female_02.mdl",
-        "models/earl_rp/citizens/player/female_04.mdl",
-        "models/earl_rp/citizens/player/female_06.mdl",
-        "models/earl_rp/citizens/player/female_19.mdl",
-        "models/earl_rp/citizens/player/female_bms_1.mdl",
-        "models/earl_rp/citizens/player/female_bms_2.mdl",
-        "models/earl_rp/citizens/player/male_01.mdl",
-        "models/earl_rp/citizens/player/male_02.mdl",
-        "models/earl_rp/citizens/player/male_03.mdl",
-        "models/earl_rp/citizens/player/male_04.mdl",
-        "models/earl_rp/citizens/player/male_05.mdl",
-        "models/earl_rp/citizens/player/male_06.mdl",
-        "models/earl_rp/citizens/player/male_07.mdl",
-        "models/earl_rp/citizens/player/male_08.mdl",
-        "models/earl_rp/citizens/player/male_09.mdl"
+        "models/player/skeleton.mdl"
     },
     description = [[]],
     weapons = {},
@@ -555,6 +512,10 @@ TEAM_STAFF = DarkRP.createJob("Отдел поддержки [ADM]", {
     vote = false,
     hasLicense = true,
     candemote = false,
+    customCheck = function(ply) 
+        return CLIENT or table.HasValue({"dis+", "admin", "superadmin"}, ply:GetUserGroup()) 
+    end,
+    CustomCheckFailMsg = "Только Администраторы могут взять эту роль!",
     category = "NONRP",
 })
 

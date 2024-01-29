@@ -30,22 +30,7 @@ CITYWORKER.Config.Job = {
 
     color = Color( 20, 150, 20, 255 ),
     model = {
-        "models/earl_rp/citizens/player/female_01.mdl",
-        "models/earl_rp/citizens/player/female_02.mdl",
-        "models/earl_rp/citizens/player/female_04.mdl",
-        "models/earl_rp/citizens/player/female_06.mdl",
-        "models/earl_rp/citizens/player/female_19.mdl",
-        "models/earl_rp/citizens/player/female_bms_1.mdl",
-        "models/earl_rp/citizens/player/female_bms_2.mdl",
-        "models/earl_rp/citizens/player/male_01.mdl",
-        "models/earl_rp/citizens/player/male_02.mdl",
-        "models/earl_rp/citizens/player/male_03.mdl",
-        "models/earl_rp/citizens/player/male_04.mdl",
-        "models/earl_rp/citizens/player/male_05.mdl",
-        "models/earl_rp/citizens/player/male_06.mdl",
-        "models/earl_rp/citizens/player/male_07.mdl",
-        "models/earl_rp/citizens/player/male_08.mdl",
-        "models/earl_rp/citizens/player/male_09.mdl"
+        "models/arty/codmw2022/mp/dmz/shadowcompany/boss/trap/trap_pm.mdl"
     },
     description = "Работа городского рабочего состоит в том, чтобы ходить и устранять утечки, пожарные гидранты, завалы и проблемы с электричеством по всему городу, и получать за это деньги!",
     weapons = { "cityworker_pliers", "cityworker_shovel", "cityworker_wrench" },
