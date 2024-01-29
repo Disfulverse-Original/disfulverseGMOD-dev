@@ -1,18 +1,18 @@
 local PANEL = {}
 
 surface.CreateFont("Nexus.PingSystem.Settings.Option.Name", {
-	font = "TT Lakes Medium",
+	font = "Roboto",
 	size = 24
 })
 
 surface.CreateFont("Nexus.PingSystem.Settings.Desc.Title", {
-	font = "TT Lakes Medium",
+	font = "Roboto",
 	size = 26,
 	weight = 800
 })
 
 surface.CreateFont("Nexus.PingSystem.Settings.Desc.Desc", {
-	font = "TT Lakes Medium",
+	font = "Roboto",
 	size = 20
 })
 
