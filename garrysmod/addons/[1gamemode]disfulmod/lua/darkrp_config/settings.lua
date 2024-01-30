@@ -381,6 +381,7 @@ GM.Config.DefaultWeapons = {
     "gmod_tool",
     "weapon_physgun",
     "weapon_hands",
+    "weapon_ch_atm_card",
 }
 
 -- Override categories.
