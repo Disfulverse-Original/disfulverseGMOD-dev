@@ -1,12 +1,12 @@
 local PANEL = {}
 
 surface.CreateFont("Nexus.PingSystem.Settings.Option.Arrow", {
-	font = "TT Lakes Medium",
+	font = "Roboto",
 	size = 40
 })
 
 surface.CreateFont("Nexus.PingSystem.Settings.Option.Combobox", {
-	font = "TT Lakes Medium",
+	font = "Roboto",
 	size = 22,
 	weight = 500
 })

@@ -1,7 +1,7 @@
 local PANEL = {}
 
 surface.CreateFont("Nexus.PingSystem.Settings.Boolean", {
-	font = "TT Lakes Medium",
+	font = "Roboto",
 	size = 20
 })
 

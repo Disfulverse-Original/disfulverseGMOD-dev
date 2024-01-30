@@ -4,7 +4,7 @@ local panels = framework:Class("Panels")
 local PANEL = {}
 
 surface.CreateFont("Nexus.PingSystem.Menu.SubTabs", {
-	font = "TT Lakes Medium",
+	font = "Roboto",
 	size = 21
 })
 
