@@ -86,20 +86,21 @@ TEAM_ZARUB = DarkRP.createJob("Контрабандист [Dis+]", {
 TEAM_BANDIT = DarkRP.createJob("Бандит", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/player/Group03/male_04.mdl",
-        "models/player/Group03/male_05.mdl",
-        "models/player/Group03/male_07.mdl",
-        "models/player/Group03/male_08.mdl",
-        "models/player/Group03/male_09.mdl",
-        "models/player/Group03/male_01.mdl",
-        "models/player/Group03/male_02.mdl",
-        "models/player/Group03/female_01.mdl",
-        "models/player/Group03/female_02.mdl",
-        "models/player/Group03/female_03.mdl",
-        "models/player/Group03/female_04.mdl",
-        "models/player/Group03/female_05.mdl",
-        "models/player/Group03/female_06.mdl",
-        "models/player/Group03/female_06.mdl"
+        "models/drem/cch/female_01.mdl",
+        "models/drem/cch/female_02.mdl",
+        "models/drem/cch/female_03.mdl",
+        "models/drem/cch/female_04.mdl",
+        "models/drem/cch/female_06.mdl",
+        "models/drem/cch/female_07.mdl",
+        "models/drem/cch/male_01.mdl",
+        "models/drem/cch/male_02.mdl",
+        "models/drem/cch/male_03.mdl",
+        "models/drem/cch/male_04.mdl",
+        "models/drem/cch/male_05.mdl",
+        "models/drem/cch/Male_06.mdl",
+        "models/drem/cch/male_07.mdl",
+        "models/drem/cch/Male_08.mdl",
+        "models/drem/cch/Male_09.mdl"
     },
     description = [[Основной костяк преступного мира, занимаются уже вещами посерьёзнее, грабёж, вооруженные захваты, налёты и тому прочее.]],
     weapons = {},
@@ -116,20 +117,21 @@ TEAM_BANDIT = DarkRP.createJob("Бандит", {
 TEAM_BANDITLOCKPICKER = DarkRP.createJob("Взломщик", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/player/Group03/male_04.mdl",
-        "models/player/Group03/male_05.mdl",
-        "models/player/Group03/male_07.mdl",
-        "models/player/Group03/male_08.mdl",
-        "models/player/Group03/male_09.mdl",
-        "models/player/Group03/male_01.mdl",
-        "models/player/Group03/male_02.mdl",
-        "models/player/Group03/female_01.mdl",
-        "models/player/Group03/female_02.mdl",
-        "models/player/Group03/female_03.mdl",
-        "models/player/Group03/female_04.mdl",
-        "models/player/Group03/female_05.mdl",
-        "models/player/Group03/female_06.mdl",
-        "models/player/Group03/female_06.mdl"
+        "models/drem/cch/female_01.mdl",
+        "models/drem/cch/female_02.mdl",
+        "models/drem/cch/female_03.mdl",
+        "models/drem/cch/female_04.mdl",
+        "models/drem/cch/female_06.mdl",
+        "models/drem/cch/female_07.mdl",
+        "models/drem/cch/male_01.mdl",
+        "models/drem/cch/male_02.mdl",
+        "models/drem/cch/male_03.mdl",
+        "models/drem/cch/male_04.mdl",
+        "models/drem/cch/male_05.mdl",
+        "models/drem/cch/Male_06.mdl",
+        "models/drem/cch/male_07.mdl",
+        "models/drem/cch/Male_08.mdl",
+        "models/drem/cch/Male_09.mdl"
     },
     description = [[Часть преступного мира, по воле случая обучился в мелкой моторике и использовании монтировки для взлома.]],
     weapons = {},
@@ -200,14 +202,13 @@ TEAM_CRYPTMINER = DarkRP.createJob("Крипто-Майнер", {
 TEAM_MAF = DarkRP.createJob("Мафиози", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/player/suits/group3/male_09_open.mdl",        
-        "models/player/suits/group2/male_01_open.mdl",
-        "models/player/suits/group3/male_08_open.mdl",
-        "models/player/suits/group2/male_01_open.mdl",
-        "models/player/suits/group2/male_02_shirt.mdl",
         "models/player/suits/group1/male_09_shirt.mdl",
         "models/player/suits/group1/male_02_shirt.mdl",
-        "models/player/suits/group1/male_08_shirt.mdl"
+        "models/player/suits/group1/male_08_shirt.mdl",
+        "models/player/suits/group2/male_01_open.mdl",
+        "models/player/suits/group2/male_03_open.mdl",
+        "models/player/suits/group3/male_09_open.mdl",
+        "models/player/suits/group3/male_08_open.mdl"
 
     },
     description = [[Высшая каста преступного мира на сервере. Занимаются насильным, принудительным взиманием налогов среди торговцев, держателей бизнесов, да и простых граждан. Регулируют все процессы внутри криминального сообщества.]],
@@ -276,7 +277,7 @@ TEAM_BARACH = DarkRP.createJob("Барахольщик [Dis+]", {
 TEAM_MAF41 = DarkRP.createJob("Головорез Мафии [Dis+]", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/arty/codmw2022/mp/dmz/shadowcompany/dmr/dmr - arc9_pm.mdl"
+        "models/arty/codmw2022/mp/dmz/shadowcompany/dmr/dmr_pm.mdl"
     },
     description = [[Ячейка Дона для особых случаев или охраны.]],
     weapons = {},
@@ -328,7 +329,21 @@ TEAM_NAEB = DarkRP.createJob("Наёмник-Мародер", {
 TEAM_HACKER = DarkRP.createJob("Хакер-взломщик", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/player/arctic.mdl"
+        "models/drem/cch/female_01.mdl",
+        "models/drem/cch/female_02.mdl",
+        "models/drem/cch/female_03.mdl",
+        "models/drem/cch/female_04.mdl",
+        "models/drem/cch/female_06.mdl",
+        "models/drem/cch/female_07.mdl",
+        "models/drem/cch/male_01.mdl",
+        "models/drem/cch/male_02.mdl",
+        "models/drem/cch/male_03.mdl",
+        "models/drem/cch/male_04.mdl",
+        "models/drem/cch/male_05.mdl",
+        "models/drem/cch/Male_06.mdl",
+        "models/drem/cch/male_07.mdl",
+        "models/drem/cch/Male_08.mdl",
+        "models/drem/cch/Male_09.mdl"
     },
     description = [[Наёмник со знаниями в сфере электронных и компьютерных технологий. Хотя и про обычный механический взлом дверей, замков, etc тоже не стоит забывать. Работает за деньги.]],
     weapons = {},
@@ -392,7 +407,7 @@ TEAM_PATP = DarkRP.createJob("Патрульная полиция", {
 TEAM_SPEZ = DarkRP.createJob("Спецназ CTSFO", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/arty/codmw2019/mp/coalition/ctsfo/ctsfo - arc9_pm.mdl"
+        "models/arty/codmw2019/mp/coalition/ctsfo/ctsfo_pm.mdl"
     },
     description = [[Отдел быстрого реагирования, выходит на операции средней сложности, охраняют стратегически важные объекты и тому прочее.]],
     weapons = {},
@@ -409,7 +424,7 @@ TEAM_SPEZ = DarkRP.createJob("Спецназ CTSFO", {
 TEAM_DISAG = DarkRP.createJob("Отдел Disag [Dis+]", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/arty/codmw2022/mp/shadow company/siege/grunt - arc9_pm.mdl"
+        "models/bread/cod/characters/milsim/shadow_company.mdl"
     },
     description = [[Спец войска, занимаются рейдами, захватами точек, штурмами и прочими тяжелыми и сложными тактико-военными операциями. По слухам состоят из бывших наемников.]],
     weapons = {},
@@ -455,18 +470,7 @@ TEAM_DET = DarkRP.createJob("Детектив", {
 TEAM_MAYOR = DarkRP.createJob("Администратор города", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/player/suits/group1/male_07_open.mdl",
-        "models/player/suits/group1/male_07_open_tie.mdl",
-        "models/player/suits/group1/male_07_shirt.mdl",
-        "models/player/suits/group1/male_07_shirt_tie.mdl",
-        "models/player/suits/group2/male_07_open.mdl",
-        "models/player/suits/group2/male_07_open_tie.mdl",
-        "models/player/suits/group2/male_07_shirt.mdl",
-        "models/player/suits/group2/male_07_shirt_tie.mdl",
-        "models/player/suits/group3/male_07_open.mdl",
-        "models/player/suits/group3/male_07_open_tie.mdl",
-        "models/player/suits/group3/male_07_shirt.mdl",
-        "models/player/suits/group3/male_07_shirt_tie.mdl"
+        "models/player/suits/group3/male_09_open.mdl"
     },
     description = [[Сам мэр, принимает законы, регулирует цены и т.д]],
     weapons = {},
@@ -495,6 +499,12 @@ TEAM_OTDELBEZ = DarkRP.createJob("Отдел Контрразведки MI5", {
     vote = false,
     hasLicense = true,
     candemote = false,
+    --[[bodygroups = {
+        ["pathes"] = {1},
+        ["legs"] = {0,1,2,3,4,5},
+        ["beanies"] = {0,1,2},
+        ["glasses"] = {0,1},
+    }]]
     category = "Правительство",
 })
 
@@ -599,4 +609,3 @@ Jobs that are hitmen (enables the hitman menu)
 ---------------------------------------------------------------------------]]
 DarkRP.addHitmanTeam(TEAM_NAEB)
 DarkRP.addHitmanTeam(TEAM_PMC)
-DarkRP.addHitmanTeam(TEAM_HACKER)
