@@ -6,8 +6,8 @@
 
     if not CLIENT then return end
 
-    surface.CreateFont( "rHit.Font.Large", { font = "BFHUD", size = 45, weight = 700 } )
-    surface.CreateFont( "rHit.Font.Phone", { font = "Callibri", size = 25, weight = 400 } )
+    surface.CreateFont( "rHit.Font.Large", { font = "Roboto", size = 45, weight = 700 } )
+    surface.CreateFont( "rHit.Font.Phone", { font = "Roboto", size = 25, weight = 400 } )
 
     --> This is the default DarkRP alternative (Small menu pops up.) <--
     function Executioner.DeployConfirmation()

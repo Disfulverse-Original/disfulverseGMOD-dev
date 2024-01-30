@@ -1,8 +1,8 @@
     if not CLIENT then return end
 
-    surface.CreateFont( "rHit.Font.HUD", { font = "BFHUD", size = 27, weight = 500, bold = true } )
-    surface.CreateFont( "rHit.Font.Info", { font = "BFHUD", size = 48, weight = 800, bold = true } )
-    surface.CreateFont( "rHit.Font.Walls", { font = "BFHUD", size = 32, weight = 800, bold = true } )
+    surface.CreateFont( "rHit.Font.HUD", { font = "Roboto", size = 27, weight = 500, bold = true } )
+    surface.CreateFont( "rHit.Font.Info", { font = "Roboto", size = 48, weight = 800, bold = true } )
+    surface.CreateFont( "rHit.Font.Walls", { font = "Roboto", size = 32, weight = 800, bold = true } )
 
     local _a, _t = {}, nil
 

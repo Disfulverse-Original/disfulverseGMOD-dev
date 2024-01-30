@@ -6,11 +6,11 @@
 
     if not CLIENT then return end
 
-    surface.CreateFont( "rHit.Font.Generic", { font = "BFHUD", size = 27, weight = 500 } )
-    surface.CreateFont( "rHit.Font.Medium", { font = "Calibri", size = 27, weight = 700 } )
-    surface.CreateFont( "rHit.Font.Small", { font = "Calibri", size = 17, weight = 700 } )
-    surface.CreateFont( "rHit.Font.Inbetween", { font = "Calibri", size = 17, weight = 700 } )
-    surface.CreateFont( "rHit.Font.Other", { font = "BFHUD", size = 23, weight = 700 } )
+    surface.CreateFont( "rHit.Font.Generic", { font = "Roboto", size = 27, weight = 500 } )
+    surface.CreateFont( "rHit.Font.Medium", { font = "Roboto", size = 27, weight = 700 } )
+    surface.CreateFont( "rHit.Font.Small", { font = "Roboto", size = 17, weight = 700 } )
+    surface.CreateFont( "rHit.Font.Inbetween", { font = "Roboto", size = 17, weight = 700 } )
+    surface.CreateFont( "rHit.Font.Other", { font = "Roboto", size = 23, weight = 700 } )
 
     Executioner.emoteTable = { 'pose_standing_01', 'pose_standing_02', 'pose_standing_03', 'pose_standing_04' }
     Executioner.materials = { ['heart'] = 'like.png', ['armor'] = 'rawr.png', [ 'oink' ] = 'oink.png' } -- :D
