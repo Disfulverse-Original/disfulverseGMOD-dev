@@ -1,16 +1,10 @@
 player_manager.AddValidModel( "Shadow Company - Trap Boss", "models/arty/codmw2022/mp/dmz/shadowcompany/boss/trap/trap_pm.mdl" )
-player_manager.AddValidModel( "Shadow Company - Trap Boss - ARC9", "models/arty/codmw2022/mp/dmz/shadowcompany/boss/trap/trap - arc9_pm.mdl" )
 player_manager.AddValidModel( "Shadow Company - DMR Grunt", "models/arty/codmw2022/mp/dmz/shadowcompany/dmr/dmr_pm.mdl" )
-player_manager.AddValidModel( "Shadow Company - DMR Grunt - ARC9", "models/arty/codmw2022/mp/dmz/shadowcompany/dmr/dmr - arc9_pm.mdl" )
 player_manager.AddValidModel( "Shadow Company - SMG Grunt", "models/arty/codmw2022/mp/dmz/shadowcompany/smg/smg_pm.mdl" )
-player_manager.AddValidModel( "Shadow Company - SMG Grunt - ARC9", "models/arty/codmw2022/mp/dmz/shadowcompany/smg/smg - arc9_pm.mdl" )
-
 player_manager.AddValidHands( "Shadow Company - Trap Boss", "models/arty/codmw2022/mp/dmz/shadowcompany/trap_vm.mdl", 0, "00" )
-player_manager.AddValidHands( "Shadow Company - Trap Boss - ARC9", "models/arty/codmw2022/mp/dmz/shadowcompany/trap_vm.mdl", 0, "00" )
 player_manager.AddValidHands( "Shadow Company - DMR Grunt", "models/arty/codmw2022/mp/dmz/shadowcompany/dmr_vm.mdl", 0, "00" )
-player_manager.AddValidHands( "Shadow Company - DMR Grunt - ARC9", "models/arty/codmw2022/mp/dmz/shadowcompany/dmr_vm.mdl", 0, "00" )
 player_manager.AddValidHands( "Shadow Company - SMG Grunt", "models/arty/codmw2022/mp/dmz/shadowcompany/smg_vm.mdl", 0, "00" )
-player_manager.AddValidHands( "Shadow Company - SMG Grunt - ARC9", "models/arty/codmw2022/mp/dmz/shadowcompany/smg_vm.mdl", 0, "00" )
+
 
 local Category = "Shadow Company" 
 

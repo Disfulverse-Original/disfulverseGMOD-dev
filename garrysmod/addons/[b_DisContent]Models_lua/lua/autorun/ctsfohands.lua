@@ -3,7 +3,6 @@ if SERVER then
 end
 
 player_manager.AddValidHands( "CTSFO", "models/arty/codmw2019/mp/coalition/ctsfo_vm.mdl", 0, "00" )
-player_manager.AddValidHands( "CTFSO - ARC9", "models/arty/codmw2019/mp/coalition/ctsfo_vm.mdl", 0, "00" )
 
 hook.Add("PreDrawPlayerHands", "ctsfo1_hands", function(hands, vm, ply, wpn)
     if IsValid(hands) 
