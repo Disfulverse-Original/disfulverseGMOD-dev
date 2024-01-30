@@ -15,7 +15,7 @@ CreateConVar("arccw_atts_ubglautoload", 0, FCVAR_ARCHIVE, "Automatically load un
 CreateConVar("arccw_atts_pickx", 0, FCVAR_ARCHIVE + FCVAR_REPLICATED, "Limit weapons to this many maximum attachments. 0 = disable system.", 0)
 
 CreateConVar("arccw_npc_replace", 0, FCVAR_ARCHIVE, "Replace NPC weapons with ArcCW weapons.")
-CreateConVar("arccw_npc_atts", 1, FCVAR_ARCHIVE, "Randomly give NPC weapons attachments.")
+CreateConVar("arccw_npc_atts", 0, FCVAR_ARCHIVE, "Randomly give NPC weapons attachments.")
 
 CreateConVar("arccw_truenames", 1, FCVAR_ARCHIVE + FCVAR_REPLICATED, "Use true names instead of fake names, where applicable. Requires restart.")
 
@@ -75,8 +75,8 @@ CreateConVar("arccw_mult_ammoamount", 1, FCVAR_ARCHIVE + FCVAR_REPLICATED, "Mult
 CreateConVar("arccw_limityear_enable", 0, FCVAR_ARCHIVE + FCVAR_REPLICATED, "Limit the maximum year for weapons.")
 CreateConVar("arccw_limityear", 0, FCVAR_ARCHIVE + FCVAR_REPLICATED, "Limit the maximum year for weapons.")
 
-CreateConVar("arccw_doorbust", 1, FCVAR_ARCHIVE, "Whether to allow door busting. 1 - break down, 2 - open only", 0, 2)
-CreateConVar("arccw_doorbust_threshold", 150, FCVAR_ARCHIVE, "The amount of damage needed to bust a normal sized door.")
+CreateConVar("arccw_doorbust", 1, FCVAR_ARCHIVE, "Whether to allow door busting. 1 - break down, 2 - open only", 1, 1)
+CreateConVar("arccw_doorbust_threshold", 195, FCVAR_ARCHIVE, "The amount of damage needed to bust a normal sized door.")
 CreateConVar("arccw_doorbust_time", 180, FCVAR_ARCHIVE, "The amount of time to keep the door busted by.", 1)
 
 CreateConVar("arccw_driveby", 0, FCVAR_ARCHIVE, "Enable special checks that allow you to fire out of vehicles (assuming some vehicle weaponizer addon exists).", 0, 1)
