@@ -6,7 +6,6 @@
 
     if not SERVER then return end
 
-    resource.AddFile( 'resource/fonts/bfhud.ttf' )
     resource.AddWorkshop( '1300407557' )
 
     Executioner.HitTracker = Executioner.HitTracker or {}

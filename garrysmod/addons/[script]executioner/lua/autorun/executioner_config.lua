@@ -38,7 +38,7 @@
     }
 
     Executioner.Config.Banned_Groups = { -- Which groups can not have a hit placed against them?
-        [ 'superadmin' ] = false,
+        [ 'superadmin' ] = true,
         [ 'owner' ] = false
     }
 
