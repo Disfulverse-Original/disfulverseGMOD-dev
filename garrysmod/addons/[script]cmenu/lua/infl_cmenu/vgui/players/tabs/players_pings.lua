@@ -4,19 +4,19 @@ local _draw = framework:Class("Draw")
 local PANEL = {}
 
 surface.CreateFont("Nexus.PingSystem.Players.Buddies.Title", {
-	font = "Lato",
+	font = "Roboto",
 	size = 24,
 	weight = 500
 })
 
 surface.CreateFont("Nexus.PingSystem.Players.Buddies.Name", {
-	font = "Lato",
+	font = "Roboto",
 	size = 28,
 	weight = 800
 })
 
 surface.CreateFont("Nexus.PingSystem.Players.Buddies.Desc", {
-	font = "Lato",
+	font = "Roboto",
 	size = 22,
 	weight = 500
 })
