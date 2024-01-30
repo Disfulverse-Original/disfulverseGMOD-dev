@@ -1,11 +1,11 @@
 
 AddCSLuaFile()
 
-SWEP.PrintName				= "Revival Tool"
+SWEP.PrintName				= "Дефибриллятор"
 SWEP.Author					= "A1steaksa"
-SWEP.Purpose			= "Bring fresh bodies back to life"
+SWEP.Purpose			= "Возвращает к жизни."
 
-SWEP.Slot					= 2
+SWEP.Slot					= 4
 SWEP.SlotPos				= 3
 
 SWEP.Spawnable				= true
