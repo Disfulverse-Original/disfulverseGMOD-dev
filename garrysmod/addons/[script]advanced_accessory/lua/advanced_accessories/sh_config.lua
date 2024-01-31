@@ -8,7 +8,7 @@ AAS = AAS or {}
 
 --fr, en, pl, de, tr, ru
 --[[ You can choose between this langages fr, en, de, ru, es, tr, pl ]]
-AAS.Lang = "en"
+AAS.Lang = "ru"
 
 --[[ Here you can change the title of the main menu ( "WELCOME, WHAT ARE YOU BUYING?" )]]
 --[[ Don't touch if you want to get the basic text ]]

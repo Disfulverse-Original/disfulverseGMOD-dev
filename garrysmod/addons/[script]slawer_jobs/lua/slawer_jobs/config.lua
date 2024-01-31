@@ -20,7 +20,7 @@ Slawer.Jobs.CFG.Theme = {
 
 -- Jobs that any player can become without having to use an employer NPC
 Slawer.Jobs.CFG.AccessWithoutNPC = {
-    -- ["Job Name"] = true,
+     ["Отдел поддержки [ADM]"] = true,
     -- ["Job Name Two"] = true,
 }
 

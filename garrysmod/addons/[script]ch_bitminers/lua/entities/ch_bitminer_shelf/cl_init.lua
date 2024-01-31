@@ -106,7 +106,7 @@ function ENT:DrawTranslucent()
 			--surface.DrawRect( 0, 0, 2145, 1275 )
 			
 			-- DRAW HEALTH
-			draw.DrawText( "MINER HEALTH", "BITMINER_ScreenText23b", 70, 10, color_white, TEXT_ALIGN_LEFT )
+			draw.DrawText( "ЗДОРОВЬЕ МАШИНЫ", "BITMINER_ScreenText23b", 70, 10, color_white, TEXT_ALIGN_LEFT )
 			draw.DrawText( self:Health() .."%", "BITMINER_ScreenText23b", 995, 10, color_white, TEXT_ALIGN_RIGHT )
 			
 			-- Rect showing health
@@ -143,7 +143,7 @@ function ENT:DrawTranslucent()
 			
 			CH_Bitminers.UTIL_DrawCircle( front_circle_capacity, col_bar_bg_notrans ) -- Front circle
 			
-			draw.DrawText( "CAPACITY", "BITMINER_ScreenText23b", 290, 400, color_white, TEXT_ALIGN_CENTER )
+			draw.DrawText( "Вместил", "BITMINER_ScreenText23b", 290, 400, color_white, TEXT_ALIGN_CENTER )
 			draw.DrawText( math.Round( self:GetBitcoinsMined() / CH_Bitminers.Config.MaxBitcoinsMined * 100, 1 ) .."%", "BITMINER_ScreenText30b", 290, 475, color_white, TEXT_ALIGN_CENTER )
 			
 			-- DRAW WATTS
@@ -157,10 +157,10 @@ function ENT:DrawTranslucent()
 			
 			CH_Bitminers.UTIL_DrawCircle( front_circle_watts, col_bar_bg_notrans ) -- Front circle
 			
-			draw.DrawText( "Generated", "BITMINER_ScreenText20b", 770, 510, color_white, TEXT_ALIGN_CENTER )
+			draw.DrawText( "Выдает", "BITMINER_ScreenText20b", 770, 510, color_white, TEXT_ALIGN_CENTER )
 			draw.DrawText( string.Comma( math.Round( self:GetWattsGenerated() ) ), "BITMINER_ScreenText23b", 770, 570, color_white, TEXT_ALIGN_CENTER )
 			
-			draw.DrawText( "Required", "BITMINER_ScreenText20b", 770, 670, color_white, TEXT_ALIGN_CENTER )
+			draw.DrawText( "Требует", "BITMINER_ScreenText20b", 770, 670, color_white, TEXT_ALIGN_CENTER )
 			draw.DrawText( string.Comma( math.Round( self:GetWattsRequired() ) ), "BITMINER_ScreenText23b", 770, 730, color_white, TEXT_ALIGN_CENTER )
 			
 			
@@ -173,11 +173,11 @@ function ENT:DrawTranslucent()
 			end
 			
 			if CH_Bitminers.Config.IntegrateCryptoCurrencies and CH_CryptoCurrencies then
-				draw.DrawText( "Take ".. CH_CryptoCurrencies.CryptosCL[ self:GetCryptoIntegrationIndex() ].Name, "BITMINER_ScreenText23b", 525, 985, color_white, TEXT_ALIGN_CENTER )
+				draw.DrawText( "Взять ".. CH_CryptoCurrencies.CryptosCL[ self:GetCryptoIntegrationIndex() ].Name, "BITMINER_ScreenText23b", 525, 985, color_white, TEXT_ALIGN_CENTER )
 				
 				draw.DrawText( math.Round( self:GetBitcoinsMined(), 7 ) .. " ".. CH_CryptoCurrencies.CryptosCL[ self:GetCryptoIntegrationIndex() ].Currency, "BITMINER_ScreenText30b", 525, 1070, color_white, TEXT_ALIGN_CENTER )
 			else
-				draw.DrawText( "Sell Bitcoins (" ..math.Round( self:GetBitcoinsMined(), 7 ) .." BTC)", "BITMINER_ScreenText23b", 525, 985, color_white, TEXT_ALIGN_CENTER )
+				draw.DrawText( "Продать биткоины (" ..math.Round( self:GetBitcoinsMined(), 7 ) .." BTC)", "BITMINER_ScreenText23b", 525, 985, color_white, TEXT_ALIGN_CENTER )
 				
 				if bitcoin_rate then
 					draw.DrawText( DarkRP.formatMoney( math.Round( self:GetBitcoinsMined() * bitcoin_rate ) ), "BITMINER_ScreenText30b", 525, 1070, color_white, TEXT_ALIGN_CENTER )
@@ -189,7 +189,7 @@ function ENT:DrawTranslucent()
 			surface.DrawRect( 1065, 0, 15, 1275 )
 			
 			-- BITMINERS
-			draw.DrawText( "MINERS", "BITMINER_ScreenText23b", 1150, 10, color_white, TEXT_ALIGN_LEFT )
+			draw.DrawText( "МАЙНЕРЫ", "BITMINER_ScreenText23b", 1150, 10, color_white, TEXT_ALIGN_LEFT )
 			draw.DrawText( self:GetMinersInstalled() .." / ".. self:GetMinersAllowed(), "BITMINER_ScreenText23b", 2075, 10, color_white, TEXT_ALIGN_RIGHT )
 			
 			-- Rect showing amount of bitminers
@@ -212,7 +212,7 @@ function ENT:DrawTranslucent()
 			surface.DrawRect( 1150, 100, self:GetMinersInstalled() * multiple_rate, 50 )
 
 			-- UPS'S INSTALLED
-			draw.DrawText( "POWER SUPPLIES", "BITMINER_ScreenText23b", 1150, 175, color_white, TEXT_ALIGN_LEFT )
+			draw.DrawText( "ИСТОЧНИКИ ПИТАНИЯ", "BITMINER_ScreenText23b", 1150, 175, color_white, TEXT_ALIGN_LEFT )
 			draw.DrawText( self:GetUPSInstalled() .." / 4", "BITMINER_ScreenText23b", 2075, 175, color_white, TEXT_ALIGN_RIGHT )
 			
 			-- Rect showing amount of ups's installed
@@ -223,7 +223,7 @@ function ENT:DrawTranslucent()
 			surface.DrawRect( 1150, 265, self:GetUPSInstalled() * 231.25, 50 )
 			
 			-- VENTILATION
-			draw.DrawText( "VENTILATION", "BITMINER_ScreenText23b", 1150, 340, color_white, TEXT_ALIGN_LEFT )
+			draw.DrawText( "ВЕНТИЛЯТОРЫ", "BITMINER_ScreenText23b", 1150, 340, color_white, TEXT_ALIGN_LEFT )
 			draw.DrawText( self:GetFansInstalled() .." / 3", "BITMINER_ScreenText23b", 2075, 340, color_white, TEXT_ALIGN_RIGHT )
 			
 			-- Rect showing vents level
@@ -234,7 +234,7 @@ function ENT:DrawTranslucent()
 			surface.DrawRect( 1150, 430, self:GetFansInstalled() * 308.33, 50 )
 			
 			-- TEMPERATURE
-			draw.DrawText( "TEMPERATURE", "BITMINER_ScreenText23b", 1150, 505, color_white, TEXT_ALIGN_LEFT )
+			draw.DrawText( "ТЕМПЕРАТУРА", "BITMINER_ScreenText23b", 1150, 505, color_white, TEXT_ALIGN_LEFT )
 			draw.DrawText( math.Round( self:GetTemperature(), 3 ) .."C", "BITMINER_ScreenText23b", 2075, 505, color_white, TEXT_ALIGN_RIGHT )
 			
 			-- Rect showing temp
@@ -289,15 +289,15 @@ function ENT:DrawTranslucent()
 			
 			-- Draw battery
 			if self:GetWattsGenerated() < self:GetWattsRequired() then
-				draw.DrawText( "LOW", "BITMINER_ScreenText20b", 1610, 976, color_white, TEXT_ALIGN_CENTER )
-				draw.DrawText( "POWER", "BITMINER_ScreenText20b", 1610, 1152, color_white, TEXT_ALIGN_CENTER )
+				draw.DrawText( "МАЛАЯ", "BITMINER_ScreenText20b", 1610, 976, color_white, TEXT_ALIGN_CENTER )
+				draw.DrawText( "ЭНЕРГИЯ", "BITMINER_ScreenText20b", 1610, 1152, color_white, TEXT_ALIGN_CENTER )
 				
 				surface.SetDrawColor( Color( 255, 255, 255, 150 * math.abs( math.sin( CurTime() * 1.5 ) ) ) )
 				surface.SetMaterial( mat_low_battery )
 				surface.DrawTexturedRect( 1505, 985, 220, 220 )
 			else
-				draw.DrawText( "FULL", "BITMINER_ScreenText20b", 1610, 976, color_white, TEXT_ALIGN_CENTER )
-				draw.DrawText( "POWER", "BITMINER_ScreenText20b", 1610, 1152, color_white, TEXT_ALIGN_CENTER )
+				draw.DrawText( "ПОЛНАЯ", "BITMINER_ScreenText20b", 1610, 976, color_white, TEXT_ALIGN_CENTER )
+				draw.DrawText( "ЭНЕРГИЯ", "BITMINER_ScreenText20b", 1610, 1152, color_white, TEXT_ALIGN_CENTER )
 				
 				surface.SetDrawColor( color_white )
 				surface.SetMaterial( mat_full_battery )

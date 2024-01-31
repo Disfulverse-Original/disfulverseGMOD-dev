@@ -56,7 +56,7 @@ Realistic_Properties.SaveProps = true -- Save props when the property is rented
 
 Realistic_Properties.SpawnProps = true -- Desactivate = false / Activate = true spawn props outside property
 
-Realistic_Properties.MaxRentalDay = 25 -- Max Rental Day
+Realistic_Properties.MaxRentalDay = 20 -- Max Rental Day
 
 Realistic_Properties.ModelOfTheBox = "models/kobralost/case/caseveeds.mdl" -- Model of the Delivery Box 
 
@@ -96,7 +96,6 @@ Realistic_Properties.EntityCompatibility = { -- Here is the entity which is comp
 }
 
 Realistic_Properties.JobCanSpawnProps = { -- Which job can spawn props outside his property when the Realistic_Properties.SpawnProps = false 
-    ["Отдел Disag"] = true,
     ["Отдел поддержки [ADM]"] = true,
 }
 

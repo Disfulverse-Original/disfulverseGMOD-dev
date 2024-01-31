@@ -32,7 +32,7 @@ surface.CreateFont( "CH_ATM_Font_ATMScreen_Size25", {
 
 surface.CreateFont( "CH_ATM_Font_ATMScreen_Size30", {
     font = "Roboto", 
-    size = 30,
+    size = 25,
     extended  = true, 
     antialias = true,
     weight = 500
@@ -40,7 +40,7 @@ surface.CreateFont( "CH_ATM_Font_ATMScreen_Size30", {
 
 surface.CreateFont( "CH_ATM_Font_ATMScreen_Size35", {
     font = "Roboto", 
-    size = 35,
+    size = 26,
     extended  = true, 
     antialias = true,
     weight = 500

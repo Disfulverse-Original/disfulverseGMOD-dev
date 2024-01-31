@@ -10,7 +10,7 @@
 --]]
 
 surface.CreateFont("rpt_font_1", {
-  font = "License Plate", 
+  font = "Roboto", 
   size = 30*(ScrH()/1080), 
   weight = 1000,
   antialias = true,
@@ -18,7 +18,7 @@ surface.CreateFont("rpt_font_1", {
 })
 
 surface.CreateFont("rpt_font_2", {
-  font = "License Plate", 
+  font = "Roboto", 
   size = 24*(ScrH()/1080), 
   weight = 1000,
   antialias = true,
@@ -26,7 +26,7 @@ surface.CreateFont("rpt_font_2", {
 })
 
 surface.CreateFont("rpt_font_3", {
-  font = "License Plate", 
+  font = "Roboto", 
   size = 30*(ScrH()/1080), 
   weight = 1000,
   antialias = true,
@@ -34,7 +34,7 @@ surface.CreateFont("rpt_font_3", {
 })
 
 surface.CreateFont("rpt_font_4", {
-  font = "License Plate", 
+  font = "Roboto", 
   size = 24*(ScrH()/1080), 
   weight = 1000,
   antialias = true,

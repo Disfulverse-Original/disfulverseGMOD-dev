@@ -12,7 +12,7 @@ end
 
 if CLIENT then
     SWEP.PrintName = CH_ATM.LangString( "Credit Card" )
-    SWEP.Slot = 0
+    SWEP.Slot = 1
     SWEP.SlotPos = 4
     SWEP.DrawAmmo = false
 end

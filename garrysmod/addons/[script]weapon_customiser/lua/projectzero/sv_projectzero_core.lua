@@ -5,8 +5,6 @@
 --ds - matveicher
 
 resource.AddWorkshop( 3148691503 )
-resource.AddFile( "resource/fonts/montserrat-bold.ttf" )
-resource.AddFile( "resource/fonts/montserrat-medium.ttf" )
 
 include( "projectzero/sv_database.lua" )
 

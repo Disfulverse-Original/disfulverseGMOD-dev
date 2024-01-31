@@ -78,10 +78,10 @@ LOUNGE_CHAT.EmoticonsNoColon = false
 **/
 
 -- Font to use for normal text throughout the chatbox.
-LOUNGE_CHAT.FontName = "Kanit Light"
+LOUNGE_CHAT.FontName = "Roboto"
 
 -- Font to use for bold text throughout the chatbox.
-LOUNGE_CHAT.FontNameBold = "Kanit Light"
+LOUNGE_CHAT.FontNameBold = "Roboto"
 
 -- Color sheet.
 LOUNGE_CHAT.Style = {

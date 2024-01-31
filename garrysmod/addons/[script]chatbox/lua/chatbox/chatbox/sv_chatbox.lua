@@ -41,6 +41,4 @@ else
 	resource.AddFile("materials/shenesis/chat/close.png")
 	resource.AddFile("materials/shenesis/chat/smile.png")
 	resource.AddFile("materials/shenesis/chat/options.png")
-	resource.AddFile("resource/fonts/circular.ttf")
-	resource.AddFile("resource/fonts/circular_bold.ttf")
 end

@@ -4,8 +4,8 @@ CH_CryptoCurrencies.Materials = CH_CryptoCurrencies.Materials or {}
 --[[
 	Cache materials in our table.
 --]]
-CH_CryptoCurrencies.Materials.CloseIcon = Material( "materials/craphead_scripts/ch_cryptocurrencies/gui/closebtn.png", "noclamp smooth" )
-CH_CryptoCurrencies.Materials.BackIcon = Material( "materials/craphead_scripts/ch_cryptocurrencies/gui/arrowbtn.png", "noclamp smooth" )
+CH_CryptoCurrencies.Materials.CloseIcon = Material( "materials/craphead_scripts/ch_cryptocurrencies/gui/close.png", "noclamp smooth" )
+CH_CryptoCurrencies.Materials.BackIcon = Material( "materials/craphead_scripts/ch_cryptocurrencies/gui/arrow.png", "noclamp smooth" )
 
 CH_CryptoCurrencies.Materials.ArrowUpIcon = Material( "materials/craphead_scripts/ch_cryptocurrencies/gui/increase.png", "noclamp smooth" )
 CH_CryptoCurrencies.Materials.ArrowDownIcon = Material( "materials/craphead_scripts/ch_cryptocurrencies/gui/decrease.png", "noclamp smooth" )
