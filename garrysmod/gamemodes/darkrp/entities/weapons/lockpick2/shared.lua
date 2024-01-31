@@ -9,7 +9,7 @@ end
 
 -- Variables that are used on both client and server
 
-SWEP.PrintName = "Отмычка"
+SWEP.PrintName = "Отличная отмычка"
 SWEP.Author = "DarkRP Developers"
 SWEP.Instructions = "Left or right click to pick a lock"
 SWEP.Contact = ""
@@ -82,7 +82,7 @@ function SWEP:PrimaryAttack()
     self:SetIsLockpicking(true)
     self:SetLockpickEnt(ent)
     self:SetLockpickStartTime(CurTime())
-    local endDelta = hook.Call("lockpickTime", nil, Owner, ent) or util.SharedRandom("DarkRP_Lockpick" .. self:EntIndex() .. "_" .. self:GetTotalLockpicks(), 15, 30)
+    local endDelta = hook.Call("lockpickTime", nil, Owner, ent) or util.SharedRandom("DarkRP_Lockpick" .. self:EntIndex() .. "_" .. self:GetTotalLockpicks(), 8, 15)
     self:SetLockpickEndTime(CurTime() + endDelta)
     self:SetTotalLockpicks(self:GetTotalLockpicks() + 1)
 
