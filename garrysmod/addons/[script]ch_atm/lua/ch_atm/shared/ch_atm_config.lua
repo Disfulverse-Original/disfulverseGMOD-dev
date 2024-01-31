@@ -11,7 +11,7 @@ CH_ATM.Config.Language = "ru" -- Set the language of the script.
 --[[
 	Default Config
 --]]
-CH_ATM.Config.AccountStartMoney = 12000 -- How much money is there on a bank account when it's created?
+CH_ATM.Config.AccountStartMoney = 0 -- How much money is there on a bank account when it's created?
 CH_ATM.Config.ATMCurrency = "darkrp" -- What gamemode/currency do you want to store in the ATM? Supported are basewars, bricks_credit_store, darkrp, helix, mtokens, pointshop2, pointshop2_premium, santosrp, sh_pointshop, sh_pointshop_premium, underdone
 
 CH_ATM.Config.NotificationTime = 8 -- Amount of seconds to show notifications
@@ -31,9 +31,9 @@ CH_ATM.Config.SendPaycheckToBank = false -- If this is enabled then their payche
 --[[
 	ATM Config
 --]]
-CH_ATM.Config.ActivateWithCreditCard = false -- Should the ATM be activated by inserting the credit card? true to enable or false to activate with pressing E
-CH_ATM.Config.FinePlayerIfForgetCard = true -- Should the player be fined if they forget their credit card in the ATM?
-CH_ATM.Config.ForgetCardFee = 20 -- How much should they be fined for getting their credit card in the ATM?
+CH_ATM.Config.ActivateWithCreditCard = true -- Should the ATM be activated by inserting the credit card? true to enable or false to activate with pressing E
+CH_ATM.Config.FinePlayerIfForgetCard = false -- Should the player be fined if they forget their credit card in the ATM?
+CH_ATM.Config.ForgetCardFee = 10 -- How much should they be fined for getting their credit card in the ATM?
 
 CH_ATM.Config.SlideMoneyOutOfATM = false -- Should we spawn money and slide them in/out of the ATM on deposit/withdraw? If not it just adds directly to wallet.
 CH_ATM.Config.OnlyOwnerCanTakeMoney = false -- Should we only allow the person that withdraws the money to be able to take the money that slides out of the ATM?
@@ -63,10 +63,7 @@ CH_ATM.Config.PoliceTeams = { -- The DarkRP team name that defines the police te
 }
 
 CH_ATM.Config.CriminalTeams = { -- The DarkRP team name that defines who can hack/lockpick ATM's (put the names as shown on your scoreboard).
-	["Безработный"] = true,
-	["Gangster"] = true,
-	["Criminal"] = true,
-	["Thief"] = true,
+	["Грабитель [Dis+]"] = true,
 }
 
 --[[
@@ -89,7 +86,7 @@ CH_ATM.Config.HackingPoliceOfficersRequired = 0 -- How many online players must 
 CH_ATM.Config.PlayerHackingCooldownTime = 1200 -- For how many seconds do we cooldown the player before they can lockpick any ATM again
 CH_ATM.Config.ATMHackCooldownTime = 600 -- For how many seconds should the ATM be on cooldown after a hack (making it un-useable for everybody). 0 to disable.
 
-CH_ATM.Config.MoneyRewardForHackingMin = 100 -- Minimum amount of money to be "rewarded" for hacking an ATM.
+CH_ATM.Config.MoneyRewardForHackingMin = 250 -- Minimum amount of money to be "rewarded" for hacking an ATM.
 CH_ATM.Config.MoneyRewardForHackingMax = 10000 -- Maximum amount of money to be "rewarded" for hacking an ATM.
 
 CH_ATM.Config.InterestToTakeForHacking = 0.0002 -- How much interest to take from all players when an ATM is hacked?
@@ -99,12 +96,12 @@ CH_ATM.Config.TheAlarmSound = "ambient/_period.wav ambient/alarms/alarm1.wav" --
 CH_ATM.Config.AlarmSoundVolume = 100 -- The volume the sound is emitted at
 
 CH_ATM.Config.MakePlayerWantedOnHack = true -- Should we make the hacker wanted once he begins lockpicking the ATM?
-CH_ATM.Config.PlayerWantedTime = 120 -- For how long should we make him wanted?
+CH_ATM.Config.PlayerWantedTime = 200 -- For how long should we make him wanted?
 
 CH_ATM.Config.UnwantedAfterHacking = false -- Once hacking finishes (success or failed) do we make him unwanted?
 
-CH_ATM.Config.KillHackerReward = 500 -- How much money is rewarded if a police officer kills a hacker?
-CH_ATM.Config.ArrestHackerReward = 2000 -- How much money is rewarded if a police officer arrests a hacker?
+CH_ATM.Config.KillHackerReward = 250 -- How much money is rewarded if a police officer kills a hacker?
+CH_ATM.Config.ArrestHackerReward = 1650 -- How much money is rewarded if a police officer arrests a hacker?
 
 --[[
 	Credit Card / Terminal Config
@@ -127,15 +124,15 @@ CH_ATM.Config.MaximumTransactionsToShow = 10 -- How many transactions should we 
 	XP SUPPORT
 --]]
 CH_ATM.Config.DarkRPLevelSystemEnabled = false -- DARKRP LEVEL SYSTEM BY vrondakis https://github.com/uen/Leveling-System
-CH_ATM.Config.SublimeLevelSystemEnabled = false -- Sublime Levels by HIGH ELO CODERS https://www.gmodstore.com/market/view/6431
+CH_ATM.Config.SublimeLevelSystemEnabled = true -- Sublime Levels by HIGH ELO CODERS https://www.gmodstore.com/market/view/6431
 CH_ATM.Config.EssentialsXPSystemEnabled = true -- Brick's Essentials and/or DarkRP Essentials by Brickwall https://www.gmodstore.com/market/view/5352 & https://www.gmodstore.com/market/view/7244
 CH_ATM.Config.EXP2SystemEnabled = false -- Elite XP SYstem (EXP2) By Axspeo https://www.gmodstore.com/market/view/4316
 CH_ATM.Config.GlorifiedLevelingXPSystem = false -- GlorifiedLeveling by GlorifiedPig https://www.gmodstore.com/market/view/7254
 
-CH_ATM.Config.SuccessfulHackXP = 20 -- Amount of XP given when a player successfully hacks an ATM.
+CH_ATM.Config.SuccessfulHackXP = 100 -- Amount of XP given when a player successfully hacks an ATM.
 
-CH_ATM.Config.KillingHackerMinXP = 20 -- Minimum amount of XP given for killing hacker.
-CH_ATM.Config.KillingHackerMaxXP = 50 -- Maximum amount of XP given for killing hacker.
+CH_ATM.Config.KillingHackerMinXP = 100 -- Minimum amount of XP given for killing hacker.
+CH_ATM.Config.KillingHackerMaxXP = 150 -- Maximum amount of XP given for killing hacker.
 
-CH_ATM.Config.ArrestingHackerMinXP = 20 -- Minimum amount of XP given for arresting hacker.
-CH_ATM.Config.ArrestingHackerMaxXP = 50 -- Maximum amount of XP given for arresting hacker.
+CH_ATM.Config.ArrestingHackerMinXP = 300 -- Minimum amount of XP given for arresting hacker.
+CH_ATM.Config.ArrestingHackerMaxXP = 350 -- Maximum amount of XP given for arresting hacker.
