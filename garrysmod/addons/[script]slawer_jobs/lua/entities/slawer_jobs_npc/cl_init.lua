@@ -2,8 +2,8 @@ include("shared.lua")
 
 surface.CreateFont( "NPCFONT1", {
  font = "Roboto",
- size = 55,
- weight = 700,
+ size = 49,
+ weight = 550,
  blursize = 0,
  scanlines = 0,
  antialias = true,
@@ -33,7 +33,7 @@ function ENT:Draw()
         -- Рисуем прямоугольную полосу сверху
         draw.RoundedBox(0, -250, 50, 500, 10, Color(255, 255, 255, 255))
         -- Рисуем текст NPC имени по центру
-        draw.DrawText(self:GetNPCName(), "NPCFONT1", 0, -15, Color(255, 255, 255, 255), TEXT_ALIGN_CENTER)
+        draw.DrawText(self:GetNPCName(), "NPCFONT1", 0, -11, Color(255, 255, 255, 255), TEXT_ALIGN_CENTER)
         -- Завершаем рисование 3D-текста и элементов
         cam.End3D2D()
     end
