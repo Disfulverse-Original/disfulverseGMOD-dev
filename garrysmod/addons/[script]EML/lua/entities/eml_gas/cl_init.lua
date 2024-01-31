@@ -3,19 +3,10 @@ include("shared.lua");
 surface.CreateFont("methFont1", {
 	font = "Roboto",
 	size = 15,
-	weight = 600,
-	blursize = 0,
+	weight = 550,
 	extended = true,
-	scanlines = 0,
 	antialias = true,
-	underline = false,
-	italic = false,
-	strikeout = false,
-	symbol = false,
-	rotary = false,
-	shadow = false,
-	additive = false,
-	outline = false,
+
 });
 
 function ENT:Initialize()	

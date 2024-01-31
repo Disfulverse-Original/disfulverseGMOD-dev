@@ -6,7 +6,7 @@ end;
 
 surface.CreateFont( "METHFONT", {
  font = "Roboto",
- size = 118,
+ size = 100,
  weight = 700,
  blursize = 0,
  scanlines = 0,
@@ -35,7 +35,7 @@ function ENT:Draw()
         -- Рисуем прямоугольную полосу сверху
         draw.RoundedBox(0, -500, -2950, 1000, 20, Color(255, 255, 255, 255))
         -- Рисуем текст "Смена имени" по центру
-        draw.DrawText("Скупщик мета", "METHFONT", 0, -3085, Color(255, 255, 255, 255), TEXT_ALIGN_CENTER)
+        draw.DrawText("Скупщик мета", "METHFONT", 0, -3078, Color(255, 255, 255, 255), TEXT_ALIGN_CENTER)
         -- Завершаем рисование 3D-текста и элементов
         cam.End3D2D()
     end

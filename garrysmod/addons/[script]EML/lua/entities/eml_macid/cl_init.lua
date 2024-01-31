@@ -1,23 +1,5 @@
 include("shared.lua");
 
-surface.CreateFont("methFont", {
-	font = "Roboto",
-	size = 30,
-	weight = 600,
-	extended = true,
-	blursize = 0,
-	scanlines = 0,
-	antialias = true,
-	underline = false,
-	italic = false,
-	strikeout = false,
-	symbol = false,
-	rotary = false,
-	shadow = false,
-	additive = false,
-	outline = false,
-});
-
 function ENT:Initialize()	
 
 end;
@@ -35,26 +17,16 @@ function ENT:Draw()
 	else
 		macidColor = Color(100, 100, 100, 255);
 	end;
-	
-	ang:RotateAroundAxis(ang:Up(), 90);
-	ang:RotateAroundAxis(ang:Forward(), 90);	
-	if LocalPlayer():GetPos():Distance(self:GetPos()) < self:GetNWInt("distance") then
-		cam.Start3D2D(pos+ang:Up()*4.8, ang, 0.1)
-			draw.SimpleText("Соляная", "methFont", 0, 0, macidColor, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER);
-			draw.SimpleText("Кислота", "methFont", 0, 24, macidColor, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER);
-			draw.SimpleText(""..self:GetNWInt("amount").."л", "methFont", 0, 48, macidColor, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER);
-		cam.End3D2D();
 
-	ang:RotateAroundAxis(ang:Up(), 0);
-	ang:RotateAroundAxis(ang:Forward(), -90);
-	ang:RotateAroundAxis(ang:Right(), 90);		
-		cam.Start3D2D(pos+ang:Up()*5, ang, 0.1)
-			surface.SetDrawColor(0, 0, 0, 200);
-			surface.DrawRect(-100, -8, 128, 16);
-			
-			surface.SetDrawColor(EML_MuriaticAcid_Color);
-			surface.DrawRect(-98, -6, math.Round((self:GetNWInt("amount")*124)/self:GetNWInt("maxAmount")), 12);				
-		cam.End3D2D();
-	end;
-		
+    local pos = self:GetPos()
+    local ang = self:GetAngles()
+    ang:RotateAroundAxis(ang:Up(), 0)
+    ang:RotateAroundAxis(ang:Forward(), 85)
+    if LocalPlayer():GetPos():DistToSqr(self:GetPos()) < 50000 then
+        cam.Start3D2D(pos + ang:Up() * 0, Angle(0, LocalPlayer():EyeAngles().y - 90, 90), 0.025)
+        draw.RoundedBoxEx(16, -500, -620, 1000, 170, Color(21, 41, 56, 255), true, true, false, false)
+        draw.RoundedBox(0, -500, -460, 1000, 20, Color(127, 255, 0, 255))
+        draw.DrawText("Соляная кислота ("..self:GetNWInt("amount").." л)", "methFont", 0, -575, Color(255, 255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER);
+        cam.End3D2D()
+    end;
 end;

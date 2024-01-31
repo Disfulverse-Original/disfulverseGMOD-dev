@@ -71,7 +71,7 @@ EML_Meth_UseSalesman = true;
 -- Use text above salesman's head?
 EML_Meth_SalesmanText = false;
 -- Salesman name.
-EML_Meth_Salesman_Name = "Скупщик";
+EML_Meth_Salesman_Name = "Скупщик мета";
 -- Salesman name color.
 EML_Meth_Salesman_Name_Color = Color(1, 241, 249, 255);
 -- Salesman phrases if player don't have meth.
@@ -91,7 +91,7 @@ EML_Meth_Salesman_NoMeth_Sound = {
 -- Salesman phrases if player got meth.
 EML_Meth_Salesman_GotMeth = {
 	"Вот это камушки.",
-	"А-ахуенно пошло...",
+	"Ахуенный товар",
 	"О боже.",
 	"Спасибо, реально, братан."
 	};	

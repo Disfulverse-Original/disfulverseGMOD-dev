@@ -42,7 +42,7 @@ local curTime = CurTime();
 			self.nextUse = curTime + 0.5;
 		else
 			activator:SetNWInt("player_meth", activator:GetNWInt("player_meth")+(self:GetNWInt("value")*EML_Meth_ValueModifier));
-			activator:SendLua("local tab = {Color(255,255,255), [[You picked up ]], Color(1,241,249,255), [["..self:GetNWInt("amount").."]], Color(255, 255, 255), [[ lbs of Crystal Meth.]] } chat.AddText(unpack(tab))");
+			activator:SendLua("local tab = {Color(255,255,255), [[Вы подобрали ]], Color(1,241,249,255), [["..self:GetNWInt("amount").."]], Color(255, 255, 255), [[ лбс Голубого неба.]] } chat.AddText(unpack(tab))");
 			self:VisualEffect();
 			self.nextUse = curTime + 0.5;		
 		end;
