@@ -134,7 +134,7 @@ TEAM_BANDITLOCKPICKER = DarkRP.createJob("Взломщик", {
         "models/drem/cch/Male_09.mdl"
     },
     description = [[Часть преступного мира, по воле случая обучился в мелкой моторике и использовании монтировки для взлома.]],
-    weapons = {},
+    weapons = {"lockpick"},
     command = "11124rr4rrg",
     max = 2,
     salary = GAMEMODE.Config.normalsalary,
@@ -153,7 +153,7 @@ TEAM_GRABER = DarkRP.createJob("Грабитель [Dis+]", {
         "models/player/suits/robber_open.mdl"
     },
     description = [[Это грабитель и он умеет грабить, воровать и убивать, если вы не уверены в своём преступном дельце, позовите этого парня, он порешает.]],
-    weapons = {},
+    weapons = {"lockpick2"},
     command = "11124rr45rrg",
     max = 1,
     salary = GAMEMODE.Config.normalsalary,
@@ -346,7 +346,7 @@ TEAM_HACKER = DarkRP.createJob("Хакер-взломщик", {
         "models/drem/cch/Male_09.mdl"
     },
     description = [[Наёмник со знаниями в сфере электронных и компьютерных технологий. Хотя и про обычный механический взлом дверей, замков, etc тоже не стоит забывать. Работает за деньги.]],
-    weapons = {},
+    weapons = {"lockpick2"},
     command = "ofsdaef",
     max = 2,
     salary = GAMEMODE.Config.normalsalary,
