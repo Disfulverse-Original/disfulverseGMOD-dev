@@ -110,7 +110,7 @@ function ENT:AcceptInput(name, activator, caller)
 	if (!self.nextUse or CurTime() >= self.nextUse) then
 		if (name == "Use" and caller:IsPlayer() and (caller:GetNWInt("player_meth") == 0)) then
 			--self:EmitSound("vo/npc/male01/gethellout.wav");			
-			caller:SendLua("local tab = {Color(1,241,249,255), [[Скупщик: ]], Color(255,255,255), [["..table.Random(EML_Meth_Salesman_NoMeth).."]] } chat.AddText(unpack(tab))");
+			caller:SendLua("local tab = {Color(1,241,249,255), [[Скупщик мета: ]], Color(255,255,255), [["..table.Random(EML_Meth_Salesman_NoMeth).."]] } chat.AddText(unpack(tab))");
 			timer.Simple(0.25, function() self:EmitSound(table.Random(EML_Meth_Salesman_NoMeth_Sound), EML_Sound_Volume, 100) end);
 		elseif (name == "Use") and (caller:IsPlayer()) and (caller:GetNWInt("player_meth") > 0) then
 			if (GAMEMODE.Version == "2.6.1") then							
@@ -118,7 +118,7 @@ function ENT:AcceptInput(name, activator, caller)
 			elseif (GAMEMODE.Version == "2.4.3") then	
 				caller:AddMoney(caller:GetNWInt("player_meth"));
 			end;
-			caller:SendLua("local tab = {Color(1,241,249,255), [[Скупщик: ]], Color(255,255,255), [["..table.Random(EML_Meth_Salesman_GotMeth)..", here is your ]], Color(128, 255, 128), [["..caller:GetNWInt("player_meth").."$.]] } chat.AddText(unpack(tab))");
+			caller:SendLua("local tab = {Color(1,241,249,255), [[Скупщик мета: ]], Color(255,255,255), [["..table.Random(EML_Meth_Salesman_GotMeth).." , вот твои ]], Color(128, 255, 128), [["..caller:GetNWInt("player_meth").."$.]] } chat.AddText(unpack(tab))");
 			caller:SetNWInt("player_meth", 0);
 			timer.Simple(0.25, function() self:EmitSound(table.Random(EML_Meth_Salesman_GotMeth_Sound), EML_Sound_Volume, 100) end);
 			timer.Simple(2.5, function() self:EmitSound("vo/npc/male01/moan0"..math.random(1, 5)..".wav", EML_Sound_Volume, 100) end);
