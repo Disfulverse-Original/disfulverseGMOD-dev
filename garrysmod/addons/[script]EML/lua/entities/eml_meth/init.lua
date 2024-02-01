@@ -13,7 +13,7 @@ function ENT:Initialize()
 	self:SetSolid(SOLID_VPHYSICS);
 	
 	self:SetNWInt("distance", EML_DrawDistance);
-	self:SetNWInt("amount", 1);
+	self:SetNWInt("amount", 0);
 	self:SetNWInt("maxAmount", 0);
 	self:SetNWInt("value", 0);
 	self:SetNWInt("valueMod", EML_Meth_ValueModifier);

@@ -4,6 +4,14 @@ function ENT:Initialize()
 
 end;
 
+surface.CreateFont("methFont", {
+	font = "Roboto",
+	size = 75,
+	weight = 600,
+	extended = true,
+	antialias = true,
+});
+
 function ENT:Draw()
 	self:DrawModel();
 	
