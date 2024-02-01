@@ -37,7 +37,7 @@ function ENT:Draw()
 			surface.DrawRect(-64, -38, 128, 96);		
 		cam.End3D2D();
 		cam.Start3D2D(pos + ang:Up()*5, ang, 0.055)
-			draw.SimpleText("Йод кристаллический", "methFont33", 0, -56, Color(255, 255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER);
+			draw.SimpleText("Кристаллический йод ", "methFont33", 0, -56, Color(255, 255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER);
 
 			surface.SetDrawColor(Color(0, 0, 0, 200));
 			surface.DrawRect(-104, -32, 204, 24);			
