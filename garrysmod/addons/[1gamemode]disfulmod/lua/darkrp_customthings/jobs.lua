@@ -393,7 +393,7 @@ TEAM_PATP = DarkRP.createJob("Патрульная полиция", {
         "models/roro/police_male_9.mdl"
     },
     description = [[Патрульный отдел полиции, выходит на операции низкой сложности, охраняют стратегически важные объекты и тому прочее.]],
-    weapons = {},
+    weapons = {"weapon_rpt_finebook", "weapon_rpt_handcuff", "weapon_rpt_stungun"},
     command = "usdbsdgar",
     max = 10,
     salary = GAMEMODE.Config.normalsalary,
@@ -410,7 +410,7 @@ TEAM_SPEZ = DarkRP.createJob("Спецназ CTSFO", {
         "models/arty/codmw2019/mp/coalition/ctsfo/ctsfo_pm.mdl"
     },
     description = [[Отдел быстрого реагирования, выходит на операции средней сложности, охраняют стратегически важные объекты и тому прочее.]],
-    weapons = {},
+    weapons = {"weapon_rpt_finebook", "weapon_rpt_handcuff", "weapon_rpt_stungun"},
     command = "ybsdxce",
     max = 5,
     salary = GAMEMODE.Config.normalsalary,
@@ -427,7 +427,7 @@ TEAM_DISAG = DarkRP.createJob("Отдел Disag [Dis+]", {
         "models/bread/cod/characters/milsim/shadow_company.mdl"
     },
     description = [[Спец войска, занимаются рейдами, захватами точек, штурмами и прочими тяжелыми и сложными тактико-военными операциями. По слухам состоят из бывших наемников.]],
-    weapons = {},
+    weapons = {"weapon_rpt_finebook", "weapon_rpt_handcuff", "weapon_rpt_stungun"},
     command = "tsdg444",
     max = 3,
     salary = GAMEMODE.Config.normalsalary,
@@ -456,7 +456,7 @@ TEAM_DET = DarkRP.createJob("Детектив", {
         "models/kerry/detective/male_09.mdl"
     },
     description = [[Ведёт расследования, сотрудничает с отделом MI5.]],
-    weapons = {},
+    weapons = {"weapon_rpt_finebook", "weapon_rpt_handcuff", "weapon_rpt_stungun"},
     command = "rsdffggggbn",
     max = 1,
     salary = GAMEMODE.Config.normalsalary,
@@ -485,13 +485,13 @@ TEAM_MAYOR = DarkRP.createJob("Администратор города", {
     category = "Правительство",
 })
 
-TEAM_OTDELBEZ = DarkRP.createJob("Отдел Контрразведки MI5", {
+TEAM_OTDELBEZ = DarkRP.createJob("Отдел Контрразведки MI5 [Dis+]", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/bread/cod/characters/kortac/horangi_kpop.mdl"
     },
     description = [[Защита Мэра и Администрации города. Занимаются серьёзными невоенными делами. Расследованиями внутри гос. структур, а так же поиском особо опасных преступников. Сотрудничают с Отделом Разведки.]],
-    weapons = {},
+    weapons = {"weapon_rpt_finebook", "weapon_rpt_handcuff", "weapon_rpt_stungun"},
     command = "wkloldd",
     max = 1,
     salary = GAMEMODE.Config.normalsalary,
@@ -499,6 +499,10 @@ TEAM_OTDELBEZ = DarkRP.createJob("Отдел Контрразведки MI5", {
     vote = false,
     hasLicense = true,
     candemote = false,
+    customCheck = function(ply) 
+        return CLIENT or table.HasValue({"dis+", "admin", "superadmin"}, ply:GetUserGroup()) 
+    end,
+    CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
     --[[bodygroups = {
         ["pathes"] = {1},
         ["legs"] = {0,1,2,3,4,5},
