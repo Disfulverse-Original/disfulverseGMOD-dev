@@ -208,7 +208,7 @@ BRICKS_SERVER.DEVCONFIG.INVENTORY.DefaultEntFuncs = {
     end,
     GetInfo = function( itemData )
         local name = BRICKS_SERVER.Func.GetList( "entities" )[itemData[1] or ""] or (itemData[1] or "Unknown")
-        return { name, "Some " .. name .. ".", (BRICKS_SERVER.CONFIG.INVENTORY.ItemRarities or {})[itemData[1] or ""] }
+        return { name, (BRICKS_SERVER.CONFIG.INVENTORY.ItemRarities or {})[itemData[1] or ""] }
     end,
     GetItemKey = function( itemData )
         return itemData[1]

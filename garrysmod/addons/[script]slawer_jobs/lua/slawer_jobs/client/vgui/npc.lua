@@ -115,6 +115,7 @@ function PANEL:Init()
 
     local dInfo = dContent.dInfo
 
+
     dInfo.dCategory = Label("", dInfo)
     dInfo.dCategory:SetFont("Slawer.Jobs:R20")
     dInfo.dCategory:SetTextColor(THEME.Texts)
@@ -126,7 +127,7 @@ function PANEL:Init()
     dInfo.dSlots:SetContentAlignment(6)
     dInfo.dSlots:SetSize(dInfo:GetWide() * 0.25, dInfo:GetTall() * 0.0275)
     dInfo.dSlots:SetPos(dInfo:GetWide() * 0.75, 0)
-    
+
     dInfo.dName = Label("", dInfo)
     dInfo.dName:SetFont("Slawer.Jobs:SB35")
     dInfo.dName:SetTextColor(THEME.Texts)
@@ -178,6 +179,7 @@ function PANEL:ShowJob(iJob)
 
     local tModels = bMultipleModels and tJob.model or {tJob.model}
     local dInfo = dContent.dInfo
+
 
 
     dContent.leftArrow:SetVisible(bMultipleModels)

@@ -10,7 +10,7 @@ CreateConVar("arccw_attinv_lockmode", 1, FCVAR_ARCHIVE + FCVAR_REPLICATED, "Once
 CreateConVar("arccw_attinv_free", 0, FCVAR_ARCHIVE + FCVAR_REPLICATED, "All attachments can always be used.")
 CreateConVar("arccw_attinv_loseondie", 0, FCVAR_ARCHIVE + FCVAR_REPLICATED, "All attachments reset on death. If set to 2, drops all attachments in a box.", 0, 2)
 
-CreateConVar("arccw_atts_spawnrand", 0, FCVAR_ARCHIVE, "Randomly give attachments to player spawned SWEPs.", 0, 1)
+CreateConVar("arccw_atts_spawnrand", 1, FCVAR_ARCHIVE, "Randomly give attachments to player spawned SWEPs.", 0, 1)
 CreateConVar("arccw_atts_ubglautoload", 0, FCVAR_ARCHIVE, "Automatically load underbarrel weapons when attached.", 0, 1)
 CreateConVar("arccw_atts_pickx", 0, FCVAR_ARCHIVE + FCVAR_REPLICATED, "Limit weapons to this many maximum attachments. 0 = disable system.", 0)
 
@@ -102,7 +102,7 @@ CreateConVar("arccw_aimassist_intensity", 0.5, FCVAR_ARCHIVE + FCVAR_REPLICATED,
 
 CreateConVar("arccw_malfunction", 1, FCVAR_ARCHIVE + FCVAR_REPLICATED, "", 0, 2)
 
-CreateConVar("arccw_attinv_giveonspawn", 0, FCVAR_ARCHIVE + FCVAR_REPLICATED, "Give this many random attachments to players on spawn.", 0)
+CreateConVar("arccw_attinv_giveonspawn", 10, FCVAR_ARCHIVE + FCVAR_REPLICATED, "Give this many random attachments to players on spawn.", 0)
 
 CreateConVar("arccw_reloadincust", 0, FCVAR_ARCHIVE + FCVAR_REPLICATED, "Allow players to reload when customizing.", 0, 1)
 CreateConVar("arccw_freeaim", 0, FCVAR_ARCHIVE + FCVAR_REPLICATED, "", 0, 2)

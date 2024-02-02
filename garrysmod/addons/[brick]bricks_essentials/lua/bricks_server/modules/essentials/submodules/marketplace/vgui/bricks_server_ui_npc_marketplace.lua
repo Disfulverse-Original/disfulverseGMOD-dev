@@ -26,7 +26,7 @@ function PANEL:Init()
 		elseif( self2:IsDown() || self2.m_bSelected ) then
 			surface.SetDrawColor( textColor.r*0.8, textColor.g*0.8, textColor.b*0.8 )
 		else
-			surface.SetDrawColor( BRICKS_SERVER.Func.GetTheme( 2 ) )
+			surface.SetDrawColor( BRICKS_SERVER.Func.GetTheme( 7 ) )
 		end
 
 		surface.SetMaterial( CloseMat )
@@ -999,7 +999,7 @@ function PANEL:RefreshSelection()
             end
         surface.SetAlphaMultiplier( 1 )
 
-        draw.SimpleText( "Time: ", "BRICKS_SERVER_Font20", 15, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), 0, TEXT_ALIGN_CENTER )
+        draw.SimpleText( "Время: ", "BRICKS_SERVER_Font20", 15, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), 0, TEXT_ALIGN_CENTER )
         draw.SimpleText( BRICKS_SERVER.Func.FormatTime( auctionTime ), "BRICKS_SERVER_Font20", w/2, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
     end
     timeBack.DoClick = function()

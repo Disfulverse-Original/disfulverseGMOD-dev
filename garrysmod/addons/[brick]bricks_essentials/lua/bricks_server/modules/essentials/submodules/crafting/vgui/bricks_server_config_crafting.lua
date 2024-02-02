@@ -86,7 +86,7 @@ function PANEL:FillPanel()
                 end
 
                 if( v.CraftTime ) then
-                    draw.SimpleText( "Time: " .. BRICKS_SERVER.Func.FormatTime( v.CraftTime ), "BRICKS_SERVER_Font20", h+15, 32, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
+                    draw.SimpleText( "Время: " .. BRICKS_SERVER.Func.FormatTime( v.CraftTime ), "BRICKS_SERVER_Font20", h+15, 32, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
                     draw.SimpleText( resourceString, "BRICKS_SERVER_Font20", h+15, 47, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
                 else
                     draw.SimpleText( resourceString, "BRICKS_SERVER_Font20", h+15, 32, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )

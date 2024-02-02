@@ -4,7 +4,7 @@ hook.Add("OnNPCKilled", path, function(npc, attacker)
     if (IsValid(attacker) and attacker:IsPlayer()) then
         local xp = Sublime.Settings.Get("kills", "npc_on_kill_experience", "number");
 
-        attacker:SL_AddExperience(xp, "for killing an npc.");
+        attacker:SL_AddExperience(xp, "за убийство НПС.");
     end
 end);
 

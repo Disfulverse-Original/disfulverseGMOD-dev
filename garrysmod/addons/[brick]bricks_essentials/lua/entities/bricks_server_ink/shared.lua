@@ -1,7 +1,7 @@
 ENT.Type = "anim"
 ENT.Base = "base_gmodentity"
  
-ENT.PrintName		= "Printer Ink"
+ENT.PrintName		= "Чернила для принтера"
 ENT.Category		= "Bricks Server"
 ENT.Author			= "Brick Wall"
 ENT.AutomaticFrameAdvance = true

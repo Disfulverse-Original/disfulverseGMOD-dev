@@ -1,4 +1,4 @@
-TEAM_CITIZEN = DarkRP.createJob("Безработный", {
+TEAM_CITIZEN = DarkRP.createJob("Безработный / 0 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/player/Group01/male_09.mdl",
@@ -20,7 +20,7 @@ TEAM_CITIZEN = DarkRP.createJob("Безработный", {
     weapons = {},
     command = "qsse",
     max = 0,
-    salary = 0,
+    salary = GAMEMODE.Config.normalsalary,
     admin = 0,
     vote = false,
     hasLicense = false,
@@ -28,7 +28,7 @@ TEAM_CITIZEN = DarkRP.createJob("Безработный", {
     category = "Нейтральные",
 })
 
-TEAM_RUN = DarkRP.createJob("Бегущий", {
+TEAM_RUN = DarkRP.createJob("Бегущий / 100 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/dejtriyev/hl1/ryangosling.mdl",
@@ -45,7 +45,7 @@ TEAM_RUN = DarkRP.createJob("Бегущий", {
     category = "Нейтральные",
 })
 
-TEAM_PRODOR = DarkRP.createJob("Продавец оружия", {
+TEAM_PRODOR = DarkRP.createJob("Продавец оружия / 25 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/player/guerilla.mdl"
@@ -54,7 +54,7 @@ TEAM_PRODOR = DarkRP.createJob("Продавец оружия", {
     weapons = {},
     command = "z22fffaaa",
     max = 2,
-    salary = GAMEMODE.Config.normalsalary,
+    salary = 50,
     admin = 0,
     vote = false,
     hasLicense = false,
@@ -62,7 +62,7 @@ TEAM_PRODOR = DarkRP.createJob("Продавец оружия", {
     category = "Нейтральные",
 })
 
-TEAM_ZARUB = DarkRP.createJob("Контрабандист [Dis+]", {
+TEAM_ZARUB = DarkRP.createJob("Контрабандист [Dis+] / 35 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/player/leet.mdl"
@@ -71,7 +71,7 @@ TEAM_ZARUB = DarkRP.createJob("Контрабандист [Dis+]", {
     weapons = {},
     command = "h31131313s",
     max = 1,
-    salary = GAMEMODE.Config.normalsalary,
+    salary = 65,
     admin = 0,
     vote = false,
     hasLicense = false,
@@ -83,7 +83,7 @@ TEAM_ZARUB = DarkRP.createJob("Контрабандист [Dis+]", {
     category = "Нейтральные",
 })
 
-TEAM_BANDIT = DarkRP.createJob("Бандит", {
+TEAM_BANDIT = DarkRP.createJob("Бандит / 10 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/drem/cch/female_01.mdl",
@@ -106,7 +106,7 @@ TEAM_BANDIT = DarkRP.createJob("Бандит", {
     weapons = {},
     command = "11124rrrrg",
     max = 10,
-    salary = GAMEMODE.Config.normalsalary,
+    salary = 25,
     admin = 0,
     vote = false,
     hasLicense = false,
@@ -114,7 +114,7 @@ TEAM_BANDIT = DarkRP.createJob("Бандит", {
     category = "Криминал",
 })
 
-TEAM_BANDITLOCKPICKER = DarkRP.createJob("Взломщик", {
+TEAM_BANDITLOCKPICKER = DarkRP.createJob("Взломщик / 10 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/drem/cch/female_01.mdl",
@@ -137,7 +137,7 @@ TEAM_BANDITLOCKPICKER = DarkRP.createJob("Взломщик", {
     weapons = {"lockpick"},
     command = "11124rr4rrg",
     max = 2,
-    salary = GAMEMODE.Config.normalsalary,
+    salary = 25,
     admin = 0,
     vote = false,
     hasLicense = false,
@@ -145,7 +145,7 @@ TEAM_BANDITLOCKPICKER = DarkRP.createJob("Взломщик", {
     category = "Криминал",
 })
 
-TEAM_GRABER = DarkRP.createJob("Грабитель [Dis+]", {
+TEAM_GRABER = DarkRP.createJob("Грабитель [Dis+] / 35 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/player/suits/robber_tie.mdl",
@@ -156,7 +156,7 @@ TEAM_GRABER = DarkRP.createJob("Грабитель [Dis+]", {
     weapons = {"lockpick2"},
     command = "11124rr45rrg",
     max = 1,
-    salary = GAMEMODE.Config.normalsalary,
+    salary = 45,
     admin = 0,
     vote = false,
     hasLicense = false,
@@ -168,7 +168,7 @@ TEAM_GRABER = DarkRP.createJob("Грабитель [Dis+]", {
     category = "Криминал",
 })
 
-TEAM_CRYPTMINER = DarkRP.createJob("Крипто-Майнер", {
+TEAM_CRYPTMINER = DarkRP.createJob("Крипто-Майнер / 45 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/drem/cch/female_01.mdl",
@@ -191,7 +191,7 @@ TEAM_CRYPTMINER = DarkRP.createJob("Крипто-Майнер", {
     weapons = {},
     command = "d1233ddccv",
     max = 2,
-    salary = GAMEMODE.Config.normalsalary,
+    salary = 45,
     admin = 0,
     vote = false,
     hasLicense = false,
@@ -199,7 +199,7 @@ TEAM_CRYPTMINER = DarkRP.createJob("Крипто-Майнер", {
     category = "Криминал",
 })
 
-TEAM_MAF = DarkRP.createJob("Мафиози", {
+TEAM_MAF = DarkRP.createJob("Мафиози / 30 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/player/suits/group1/male_09_shirt.mdl",
@@ -215,7 +215,7 @@ TEAM_MAF = DarkRP.createJob("Мафиози", {
     weapons = {},
     command = "123tggfa",
     max = 10,
-    salary = GAMEMODE.Config.normalsalary,
+    salary = 75,
     admin = 0,
     vote = false,
     hasLicense = false,
@@ -223,7 +223,7 @@ TEAM_MAF = DarkRP.createJob("Мафиози", {
     category = "Криминал",
 })
 
-TEAM_GROVER = DarkRP.createJob("Варщик мета", {
+TEAM_GROVER = DarkRP.createJob("Варщик мета / 30 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/drem/cch/female_01.mdl",
@@ -246,7 +246,7 @@ TEAM_GROVER = DarkRP.createJob("Варщик мета", {
     weapons = {},
     command = "d1x2341xz",
     max = 2,
-    salary = GAMEMODE.Config.normalsalary,
+    salary = 30,
     admin = 0,
     vote = false,
     hasLicense = false,
@@ -254,7 +254,7 @@ TEAM_GROVER = DarkRP.createJob("Варщик мета", {
     category = "Криминал",
 })
 
-TEAM_BARACH = DarkRP.createJob("Барахольщик [Dis+]", {
+TEAM_BARACH = DarkRP.createJob("Барахольщик [Dis+] / 30 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/grim/isa/isa_sniper.mdl"
@@ -262,8 +262,8 @@ TEAM_BARACH = DarkRP.createJob("Барахольщик [Dis+]", {
     description = [[Преступный торговец-крафтер, в ассортименте всевозможные товары нелегального характера, оружия, запрещённые детали для изготовления и тому прочее. Все товары достаточно дорогие, так что и цена за них соответствующая.]],
     weapons = {},
     command = "d12341xz",
-    max = 2,
-    salary = GAMEMODE.Config.normalsalary,
+    max = 1,
+    salary = 75,
     admin = 0,
     vote = false,
     hasLicense = false,
@@ -274,7 +274,7 @@ TEAM_BARACH = DarkRP.createJob("Барахольщик [Dis+]", {
     category = "Криминал",
 })
 
-TEAM_MAF41 = DarkRP.createJob("Головорез Мафии [Dis+]", {
+TEAM_MAF41 = DarkRP.createJob("Головорез Мафии [Dis+] / 45 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/arty/codmw2022/mp/dmz/shadowcompany/dmr/dmr_pm.mdl"
@@ -283,7 +283,7 @@ TEAM_MAF41 = DarkRP.createJob("Головорез Мафии [Dis+]", {
     weapons = {},
     command = "123tggf1a",
     max = 2,
-    salary = GAMEMODE.Config.normalsalary,
+    salary = 100,
     admin = 0,
     vote = false,
     hasLicense = false,
@@ -295,7 +295,7 @@ TEAM_MAF41 = DarkRP.createJob("Головорез Мафии [Dis+]", {
     category = "Криминал",
 })
 
-TEAM_NAEB = DarkRP.createJob("Наёмник-Мародер", {
+TEAM_NAEB = DarkRP.createJob("Наёмник-Мародер / 30 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/drem/cch/female_01.mdl",
@@ -317,8 +317,8 @@ TEAM_NAEB = DarkRP.createJob("Наёмник-Мародер", {
     description = [[Незаурядный вооруженный бандит, работает за деньги и способен на малое в одиночку, но на многое в группе.]],
     weapons = {},
     command = "p1gbged",
-    max = 3,
-    salary = GAMEMODE.Config.normalsalary,
+    max = 4,
+    salary = 50,
     admin = 0,
     vote = false,
     hasLicense = false,
@@ -326,7 +326,7 @@ TEAM_NAEB = DarkRP.createJob("Наёмник-Мародер", {
     category = "Мародёры",
 })
 
-TEAM_HACKER = DarkRP.createJob("Хакер-взломщик", {
+TEAM_HACKER = DarkRP.createJob("Хакер-взломщик / 35 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/drem/cch/female_01.mdl",
@@ -349,7 +349,7 @@ TEAM_HACKER = DarkRP.createJob("Хакер-взломщик", {
     weapons = {"lockpick2"},
     command = "ofsdaef",
     max = 2,
-    salary = GAMEMODE.Config.normalsalary,
+    salary = 55,
     admin = 0,
     vote = false,
     hasLicense = false,
@@ -357,7 +357,7 @@ TEAM_HACKER = DarkRP.createJob("Хакер-взломщик", {
     category = "Мародёры",
 })
 
-TEAM_PMC = DarkRP.createJob("Оператор ЧВК [Dis+]", {
+TEAM_PMC = DarkRP.createJob("Оператор ЧВК [Dis+] / 50 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/arty/codmw2022/mp/dmz/shadowcompany/smg/smg_pm.mdl"
@@ -365,8 +365,8 @@ TEAM_PMC = DarkRP.createJob("Оператор ЧВК [Dis+]", {
     description = [[Опытный боец ЧВК Scorpion, неизвестное прошлое, известные цели. Зароботок денег. Работает на всех и ни на кого. Может заниматься чем угодно за деньги.]],
     weapons = {},
     command = "isdfgs",
-    max = 4,
-    salary = GAMEMODE.Config.normalsalary,
+    max = 3,
+    salary = 100,
     admin = 0,
     vote = false,
     hasLicense = true,
@@ -378,7 +378,7 @@ TEAM_PMC = DarkRP.createJob("Оператор ЧВК [Dis+]", {
     category = "Мародёры",
 })
 
-TEAM_PATP = DarkRP.createJob("Патрульная полиция", {
+TEAM_PATP = DarkRP.createJob("Патрульная полиция / 10 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/roro/police_male_1.mdl",
@@ -396,7 +396,7 @@ TEAM_PATP = DarkRP.createJob("Патрульная полиция", {
     weapons = {"weapon_rpt_finebook", "weapon_rpt_handcuff", "weapon_rpt_stungun"},
     command = "usdbsdgar",
     max = 10,
-    salary = GAMEMODE.Config.normalsalary,
+    salary = 100,
     admin = 0,
     vote = false,
     hasLicense = true,
@@ -404,7 +404,7 @@ TEAM_PATP = DarkRP.createJob("Патрульная полиция", {
     category = "Правительство",
 })
 
-TEAM_SPEZ = DarkRP.createJob("Спецназ CTSFO", {
+TEAM_SPEZ = DarkRP.createJob("Спецназ CTSFO / 30 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/arty/codmw2019/mp/coalition/ctsfo/ctsfo_pm.mdl"
@@ -413,7 +413,7 @@ TEAM_SPEZ = DarkRP.createJob("Спецназ CTSFO", {
     weapons = {"weapon_rpt_finebook", "weapon_rpt_handcuff", "weapon_rpt_stungun"},
     command = "ybsdxce",
     max = 5,
-    salary = GAMEMODE.Config.normalsalary,
+    salary = 135,
     admin = 0,
     vote = false,
     hasLicense = true,
@@ -421,7 +421,7 @@ TEAM_SPEZ = DarkRP.createJob("Спецназ CTSFO", {
     category = "Правительство",
 })
 
-TEAM_DISAG = DarkRP.createJob("Отдел Disag [Dis+]", {
+TEAM_DISAG = DarkRP.createJob("Отдел Disag [Dis+] / 45 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/bread/cod/characters/milsim/shadow_company.mdl"
@@ -430,7 +430,7 @@ TEAM_DISAG = DarkRP.createJob("Отдел Disag [Dis+]", {
     weapons = {"weapon_rpt_finebook", "weapon_rpt_handcuff", "weapon_rpt_stungun"},
     command = "tsdg444",
     max = 3,
-    salary = GAMEMODE.Config.normalsalary,
+    salary = 150,
     admin = 0,
     vote = false,
     hasLicense = true,
@@ -442,7 +442,7 @@ TEAM_DISAG = DarkRP.createJob("Отдел Disag [Dis+]", {
     category = "Правительство",
 })
 
-TEAM_DET = DarkRP.createJob("Детектив", {
+TEAM_DET = DarkRP.createJob("Детектив / 35 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/kerry/detective/male_01.mdl",
@@ -459,7 +459,7 @@ TEAM_DET = DarkRP.createJob("Детектив", {
     weapons = {"weapon_rpt_finebook", "weapon_rpt_handcuff", "weapon_rpt_stungun"},
     command = "rsdffggggbn",
     max = 1,
-    salary = GAMEMODE.Config.normalsalary,
+    salary = 125,
     admin = 0,
     vote = false,
     hasLicense = true,
@@ -467,7 +467,7 @@ TEAM_DET = DarkRP.createJob("Детектив", {
     category = "Правительство",
 })
 
-TEAM_MAYOR = DarkRP.createJob("Администратор города", {
+TEAM_MAYOR = DarkRP.createJob("Администратор города / 75 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/player/suits/group3/male_09_open.mdl"
@@ -476,7 +476,7 @@ TEAM_MAYOR = DarkRP.createJob("Администратор города", {
     weapons = {},
     command = "gfvdcze",
     max = 1,
-    salary = GAMEMODE.Config.normalsalary,
+    salary = 175,
     admin = 0,
     vote = false,
     hasLicense = true,
@@ -485,7 +485,7 @@ TEAM_MAYOR = DarkRP.createJob("Администратор города", {
     category = "Правительство",
 })
 
-TEAM_OTDELBEZ = DarkRP.createJob("Отдел Контрразведки MI5 [Dis+]", {
+TEAM_OTDELBEZ = DarkRP.createJob("Отдел Контрразведки MI5 [Dis+] / 45 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/bread/cod/characters/kortac/horangi_kpop.mdl"
@@ -493,8 +493,8 @@ TEAM_OTDELBEZ = DarkRP.createJob("Отдел Контрразведки MI5 [Dis
     description = [[Защита Мэра и Администрации города. Занимаются серьёзными невоенными делами. Расследованиями внутри гос. структур, а так же поиском особо опасных преступников. Сотрудничают с Отделом Разведки.]],
     weapons = {"weapon_rpt_finebook", "weapon_rpt_handcuff", "weapon_rpt_stungun"},
     command = "wkloldd",
-    max = 1,
-    salary = GAMEMODE.Config.normalsalary,
+    max = 2,
+    salary = 150,
     admin = 0,
     vote = false,
     hasLicense = true,
@@ -521,7 +521,7 @@ TEAM_STAFF = DarkRP.createJob("Отдел поддержки [ADM]", {
     weapons = {},
     command = "admdvvvv2",
     max = 0,
-    salary = GAMEMODE.Config.normalsalary,
+    salary = 0,
     admin = 1,
     vote = false,
     hasLicense = true,

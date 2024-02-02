@@ -247,11 +247,11 @@ GM.Config.moneyRemoveTime               = 600
 -- mprintamount - Value of the money printed by the money printer.
 GM.Config.mprintamount                  = 250
 -- normalsalary - Sets the starting salary for newly joined players.
-GM.Config.normalsalary                  = 100
+GM.Config.normalsalary                  = 5
 -- npckillpay - Sets the money given for each NPC kill.
 GM.Config.npckillpay                    = 250
 -- paydelay - Sets how long it takes before people get salary.
-GM.Config.paydelay                      = 360
+GM.Config.paydelay                      = 600
 -- pocketitems - Sets the amount of objects the pocket can carry.
 GM.Config.pocketitems                   = 0
 -- pricecap - The maximum price of items (using /price).
@@ -273,9 +273,9 @@ GM.Config.runspeedcp                    = 240
 -- searchtime - Number of seconds for which a search warrant is valid.
 GM.Config.searchtime                    = 30
 -- ShipmentSpawnTime - Antispam time between spawning shipments.
-GM.Config.ShipmentSpamTime              = 3
+GM.Config.ShipmentSpamTime              = 1
 -- shipmenttime - The number of seconds it takes for a shipment to spawn.
-GM.Config.shipmentspawntime             = 10
+GM.Config.shipmentspawntime             = 3
 -- startinghealth - the health when you spawn.
 GM.Config.startinghealth                = 100
 -- startingmoney - your wallet when you join for the first time.

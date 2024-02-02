@@ -7,7 +7,7 @@ local SKILL = {};
 SKILL.Name              = "Барыга";
 
 -- The description of the skill.
-SKILL.Description       = "Предметы в магазине будут дешевле.\nДо 20% на макс. уровне.";
+SKILL.Description       = "Предметы в магазине будут дешевле.\nДо 35% на макс. уровне.";
 
 -- If the category of the skill does not exist then we will automatically create it.
 SKILL.Category          = "ДаркРП"
@@ -17,7 +17,7 @@ SKILL.Identifier        = "bargain";
 
 -- The amount of buttons on the skill page.
 SKILL.ButtonAmount      = 10;
-SKILL.AmountPerPoint    = 0.02;
+SKILL.AmountPerPoint    = 0.035;
 
 -- Should we enable this skill?
 SKILL.Enabled           = true;

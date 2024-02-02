@@ -49,7 +49,7 @@ BRICKS_SERVER.BASECONFIG.F4.Tabs = {
     } },
     --[6] = { true },
     --[7] = { "Discord", "discord_24.png", "https://discord.gg/crBpKpR" },
-    --[8] = { "Donate", "donate_24.png", "https://www.blackrockgaming.co.uk/donate" },
+    --[8] = { "Контент", "crate_24.png", "https://steamcommunity.com/sharedfiles/filedetails/?id=3148772701" },
 }
 
 --[[ LEVELING ]]--
@@ -139,7 +139,7 @@ BRICKS_SERVER.BASECONFIG.PRINTERS.PrinterSlots = {
         Level = 30,       
     },
     [2] = {
-        Group = "VIP",
+        Group = "Dis+",
     },
 --[[ 
     [3] = {
@@ -159,14 +159,14 @@ BRICKS_SERVER.BASECONFIG.INVENTORY["Inventory Slots"] = {
     ["Staff"] = 40,
     --["VIP++"] = 35,
     --["VIP+"] = 30,
-    ["VIP"] = 35,
+    ["Dis+"] = 35,
     ["Default"] = 15
 }
 BRICKS_SERVER.BASECONFIG.INVENTORY["Bank Slots"] = {
     ["Staff"] = 40,
     --["VIP++"] = 35,
     --["VIP+"] = 30,
-    ["VIP"] = 40,
+    ["Dis+"] = 40,
     ["Default"] = 20
 }
 
@@ -213,14 +213,17 @@ BRICKS_SERVER.BASECONFIG.CRAFTING["Garbage Collect Time"] = 3
 BRICKS_SERVER.BASECONFIG.CRAFTING["Resource Despawn Time"] = 300
 BRICKS_SERVER.BASECONFIG.CRAFTING["Add Resources Directly To Inventory"] = true
 BRICKS_SERVER.BASECONFIG.CRAFTING.Resources = {
+--[[
     ["Wood"] = { "models/2rek/brickwall/bwall_log_1.mdl" },
     ["Plastic"] = { "models/2rek/brickwall/bwall_plastic_1.mdl" },
     ["Scrap"] = { "models/2rek/brickwall/bwall_scrap_1.mdl" },
     ["Iron"] = { "models/2rek/brickwall/bwall_ore_1.mdl", Color( 0, 0, 0 ) },
     ["Diamond"] = { "models/2rek/brickwall/bwall_ore_1.mdl", Color( 0, 246, 255 ) },
     ["Ruby"] = { "models/2rek/brickwall/bwall_ore_1.mdl", Color( 255, 0, 0 ) },
+--]]
 }
 BRICKS_SERVER.BASECONFIG.CRAFTING.Craftables = {
+--[[
     [1] = {
         Name = "Ak-47",
         Type = "Weapon",
@@ -238,18 +241,25 @@ BRICKS_SERVER.BASECONFIG.CRAFTING.Craftables = {
         Model = "models/weapons/w_rif_m4a1.mdl",
         CraftTime = 2
     }
+--]]
 }
 BRICKS_SERVER.BASECONFIG.CRAFTING.RockTypes = {
+--[[
     ["Iron"] = 75,
     ["Diamond"] = 3,
     ["Ruby"] = 7
+--]]
 }
 BRICKS_SERVER.BASECONFIG.CRAFTING.TreeTypes = {
+--[[
     ["Wood"] = 75
+--]]
 }
 BRICKS_SERVER.BASECONFIG.CRAFTING.GarbageTypes = {
+--[[
     ["Plastic"] = 80,
     ["Scrap"] = 10
+--]]
 }
 BRICKS_SERVER.BASECONFIG.CRAFTING.Skills = {
 --[[
@@ -439,9 +449,10 @@ BRICKS_SERVER.BASECONFIG.ARMORY.Items = {
 
 --[[ BOSSES ]]--
 BRICKS_SERVER.BASECONFIG.BOSS = {}
-BRICKS_SERVER.BASECONFIG.BOSS["Damage Update Time"] = 2
+BRICKS_SERVER.BASECONFIG.BOSS["Damage Update Time"] = 1
 BRICKS_SERVER.BASECONFIG.BOSS["Boss Bar Display Distance"] = 2000
 BRICKS_SERVER.BASECONFIG.BOSS.NPCs = {}
+--[[
 BRICKS_SERVER.BASECONFIG.BOSS.NPCs[1] = {
     Name = "MINI ZOMBIE BOSS",
     Model = "models/zombie/classic.mdl",
@@ -487,7 +498,7 @@ BRICKS_SERVER.BASECONFIG.BOSS.NPCs[1] = {
         }
     }
 }
-
+--]]
 --[[
 --[[ DEATHSCREENS
 BRICKS_SERVER.BASECONFIG.DEATHSCREENS = {}

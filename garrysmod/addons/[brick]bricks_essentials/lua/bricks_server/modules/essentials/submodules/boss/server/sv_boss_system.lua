@@ -13,6 +13,7 @@ function BRICKS_SERVER.Func.SpawnBoss( spawnKey )
 	local BossEntity = ents.Create( BossTable.Class )
 	if ( !IsValid( BossEntity ) ) then return end
 	BossEntity:SetPos( position )
+	BossEntity:SetModel( BossTable.Model )
 	BossEntity:Spawn()
 	BossEntity:SetHealth( BossTable.Health )
 	BossEntity:SetNW2Int( "BRICKS_SERVER_BOSS_KEY", spawnTable[1] )

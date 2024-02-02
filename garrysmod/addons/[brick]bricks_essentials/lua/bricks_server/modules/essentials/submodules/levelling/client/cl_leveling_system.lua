@@ -89,5 +89,6 @@ hook.Add( "DrawOverlay", "BRS.HUDPaint_LevellingHUD", function()
 		end
 		draw.SimpleText( expStatus, "BRICKS_SERVER_HUDFontS", ScrW()/2-1, y+height+2+1, Color( 0, 0, 0 ), TEXT_ALIGN_CENTER, 0 )
 		draw.SimpleText( expStatus, "BRICKS_SERVER_HUDFontS", ScrW()/2, y+height+2, textcolor, TEXT_ALIGN_CENTER, 0 )
+
 	end
 end )

@@ -1,5 +1,4 @@
 local PANEL = {}
-
 function PANEL:Init()
 
 end
@@ -32,14 +31,16 @@ function PANEL:FillPanel( f4Panel, sheetButton )
         local size = 24
         surface.DrawTexturedRect( w-size-(h-size)/2, (h-size)/2, size, size )
     end
-    
-    craftingSearchBar = vgui.Create( "bricks_server_search", craftingSearchBarBack )
+    craftingSearchBar = vgui.Create( "bricks_server_search", craftingSearchBarBack ) -- панель поиска
     craftingSearchBar:Dock( FILL )
 
-    local craftingPanel = vgui.Create( "bricks_server_scrollpanel", self )
+    local craftingPanel = vgui.Create( "bricks_server_scrollpanel_bar", self ) -- список крафта
     craftingPanel:Dock( FILL )
     craftingPanel:DockMargin( 10, 0, 10, 10 )
+    craftingPanel:SetBarColor(BRICKS_SERVER.Func.GetTheme( 7 ))
     craftingPanel.Paint = function( self, w, h ) end 
+
+
 
     local panelWide, panelTall = ScrW()*0.6-BRICKS_SERVER.DEVCONFIG.MainNavWidth, ScrH()*0.65-40
     local popoutWide, popoutTall = panelWide*0.5, panelTall
@@ -111,7 +112,7 @@ function PANEL:FillPanel( f4Panel, sheetButton )
                 draw.RoundedBox( 5, 0, 0, w, h, BRICKS_SERVER.Func.GetTheme( 4 ) )
                 surface.SetAlphaMultiplier( 1 )
         
-                draw.SimpleText( "Craft", "BRICKS_SERVER_Font20", w/2, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+                draw.SimpleText( "Скрафтить", "BRICKS_SERVER_Font20", w/2, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
             end
             itemAction.DoClick = function()
                 if( not BRS_CRAFTING_TIMES or not BRS_CRAFTING_TIMES[itemKey] ) then
@@ -278,6 +279,8 @@ function PANEL:FillPanel( f4Panel, sheetButton )
                 end
             end
         end
+
+
     end
 
     local function fillCrafting()
@@ -297,12 +300,15 @@ function PANEL:FillPanel( f4Panel, sheetButton )
 
         table.sort( sortedCraftingTable, function(a, b) return ((a or {}).Level or 0) < ((b or {}).Level or 0) end )
 
+
         for k, v in pairs( sortedCraftingTable ) do
             local craftingBack = vgui.Create( "DPanel", craftingPanel )
             craftingBack:Dock( TOP )
-            craftingBack:SetTall( 100 )
+            craftingBack:SetTall( 95 )
             craftingBack:DockMargin( 0, 0, 0, 5 )
             craftingBack:DockPadding( 0, 0, 25, 5 )
+
+
             local resourceString = ""
             for key, val in pairs( v.Resources or {} ) do
                 if( resourceString == "" ) then
@@ -318,7 +324,6 @@ function PANEL:FillPanel( f4Panel, sheetButton )
             end
             local loadingIcon = Material( "materials/bricks_server/loading.png" )
             craftingBack.Paint = function( self2, w, h )
-                draw.RoundedBox( 5, 0, 0, w, h, BRICKS_SERVER.Func.GetTheme( 3 ) )
 
                 if( BRS_CRAFTING_TIMES and BRS_CRAFTING_TIMES[v.key] ) then
                     local finalWidth = w*math.Clamp( (BRS_CRAFTING_TIMES[v.key]-CurTime())/v.CraftTime, 0, 1 )
@@ -329,29 +334,32 @@ function PANEL:FillPanel( f4Panel, sheetButton )
                     end
                 end
 
-                draw.RoundedBox( 5, 5, 5, h-10, h-10, BRICKS_SERVER.Func.GetTheme( 2 ) )
+                draw.RoundedBox( 3, 0, 0, w, h, Color(33,33,33,75) )
+
+                draw.RoundedBox( 3, 10, 10, 75, 75, BRICKS_SERVER.Func.GetTheme( 8 ) )
 
                 if( amount > 1 ) then
-                    draw.SimpleText( "x" .. amount .. " " .. v.Name, "BRICKS_SERVER_Font33", h+15, 5, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
+                    draw.SimpleText( "[ " .. "x" .. amount .. " — " .. v.Name .. " ] — " .. v.Level .. " " .. "Уровень", "BRICKS_SERVER_Font33", h, 5, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
                 else
-                    draw.SimpleText( v.Name, "BRICKS_SERVER_Font33", h+15, 5, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
+                    draw.SimpleText( "[ " .. v.Name .. " ] — " .. v.Level .. " " .. "Уровень", "BRICKS_SERVER_Font33", h, 5, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
                 end
                 
                 if( BRS_CRAFTING_TIMES and BRS_CRAFTING_TIMES[v.key] ) then
-                    draw.SimpleText( "Time left: " .. BRICKS_SERVER.Func.FormatTime( math.max( 0, BRS_CRAFTING_TIMES[v.key]-CurTime() ) ), "BRICKS_SERVER_Font20", h+15, 32, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
+                    draw.SimpleText( "Осталось: " .. BRICKS_SERVER.Func.FormatTime( math.max( 0, BRS_CRAFTING_TIMES[v.key]-CurTime() ) ), "BRICKS_SERVER_Font20", h+15, 32, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
 
                     surface.SetDrawColor( 255, 255, 255, 255 )
                     surface.SetMaterial( loadingIcon )
                     local size = 32
                     surface.DrawTexturedRectRotated( w/2, h/2, size, size, -(CurTime() % 360 * 250) )
 
-                    draw.SimpleText( "Crafting", "BRICKS_SERVER_Font20", w/2, h/2+(size/2)+5, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, 0 )
+                    draw.SimpleText( "Создаем...", "BRICKS_SERVER_Font18", w/2, h/2+(size/2)+5, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, 0 )
                 else
-                    if( v.CraftTime ) then
-                        draw.SimpleText( "Time: " .. BRICKS_SERVER.Func.FormatWordTime( v.CraftTime ), "BRICKS_SERVER_Font20", h+15, 32, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
-                    end
-                    draw.SimpleText( resourceString, "BRICKS_SERVER_Font20", h+15, 47, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
+                    --if( v.CraftTime ) then
+                       -- draw.SimpleText( "Время: " .. BRICKS_SERVER.Func.FormatWordTime( v.CraftTime ), "BRICKS_SERVER_Font20", h+15, 40, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
+                    --end
+                    draw.SimpleText( resourceString, "BRICKS_SERVER_Font18", h, 50, Color(200,200,200), 0, 0 )
                 end
+
             end
 
             local craftingModel = vgui.Create( "DModelPanel" , craftingBack )
@@ -382,21 +390,24 @@ function PANEL:FillPanel( f4Panel, sheetButton )
             local changeAlpha = 0
             craftingAction.Paint = function( self2, w, h ) 
                 if( self2:IsDown() ) then
-                    changeAlpha = math.Clamp( changeAlpha+10, 0, 125 )
+                    changeAlpha = math.Clamp( changeAlpha+10, 0, 255 )
                 elseif( self2:IsHovered() ) then
-                    changeAlpha = math.Clamp( changeAlpha+10, 0, 95 )
+                    changeAlpha = math.Clamp( changeAlpha+10, 0, 200 )
                 else
                     changeAlpha = math.Clamp( changeAlpha-10, 0, 95 )
                 end
 
                 surface.SetAlphaMultiplier( changeAlpha/255 )
-                draw.RoundedBox( 5, 0, 0, w, h, BRICKS_SERVER.Func.GetTheme( 2 ) )
+                draw.RoundedBox( 5, 0, 0, w, h, BRICKS_SERVER.Func.GetTheme( 8 ) )
                 surface.SetAlphaMultiplier( 1 )
             end
             craftingAction.DoClick = function()
                 CreateItemPopout( v.key )
             end
+
         end
+
+
     end
     fillCrafting()
 
@@ -409,10 +420,13 @@ function PANEL:FillPanel( f4Panel, sheetButton )
     craftingSearchBar.OnChange = function()
         fillCrafting()
     end
+
+
 end
 
 function PANEL:Paint( w, h )
 
 end
+
 
 vgui.Register( "bricks_server_f4_crafting", PANEL, "DPanel" )

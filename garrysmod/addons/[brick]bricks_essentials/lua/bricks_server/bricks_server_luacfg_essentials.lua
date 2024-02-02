@@ -26,9 +26,10 @@ BRICKS_SERVER.ESSENTIALS.LUACFG.F4Commands = { -- The commands that show up in t
 }
 --]]
 BRICKS_SERVER.ESSENTIALS.LUACFG.ItemDescriptions = { -- Give an item a custom description, put the class of the weapon or name of the resource
-    ["weapon_crowbar"] = "A bar used to pry things open!",
-    ["bricks_server_axe"] = "Used to chop wood.",
-    ["bricks_server_pickaxe"] = "Used to mine rocks."
+    ["revival_tool"] = "Возвращает к жизни смертельно раненых.",
+    ["bricks_server_axe"] = "Инструмент для добычи дерева.",
+    ["bricks_server_pickaxe"] = "Инструмент для добычи полезных ископаемых из камней.",
+    ["spawned_weapon"] = "Ящик с содержимым."
 }
 
 BRICKS_SERVER.ESSENTIALS.LUACFG.HolsterCommands = {

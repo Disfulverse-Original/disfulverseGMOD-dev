@@ -26,7 +26,7 @@ CITYWORKER.Config.Time = 15
 
 -- Configuration for the DarkRP job.
 CITYWORKER.Config.Job = {
-    name = "Городской работник",
+    name = "Городской работник / 0 lvl",
 
     color = Color( 20, 150, 20, 255 ),
     model = {
@@ -36,7 +36,7 @@ CITYWORKER.Config.Job = {
     weapons = { "cityworker_pliers", "cityworker_shovel", "cityworker_wrench" },
     command = "cityworker",
     max = 0,
-    salary = 0,
+    salary = 50,
     admin = 0,
     vote = false,
     hasLicense = false,

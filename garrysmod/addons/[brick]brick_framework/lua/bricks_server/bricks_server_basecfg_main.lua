@@ -43,45 +43,40 @@ BRICKS_SERVER.BASECONFIG.LANGUAGE.Languages = {}
 
 --[[ THEME CONFIG ]]--
 BRICKS_SERVER.BASECONFIG.THEME = {}
-BRICKS_SERVER.BASECONFIG.THEME[0] = Color(25, 25, 25)
-BRICKS_SERVER.BASECONFIG.THEME[1] = Color(40, 40, 40)
-BRICKS_SERVER.BASECONFIG.THEME[2] = Color(49, 49, 49)
-BRICKS_SERVER.BASECONFIG.THEME[3] = Color(68, 68, 68)
-BRICKS_SERVER.BASECONFIG.THEME[4] = Color(181, 50, 50)
-BRICKS_SERVER.BASECONFIG.THEME[5] = Color(201, 70, 70)
+BRICKS_SERVER.BASECONFIG.THEME[0] = Color(33, 33, 33, 250)
+BRICKS_SERVER.BASECONFIG.THEME[1] = Color(29, 29, 29, 250)
+BRICKS_SERVER.BASECONFIG.THEME[2] = Color(42, 42, 42, 250)
+BRICKS_SERVER.BASECONFIG.THEME[3] = Color(48, 47, 49, 245)
+BRICKS_SERVER.BASECONFIG.THEME[4] = Color(94, 125, 247)
+BRICKS_SERVER.BASECONFIG.THEME[5] = Color(129, 129, 252)
 BRICKS_SERVER.BASECONFIG.THEME[6] = Color(255, 255, 255)
+BRICKS_SERVER.BASECONFIG.THEME[7] = Color(79, 80, 92, 250)
+BRICKS_SERVER.BASECONFIG.THEME[8] = Color(0, 0, 0, 150)
 
 --[[ INVENTORY ]]--
 BRICKS_SERVER.BASECONFIG.INVENTORY = BRICKS_SERVER.BASECONFIG.INVENTORY or {}
 BRICKS_SERVER.BASECONFIG.INVENTORY.ItemRarities = {
-    ["Wood"] = "Uncommon",
-    ["Scrap"] = "Uncommon",
-    ["Iron"] = "Common",
-    ["Plastic"] = "Common",
-    ["Ruby"] = "Rare",
-    ["Diamond"] = "Epic",
-    ["weapon_ak472"] = "Legendary",
-    ["weapon_deagle2"] = "Rare",
-    ["weapon_fiveseven2"] = "Common",
-    ["weapon_glock2"] = "Common",
-    ["weapon_p2282"] = "Common",
-    ["weapon_m42"] = "Rare",
-    ["weapon_mac102"] = "Uncommon",
-    ["weapon_mp52"] = "Uncommon",
-    ["weapon_pumpshotgun2"] = "Uncommon",
-    ["ls_sniper"] = "Epic",
+    --["Wood"] = "Uncommon",
+    --["Scrap"] = "Uncommon",
+    --["Iron"] = "Common",
+    --["Plastic"] = "Common",
+    --["Ruby"] = "Rare",
+    --["Diamond"] = "Epic",
+    --["weapon_ak472"] = "Legendary",
 }
 BRICKS_SERVER.BASECONFIG.INVENTORY.Whitelist = {
+    ["bricks_server_resource"] = { false, true },
     ["spawned_shipment"] = { true, true },
     ["spawned_weapon"] = { true, true },
-    ["bricks_server_ink"] = { false, true },
-    ["bricks_server_resource"] = { false, true },
+    ["bricks_server_ink"] = { false, true }
+--[[
     ["bricks_server_resource_wood"] = { false, true },
     ["bricks_server_resource_scrap"] = { false, true },
     ["bricks_server_resource_iron"] = { false, true },
     ["bricks_server_resource_plastic"] = { false, true },
     ["bricks_server_resource_ruby"] = { false, true },
     ["bricks_server_resource_diamond"] = { false, true }
+--]]
 }
 
 --[[ NPCS ]]--

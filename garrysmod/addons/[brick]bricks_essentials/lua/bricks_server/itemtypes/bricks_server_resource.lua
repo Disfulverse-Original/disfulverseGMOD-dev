@@ -20,7 +20,7 @@ ITEM.OnSpawn = function( ply, pos, itemData, itemAmount )
 end
 
 ITEM.GetInfo = function( itemData )
-    local itemDescription = "Crafting resource."
+    local itemDescription = "Ресурс для крафта."
     if( BRICKS_SERVER.ESSENTIALS.LUACFG.ItemDescriptions and BRICKS_SERVER.ESSENTIALS.LUACFG.ItemDescriptions[(itemData[3] or "")] ) then
         itemDescription = BRICKS_SERVER.ESSENTIALS.LUACFG.ItemDescriptions[(itemData[3] or "")]
     end

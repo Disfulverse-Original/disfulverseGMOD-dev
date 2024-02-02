@@ -1,12 +1,13 @@
 local PANEL = {}
 
 function PANEL:Init()
+
     self:SetSize( ScrW()*0.6, ScrH()*0.65 )
     self:Center()
     self:SetHeader( BRICKS_SERVER.CONFIG.GENERAL["Server Name"] )
     self.removeOnClose = false
+    self.startTime = SysTime()
     self.centerOnSizeChanged = true
-
     self.onCloseFunc = function()
         if( BRICKS_SERVER.Func.HasAdminAccess( LocalPlayer() ) ) then
             BRICKS_SERVER.Func.SendAdminConfig()
@@ -32,6 +33,10 @@ function PANEL:Init()
             hook.Remove( "Move", self )
         end
     end)
+end
+
+function PANEL:Paint()
+    Derma_DrawBackgroundBlur(self, self.startTime)
 end
 
 function PANEL:FillTabs()
@@ -78,7 +83,7 @@ function PANEL:FillTabs()
     avatarIcon:SetPos( (height-avatarBackSize)/2+distance, (height-avatarBackSize)/2+distance )
     avatarIcon:SetSize( avatarBackSize-(2*distance), avatarBackSize-(2*distance) )
     avatarIcon:SetPlayer( LocalPlayer(), 64 )
---[[
+    --[[
     local commandsButton = vgui.Create( "DButton", self.sheet.Navigation )
     commandsButton:SetSize( 16, 16 )
     commandsButton:SetPos( BRICKS_SERVER.DEVCONFIG.MainNavWidth-commandsButton:GetWide()-5, 12 )
@@ -135,7 +140,7 @@ function PANEL:FillTabs()
             avatarIcon:SetPos( (height-avatarBackSize)/2+distance, (height-avatarBackSize)/2+distance )
             avatarIcon:SetSize( avatarBackSize-(2*distance), avatarBackSize-(2*distance) )
             avatarIcon:SetPlayer( LocalPlayer(), 64 )
---[[
+        --[[
             local commandsButtonTop = vgui.Create( "DButton", self.navCover )
             commandsButtonTop:SetSize( 16, 16 )
             commandsButtonTop:SetPos( BRICKS_SERVER.DEVCONFIG.MainNavWidth-commandsButtonTop:GetWide()-5, 12 )
@@ -267,7 +272,7 @@ function PANEL:FillTabs()
 
         end
     end
---]]
+    --]]
     for k, v in pairs( (BRICKS_SERVER.CONFIG.F4 or {}).Tabs or {} ) do
         local f4TabTable = (BRICKS_SERVER.DEVCONFIG.F4Tabs[v[3] or 0] or {})
         if( not istable( v[3] ) and f4TabTable[2] ) then

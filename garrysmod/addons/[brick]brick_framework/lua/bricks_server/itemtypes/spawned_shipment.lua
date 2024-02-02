@@ -21,7 +21,7 @@ ITEM.OnSpawn = function( ply, pos, itemData, itemAmount )
 end
 
 ITEM.GetInfo = function( itemData )
-    return { (itemData[4] or "Unknown"), (itemData[5] or BRICKS_SERVER.Func.L( "someDescription" )), (BRICKS_SERVER.CONFIG.INVENTORY.ItemRarities or {})[itemData[3] or ""] }
+    return { (itemData[3] or "Unknown"), (itemData[5] or BRICKS_SERVER.Func.L( "someDescription" )), (BRICKS_SERVER.CONFIG.INVENTORY.ItemRarities or {})[itemData[3] or ""] }
 end
 
 ITEM:Register()
