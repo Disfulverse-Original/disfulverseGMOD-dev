@@ -1,0 +1,1 @@
+{"Boss Bar Display Distance":2000.0,"NPCs":[{"Scale":1.0,"Name":"NEW BOSS","Loot":[],"Class":"npc_combine_s","DamageScale":1.0,"Health":100.0,"Model":"models/arty/codmw2022/mp/dmz/shadowcompany/boss/trap/trap_hostile.mdl","Weapon":"arccw_ud_mini14"}],"Damage Update Time":1.0}
