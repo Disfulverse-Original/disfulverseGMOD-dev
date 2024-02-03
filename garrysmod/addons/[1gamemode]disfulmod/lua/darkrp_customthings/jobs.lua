@@ -301,21 +301,13 @@ TEAM_CRYPTMINER = DarkRP.createJob("Крипто-Майнер / 45 lvl", {
 TEAM_NAEB = DarkRP.createJob("Наёмник-Мародер / 30 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/drem/cch/female_01.mdl",
-        "models/drem/cch/female_02.mdl",
-        "models/drem/cch/female_03.mdl",
-        "models/drem/cch/female_04.mdl",
-        "models/drem/cch/female_06.mdl",
-        "models/drem/cch/female_07.mdl",
-        "models/drem/cch/male_01.mdl",
-        "models/drem/cch/male_02.mdl",
-        "models/drem/cch/male_03.mdl",
-        "models/drem/cch/male_04.mdl",
-        "models/drem/cch/male_05.mdl",
-        "models/drem/cch/Male_06.mdl",
-        "models/drem/cch/male_07.mdl",
-        "models/drem/cch/Male_08.mdl",
-        "models/drem/cch/Male_09.mdl" 
+        "models/Humans/Group03/Male_04.mdl",
+        "models/Humans/Group03/male_08.mdl",
+        "models/Humans/Group03/male_09.mdl",
+        "models/Humans/Group03/Female_02.mdl",
+        "models/Humans/Group03/Male_05.mdl",
+        "models/Humans/Group03/male_03.mdl",
+        "models/Humans/Group03/Male_06.mdl" 
     },
     description = [[Незаурядный вооруженный бандит, работает за деньги и способен на малое в одиночку, но на многое в группе.]],
     weapons = {},
@@ -331,21 +323,7 @@ TEAM_NAEB = DarkRP.createJob("Наёмник-Мародер / 30 lvl", {
 TEAM_HACKER = DarkRP.createJob("Хакер-взломщик / 35 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/drem/cch/female_01.mdl",
-        "models/drem/cch/female_02.mdl",
-        "models/drem/cch/female_03.mdl",
-        "models/drem/cch/female_04.mdl",
-        "models/drem/cch/female_06.mdl",
-        "models/drem/cch/female_07.mdl",
-        "models/drem/cch/male_01.mdl",
-        "models/drem/cch/male_02.mdl",
-        "models/drem/cch/male_03.mdl",
-        "models/drem/cch/male_04.mdl",
-        "models/drem/cch/male_05.mdl",
-        "models/drem/cch/Male_06.mdl",
-        "models/drem/cch/male_07.mdl",
-        "models/drem/cch/Male_08.mdl",
-        "models/drem/cch/Male_09.mdl"
+        "models/player/t_arctic.mdl"
     },
     description = [[Наёмник со знаниями в сфере электронных и компьютерных технологий. Хотя и про обычный механический взлом дверей, замков, etc тоже не стоит забывать. Работает за деньги.]],
     weapons = {"lockpick2"},
