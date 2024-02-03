@@ -16,8 +16,8 @@ SKILL.Category          = "ДаркРП"
 SKILL.Identifier        = "master_thief";
 
 -- The amount of buttons on the skill page.
-SKILL.ButtonAmount      = 10;
-SKILL.AmountPerPoint    = 0.050;
+SKILL.ButtonAmount      = 5;
+SKILL.AmountPerPoint    = 0.100;
 
 -- Should we enable this skill?
 SKILL.Enabled           = true;
@@ -39,7 +39,7 @@ if (SERVER and SKILL.Enabled) then
         local points = ply:SL_GetInteger(SKILL.Identifier, 0);
 
         if (points > 0) then
-            local time = 30 * (1 - (points * SKILL.AmountPerPoint));
+            local time = 15 * (1 - (points * SKILL.AmountPerPoint));
 
             return time;
         end
