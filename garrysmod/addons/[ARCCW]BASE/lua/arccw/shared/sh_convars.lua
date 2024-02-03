@@ -76,7 +76,7 @@ CreateConVar("arccw_limityear_enable", 0, FCVAR_ARCHIVE + FCVAR_REPLICATED, "Lim
 CreateConVar("arccw_limityear", 0, FCVAR_ARCHIVE + FCVAR_REPLICATED, "Limit the maximum year for weapons.")
 
 CreateConVar("arccw_doorbust", 1, FCVAR_ARCHIVE, "Whether to allow door busting. 1 - break down, 2 - open only", 1, 1)
-CreateConVar("arccw_doorbust_threshold", 195, FCVAR_ARCHIVE, "The amount of damage needed to bust a normal sized door.")
+CreateConVar("arccw_doorbust_threshold", 160, FCVAR_ARCHIVE, "The amount of damage needed to bust a normal sized door.")
 CreateConVar("arccw_doorbust_time", 180, FCVAR_ARCHIVE, "The amount of time to keep the door busted by.", 1)
 
 CreateConVar("arccw_driveby", 0, FCVAR_ARCHIVE, "Enable special checks that allow you to fire out of vehicles (assuming some vehicle weaponizer addon exists).", 0, 1)
