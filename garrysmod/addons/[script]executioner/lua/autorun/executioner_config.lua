@@ -23,7 +23,7 @@
     -- Languages Supported: english, dutch, norwegian
     Executioner.Config.Language.Choice = 'russian'
 
-    Executioner.Config.ChatPrefix = '[Executioner] '
+    Executioner.Config.ChatPrefix = '[Disfulverse.Executioner] '
     Executioner.Config.PrefixColor = Color( 255, 255, 255 )
 
     Executioner.Config.Phone_Command = '!requests'
@@ -32,9 +32,9 @@
     Executioner.Config.Cancel_Hit = '!cancel_hit'
 
     Executioner.Config.Hitman_Teams = { -- These are your Hitman teams. Use the name of the job you want as a Hitman (case sensitive)
-        [ 'Наёмник-Мародер' ] = true,
-        [ 'Оператор ЧВК' ] = true,
-        [ 'Хакер-взломщик' ] = true
+        [ 'Наёмник-Мародер / 30 lvl' ] = true,
+        [ 'Хакер-взломщик / 35 lvl' ] = true,
+        [ 'Оператор ЧВК [Dis+] / 50 lvl' ] = true
     }
 
     Executioner.Config.Banned_Groups = { -- Which groups can not have a hit placed against them?
@@ -43,19 +43,18 @@
     }
 
     Executioner.Config.No_Place_Teams = { -- These can still have a hit against them, but they not place hits at all.
-        [ 'Патрульная полиция' ] = true,
-        [ 'Спецназ' ] = true,
-        [ 'Отдел Disag' ] = true,
-        [ 'Детектив' ] = true,
-        [ 'Отдел Разведки' ] = true,
-        [ 'Отдел Безопасности' ] = true,
-        [ 'Депутат' ] = true,
-        [ 'Администратор города' ] = true
+        ['Патрульная полиция / 10 lvl'] = true,
+        ['Спецназ CTSFO / 30 lvl'] = true,
+        ['Отдел Disag [Dis+] / 45 lvl'] = true, 
+        ['Детектив / 35 lvl'] = true,
+        ['Администратор города / 75 lvl'] = true,
+        ['Отдел Контрразведки MI5 [Dis+] / 45 lvl'] = true,
+        ['Отдел поддержки [ADM]'] = true,
     }
 
     Executioner.Config.BlackList_Teams = { -- Which teams can not have a hit placed against them? These teams also can't use the Phone.
-        [ 'Gun Dealer' ] = true,
-        [ 'Staff on Duty' ] = true,
+        --[ 'Gun Dealer' ] = true,
+        --[ 'Staff on Duty' ] = true,
         --[ 'Mob boss' ] = true
     }
 
@@ -70,22 +69,22 @@
         Dildo Launcher, frying pan, whatever the fuck you want.
     --]]
     Executioner.BonusWeapons = {
-        { name = 'Glock 18', ent = 'fas2_glock20' },
-        { name = 'Revolver', ent = 'fas2_ragingbull' },
-        { name = 'MP5', ent = 'fas2_mp5a5' },
-        { name = 'AK-47', ent = 'fas2_ak47' },
-        { name = 'SR-25', ent = 'fas2_sr25' },
-        { name = 'M4A1', ent = 'fas2_m4a1' },
-        { name = 'M82', ent = 'fas2_m82' },
-        { name = 'SG 552', ent = 'fas2_sg552' }
+        --{ name = 'Glock 18', ent = 'fas2_glock20' },
+       -- { name = 'Revolver', ent = 'fas2_ragingbull' },
+        --{ name = 'MP5', ent = 'fas2_mp5a5' },
+        --{ name = 'AK-47', ent = 'fas2_ak47' },
+        --{ name = 'SR-25', ent = 'fas2_sr25' },
+        --{ name = 'M4A1', ent = 'fas2_m4a1' },
+       -- { name = 'M82', ent = 'fas2_m82' },
+        --{ name = 'SG 552', ent = 'fas2_sg552' }
     }
 
     Executioner.Config.BonusChance = 25 -- The chance 1 - 100% that a Hitman is offered a bonus.
-    Executioner.Config.BonusMoney = 17500 -- How much money is given on a bonus hit? From a bonus weapon
+    Executioner.Config.BonusMoney = 2500 -- How much money is given on a bonus hit? From a bonus weapon
     Executioner.Config.TaxOnKill = 0 -- What percentage is taken when a hit is completed? 0 to disable.
 
-    Executioner.Config.Max_Hit_Price = 15000 -- The maximum price the customer can place
-    Executioner.Config.Min_Hit_Price = 7500 -- The minimum price the customer can place
+    Executioner.Config.Max_Hit_Price = 30000 -- The maximum price the customer can place
+    Executioner.Config.Min_Hit_Price = 5000 -- The minimum price the customer can place
 
     Executioner.Config.PhoneEnabled = true -- If this enabled, you may only place hits via the phone.
     Executioner.Config.Enable_Face_To_Face = false -- Can people place hits on a Hitman by pressing 'E'?
@@ -107,7 +106,7 @@
 
     Executioner.Config.Generate_Hit_Intervals = 60 * 15 -- How long for a hit to be placed? In seconds?
     Executioner.Config.Generate_Remove_Time = 60 * 40 -- How long until a hit is removed as nobody has taken it?
-    Executioner.Config.Minimum_Players = 6 -- How many people need to be on the server for a random hit to take place?
+    Executioner.Config.Minimum_Players = 5 -- How many people need to be on the server for a random hit to take place?
     -- This number also required a hitman to be on the server, with no active hit.
     --------------------------------
     --> Start of Client Settings <--
@@ -118,15 +117,15 @@
     Executioner.Config.MenuSounds = true -- Do you want there to be sounds in the interfaces?
     Executioner.Config.GlobalAlpha = 255 -- The Alpha of all the interfaces.
     Executioner.Config.Name_Colors = Color( 255, 255, 255 ) -- The color of all the names.
-    Executioner.Config.EnableBlur = true -- Enable blur on all of the interfaces?
+    Executioner.Config.EnableBlur = false -- Enable blur on all of the interfaces?
     Executioner.Config.Component_Colors = { -- All the colors for components. Normal = default look, no hover. Hover = color on hover, text = color of text.
         [ 'button_request' ] = { normal = Color( 22, 22, 22 ), hover = Color( 18, 18, 18 ), text = Color( 255, 255, 255 ) },
-        [ 'button_accept' ] = { normal = Color( 102, 48, 48 ), hover = Color( 204, 78, 78 ), text = Color( 255, 255, 255 ) },
-        [ 'button_deny' ] = { normal = Color( 170, 32, 25 ), hover = Color( 230, 32, 25 ), text = Color( 255, 255, 255 ) },
+        [ 'button_accept' ] = { normal = Color(99, 99, 225), hover = Color( 204, 78, 78 ), text = Color( 255, 255, 255 ) },
+        [ 'button_deny' ] = { normal = Color(129, 129, 252), hover = Color( 230, 32, 25 ), text = Color( 255, 255, 255 ) },
         [ 'hit_price_entry' ] = { normal = Color( 22, 22, 22 ), hover = Color( 18, 18, 18 ), text = Color( 255, 255, 255, 200 ) },
         [ 'health_armor_display' ] = { -- This is a bit of a bitch.
             barBackground = Color( 22, 22, 22 ),
-            healthBar = Color( 105, 59, 59 ),
+            healthBar = Color( 232, 56, 71, 200 ),
             armorBar = Color( 79, 112, 111 ),
             outline = Color( 24, 24, 24 ),
             healthColor = Color( 255, 255, 255 ),
@@ -147,13 +146,14 @@
     Executioner.Config.Placement.No_Preview = 'Выберите цель'
     Executioner.Config.Placement.Request_Hit = 'Заказать цель'
     --> Colors <--
-    Executioner.Config.Placement.Background = Color(0,0,0,100)
+    Executioner.Config.Placement.Background = Color(33, 33, 33, 250)
     Executioner.Config.Placement.Main_Title_Color = Color( 255, 255, 255 )
+    Executioner.Config.Placement.ModelBackColor = Color(42, 42, 42, 250) --disfulversed
     Executioner.Config.Placement.Split_Bar = Color( 42, 42, 42, 240 ) -- The line down the middle of the first screen.
-    Executioner.Config.Placement.No_Preview_Color = Color( 230, 32, 25 )
+    Executioner.Config.Placement.No_Preview_Color = Color( 255, 255, 255 )
     ---------------------------------------------------------------------
     -- mainColor = the default color in row renders. onSecond = for every set of 2 use this color..
-    Executioner.Config.Placement.Row_Hovers = { mainColor = Color( 79, 64, 64 ), onSecond = Color( 84, 53, 53 ) }
+    Executioner.Config.Placement.Row_Hovers = { mainColor = Color( 48, 47, 49, 245 ), onSecond = Color( 48, 47, 49, 245 ) }
     Executioner.Config.Placement.Data_Canvis_Color = Color( 28, 28, 28, 220 )
     ------------------------------------------------
     --> Start of Confirmation Menu Configuration <--
@@ -164,7 +164,7 @@
     Executioner.Config.Confirmation.Accept_Hit = 'Принять заказ'
     Executioner.Config.Confirmation.Deny_Hit = 'Отменить заказ'
     --> Colors <--
-    Executioner.Config.Confirmation.Background = Color( 30, 30, 30 )
+    Executioner.Config.Confirmation.Background = Color(33, 33, 33, 250)
     Executioner.Config.Confirmation.Main_Title_Color = Color( 255, 255, 255 )
     Executioner.Config.Confirmation.Data_Canvis_Color = Color( 28, 28, 28, 220 )
     Executioner.Config.Confirmation.Money_Bar_Color = Color( 20, 20, 20 )

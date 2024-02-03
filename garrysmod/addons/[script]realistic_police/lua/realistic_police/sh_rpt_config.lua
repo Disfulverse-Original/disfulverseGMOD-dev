@@ -44,12 +44,13 @@ Realistic_Police.AdminRank = { -- Rank Admin
 }
 
 Realistic_Police.OpenComputer = { -- Which job can open the computer 
-    ["Патрульная полиция"] = true,
-    ["Спецназ CTSFO"] = true, 
-	["Отдел Disag [Dis+]"] = true,
-	["Детектив"] = true,
-	["Администратор города [WL]"] = true,
-	["Отдел Контрразведки MI5"] = true
+    ["Патрульная полиция / 10 lvl"] = true,
+    ["Спецназ CTSFO / 30 lvl"] = true,
+    ["Отдел Disag [Dis+] / 45 lvl"] = true, 
+    ["Детектив / 35 lvl"] = true,
+    ["Администратор города / 75 lvl"] = true,
+    ["Отдел Контрразведки MI5 [Dis+] / 45 lvl"] = true,
+    ["Отдел поддержки [ADM]"] = true,
 }
 
 Realistic_Police.PoliceVehicle = { -- Police Vehicle
@@ -166,12 +167,13 @@ Realistic_Police.KeyForOpenTrunk = KEY_E -- https://wiki.facepunch.com/gmod/Enum
 Realistic_Police.KeyTrunkHUD = false -- Activate/desactivate the hud of the vehicle 
 
 Realistic_Police.CanOpenTrunk = {
-    ["Патрульная полиция"] = true,
-    ["Спецназ CTSFO"] = true, 
-	["Отдел Disag [Dis+]"] = true,
-	["Детектив"] = true,
-	["Администратор города [WL]"] = true,
-	["Отдел Контрразведки MI5"] = true
+    ["Патрульная полиция / 10 lvl"] = true,
+    ["Спецназ CTSFO / 30 lvl"] = true,
+    ["Отдел Disag [Dis+] / 45 lvl"] = true, 
+    ["Детектив / 35 lvl"] = true,
+    ["Администратор города / 75 lvl"] = true,
+    ["Отдел Контрразведки MI5 [Dis+] / 45 lvl"] = true,
+    ["Отдел поддержки [ADM]"] = true,
 }
 
 Realistic_Police.VehiclePoliceTrunk = {
@@ -227,21 +229,23 @@ Realistic_Police.SurrenderInfoKey = "T" -- The Key
 Realistic_Police.SurrenderActivate = false 
 
 Realistic_Police.CanCuff = { -- Job which can arrest someone
-    ["Патрульная полиция"] = true,
-    ["Спецназ CTSFO"] = true, 
-	["Отдел Disag [Dis+]"] = true,
-	["Детектив"] = true,
-	["Администратор города [WL]"] = true,
-	["Отдел Контрразведки MI5"] = true
+    ["Патрульная полиция / 10 lvl"] = true,
+    ["Спецназ CTSFO / 30 lvl"] = true,
+    ["Отдел Disag [Dis+] / 45 lvl"] = true, 
+    ["Детектив / 35 lvl"] = true,
+    ["Администратор города / 75 lvl"] = true,
+    ["Отдел Контрразведки MI5 [Dis+] / 45 lvl"] = true,
+    ["Отдел поддержки [ADM]"] = true,
 }
  
 Realistic_Police.CantBeCuff = { -- Job which can't be cuff
-    ["Патрульная полиция"] = true,
-    ["Спецназ CTSFO"] = true, 
-	["Отдел Disag [Dis+]"] = true,
-	["Детектив"] = true,
-	["Администратор города [WL]"] = true,
-	["Отдел Контрразведки MI5"] = true
+    ["Патрульная полиция / 10 lvl"] = true,
+    ["Спецназ CTSFO / 30 lvl"] = true,
+    ["Отдел Disag [Dis+] / 45 lvl"] = true, 
+    ["Детектив / 35 lvl"] = true,
+    ["Администратор города / 75 lvl"] = true,
+    ["Отдел Контрразведки MI5 [Dis+] / 45 lvl"] = true,
+    ["Отдел поддержки [ADM]"] = true,
 }
 
 Realistic_Police.CantConfiscate = { -- Job which can't be cuff
@@ -256,12 +260,13 @@ Realistic_Police.CantConfiscate = { -- Job which can't be cuff
 -----------------------------------------------------------------------------
 
 Realistic_Police.CantBeStun = { -- Job which can't be cuff
-    ["Патрульная полиция"] = true,
-    ["Спецназ CTSFO"] = true, 
-	["Отдел Disag [Dis+]"] = true,
-	["Детектив"] = true,
-	["Администратор города [WL]"] = true,
-	["Отдел Контрразведки MI5"] = true
+    ["Патрульная полиция / 10 lvl"] = true,
+    ["Спецназ CTSFO / 30 lvl"] = true,
+    ["Отдел Disag [Dis+] / 45 lvl"] = true, 
+    ["Детектив / 35 lvl"] = true,
+    ["Администратор города / 75 lvl"] = true,
+    ["Отдел Контрразведки MI5 [Dis+] / 45 lvl"] = true,
+    ["Отдел поддержки [ADM]"] = true,
 }
 
 -----------------------------------------------------------------------------
@@ -289,21 +294,23 @@ Realistic_Police.CameraGiveMoney = 500 -- Money give when a player repair a came
 -----------------------------------------------------------------------------
 
 Realistic_Police.JobDeleteReport = { -- Which job can delete Report 
-    ["Патрульная полиция"] = true,
-    ["Спецназ CTSFO"] = true, 
-	["Отдел Disag [Dis+]"] = true,
-	["Детектив"] = true,
-	["Администратор города [WL]"] = true,
-	["Отдел Контрразведки MI5"] = true
+    ["Патрульная полиция / 10 lvl"] = true,
+    ["Спецназ CTSFO / 30 lvl"] = true,
+    ["Отдел Disag [Dis+] / 45 lvl"] = true, 
+    ["Детектив / 35 lvl"] = true,
+    ["Администратор города / 75 lvl"] = true,
+    ["Отдел Контрразведки MI5 [Dis+] / 45 lvl"] = true,
+    ["Отдел поддержки [ADM]"] = true,
 }
 
 Realistic_Police.JobEditReport = { -- Which job can create / edit report 
-    ["Патрульная полиция"] = true,
-    ["Спецназ CTSFO"] = true, 
-	["Отдел Disag [Dis+]"] = true,
-	["Детектив"] = true,
-	["Администратор города [WL]"] = true,
-	["Отдел Контрразведки MI5"] = true
+    ["Патрульная полиция / 10 lvl"] = true,
+    ["Спецназ CTSFO / 30 lvl"] = true,
+    ["Отдел Disag [Dis+] / 45 lvl"] = true, 
+    ["Детектив / 35 lvl"] = true,
+    ["Администратор города / 75 lvl"] = true,
+    ["Отдел Контрразведки MI5 [Dis+] / 45 lvl"] = true,
+    ["Отдел поддержки [ADM]"] = true,
 }
 
 -----------------------------------------------------------------------------
@@ -311,21 +318,23 @@ Realistic_Police.JobEditReport = { -- Which job can create / edit report
 -----------------------------------------------------------------------------
 
 Realistic_Police.JobDeleteRecord = { -- Which job can delete Criminal Record
-    ["Патрульная полиция"] = true,
-    ["Спецназ CTSFO"] = true, 
-	["Отдел Disag [Dis+]"] = true,
-	["Детектив"] = true,
-	["Администратор города [WL]"] = true,
-	["Отдел Контрразведки MI5"] = true
+    ["Патрульная полиция / 10 lvl"] = true,
+    ["Спецназ CTSFO / 30 lvl"] = true,
+    ["Отдел Disag [Dis+] / 45 lvl"] = true, 
+    ["Детектив / 35 lvl"] = true,
+    ["Администратор города / 75 lvl"] = true,
+    ["Отдел Контрразведки MI5 [Dis+] / 45 lvl"] = true,
+    ["Отдел поддержки [ADM]"] = true,
 }
 
 Realistic_Police.JobEditRecord = { -- Which job can create / edit Criminal Record  
-    ["Патрульная полиция"] = true,
-    ["Спецназ CTSFO"] = true, 
-	["Отдел Disag [Dis+]"] = true,
-	["Детектив"] = true,
-	["Администратор города [WL]"] = true,
-	["Отдел Контрразведки MI5"] = true
+    ["Патрульная полиция / 10 lvl"] = true,
+    ["Спецназ CTSFO / 30 lvl"] = true,
+    ["Отдел Disag [Dis+] / 45 lvl"] = true, 
+    ["Детектив / 35 lvl"] = true,
+    ["Администратор города / 75 lvl"] = true,
+    ["Отдел Контрразведки MI5 [Dis+] / 45 lvl"] = true,
+    ["Отдел поддержки [ADM]"] = true,
 }
 
 -----------------------------------------------------------------------------
@@ -339,21 +348,23 @@ Realistic_Police.PourcentPay = 10 -- The amount pourcent which are give when the
 Realistic_Police.MaxPenalty = 2 -- Maxe Penalty on the same player 
 
 Realistic_Police.JobCanAddFine = { -- Which job can add fine
-    ["Патрульная полиция"] = true,
-    ["Спецназ CTSFO"] = true, 
-	["Отдел Disag [Dis+]"] = true,
-	["Детектив"] = true,
-	["Администратор города [WL]"] = true,
-	["Отдел Контрразведки MI5"] = true
+    ["Патрульная полиция / 10 lvl"] = true,
+    ["Спецназ CTSFO / 30 lvl"] = true,
+    ["Отдел Disag [Dis+] / 45 lvl"] = true, 
+    ["Детектив / 35 lvl"] = true,
+    ["Администратор города / 75 lvl"] = true,
+    ["Отдел Контрразведки MI5 [Dis+] / 45 lvl"] = true,
+    ["Отдел поддержки [ADM]"] = true,
 }
 
 Realistic_Police.JobCantHaveFine = { -- Which job can't receive fine 
-    ["Патрульная полиция"] = true,
-    ["Спецназ CTSFO"] = true, 
-	["Отдел Disag [Dis+]"] = true,
-	["Детектив"] = true,
-	["Администратор города [WL]"] = true,
-	["Отдел Контрразведки MI5"] = true
+    ["Патрульная полиция / 10 lvl"] = true,
+    ["Спецназ CTSFO / 30 lvl"] = true,
+    ["Отдел Disag [Dis+] / 45 lvl"] = true, 
+    ["Детектив / 35 lvl"] = true,
+    ["Администратор города / 75 lvl"] = true,
+    ["Отдел Контрразведки MI5 [Dis+] / 45 lvl"] = true,
+    ["Отдел поддержки [ADM]"] = true,
 }
 
 Realistic_Police.VehicleCantHaveFine = { -- Which vehicle can't receive fine 
@@ -505,8 +516,8 @@ Realistic_Police.ResolveHack = 120 -- Time which the computer will be repair
 Realistic_Police.WordCount = 2 -- How many word the people have to write for hack the computer
 
 Realistic_Police.HackerJob = { -- Which are not able to use the computer without hack the computer 
-    ["Хакер-взломщик"] = true,
-    ["Оператор ЧВК [Dis+]"] = true,
+    ["Хакер-взломщик / 35 lvl"] = true,
+    ["Оператор ЧВК [Dis+] / 50 lvl"] = true,
 }
 
 Realistic_Police.WordHack = { -- Random Word for hack the computer 

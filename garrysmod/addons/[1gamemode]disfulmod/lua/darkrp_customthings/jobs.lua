@@ -1,3 +1,6 @@
+
+
+--Neutral--
 TEAM_CITIZEN = DarkRP.createJob("Безработный / 0 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
@@ -27,7 +30,6 @@ TEAM_CITIZEN = DarkRP.createJob("Безработный / 0 lvl", {
     candemote = false,
     category = "Нейтральные",
 })
-
 TEAM_RUN = DarkRP.createJob("Бегущий / 100 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
@@ -44,7 +46,10 @@ TEAM_RUN = DarkRP.createJob("Бегущий / 100 lvl", {
     candemote = false,
     category = "Нейтральные",
 })
+--Neutral--
 
+
+--Traders--
 TEAM_PRODOR = DarkRP.createJob("Продавец оружия / 25 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
@@ -61,7 +66,6 @@ TEAM_PRODOR = DarkRP.createJob("Продавец оружия / 25 lvl", {
     candemote = true,
     category = "Нейтральные",
 })
-
 TEAM_ZARUB = DarkRP.createJob("Контрабандист [Dis+] / 35 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
@@ -82,7 +86,29 @@ TEAM_ZARUB = DarkRP.createJob("Контрабандист [Dis+] / 35 lvl", {
     CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
     category = "Нейтральные",
 })
+TEAM_BARACH = DarkRP.createJob("Барахольщик [Dis+] / 30 lvl", {
+    color = Color(20, 150, 20, 255),
+    model = {
+        "models/grim/isa/isa_sniper.mdl"
+    },
+    description = [[Загадочный торговец работающий как правило на тех, кто больше платит. В ассортименте всевозможные материалы для крафта, разношёрстное оружие и прочее полезное барахло. ]],
+    weapons = {},
+    command = "d12341xz",
+    max = 1,
+    salary = 75,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = true,
+    customCheck = function(ply) 
+        return CLIENT or table.HasValue({"dis+", "admin", "superadmin"}, ply:GetUserGroup()) 
+    end,
+    category = "Криминал",
+})
+--Traders--
 
+
+--Criminal--
 TEAM_BANDIT = DarkRP.createJob("Бандит / 10 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
@@ -113,7 +139,6 @@ TEAM_BANDIT = DarkRP.createJob("Бандит / 10 lvl", {
     candemote = true,
     category = "Криминал",
 })
-
 TEAM_BANDITLOCKPICKER = DarkRP.createJob("Взломщик / 10 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
@@ -144,7 +169,6 @@ TEAM_BANDITLOCKPICKER = DarkRP.createJob("Взломщик / 10 lvl", {
     candemote = true,
     category = "Криминал",
 })
-
 TEAM_GRABER = DarkRP.createJob("Грабитель [Dis+] / 35 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
@@ -167,38 +191,6 @@ TEAM_GRABER = DarkRP.createJob("Грабитель [Dis+] / 35 lvl", {
     CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
     category = "Криминал",
 })
-
-TEAM_CRYPTMINER = DarkRP.createJob("Крипто-Майнер / 45 lvl", {
-    color = Color(20, 150, 20, 255),
-    model = {
-        "models/drem/cch/female_01.mdl",
-        "models/drem/cch/female_02.mdl",
-        "models/drem/cch/female_03.mdl",
-        "models/drem/cch/female_04.mdl",
-        "models/drem/cch/female_06.mdl",
-        "models/drem/cch/female_07.mdl",
-        "models/drem/cch/male_01.mdl",
-        "models/drem/cch/male_02.mdl",
-        "models/drem/cch/male_03.mdl",
-        "models/drem/cch/male_04.mdl",
-        "models/drem/cch/male_05.mdl",
-        "models/drem/cch/Male_06.mdl",
-        "models/drem/cch/male_07.mdl",
-        "models/drem/cch/Male_08.mdl",
-        "models/drem/cch/Male_09.mdl"
-    },
-    description = [[Тот самый причастный к кризису полупроводников. Нелегально майнит криптовалюту и оберегается криминальными елементами, а может и не оберегается, who knows.]],
-    weapons = {},
-    command = "d1233ddccv",
-    max = 2,
-    salary = 45,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = true,
-    category = "Криминал",
-})
-
 TEAM_MAF = DarkRP.createJob("Мафиози / 30 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
@@ -222,7 +214,26 @@ TEAM_MAF = DarkRP.createJob("Мафиози / 30 lvl", {
     candemote = true,
     category = "Криминал",
 })
-
+TEAM_MAF41 = DarkRP.createJob("Головорез Мафии [Dis+] / 45 lvl", {
+    color = Color(20, 150, 20, 255),
+    model = {
+        "models/arty/codmw2022/mp/dmz/shadowcompany/dmr/dmr_pm.mdl"
+    },
+    description = [[Ячейка Дона для особых случаев или охраны.]],
+    weapons = {},
+    command = "123tggf1a",
+    max = 2,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = true,
+    customCheck = function(ply) 
+        return CLIENT or table.HasValue({"dis+", "admin", "superadmin"}, ply:GetUserGroup()) 
+    end,
+    CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
+    category = "Криминал",
+})
 TEAM_GROVER = DarkRP.createJob("Варщик мета / 30 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
@@ -253,48 +264,40 @@ TEAM_GROVER = DarkRP.createJob("Варщик мета / 30 lvl", {
     candemote = true,
     category = "Криминал",
 })
-
-TEAM_BARACH = DarkRP.createJob("Барахольщик [Dis+] / 30 lvl", {
+TEAM_CRYPTMINER = DarkRP.createJob("Крипто-Майнер / 45 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/grim/isa/isa_sniper.mdl"
+        "models/drem/cch/female_01.mdl",
+        "models/drem/cch/female_02.mdl",
+        "models/drem/cch/female_03.mdl",
+        "models/drem/cch/female_04.mdl",
+        "models/drem/cch/female_06.mdl",
+        "models/drem/cch/female_07.mdl",
+        "models/drem/cch/male_01.mdl",
+        "models/drem/cch/male_02.mdl",
+        "models/drem/cch/male_03.mdl",
+        "models/drem/cch/male_04.mdl",
+        "models/drem/cch/male_05.mdl",
+        "models/drem/cch/Male_06.mdl",
+        "models/drem/cch/male_07.mdl",
+        "models/drem/cch/Male_08.mdl",
+        "models/drem/cch/Male_09.mdl"
     },
-    description = [[Преступный торговец-крафтер, в ассортименте всевозможные товары нелегального характера, оружия, запрещённые детали для изготовления и тому прочее. Все товары достаточно дорогие, так что и цена за них соответствующая.]],
+    description = [[Тот самый причастный к кризису полупроводников. Нелегально майнит криптовалюту и оберегается криминальными елементами, а может и не оберегается, who knows.]],
     weapons = {},
-    command = "d12341xz",
-    max = 1,
-    salary = 75,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = true,
-    customCheck = function(ply) 
-        return CLIENT or table.HasValue({"dis+", "admin", "superadmin"}, ply:GetUserGroup()) 
-    end,
-    category = "Криминал",
-})
-
-TEAM_MAF41 = DarkRP.createJob("Головорез Мафии [Dis+] / 45 lvl", {
-    color = Color(20, 150, 20, 255),
-    model = {
-        "models/arty/codmw2022/mp/dmz/shadowcompany/dmr/dmr_pm.mdl"
-    },
-    description = [[Ячейка Дона для особых случаев или охраны.]],
-    weapons = {},
-    command = "123tggf1a",
+    command = "d1233ddccv",
     max = 2,
-    salary = 100,
+    salary = 45,
     admin = 0,
     vote = false,
     hasLicense = false,
     candemote = true,
-    customCheck = function(ply) 
-        return CLIENT or table.HasValue({"dis+", "admin", "superadmin"}, ply:GetUserGroup()) 
-    end,
-    CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
     category = "Криминал",
 })
+--Criminal--
 
+
+--Marauders--
 TEAM_NAEB = DarkRP.createJob("Наёмник-Мародер / 30 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
@@ -325,7 +328,6 @@ TEAM_NAEB = DarkRP.createJob("Наёмник-Мародер / 30 lvl", {
     candemote = true,
     category = "Мародёры",
 })
-
 TEAM_HACKER = DarkRP.createJob("Хакер-взломщик / 35 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
@@ -356,7 +358,6 @@ TEAM_HACKER = DarkRP.createJob("Хакер-взломщик / 35 lvl", {
     candemote = true,
     category = "Мародёры",
 })
-
 TEAM_PMC = DarkRP.createJob("Оператор ЧВК [Dis+] / 50 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
@@ -377,7 +378,10 @@ TEAM_PMC = DarkRP.createJob("Оператор ЧВК [Dis+] / 50 lvl", {
     CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
     category = "Мародёры",
 })
+--Marauders--
 
+
+--Government--
 TEAM_PATP = DarkRP.createJob("Патрульная полиция / 10 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
@@ -403,7 +407,6 @@ TEAM_PATP = DarkRP.createJob("Патрульная полиция / 10 lvl", {
     candemote = false,
     category = "Правительство",
 })
-
 TEAM_SPEZ = DarkRP.createJob("Спецназ CTSFO / 30 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
@@ -420,7 +423,6 @@ TEAM_SPEZ = DarkRP.createJob("Спецназ CTSFO / 30 lvl", {
     candemote = false,
     category = "Правительство",
 })
-
 TEAM_DISAG = DarkRP.createJob("Отдел Disag [Dis+] / 45 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
@@ -441,7 +443,6 @@ TEAM_DISAG = DarkRP.createJob("Отдел Disag [Dis+] / 45 lvl", {
     CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
     category = "Правительство",
 })
-
 TEAM_DET = DarkRP.createJob("Детектив / 35 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
@@ -466,7 +467,6 @@ TEAM_DET = DarkRP.createJob("Детектив / 35 lvl", {
     candemote = false,
     category = "Правительство",
 })
-
 TEAM_MAYOR = DarkRP.createJob("Администратор города / 75 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
@@ -484,7 +484,6 @@ TEAM_MAYOR = DarkRP.createJob("Администратор города / 75 lvl"
     candemote = false,
     category = "Правительство",
 })
-
 TEAM_OTDELBEZ = DarkRP.createJob("Отдел Контрразведки MI5 [Dis+] / 45 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
@@ -511,7 +510,6 @@ TEAM_OTDELBEZ = DarkRP.createJob("Отдел Контрразведки MI5 [Dis
     }]]
     category = "Правительство",
 })
-
 TEAM_STAFF = DarkRP.createJob("Отдел поддержки [ADM]", {
     color = Color(20, 150, 20, 255),
     model = {
@@ -532,6 +530,8 @@ TEAM_STAFF = DarkRP.createJob("Отдел поддержки [ADM]", {
     CustomCheckFailMsg = "Только Администраторы могут взять эту роль!",
     category = "NONRP",
 })
+--Government--
+
 
 -- Default categories
 DarkRP.createCategory{
@@ -577,7 +577,7 @@ DarkRP.createCategory{
 
 -- Door groups
 AddDoorGroup("Полицейский Участок", TEAM_POLICE, TEAM_MAYOR, TEAM_SPEZ, TEAM_DET, TEAM_PATP, TEAM_OTDELBEZ, TEAM_DISAG)
-AddDoorGroup("Бар BeerRunners", TEAM_MAF)
+AddDoorGroup("Бар [В Погоне за Пивом]", TEAM_MAF)
 
 -- Agendas
 DarkRP.createAgenda("Gangster's agenda", TEAM_MOB, {TEAM_GANG})
@@ -612,4 +612,5 @@ GAMEMODE.CivilProtection = {
 Jobs that are hitmen (enables the hitman menu)
 ---------------------------------------------------------------------------]]
 DarkRP.addHitmanTeam(TEAM_NAEB)
+DarkRP.addHitmanTeam(TEAM_HACKER)
 DarkRP.addHitmanTeam(TEAM_PMC)

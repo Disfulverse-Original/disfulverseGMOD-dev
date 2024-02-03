@@ -53,7 +53,7 @@
         Graphics.DrawRect( 32, h / 2 + 103 + y, bar_width, 25, Executioner.Config.Component_Colors[ 'health_armor_display' ].barBackground )
         Graphics.DrawRect( 32, h / 2 + 103 + y, armorSize, 25, Executioner.Config.Component_Colors[ 'health_armor_display' ].armorBar )
         Graphics.DrawText( string.format( '%i%s', armor, '%' ), 'rHit.Font.Inbetween', w / 2 - 5, h / 2 + 102 + y, Executioner.Config.Component_Colors[ 'health_armor_display' ].armorColor )
-        Graphics.DrawOutline( 30, h / 2 + 75 + y, w - 60, 55, 2, Executioner.Config.Component_Colors[ 'health_armor_display' ].outline )
+        --Graphics.DrawOutline( 30, h / 2 + 75 + y, w - 60, 55, 2, Executioner.Config.Component_Colors[ 'health_armor_display' ].outline )
     end
 
     local function CreatePanelReplica( parent, default_paint, side, scroll, func )
@@ -64,7 +64,7 @@
         if default_paint then
             base_canvis.Paint = function( me, w, h )
                 Graphics.DrawRect( 0, 0, w, h, Executioner.Config.Placement.Data_Canvis_Color )
-                Graphics.DrawOutline( 0, 0, w, h, 2, Executioner.Config.Outline_Colors ) -- 42, 42, 42, 200
+                --Graphics.DrawOutline( 0, 0, w, h, 2, Executioner.Config.Outline_Colors ) -- 42, 42, 42, 200
             end
         else base_canvis.Paint = func end
 
@@ -101,11 +101,11 @@
         local data_canvis = CreatePanelReplica( frame, true, 2, false )
         player_canivs:SetDisabled( true )
 
-        local hasSelection, current_selection, color_selection = false, nil, Executioner.Config.Placement.Row_Hovers.mainColor
+        local hasSelection, current_selection, color_selection = false, nil, Executioner.Config.Placement.ModelBackColor
 
         data_canvis.Paint = function( me, w, h )
             Graphics.DrawRect( 0, 0, w, h, Executioner.Config.Placement.Data_Canvis_Color )
-            Graphics.DrawOutline( 0, 0, w, h, 2, Executioner.Config.Outline_Colors  ) -- 42, 42, 42, 200
+            --Graphics.DrawOutline( 0, 0, w, h, 2, Executioner.Config.Outline_Colors  ) -- 42, 42, 42, 200
             if hasSelection and IsValid( current_selection ) then
                 Graphics.DrawText( current_selection:Nick(), 'rHit.Font.Generic', w / 2 - 5, 6, Executioner.Config.Name_Colors )
                 Graphics.DrawText( team.GetName( current_selection:Team() ), 'rHit.Font.Generic', w / 2 - 5, 273, team.GetColor( current_selection:Team() ) )
@@ -121,12 +121,18 @@
         model_panel:SetModel( current_selection and current_selection:GetModel() or '' )
         model_panel:SetAnimated( true )
         model_panel:SetVisible( false )
+        model_panel:SetDirectionalLight(BOX_TOP, Color(155, 174, 201))
+        model_panel:SetDirectionalLight(BOX_FRONT, Color(18, 13, 12))
+        model_panel:SetDirectionalLight(BOX_LEFT, Color(94, 63, 57))
+        model_panel:SetDirectionalLight(BOX_BACK, Color(242, 253, 255))
+        model_panel:SetDirectionalLight(BOX_RIGHT, Color(235, 239, 240))
+        model_panel:SetDirectionalLight(BOX_BOTTOM, Color(235, 239, 240))
         model_panel.LayoutEntity = function() return end
-        model_panel:SetCamPos( Vector( 50, 0, 60 ) )
+        model_panel:SetCamPos( Vector( 50, 0, 50 ) )
 
         model_panel.Paint = function( me, w, h )
             Graphics.DrawRect( 0, 0, w, h, color_selection )
-            Graphics.DrawOutline( 0, 0, w, h, 2, Executioner.Config.Outline_Colors )
+            --Graphics.DrawOutline( 0, 0, w, h, 2, Executioner.Config.Outline_Colors )
             baseclass.Get( 'DModelPanel' ).Paint( me, w, h )
         end
 
@@ -186,14 +192,14 @@
                 local name = IsValid( v ) and v:Nick() or 'Disconnected'
                 Graphics.DrawRect( 0, 0, w, h, k % 2 == 0 and Executioner.Config.Placement.Row_Hovers.onSecond or Executioner.Config.Placement.Row_Hovers.mainColor )
                 Graphics.DrawText( name, 'rHit.Font.Medium', 5, 10, Executioner.Config.Name_Colors, TEXT_ALIGN_LEFT)
-                if me.Selected then Graphics.DrawOutline( 0, 0, w, h, 2, Executioner.Config.Outline_Colors ) end
+                --if me.Selected then Graphics.DrawOutline( 0, 0, w, h, 2, Executioner.Config.Outline_Colors ) end
             end
             player_index.OnCursorEntered = function( me, w, h )
                 if locked then return end
                 hasSelection, current_selection, emote = true, v, table.Random( Executioner.emoteTable )
                 model_panel:SetModel( v:GetModel() )
                 Graphics.PlaySequence( model_panel, emote )
-                color_selection = k % 2 == 0 and Executioner.Config.Placement.Row_Hovers.onSecond or Executioner.Config.Placement.Row_Hovers.mainColor
+                --color_selection = k % 2 == 0 and Executioner.Config.Placement.Row_Hovers.onSecond or Executioner.Config.Placement.Row_Hovers.mainColor
                 ShowComponents( { model_panel, price_range, request_hit } )
                 Graphics.CreateIconObject( data_canvis, Executioner.materials[ 'heart' ], 30, 309, 32, 32, false )
                 Graphics.CreateIconObject( data_canvis, Executioner.materials[ 'armor' ], 30, 337, 32, 32, false )

@@ -54,7 +54,7 @@ end )
 hook.Add( "playerCanChangeTeam", "BRS.playerCanChangeTeam_Levelling", function( ply, job, force )
 	if( BRICKS_SERVER.CONFIG.LEVELING.JobLevels[RPExtraTeams[job].command or "error"] ) then
 		if( (ply.BRS_LEVEL or 0) < BRICKS_SERVER.CONFIG.LEVELING.JobLevels[RPExtraTeams[job].command or "error"] ) then
-			return false, "You are not the right level for this job (Level " .. BRICKS_SERVER.CONFIG.LEVELING.JobLevels[RPExtraTeams[job].command or "error"] .. ")."
+			return false, "У вас слишком низкий уровень для этой работы (Необходимый уровень: " .. BRICKS_SERVER.CONFIG.LEVELING.JobLevels[RPExtraTeams[job].command or "error"] .. ")."
 		end
 	end
 end )
@@ -63,7 +63,7 @@ end )
 hook.Add( "canBuyShipment", "BRS.canBuyShipment_Levelling", function( ply, shipments )
 	if( BRICKS_SERVER.CONFIG.LEVELING.ShipmentLevels[shipments.name or "error"] ) then
 		if( (ply.BRS_LEVEL or 0) < BRICKS_SERVER.CONFIG.LEVELING.ShipmentLevels[shipments.name or "error"] ) then
-			return false, false, "You are not the right level to buy this shipment (Level " .. BRICKS_SERVER.CONFIG.LEVELING.ShipmentLevels[shipments.name or "error"] .. ")."
+			return false, false, "У вас слишком низкий уровень для приобретения данной поставки (Необходимый уровень: " .. BRICKS_SERVER.CONFIG.LEVELING.ShipmentLevels[shipments.name or "error"] .. ")."
 		end
 	end
 end )
@@ -72,7 +72,7 @@ end )
 hook.Add( "canBuyCustomEntity", "BRS.canBuyCustomEntity_Levelling", function( ply, entity )
 	if( BRICKS_SERVER.CONFIG.LEVELING.EntityLevels[entity.cmd or "error"] ) then
 		if( (ply.BRS_LEVEL or 0) < BRICKS_SERVER.CONFIG.LEVELING.EntityLevels[entity.cmd or "error"] ) then
-			return false, false, "You are not the right level to buy this entity (Level " .. BRICKS_SERVER.CONFIG.LEVELING.EntityLevels[entity.cmd or "error"] .. ")."
+			return false, false, "У вас слишком низкий уровень для приобретения этого энтити (Необходимый уровень: " .. BRICKS_SERVER.CONFIG.LEVELING.EntityLevels[entity.cmd or "error"] .. ")."
 		end
 	end
 end )
@@ -81,7 +81,7 @@ end )
 hook.Add( "canBuyAmmo", "BRS.canBuyAmmo_Levelling", function( ply, ammo )
 	if( (BRICKS_SERVER.CONFIG.LEVELING.AmmoLevels or {})[ammo.id or 0] ) then
 		if( (ply.BRS_LEVEL or 0) < BRICKS_SERVER.CONFIG.LEVELING.AmmoLevels[ammo.id] ) then
-			return false, false, "You are not the right level to buy this ammo (Level " .. BRICKS_SERVER.CONFIG.LEVELING.AmmoLevels[ammo.id] .. ")."
+			return false, false, "У вас слишком низкий уровень для приобретения этой аммуниции (Необходимый уровень: " .. BRICKS_SERVER.CONFIG.LEVELING.AmmoLevels[ammo.id] .. ")."
 		end
 	end
 end )

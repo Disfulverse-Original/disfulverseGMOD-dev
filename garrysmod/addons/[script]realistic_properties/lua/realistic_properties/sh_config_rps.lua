@@ -107,12 +107,12 @@ Realistic_Properties.BuyEntitiesWithoutProperties = { -- Which job can buy entit
 }
 
 Realistic_Properties.PoliceJob = { -- Police Job which can see the owner of property 
-    ["Отдел Контрразведки MI5"] = true,
-    ["Администратор города [WL]"] = true,
-    ["Детектив"] = true, 
-    ["Отдел Disag [Dis+]"] = true,
-    ["Спецназ CTSFO"] = true,
-    ["Патрульная полиция"] = true,
+    ["Патрульная полиция / 10 lvl"] = true,
+    ["Спецназ CTSFO / 30 lvl"] = true,
+    ["Отдел Disag [Dis+] / 45 lvl"] = true, 
+    ["Детектив / 35 lvl"] = true,
+    ["Администратор города / 75 lvl"] = true,
+    ["Отдел Контрразведки MI5 [Dis+] / 45 lvl"] = true,
     ["Отдел поддержки [ADM]"] = true,
 }
 

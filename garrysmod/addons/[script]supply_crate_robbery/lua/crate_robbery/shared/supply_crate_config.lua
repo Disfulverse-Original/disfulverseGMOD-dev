@@ -12,31 +12,33 @@ CH_SupplyCrate.Config.Language = "ru" -- Set the language of the script.
 
 -- TEAM CONFIGURATION
 CH_SupplyCrate.Config.RequiredTeams = { -- These are the names of the jobs that counts the police required. The amount of players on these teams are calculated together in the count.
-	"Патрульная полиция",
-	"Отдел Disag [Dis+]",
-	"Детектив",
-	"Администратор города [WL]",
-	"Отдел Контрразведки MI5",
-	"Спецназ CTSFO"
+	"Патрульная полиция / 10 lvl",
+	"Спецназ CTSFO / 30 lvl",
+	"Отдел Disag [Dis+] / 45 lvl",
+	"Детектив / 35 lvl",
+	"Администратор города / 75 lvl",
+	"Отдел Контрразведки MI5 [Dis+] / 45 lvl"
 }
 
 CH_SupplyCrate.Config.GovernmentTeams = { -- These are your government teams. They will receive messages when robberies start. Use the actual team name, as shown below.
-	"Патрульная полиция",
-	"Отдел Disag [Dis+]",
-	"Детектив",
-	"Администратор города [WL]",
-	"Отдел Контрразведки MI5",
-	"Спецназ CTSFO"
+	"Патрульная полиция / 10 lvl",
+	"Спецназ CTSFO / 30 lvl",
+	"Отдел Disag [Dis+] / 45 lvl",
+	"Детектив / 35 lvl",
+	"Администратор города / 75 lvl",
+	"Отдел Контрразведки MI5 [Dis+] / 45 lvl"
 }
 
 CH_SupplyCrate.Config.AllowedTeams = { -- These are the teams that are allowed to rob the supply crate.
-	"Мафиози",
-	"Оператор ЧВК [Dis+]",
-	"Хакер-взломщик",
-	"Наёмник-Мародер",
-	"Головорез Мафии [Dis+]",
-	"Бандит",
-	"Бегущий" -- THE LAST LINE SHOULD NOT HAVE A COMMA AT THE END. BE AWARE OF THIS WHEN EDITING THIS!
+	"Бандит / 10 lvl",
+	"Взломщик / 10 lvl",
+	"Грабитель [Dis+] / 35 lvl",
+	"Мафиози / 30 lvl",
+	"Головорез Мафии [Dis+] / 45 lvl",
+	"Наёмник-Мародер / 30 lvl",
+	"Хакер-взломщик / 35 lvl",
+	"Оператор ЧВК [Dis+] / 50 lvl",
+	"Бегущий / 100 lvl" -- THE LAST LINE SHOULD NOT HAVE A COMMA AT THE END. BE AWARE OF THIS WHEN EDITING THIS!
 }
 
 -- General settings.
@@ -44,7 +46,7 @@ CH_SupplyCrate.Config.RobberyAliveTime = 5 -- The amount of MINUTES the player m
 CH_SupplyCrate.Config.RobberyCooldownTime = 30 -- The amount of MINUTES the supply crate is on a cooldown after a robbery! (Doesn't matter if the robbery failed or not) [Default = 30]
 CH_SupplyCrate.Config.RobberyDistance = 300000 -- The amount of space the player can move away from the supply crate entity, before the robbery fails. [Default = 300000]
 CH_SupplyCrate.Config.PlayerLimit = 6 -- The amount of players there must be on the server before you can rob the supply crate. [Default = 6]
-CH_SupplyCrate.Config.KillReward = 500 -- The amount of money a person is rewarded for killing the supply crate robber. [Default = 500]
+CH_SupplyCrate.Config.KillReward = 1000 -- The amount of money a person is rewarded for killing the supply crate robber. [Default = 500]
 CH_SupplyCrate.Config.PoliceRequired = 4 -- The amount of police officers there must be before a person can rob the supply crate. [Default = 4]
 
 CH_SupplyCrate.Config.EmitSoundOnRob = true -- Should an alarm go off when the bank vault gets robbed. [Default = true]
@@ -56,13 +58,13 @@ CH_SupplyCrate.Config.SoundVolume = 100 -- The sound volume for the alarm sound.
 CH_SupplyCrate.Config.EnableMoneyLoot = true -- Should the money element be enabled?
 CH_SupplyCrate.Config.MoneyTimer = 120 -- This is the time that defines when money is added to the supply crate. In seconds! [Default = 120 (2 Minute)]
 CH_SupplyCrate.Config.MoneyOnTime = 1000 -- This is the amount of money to be added to the supply crate every x minutes/seconds. Defined by the setting above. [Default = 1000]
-CH_SupplyCrate.Config.MaxMoney = 15000 -- The maximum amount of money the supply crate can have. Set to 0 for no limit. [Default = 15000]
+CH_SupplyCrate.Config.MaxMoney = 30000 -- The maximum amount of money the supply crate can have. Set to 0 for no limit. [Default = 15000]
 
 -- Section two. Handles the ammonition part.
 CH_SupplyCrate.Config.EnableAmmoLoot = true -- Should the ammo element be enabled?
 CH_SupplyCrate.Config.AmmoTimer = 300 -- This is the time that defines when ammo is added to the supply crate. In seconds! [Default = 300 5 Minutes)]
 CH_SupplyCrate.Config.AmmoOnTime = 20 -- This is the amount of ammo to be added to the supply crate every x minutes/seconds. Defined by the setting above. [Default = 20]
-CH_SupplyCrate.Config.MaxAmmo = 120 -- The maximum amount of ammo the supply crate can have. Set to 0 for no limit. [Default = 120]
+CH_SupplyCrate.Config.MaxAmmo = 240 -- The maximum amount of ammo the supply crate can have. Set to 0 for no limit. [Default = 120]
 
 -- Section tree. Handles the shitment part.
 CH_SupplyCrate.Config.EnableShipmentLoot = true -- Should the shipment element be enabled?
@@ -97,8 +99,8 @@ CH_SupplyCrate.Config.DarkRPLevelSystemEnabled = false -- DARKRP LEVEL SYSTEM BY
 CH_SupplyCrate.Config.SublimeLevelSystemEnabled = true -- Sublime Levels by HIGH ELO CODERS https://www.gmodstore.com/market/view/6431
 CH_SupplyCrate.Config.BricksLevelSystemEnabled = true
 
-CH_SupplyCrate.Config.XPSuccessfulRobbery = 200 -- Amount of experience to give on successfully robbing the supply crate.
-CH_SupplyCrate.Config.XPStoppingRobber = 200 -- Amount of experience to give if a cop kills a player robbing the supply crate.
+CH_SupplyCrate.Config.XPSuccessfulRobbery = 500 -- Amount of experience to give on successfully robbing the supply crate.
+CH_SupplyCrate.Config.XPStoppingRobber = 500 -- Amount of experience to give if a cop kills a player robbing the supply crate.
 
 -- 3d2d display configs
 CH_SupplyCrate.Design.CooldownTextColor = Color( 48, 151, 209, 255 )

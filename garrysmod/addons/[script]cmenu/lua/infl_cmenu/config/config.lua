@@ -159,4 +159,4 @@ PIS.Config:AddMenu("Меню полиции", 		"police", 		"Меню полиц
 
 
 
-PIS.Config:AddMenu("Список заказов", 			"hitman", 		"Список заказов", 		    red,	  function() RunConsoleCommand("say","!requests")   end, function(ply) return ply:isHitman() end)
+PIS.Config:AddMenu("Список заказов", 			"hitman", 		"Список заказов", 		    red,	  function() RunConsoleCommand("say","!requests")   end, function(ply) return Executioner.Config.Hitman_Teams[ team.GetName( ply:Team() ) ] end)

@@ -33,30 +33,30 @@ net.Receive( "BRS.Net.UnlockPrinter", function( len, ply )
 	
 	if( slotTable.Price ) then
 		if( ply:getDarkRPVar( "money" ) < slotTable.Price ) then
-			DarkRP.notify( ply, 1, 5, "You don't have enough money to unlock this slot!" )
+			DarkRP.notify( ply, 1, 5, "У вас недостаточно денег, чтобы приобрести эту ячейку!" )
 			return
 		end
 	end
 
 	if( BRICKS_SERVER.Func.IsSubModuleEnabled( "essentials", "levelling" ) and slotTable.Level ) then
 		if( ply:GetLevel() < slotTable.Level ) then
-			DarkRP.notify( ply, 1, 5, "You are not the right level to unlock this slot!" )
+			DarkRP.notify( ply, 1, 5, "У вас слишком низкий уровень для того, чтобы открыть эту ячейку!" )
 			return
 		end
 	end
 
 	if( slotTable.Group ) then
 		if( not BRICKS_SERVER.Func.IsInGroup( ply, slotTable.Group ) ) then
-			DarkRP.notify( ply, 1, 5, "You are not the right group to unlock this slot!" )
+			DarkRP.notify( ply, 1, 5, "Ваш ранг не подходит для открытия этой ячейки!" )
 			return
 		end
 	end
 
 	if( slotTable.Price ) then
 		ply:addMoney( -slotTable.Price )
-		DarkRP.notify( ply, 1, 5, "You have unlocked printer slot " .. slotID .. " for " .. DarkRP.formatMoney( slotTable.Price ) .. "!" )
+		DarkRP.notify( ply, 1, 5, "Вы открыли ячейку с принтером " .. slotID .. " за " .. DarkRP.formatMoney( slotTable.Price ) .. "!" )
 	else
-		DarkRP.notify( ply, 1, 5, "You have unlocked printer slot " .. slotID .. "!" )
+		DarkRP.notify( ply, 1, 5, "Вы открыли ячейку с принтером " .. slotID .. "!" )
 	end
 
 	plyPrinters[slotID] = {
