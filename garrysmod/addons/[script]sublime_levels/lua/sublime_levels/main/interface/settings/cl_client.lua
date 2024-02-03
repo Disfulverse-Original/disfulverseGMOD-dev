@@ -1,3 +1,4 @@
+--[[
 local panel = {};
 
 local approach = math.Approach;
@@ -290,3 +291,4 @@ function panel:Paint(w, h)
 
 end
 vgui.Register("Sublime.OptionsClient", panel, "EditablePanel");
+--]]

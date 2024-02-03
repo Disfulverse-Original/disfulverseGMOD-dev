@@ -1,3 +1,4 @@
+--
 local panel = {};
 
 function panel:CreateButtons()
@@ -51,13 +52,14 @@ function panel:CreateButtons()
             surface.PlaySound("sublime_levels/button.mp3");
         end
 
-        -- We should display the XP Settings panel at ui startup.
+        --[[
         if (data.name == self.L("client_settings")) then
             self.Selected       = self.CreatedButtons[i];
             self.CreatedPanel   = self:Add(data.ui);
             self.CreatedPanel:SetPos(150, 0);
             self.CreatedPanel:SetSize(self:GetWide() - 150, self:GetTall());
         end
+        --]]
     end
 end
 
@@ -71,6 +73,7 @@ function panel:Init()
     self.Player         = LocalPlayer(); 
 
     self.Buttons = {
+--[[
         {
             name = self.L("client_settings"),
             ui = "Sublime.OptionsClient",
@@ -78,7 +81,7 @@ function panel:Init()
             mat = Sublime.Materials["SL_Settings"],
             access = true,
         },
-
+--]]
         {
             name = self.L("server_settings"),
             ui = "Sublime.OptionsServer",
@@ -184,3 +187,4 @@ end
 function panel:Paint(w, h)
 end
 vgui.Register("Sublime.Options", panel, "EditablePanel");
+--
