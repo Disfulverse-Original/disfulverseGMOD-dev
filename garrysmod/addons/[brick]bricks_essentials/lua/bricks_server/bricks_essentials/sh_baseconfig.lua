@@ -206,9 +206,9 @@ BRICKS_SERVER.BASECONFIG.BOOSTERS = {
 
 --[[ CRAFTING ]]--
 BRICKS_SERVER.BASECONFIG.CRAFTING = {}
-BRICKS_SERVER.BASECONFIG.CRAFTING["Rock Respawn Time"] = 60
+BRICKS_SERVER.BASECONFIG.CRAFTING["Rock Respawn Time"] = 300
 BRICKS_SERVER.BASECONFIG.CRAFTING["Tree Respawn Time"] = 60
-BRICKS_SERVER.BASECONFIG.CRAFTING["Garbage Respawn Time"] = 60
+BRICKS_SERVER.BASECONFIG.CRAFTING["Garbage Respawn Time"] = 120
 BRICKS_SERVER.BASECONFIG.CRAFTING["Garbage Collect Time"] = 3
 BRICKS_SERVER.BASECONFIG.CRAFTING["Resource Despawn Time"] = 300
 BRICKS_SERVER.BASECONFIG.CRAFTING["Add Resources Directly To Inventory"] = true
@@ -273,27 +273,15 @@ BRICKS_SERVER.BASECONFIG.CRAFTING.Skills = {
 
 --[[ NPCS ]]--
 BRICKS_SERVER.BASECONFIG.NPCS = BRICKS_SERVER.BASECONFIG.NPCS or {}
+--[[
 table.insert( BRICKS_SERVER.BASECONFIG.NPCS, {
-    Name = "Resource store",
+    Name = "Скупщик",
     Type = "Trader",
     ReqInfo = { 1 },
-    Buying = {
-        [1] = {
-            Type = "Resource",
-            Model = "models/2rek/brickwall/bwall_log_1.mdl",
-            ReqInfo = { "Wood" },
-            Price = 50
-        },
-        [2] = {
-            Type = "Resource",
-            Model = "models/2rek/brickwall/bwall_ore_1.mdl",
-            ReqInfo = { "Iron" },
-            Price = 100
-        }
-    }
+    Buying = {}
 } )
 table.insert( BRICKS_SERVER.BASECONFIG.NPCS, {
-    Name = "Marketplace",
+    Name = "Аукцион",
     Type = "Marketplace"
 } )
 table.insert( BRICKS_SERVER.BASECONFIG.NPCS, {
@@ -312,7 +300,7 @@ table.insert( BRICKS_SERVER.BASECONFIG.NPCS, {
     Name = "SWEP Upgrader",
     Type = "SWEP Upgrader"
 } )
-
+--]]
 --[[ MARKETPLACE ]]--
 BRICKS_SERVER.BASECONFIG.MARKETPLACE = {}
 BRICKS_SERVER.BASECONFIG.MARKETPLACE["Currency"] = "darkrp_money"
@@ -334,129 +322,206 @@ BRICKS_SERVER.BASECONFIG.BANKVAULT["Money Bag Amount"] = { 100000, 150000 }
 BRICKS_SERVER.BASECONFIG.BANKVAULT["Dirty To Clean Money Multiplier"] = { 0.9, 1.1 }
 BRICKS_SERVER.BASECONFIG.BANKVAULT["Pins Required"] = 3
 BRICKS_SERVER.BASECONFIG.BANKVAULT["Can Pickup Multiple Bags"] = false
-BRICKS_SERVER.BASECONFIG.BANKVAULT.RobberTeams = {
-    ["citizen"] = true
-}
-BRICKS_SERVER.BASECONFIG.BANKVAULT.PoliceJobs = {
-    ["cp"] = true
-}
+BRICKS_SERVER.BASECONFIG.BANKVAULT.RobberTeams = {}
+BRICKS_SERVER.BASECONFIG.BANKVAULT.PoliceJobs = {}
 
 --[[ ARMORY ]]--
 BRICKS_SERVER.BASECONFIG.ARMORY = {}
 BRICKS_SERVER.BASECONFIG.ARMORY["Police Requirement"] = 6
-BRICKS_SERVER.BASECONFIG.ARMORY["Robbery Cooldown"] = 1800
-BRICKS_SERVER.BASECONFIG.ARMORY["Open Time"] = 30
-BRICKS_SERVER.BASECONFIG.ARMORY["Reward Money"] = { 2500, 5000 }
+BRICKS_SERVER.BASECONFIG.ARMORY["Robbery Cooldown"] = 600
+BRICKS_SERVER.BASECONFIG.ARMORY["Open Time"] = 60
+BRICKS_SERVER.BASECONFIG.ARMORY["Reward Money"] = { 5000, 10000 }
 BRICKS_SERVER.BASECONFIG.ARMORY["Shipment Reward Amount"] = { 2, 5 }
-BRICKS_SERVER.BASECONFIG.ARMORY["Fail Cooldown"] = 60
-BRICKS_SERVER.BASECONFIG.ARMORY.RewardShipments = { ["AK47"] = true }
+BRICKS_SERVER.BASECONFIG.ARMORY["Fail Cooldown"] = 600
+BRICKS_SERVER.BASECONFIG.ARMORY.RewardShipments = {
+    ["Glock"] = true,
+    ["MP5A4"] = true,
+    ["Benelli M4"] = true,
+    ["SPAS-12"] = true,
+    ["M16"] = true
+
+}
 BRICKS_SERVER.BASECONFIG.ARMORY.RobberTeams = {
-    ["Бандит / 10 lvl"] = true,
-    ["Взломщик / 10 lvl"] = true,
-    ["Грабитель [Dis+] / 35 lvl"] = true,
-    ["Мафиози / 30 lvl"] = true,
-    ["Головорез Мафии [Dis+] / 45 lvl"] = true,
-    ["Наёмник-Мародер / 30 lvl"] = true,
-    ["Хакер-взломщик / 35 lvl"] = true,
-    ["Оператор ЧВК [Dis+] / 50 lvl"] = true,
-    ["Бегущий / 100 lvl"] = true
+    ["11124rrrrg"] = true,-- Бандит
+    ["11124rr4rrg"] = true,-- Взломщик
+    ["11124rr45rrg"] = true,-- Грабитель
+    ["123tggfa"] = true,-- Мафиози
+    ["123tggf1a"] = true,-- Головорез
+    ["p1gbged"] = true,-- Наемник мародер
+    ["ofsdaef"] = true,-- Хакер взломщик
+    ["isdfgs"] = true,-- Оператор ЧВК
+    ["qssw"] = true-- Бегущий
 }
+
 BRICKS_SERVER.BASECONFIG.ARMORY.PoliceJobs = {
-    ['Патрульная полиция / 10 lvl'] = true,
-    ['Спецназ CTSFO / 30 lvl'] = true,
-    ['Отдел Disag [Dis+] / 45 lvl'] = true, 
-    ['Детектив / 35 lvl'] = true,
-    ['Администратор города / 75 lvl'] = true,
-    ['Отдел Контрразведки MI5 [Dis+] / 45 lvl'] = true,
-    ['Отдел поддержки [ADM]'] = true
+    ["usdbsdgar"] = true,-- патрул полиция
+    ["ybsdxce"] = true,-- детектив
+    ["tsdg444"] = true,-- спецназ
+    ["rsdffggggbn"] = true,-- дизаг спецназ
+    ["wkloldd"] = true-- отдел Контрразведки
 }
+
 BRICKS_SERVER.BASECONFIG.ARMORY.Items = {
 	[1] = {
-        Name = "AK-47 Rifle",
-        Category = "Weapons",
+        Name = "Glock",
+        Category = "Оружие",
         Type = "Weapon",
-        ReqInfo = { "weapon_ak472" },
-		Model = "models/weapons/w_rif_ak47.mdl"
+        ReqInfo = { "arccw_ud_glock" },
+		Model = "models/weapons/arccw/c_ud_glock.mdl"
 	},
 	[2] = {
-        Name = "M4 Rifle",
-        Category = "Weapons",
+        Name = "MP5A4",
+        Category = "Оружие",
         Type = "Weapon",
-        ReqInfo = { "weapon_m42" },
-		Model = "models/weapons/w_rif_m4a1.mdl",
-		Level = 4
+        ReqInfo = { "arccw_ur_mp5" },
+		Model = "models/weapons/arccw/c_ur_mp5.mdl",
+        Level = 15
 	},
 	[3] = {
-        Name = "Pump Shotgun",
-        Category = "Weapons",
+        Name = "Benelli M4",
+        Category = "Оружие",
         Type = "Weapon",
-        ReqInfo = { "weapon_pumpshotgun2" },
-		Model = "models/weapons/w_shot_m3super90.mdl"
+        ReqInfo = { "arccw_ud_m1014" },
+		Model = "models/weapons/arccw/c_ud_m1014.mdl",
+        Level = 20
 	},
-	[4] = {
-        Name = "Deagle",
-        Category = "Weapons",
+    [4] = {
+        Name = "SPAS-12",
+        Category = "Оружие",
         Type = "Weapon",
-        ReqInfo = { "weapon_deagle2" },
-		Model = "models/weapons/w_pist_deagle.mdl",
-        Level = 8,
+        ReqInfo = { "arccw_ur_spas12" },
+        Model = "models/weapons/arccw/c_ur_spas12.mdl",
+        Level = 30,
         Restrictions = { 
-            ["chief"] = true
+            ["ybsdxce"] = true,--["Детектив / 35 lvl"] = true, 
+            ["tsdg444"] = true,--["Спецназ CTSFO / 30 lvl"] = true,
+            ["rsdffggggbn"] = true,--["Отдел Disag [Dis+] / 45 lvl"] = true,
+            ["wkloldd"] = true--["Отдел Контрразведки MI5 [Dis+] / 45 lvl"] = true
         }
-	},
-	[5] = {
-        Name = "Pistol Ammo",
-        Category = "Ammo",
-        Type = "Ammo",
-        ReqInfo = { "Pistol", 30, 90 },
-		Model = "models/items/boxsrounds.mdl"
-	},
-	[6] = {
-        Name = "SMG Ammo",
-        Category = "Ammo",
-        Type = "Ammo",
-        ReqInfo = { "SMG1", 45, 90 },
-		Model = "models/items/boxsrounds.mdl",
-        Restrictions = { 
-            ["cp"] = true
-        }
-	},
-	[7] = {
-        Name = "Buckshot",
-        Category = "Ammo",
-        Type = "Ammo",
-        ReqInfo = { "Buckshot", 12, 36 },
-		Model = "models/items/boxbuckshot.mdl",
-		Level = 5,
-        Restrictions = { 
-            ["chief"] = true
-        }
-	},
-	[8] = {
-        Name = "Light Armor",
-        Category = "Gear",
-        Type = "Armor",
-        ReqInfo = { 50 },
-        Model = "models/Items/battery.mdl"
     },
-	[9] = {
-		Name = "Medium Armor",
-        Category = "Gear",
-        Type = "Armor",
-        ReqInfo = { 100 },
-		Model = "models/Items/battery.mdl",
-		Level = 3
-	},
-	[10] = {
-		Name = "Heavy Armor",
-        Category = "Gear",
-        Type = "Armor",
-        ReqInfo = { 150 },
-		Model = "models/Items/battery.mdl",
-		Level = 6,
+    [5] = {
+        Name = "M16A2",
+        Category = "Оружие",
+        Type = "Weapon",
+        ReqInfo = { "arccw_ud_m16" },
+        Model = "models/weapons/arccw/c_ud_m16.mdl",
+        Level = 30,
         Restrictions = { 
-            ["chief"] = true
+            ["tsdg444"] = true,--["Спецназ CTSFO / 30 lvl"] = true,
+            ["rsdffggggbn"] = true,--["Отдел Disag [Dis+] / 45 lvl"] = true,
+            ["wkloldd"] = true--["Отдел Контрразведки MI5 [Dis+] / 45 lvl"] = true
         }
+    },
+    [6] = {
+        Name = "Shield",
+        Category = "Снаряжение",
+        Type = "Weapon",
+        ReqInfo = { "arccw_go_shield" },
+        Model = "models/weapons/arccw_go/v_shield.mdl",
+        Level = 30
+    },
+    [7] = {
+        Name = "M84 Stun",
+        Category = "Гранаты",
+        Type = "Weapon",
+        ReqInfo = { "arccw_go_nade_flash" },
+        Model = "models/weapons/arccw_go/w_eq_flashbang_thrown.mdl",
+        Level = 20
+    },
+    [8] = {
+        Name = "Model 5210 Smoke",
+        Category = "Гранаты",
+        Type = "Weapon",
+        ReqInfo = { "arccw_go_nade_smoke" },
+        Model = "models/weapons/arccw_go/w_eq_smokegrenade_thrown.mdl",
+        Level = 30,
+        Restrictions = {
+            ["ybsdxce"] = true,--["Детектив / 35 lvl"] = true, 
+            ["tsdg444"] = true,--["Спецназ CTSFO / 30 lvl"] = true,
+            ["rsdffggggbn"] = true,--["Отдел Disag [Dis+] / 45 lvl"] = true,
+            ["wkloldd"] = true--["Отдел Контрразведки MI5 [Dis+] / 45 lvl"] = true
+        }
+    },
+    [9] = {
+        Name = "AN/M14 Thermite",
+        Category = "Гранаты",
+        Type = "Weapon",
+        ReqInfo = { "arccw_go_nade_incendiary" },
+        Model = "models/weapons/arccw_go/w_eq_incendiarygrenade_thrown.mdl",
+        Level = 30,
+        Restrictions = { 
+            ["tsdg444"] = true,--["Спецназ CTSFO / 30 lvl"] = true,
+            ["rsdffggggbn"] = true,--["Отдел Disag [Dis+] / 45 lvl"] = true,
+            ["wkloldd"] = true--["Отдел Контрразведки MI5 [Dis+] / 45 lvl"] = true
+        }
+    },
+    [10] = {
+        Name = "M67 Frag",
+        Category = "Гранаты",
+        Type = "Weapon",
+        ReqInfo = { "arccw_go_nade_frag" },
+        Model = "models/weapons/arccw_go/w_eq_fraggrenade_thrown.mdl",
+        Level = 30,
+        Restrictions = { 
+            ["tsdg444"] = true,--["Спецназ CTSFO / 30 lvl"] = true,
+            ["rsdffggggbn"] = true,--["Отдел Disag [Dis+] / 45 lvl"] = true,
+            ["wkloldd"] = true--["Отдел Контрразведки MI5 [Dis+] / 45 lvl"] = true
+        }
+    },
+	[11] = {
+        Name = "Pistol Ammo",
+        Category = "Патроны",
+        Type = "Ammo",
+        ReqInfo = { "Pistol", 20, 60 },
+		Model = "models/items/arccw/pistol_ammo.mdl"
+	},
+	[12] = {
+        Name = "SMG Ammo",
+        Category = "Патроны",
+        Type = "Ammo",
+        ReqInfo = { "SMG1", 30, 90 },
+		Model = "models/items/arccw/smg_ammo.mdl",
+        Level = 15
+	},
+    [13] = {
+        Name = "Buckshot",
+        Category = "Патроны",
+        Type = "Ammo",
+        ReqInfo = { "Buckshot", 20, 40 },
+        Model = "models/items/arccw/shotgun_ammo.mdl",
+        Level = 20
+    },
+    [14] = {
+        Name = "AR Ammo",
+        Category = "Патроны",
+        Type = "Ammo",
+        ReqInfo = { "AR2", 30, 120 },
+        Model = "models/items/arccw/rifle_ammo.mdl",
+        Level = 30
+    },
+	[15] = {
+        Name = "Облегчённый бронежилет",
+        Category = "Снаряжение",
+        Type = "Armor",
+        ReqInfo = { 25 },
+        Model = "models/Items/battery.mdl",
+        Level = 15
+    },
+	[16] = {
+		Name = "Обычный бронежилет",
+        Category = "Снаряжение",
+        Type = "Armor",
+        ReqInfo = { 75 },
+		Model = "models/Items/battery.mdl",
+		Level = 30
+	},
+	[17] = {
+		Name = "Тяжелый бронежилет",
+        Category = "Снаряжение",
+        Type = "Armor",
+        ReqInfo = { 125 },
+		Model = "models/Items/battery.mdl",
+		Level = 45
 	}
 }
 

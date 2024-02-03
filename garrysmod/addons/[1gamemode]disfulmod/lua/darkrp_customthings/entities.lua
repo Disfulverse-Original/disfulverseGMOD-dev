@@ -200,7 +200,7 @@ DarkRP.createEntity(".338 Lapua Magnum [AWM]", {
     },
     category = "Типы патронов",
 })
-DarkRP.createEntity(" Magnum #000 Buckshot [SHOTGUN]", {
+DarkRP.createEntity("Magnum #000 Buckshot [SHOTGUN]", {
     ent = "acwatt_uc_ammo_sg_magnum",
     cmd = "16467547dspricel8",
     model = "models/Items/item_item_crate.mdl",

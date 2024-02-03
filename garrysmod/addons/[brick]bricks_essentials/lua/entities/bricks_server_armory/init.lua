@@ -194,7 +194,7 @@ net.Receive( "BRS.Net.ArmoryEquipItem", function( len, ply )
 
 	if( BRICKS_SERVER.Func.IsSubModuleEnabled( "essentials", "levelling" ) and itemTable.Level ) then
 		if( ply:GetLevel() < itemTable.Level ) then
-			DarkRP.notify( ply, 1, 5, "You are not the right level to equip this item!" )
+			DarkRP.notify( ply, 1, 5, "У вас слишком низкий уровень чтобы взять это!" )
 			return
 		end
 	end
@@ -208,7 +208,7 @@ net.Receive( "BRS.Net.ArmoryEquipItem", function( len, ply )
 
 	if( itemTable.Restrictions ) then
 		if( not itemTable.Restrictions[RPExtraTeams[ply:Team()].command] ) then
-			DarkRP.notify( ply, 1, 5, "You are not the right job to equip this item!" )
+			DarkRP.notify( ply, 1, 5, "Этот предмет доступен с профессии выше!" )
 			return
 		end
 	end
@@ -218,7 +218,7 @@ net.Receive( "BRS.Net.ArmoryEquipItem", function( len, ply )
 	if( giveItem == false ) then
 		DarkRP.notify( ply, 1, 5, errorMsg or "Error equipping item!" )
 	else
-		DarkRP.notify( ply, 1, 5, "You have equipped " .. itemTable.Name .. " from the armory!" )
+		DarkRP.notify( ply, 1, 5, "Вы взяли " .. itemTable.Name .. " из оружейной!" )
 	end
 end )
 

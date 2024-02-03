@@ -28,7 +28,6 @@ DarkRP.createShipment("M1911 [x3]", {
     price = 6000,
     noship = false,
     separate = false,
---    shipmodel = "models/craphead_scripts/supply_crate/mil_crate.mdl",
     category = "Вооружение",
     allowed = {
         TEAM_PRODOR
@@ -42,7 +41,6 @@ DarkRP.createShipment("Remington 870 [x3]", {
     price = 12000,
     noship = false,
     separate = false,
---    shipmodel = "models/craphead_scripts/supply_crate/mil_crate.mdl",
     category = "Вооружение",
     allowed = {
         TEAM_PRODOR
@@ -56,7 +54,6 @@ DarkRP.createShipment("G3A3 [x3]", {
     price = 14550,
     noship = false,
     separate = false,
---    shipmodel = "models/craphead_scripts/supply_crate/mil_crate.mdl",
     category = "Вооружение",
     allowed = {
         TEAM_PRODOR
@@ -77,7 +74,6 @@ DarkRP.createShipment("Desert Eagle [x3]", {
     price = 10200,
     noship = false,
     separate = false,
---    shipmodel = "models/craphead_scripts/supply_crate/mil_crate.mdl",
     category = "Вооружение",
     allowed = {
         TEAM_ZARUB
@@ -91,7 +87,6 @@ DarkRP.createShipment("AWM [x3]", {
     price = 21000,
     noship = false,
     separate = false,
---    shipmodel = "models/craphead_scripts/supply_crate/mil_crate.mdl",
     category = "Вооружение",
     allowed = {
         TEAM_ZARUB
@@ -105,7 +100,6 @@ DarkRP.createShipment("MINI14 [x3]", {
     price = 15750,
     noship = false,
     separate = false,
---    shipmodel = "models/craphead_scripts/supply_crate/mil_crate.mdl",
     category = "Вооружение",
     allowed = {
         TEAM_ZARUB
@@ -125,7 +119,6 @@ DarkRP.createShipment("AKM [x5]", {
     price = 7500,
     noship = false,
     separate = false,
---    shipmodel = "models/craphead_scripts/supply_crate/mil_crate.mdl",
     category = "Вооружение",
     allowed = {
         TEAM_BARACH
@@ -139,7 +132,6 @@ DarkRP.createShipment("M79 [x1]", {
     price = 4750,
     noship = false,
     separate = false,
---    shipmodel = "models/craphead_scripts/supply_crate/mil_crate.mdl",
     category = "Вооружение",
     allowed = {
         TEAM_BARACH
@@ -153,7 +145,6 @@ DarkRP.createShipment("UZI [x1]", {
     price = 6750,
     noship = false,
     separate = false,
---    shipmodel = "models/craphead_scripts/supply_crate/mil_crate.mdl",
     category = "Вооружение",
     allowed = {
         TEAM_BARACH
@@ -167,7 +158,6 @@ DarkRP.createShipment("IZh-58 [x3]", {
     price = 4500,
     noship = false,
     separate = false,
---    shipmodel = "models/craphead_scripts/supply_crate/mil_crate.mdl",
     category = "Вооружение",
     allowed = {
         TEAM_BARACH
@@ -181,10 +171,65 @@ DarkRP.createShipment("Model 329PD [x3]", {
     price = 6000,
     noship = false,
     separate = false,
---    shipmodel = "models/craphead_scripts/supply_crate/mil_crate.mdl",
     category = "Вооружение",
     allowed = {
         TEAM_BARACH
     },
 })
 -- Барахольщик
+
+
+-- Полицейские
+
+
+DarkRP.createShipment("Glock", {
+    entity = "arccw_ud_glock",
+    model = "models/weapons/arccw/c_ud_glock.mdl",
+    amount = 1,
+    pricesep = 99999,
+    price = 99999,
+    noship = false,
+    separate = false,
+    category = "Вооружение"
+})
+DarkRP.createShipment("MP5A4", {
+    entity = "arccw_ur_mp5",
+    model = "models/weapons/arccw/c_ur_mp5.mdl",
+    amount = 1,
+    pricesep = 99999,
+    price = 99999,
+    noship = false,
+    separate = false,
+    category = "Вооружение"
+})
+DarkRP.createShipment("Benelli M4", {
+    entity = "arccw_ud_m1014",
+    model = "models/weapons/arccw/c_ud_m1014.mdl",
+    amount = 1,
+    pricesep = 99999,
+    price = 99999,
+    noship = false,
+    separate = false,
+    category = "Вооружение"
+})
+DarkRP.createShipment("SPAS-12", {
+    entity = "arccw_ur_spas12",
+    model = "models/weapons/arccw/c_ur_spas12.mdl",
+    amount = 1,
+    pricesep = 99999,
+    price = 99999,
+    noship = false,
+    separate = false,
+    category = "Вооружение"
+})
+DarkRP.createShipment("M16", {
+    entity = "arccw_ud_m16",
+    model = "models/weapons/arccw/c_ud_m16.mdl",
+    amount = 1,
+    pricesep = 99999,
+    price = 99999,
+    noship = false,
+    separate = false,
+    category = "Вооружение"
+})
+-- Полицейские
