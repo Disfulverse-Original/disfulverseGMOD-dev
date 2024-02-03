@@ -12,7 +12,7 @@ SWEP.Trivia_Mechanism = "Thermite TH3"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1944
 
-SWEP.Slot = 4
+SWEP.Slot = 3
 
 SWEP.NotForNPCs = true
 

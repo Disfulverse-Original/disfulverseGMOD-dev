@@ -61,7 +61,7 @@ local patriotDesc = "An assault pistol developed for The Boss. The feeder mechan
 
 -- Weapon slot --
 
-SWEP.Slot = 2
+SWEP.Slot = 0
 
 -- Weapon's manufacturer real name --
 

@@ -39,7 +39,7 @@ SWEP.Trivia_Year = 1950
 
 -- Weapon slot --
 
-SWEP.Slot = 3
+SWEP.Slot = 0
 
 -- Weapon's manufacturer real name --
 

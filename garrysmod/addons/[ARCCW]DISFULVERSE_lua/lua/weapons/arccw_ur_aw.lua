@@ -20,7 +20,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 
-SWEP.Slot = 3
+SWEP.Slot = 0
 SWEP.CamAttachment = 3
 
 SWEP.UseHands = true

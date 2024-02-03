@@ -16,7 +16,7 @@ else
 	SWEP.PrintName = "Руки"
 	SWEP.Category = ""
 	SWEP.Slot = 1
-	SWEP.SlotPos = 1
+	SWEP.SlotPos = 0
 	SWEP.DrawAmmo = false
 	SWEP.DrawCrosshair = false
 	SWEP.ViewModelFOV = 45

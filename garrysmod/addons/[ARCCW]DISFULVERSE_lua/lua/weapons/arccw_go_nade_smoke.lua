@@ -12,7 +12,7 @@ SWEP.Trivia_Mechanism = "Pyrotechnic delay fuze"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1997
 
-SWEP.Slot = 4
+SWEP.Slot = 3
 
 SWEP.NotForNPCs = true
 

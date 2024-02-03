@@ -1,7 +1,7 @@
 if CLIENT then
 	SWEP.PrintName = "Топор Т1" -- For english translate this to Pickaxe
-	SWEP.Slot = 0
-	SWEP.SlotPos = 5
+	SWEP.Slot = 2
+	SWEP.SlotPos = 0
 	SWEP.DrawAmmo = false
 	SWEP.DrawCrosshair = true
 end

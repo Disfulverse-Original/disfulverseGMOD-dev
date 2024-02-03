@@ -12,7 +12,7 @@ SWEP.Trivia_Mechanism = "Magnesium/Ammonium Nitrate Mix"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1995
 
-SWEP.Slot = 4
+SWEP.Slot = 3
 
 SWEP.NotForNPCs = true
 

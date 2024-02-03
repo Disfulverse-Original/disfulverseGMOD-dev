@@ -12,7 +12,7 @@ SWEP.Trivia_Mechanism = "Composition B"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1968
 
-SWEP.Slot = 4
+SWEP.Slot = 3
 
 SWEP.NotForNPCs = true
 

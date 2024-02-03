@@ -22,7 +22,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     SWEP.Trivia_Manufacturer = "Heckler & Koch"
 end
 
-SWEP.Slot = 2
+SWEP.Slot = 0
 SWEP.CamAttachment = 3
 
 SWEP.UseHands = true

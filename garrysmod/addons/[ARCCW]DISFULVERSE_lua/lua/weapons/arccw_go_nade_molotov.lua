@@ -12,7 +12,7 @@ SWEP.Trivia_Mechanism = "Gasoline + Dish Soap"
 SWEP.Trivia_Country = "Finland"
 SWEP.Trivia_Year = 1939
 
-SWEP.Slot = 4
+SWEP.Slot = 3
 
 SWEP.NotForNPCs = true
 

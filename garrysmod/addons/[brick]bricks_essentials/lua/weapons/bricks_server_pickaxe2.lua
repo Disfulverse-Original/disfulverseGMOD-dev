@@ -1,7 +1,7 @@
 if CLIENT then
     SWEP.PrintName = "Кирка T2"
-    SWEP.Slot = 0
-    SWEP.SlotPos = 5
+    SWEP.Slot = 2
+    SWEP.SlotPos = 1
     SWEP.DrawAmmo = false
     SWEP.DrawCrosshair = true
 end

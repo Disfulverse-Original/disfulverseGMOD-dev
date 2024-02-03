@@ -12,8 +12,8 @@ SWEP.Trivia_Mechanism = "Steel-Aramid Composite"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 2009
 
-SWEP.Slot = 0
-
+SWEP.Slot = 5
+SWEP.SlotPos = 0
 SWEP.NotForNPCs = true
 
 SWEP.UseHands = true
