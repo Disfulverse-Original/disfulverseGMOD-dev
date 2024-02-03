@@ -200,6 +200,17 @@ DarkRP.createEntity(".338 Lapua Magnum [AWM]", {
     },
     category = "Типы патронов",
 })
+DarkRP.createEntity(" Magnum #000 Buckshot [SHOTGUN]", {
+    ent = "acwatt_uc_ammo_sg_magnum",
+    cmd = "16467547dspricel8",
+    model = "models/Items/item_item_crate.mdl",
+    price = 2200,
+    max = 0,
+    allowed = {
+        TEAM_ZARUB
+    },
+    category = "Типы патронов",
+})
 DarkRP.createEntity("AP/ARMOR-PIERCING [ARs]", {
     ent = "acwatt_uc_ammo_ap",
     cmd = "1667547pricel9",
