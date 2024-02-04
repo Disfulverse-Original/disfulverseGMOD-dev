@@ -323,7 +323,7 @@ TEAM_NAEB = DarkRP.createJob("Наёмник-Мародер / 30 lvl", {
 TEAM_HACKER = DarkRP.createJob("Хакер-взломщик / 35 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/player/t_arctic.mdl"
+        "models/player/arctic.mdl"
     },
     description = [[Наёмник со знаниями в сфере электронных и компьютерных технологий. Хотя и про обычный механический взлом дверей, замков, etc тоже не стоит забывать. Работает за деньги.]],
     weapons = {"lockpick2"},
