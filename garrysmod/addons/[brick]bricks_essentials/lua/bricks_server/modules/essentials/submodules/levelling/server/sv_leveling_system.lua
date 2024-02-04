@@ -43,12 +43,26 @@ end
 function playerMeta:AddExperience( amount, reason )
 	if( (amount or 0) <= 0 ) then return end
 
+	--ocal disfulversedboost = 1.5
+
+
 	if( self:GetNW2Int( "brs_experience_booster", 1 ) > 1 ) then
 		amount = amount*self:GetNW2Int( "brs_experience_booster", 1 )
 	end
 
-	self:SetExperience( self:GetExperience() + amount )
-	BRICKS_SERVER.Func.AddLvlNotify( self, false, amount )
+	if self:GetUserGroup() == "disfulversed" then
+		amount = amount * 1.5
+		self:SetExperience( self:GetExperience() + amount )
+		BRICKS_SERVER.Func.AddLvlNotify( self, false, amount )
+		self:CheckLevelUp()
+
+	else
+		self:SetExperience( self:GetExperience() + amount )
+		BRICKS_SERVER.Func.AddLvlNotify( self, false, amount )
+		self:CheckLevelUp()
+
+	end
+
 	self:CheckLevelUp()
 	
 	if( BRICKS_SERVER.Func.IsSubModuleEnabled( "essentials", "logging" ) ) then

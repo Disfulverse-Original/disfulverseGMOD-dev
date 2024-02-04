@@ -54,12 +54,17 @@ function ENT:HitRock( Damage, attacker )
 					resourceEnt:Spawn()
 				end
 			elseif( IsValid( attacker ) and attacker:IsPlayer() ) then
+
 				local itemData = { "bricks_server_resource", (BRICKS_SERVER.CONFIG.CRAFTING.Resources[self:GetRockType() or ""][1] or ""), self:GetRockType() }
                 attacker:BRS():AddInventoryItem( itemData, 1 )
+
+				local itemInfo = BRICKS_SERVER.Func.GetEntTypeField( itemData[1], "GetInfo" )( itemData )				
+				DarkRP.notify( attacker, 1, 5, "Вы получили x1 " .. itemInfo[1] .. " из этого камня!" )
 			end
 
 			if( BRICKS_SERVER.Func.IsSubModuleEnabled( "essentials", "levelling" ) and IsValid( attacker ) and attacker:IsPlayer() ) then
 				attacker:AddExperience( (BRICKS_SERVER.CONFIG.LEVELING["EXP Gained - Rock Mined"] or 0), "Mining" )
+    			attacker:SL_AddExperience( Sublime.Config.BricksRockTreeGarbageEXP, "за выполненную работу.")				
 			end
 		end
 	end

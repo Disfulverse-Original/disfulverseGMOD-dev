@@ -81,7 +81,7 @@ TEAM_ZARUB = DarkRP.createJob("Контрабандист [Dis+] / 35 lvl", {
     hasLicense = false,
     candemote = true,
     customCheck = function(ply) 
-        return CLIENT or table.HasValue({"dis+", "admin", "superadmin"}, ply:GetUserGroup()) 
+        return CLIENT or table.HasValue({"disfulversed", "admin", "superadmin"}, ply:GetUserGroup()) 
     end,
     CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
     category = "Нейтральные",
@@ -101,7 +101,7 @@ TEAM_BARACH = DarkRP.createJob("Барахольщик [Dis+] / 30 lvl", {
     hasLicense = false,
     candemote = true,
     customCheck = function(ply) 
-        return CLIENT or table.HasValue({"dis+", "admin", "superadmin"}, ply:GetUserGroup()) 
+        return CLIENT or table.HasValue({"disfulversed", "admin", "superadmin"}, ply:GetUserGroup()) 
     end,
     category = "Криминал",
 })
@@ -186,7 +186,7 @@ TEAM_GRABER = DarkRP.createJob("Грабитель [Dis+] / 35 lvl", {
     hasLicense = false,
     candemote = true,
     customCheck = function(ply) 
-        return CLIENT or table.HasValue({"dis+", "admin", "superadmin"}, ply:GetUserGroup()) 
+        return CLIENT or table.HasValue({"disfulversed", "admin", "superadmin"}, ply:GetUserGroup()) 
     end,
     CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
     category = "Криминал",
@@ -229,7 +229,7 @@ TEAM_MAF41 = DarkRP.createJob("Головорез Мафии [Dis+] / 45 lvl", {
     hasLicense = false,
     candemote = true,
     customCheck = function(ply) 
-        return CLIENT or table.HasValue({"dis+", "admin", "superadmin"}, ply:GetUserGroup()) 
+        return CLIENT or table.HasValue({"disfulversed", "admin", "superadmin"}, ply:GetUserGroup()) 
     end,
     CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
     category = "Криминал",
@@ -351,7 +351,7 @@ TEAM_PMC = DarkRP.createJob("Оператор ЧВК [Dis+] / 50 lvl", {
     hasLicense = true,
     candemote = false,
     customCheck = function(ply) 
-        return CLIENT or table.HasValue({"dis+", "admin", "superadmin"}, ply:GetUserGroup()) 
+        return CLIENT or table.HasValue({"disfulversed", "admin", "superadmin"}, ply:GetUserGroup()) 
     end,
     CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
     category = "Мародёры",
@@ -416,7 +416,7 @@ TEAM_DISAG = DarkRP.createJob("Отдел Disag [Dis+] / 45 lvl", {
     hasLicense = true,
     candemote = false,
     customCheck = function(ply) 
-        return CLIENT or table.HasValue({"dis+", "admin", "superadmin"}, ply:GetUserGroup()) 
+        return CLIENT or table.HasValue({"disfulversed", "admin", "superadmin"}, ply:GetUserGroup()) 
     end,
     CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
     category = "Правительство",
@@ -467,7 +467,7 @@ TEAM_OTDELBEZ = DarkRP.createJob("Отдел Контрразведки MI5 [Dis
     model = {
         "models/bread/cod/characters/kortac/horangi_kpop.mdl"
     },
-    description = [[Защита Мэра и Администрации города. Занимаются серьёзными невоенными делами. Расследованиями внутри гос. структур, а так же поиском особо опасных преступников. Сотрудничают с Отделом Разведки.]],
+    description = [[Защита Мэра и Администрации города. Занимаются серьёзными невоенными делами. Расследованиями внутри гос. структур, а так же поиском особо опасных преступников.]],
     weapons = {"weapon_rpt_finebook", "weapon_rpt_handcuff", "weapon_rpt_stungun"},
     command = "wkloldd",
     max = 2,
@@ -477,7 +477,7 @@ TEAM_OTDELBEZ = DarkRP.createJob("Отдел Контрразведки MI5 [Dis
     hasLicense = true,
     candemote = false,
     customCheck = function(ply) 
-        return CLIENT or table.HasValue({"dis+", "admin", "superadmin"}, ply:GetUserGroup()) 
+        return CLIENT or table.HasValue({"disfulversed", "admin", "superadmin"}, ply:GetUserGroup()) 
     end,
     CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
     --[[bodygroups = {

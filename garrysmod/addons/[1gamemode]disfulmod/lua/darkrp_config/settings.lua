@@ -373,6 +373,25 @@ GM.Config.DisallowDrop = {
     ["bricks_server_pickaxe"] = true,
     ["bricks_server_invpickup"] = true,
     ["weapon_hands"] = true,
+    ["weapon_hl2axe"] = true,
+    ["weapon_hl2bottle"] = true,
+    ["weapon_hl2brokenbottle"] = true,
+    ["weapon_hl2hook"] = true,
+    ["weapon_hl2pan"] = true,
+    ["weapon_hl2pickaxe"] = true,
+    ["weapon_hl2pipe"] = true,
+    ["weapon_hl2pot"] = true,
+    ["weapon_hl2shovel"] = true,
+    ["parkourmod"] = true,
+    ["weapon_rpt_stungun"] = true,
+    ["weapon_rpt_handcuff"] = true,
+    ["weapon_rpt_finebook"] = true,
+    ["cityworker_config"] = true,
+    ["slawer_jobs_admin_tool"] = true,
+    ["aas_item_menu"] = true,
+    ["weapon_ch_atm_card"] = true,
+
+
 }
 
 -- The list of weapons people spawn with.
@@ -437,9 +456,9 @@ GM.Config.AdminWeapons = {
 
 -- These are the default laws, they're unchangeable in-game.
 GM.Config.DefaultLaws = {
-    "Do not attack other citizens except in self-defence.",
-    "Do not steal or break into people's homes.",
-    "Money printers/drugs are illegal.",
+    --"Do not attack other citizens except in self-defence.",
+    --"Do not steal or break into people's homes.",
+    --"Money printers/drugs are illegal.",
 }
 
 GM.Config.PocketBlacklist = {
@@ -481,9 +500,16 @@ GM.Config.noStripWeapons = {
 -- This only applies when removeclassitems is set to true.
 -- Note: entities will only be removed when the player changes to a job that is not allowed to have the entity.
 GM.Config.preventClassItemRemoval = {
-    ["gunlab"] = false,
-    ["microwave"] = false,
-    ["spawned_shipment"] = false,
+    ["spawned_shipment"] = true,
+    ["spawned_weapon"] = true,
+    ["bricks_server_pickaxe1"] = true,
+    ["bricks_server_pickaxe2"] = true,
+    ["bricks_server_pickaxe3"] = true,
+    ["bricks_server_pickaxe4"] = true,
+    ["bricks_server_axe1"] = true,
+    ["bricks_server_axe2"] = true,
+    ["bricks_server_axe3"] = true,
+    ["bricks_server_axe4"] = true,
 }
 
 -- Properties set to true are allowed to be used. Values set to false or are missing from this list are blocked.

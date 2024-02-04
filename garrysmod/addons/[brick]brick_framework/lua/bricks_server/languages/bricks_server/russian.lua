@@ -101,7 +101,7 @@ BRICKS_SERVER.Func.AddLanguageStrings( "russian", {
     ["save"] = "Сохранить",
     ["confirm"] = "Подтвердить",
     ["nil"] = "NIL",
-    ["none"] = "Ничего",
+    ["none"] = "-",
     ["selected"] = "Выбрано",
     ["unselected"] = "Не выбрано",
     ["add"] = "Добавить",

@@ -1,6 +1,7 @@
 local PANEL = {}
 
 function PANEL:Init()
+    self.startTime = SysTime()
     self:SetSize( ScrW()*0.5, ScrH()*0.55 )
     self:Center()
     self:MakePopup()
@@ -99,7 +100,7 @@ function PANEL:Init()
                 if( x != toScreenX or y != toScreenY ) then
                     x, y = toScreenX, toScreenY
     
-                    self2:SetBRSToolTip( x, y, w, h, "Show ended auctions" )
+                    self2:SetBRSToolTip( x, y, w, h, "Показать купленные лоты" )
                 end
 
                 if( self2.showEnded ) then
@@ -160,17 +161,17 @@ function PANEL:Init()
     auctionPanel:Dock( FILL )
     auctionPanel:DockMargin( 10, 5, 10, 10 )
     auctionPanel.Paint = function( self, w, h ) end 
-    mainSheet:AddSheet( "Auctions", auctionPanel )
+    mainSheet:AddSheet( "Лоты", auctionPanel )
 
     self.auctionSortChoice = "time_low_to_high"
     self.auctionShowEnded = false
     self.auctionSearchText = ""
     CreateTopBar( auctionPanel, function()
         auctionPanel.menu = DermaMenu()
-        auctionPanel.menu:AddOption( "Ending soonest", function() self.auctionSortChoice = "time_low_to_high" self:Refresh() end )
-        auctionPanel.menu:AddOption( "Ending latest", function() self.auctionSortChoice = "time_high_to_low" self:Refresh() end )
-        auctionPanel.menu:AddOption( "Bid - low to high", function() self.auctionSortChoice = "price_low_to_high" self:Refresh() end )
-        auctionPanel.menu:AddOption( "Bid - high to low", function() self.auctionSortChoice = "price_high_to_low" self:Refresh() end )
+        auctionPanel.menu:AddOption( "Заканчиваются скоро", function() self.auctionSortChoice = "time_low_to_high" self:Refresh() end )
+        auctionPanel.menu:AddOption( "Заканчиваются не скоро", function() self.auctionSortChoice = "time_high_to_low" self:Refresh() end )
+        auctionPanel.menu:AddOption( "Ставка - меньшее к большему", function() self.auctionSortChoice = "price_low_to_high" self:Refresh() end )
+        auctionPanel.menu:AddOption( "Ставка - большее к меньшему", function() self.auctionSortChoice = "price_high_to_low" self:Refresh() end )
         auctionPanel.menu:Open()
     end, function( searchBar )
         self.auctionSearchText = searchBar:GetValue() or ""
@@ -186,16 +187,16 @@ function PANEL:Init()
     myBidsPanel:Dock( FILL )
     myBidsPanel:DockMargin( 10, 5, 10, 10 )
     myBidsPanel.Paint = function( self, w, h ) end 
-    mainSheet:AddSheet( "My Bids", myBidsPanel )
+    mainSheet:AddSheet( "Мои ставки", myBidsPanel )
 
     self.myBidsSortChoice = "time_low_to_high"
     self.myBidsSearchText = ""
     CreateTopBar( myBidsPanel, function()
         myBidsPanel.menu = DermaMenu()
-        myBidsPanel.menu:AddOption( "Ending soonest", function() self.myBidsSortChoice = "time_low_to_high" self:RefreshMyBids() end )
-        myBidsPanel.menu:AddOption( "Ending latest", function() self.myBidsSortChoice = "time_high_to_low" self:RefreshMyBids() end )
-        myBidsPanel.menu:AddOption( "Bid - low to high", function() self.myBidsSortChoice = "price_low_to_high" self:RefreshMyBids() end )
-        myBidsPanel.menu:AddOption( "Bid - high to low", function() self.myBidsSortChoice = "price_high_to_low" self:RefreshMyBids() end )
+        myBidsPanel.menu:AddOption( "Заканчиваются скоро", function() self.myBidsSortChoice = "time_low_to_high" self:RefreshMyBids() end )
+        myBidsPanel.menu:AddOption( "Заканчиваются не скоро", function() self.myBidsSortChoice = "time_high_to_low" self:RefreshMyBids() end )
+        myBidsPanel.menu:AddOption( "Ставка - меньшее к большему", function() self.myBidsSortChoice = "price_low_to_high" self:RefreshMyBids() end )
+        myBidsPanel.menu:AddOption( "Ставка - большее к меньшему", function() self.myBidsSortChoice = "price_high_to_low" self:RefreshMyBids() end )
         myBidsPanel.menu:Open()
     end, function( searchBar )
         self.myBidsSearchText = searchBar:GetValue() or ""
@@ -211,16 +212,16 @@ function PANEL:Init()
     myAuctionPanel:Dock( FILL )
     myAuctionPanel:DockMargin( 10, 5, 10, 10 )
     myAuctionPanel.Paint = function( self, w, h ) end 
-    mainSheet:AddSheet( "My Auctions", myAuctionPanel )
+    mainSheet:AddSheet( "Мои лоты", myAuctionPanel )
 
     self.myAuctionSortChoice = "time_low_to_high"
     self.myAuctionSearchText = ""
     CreateTopBar( myAuctionPanel, function()
         myAuctionPanel.menu = DermaMenu()
-        myAuctionPanel.menu:AddOption( "Ending soonest", function() self.myAuctionSortChoice = "time_low_to_high" self:RefreshMyAuctions() end )
-        myAuctionPanel.menu:AddOption( "Ending latest", function() self.myAuctionSortChoice = "time_high_to_low" self:RefreshMyAuctions() end )
-        myAuctionPanel.menu:AddOption( "Bid - low to high", function() self.myAuctionSortChoice = "price_low_to_high" self:RefreshMyAuctions() end )
-        myAuctionPanel.menu:AddOption( "Bid - high to low", function() self.myAuctionSortChoice = "price_high_to_low" self:RefreshMyAuctions() end )
+        myAuctionPanel.menu:AddOption( "Заканчиваются скоро", function() self.myAuctionSortChoice = "time_low_to_high" self:RefreshMyAuctions() end )
+        myAuctionPanel.menu:AddOption( "Заканчиваются не скоро", function() self.myAuctionSortChoice = "time_high_to_low" self:RefreshMyAuctions() end )
+        myAuctionPanel.menu:AddOption( "Ставка - меньшее к большему", function() self.myAuctionSortChoice = "price_low_to_high" self:RefreshMyAuctions() end )
+        myAuctionPanel.menu:AddOption( "Ставка - большее к меньшему", function() self.myAuctionSortChoice = "price_high_to_low" self:RefreshMyAuctions() end )
         myAuctionPanel.menu:Open()
     end, function( searchBar )
         self.myAuctionSearchText = searchBar:GetValue() or ""
@@ -237,7 +238,7 @@ function PANEL:Init()
     local createAuctionPanel = vgui.Create( "DPanel", mainSheet )
     createAuctionPanel:Dock( FILL )
     createAuctionPanel.Paint = function( self, w, h ) end 
-    mainSheet:AddSheet( "Create Auction", createAuctionPanel )
+    mainSheet:AddSheet( "Создать лот", createAuctionPanel )
 
     local createAuctionInvScroll = vgui.Create( "bricks_server_scrollpanel", createAuctionPanel )
     createAuctionInvScroll:Dock( LEFT )
@@ -271,7 +272,7 @@ function PANEL:Init()
         adminPanel:Dock( FILL )
         adminPanel:DockMargin( 10, 5, 10, 10 )
         adminPanel.Paint = function( self, w, h ) end 
-        mainSheet:AddSheet( "Admin", adminPanel )
+        mainSheet:AddSheet( "Админская", adminPanel )
 
         self.adminSortChoice = "time_low_to_high"
         self.adminShowEnded = false
@@ -939,21 +940,21 @@ function PANEL:RefreshSelection()
 		draw.RoundedBox( 5, 0, 0, w, h, BRICKS_SERVER.DEVCONFIG.BaseThemes.DarkGreen )
 		surface.SetAlphaMultiplier( 1 )
 
-        draw.SimpleText( "Submit", "BRICKS_SERVER_Font20", w/2, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+        draw.SimpleText( "Создать", "BRICKS_SERVER_Font20", w/2, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
     end
     submitButton.DoClick = function()
         if( auctionTime < (BRICKS_SERVER.CONFIG.MARKETPLACE["Minimum Auction Time"] or 300) or auctionTime > (BRICKS_SERVER.CONFIG.MARKETPLACE["Maximum Auction Time"] or 86400) ) then
-            notification.AddLegacy( "Minimum time is " .. (BRICKS_SERVER.CONFIG.MARKETPLACE["Minimum Auction Time"] or 300) .. ", maximum is " .. (BRICKS_SERVER.CONFIG.MARKETPLACE["Maximum Auction Time"] or 86400) .. "!", 1, 3 )
+            notification.AddLegacy( "Минимальное время на лот: " .. (BRICKS_SERVER.CONFIG.MARKETPLACE["Minimum Auction Time"] or 300) .. ", максимальное: " .. (BRICKS_SERVER.CONFIG.MARKETPLACE["Maximum Auction Time"] or 86400) .. "!", 1, 3 )
             return
         end
 
         if( auctionPrice < (BRICKS_SERVER.CONFIG.MARKETPLACE["Minimum Starting Price"] or 1000) ) then
-            notification.AddLegacy( "Minimum price is " .. (BRICKS_SERVER.CONFIG.MARKETPLACE["Minimum Starting Price"] or 1000) .. "!", 1, 3 )
+            notification.AddLegacy( "Стартовая цена: " .. (BRICKS_SERVER.CONFIG.MARKETPLACE["Minimum Starting Price"] or 1000) .. "!", 1, 3 )
             return
         end
 
         if( amount > (selectedItem[1] or 1) ) then
-            notification.AddLegacy( "You don't have enough of this item!", 1, 3 )
+            notification.AddLegacy( "У вас недостаточно этого предмета!", 1, 3 )
             return
         end
 
@@ -1003,7 +1004,7 @@ function PANEL:RefreshSelection()
         draw.SimpleText( BRICKS_SERVER.Func.FormatTime( auctionTime ), "BRICKS_SERVER_Font20", w/2, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
     end
     timeBack.DoClick = function()
-        BRICKS_SERVER.Func.StringRequest( "Auction", "How long should the auction last in seconds?", auctionTime, function( text ) 
+        BRICKS_SERVER.Func.StringRequest( "Аукцион", "Как долго должен просуществовать ваш лот? Укажите в секундах.", auctionTime, function( text ) 
             if( isnumber( tonumber( text ) ) ) then
                 if( text >= (BRICKS_SERVER.CONFIG.MARKETPLACE["Minimum Auction Time"] or 300) and text <= (BRICKS_SERVER.CONFIG.MARKETPLACE["Maximum Auction Time"] or 86400) ) then
                     auctionTime = tonumber( text )
@@ -1044,11 +1045,11 @@ function PANEL:RefreshSelection()
             end
         surface.SetAlphaMultiplier( 1 )
 
-        draw.SimpleText( "Price: ", "BRICKS_SERVER_Font20", 15, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), 0, TEXT_ALIGN_CENTER )
+        draw.SimpleText( "Цена: ", "BRICKS_SERVER_Font20", 15, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), 0, TEXT_ALIGN_CENTER )
         draw.SimpleText( currencyTable.formatFunction( auctionPrice ), "BRICKS_SERVER_Font20", w/2, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
     end
     priceBack.DoClick = function()
-        BRICKS_SERVER.Func.StringRequest( "Auction", "What should the starting price be?", auctionPrice, function( text ) 
+        BRICKS_SERVER.Func.StringRequest( "Аукцион", "Какой должна быть стартовая цена?", auctionPrice, function( text ) 
             if( isnumber( tonumber( text ) ) ) then
                 if( tonumber( text ) >= (BRICKS_SERVER.CONFIG.MARKETPLACE["Minimum Starting Price"] or 1000) ) then
                     auctionPrice = tonumber( text )
@@ -1090,7 +1091,7 @@ function PANEL:RefreshSelection()
             end
         surface.SetAlphaMultiplier( 1 )
 
-        draw.SimpleText( "Amount: ", "BRICKS_SERVER_Font20", 15, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), 0, TEXT_ALIGN_CENTER )
+        draw.SimpleText( "Кол-во: ", "BRICKS_SERVER_Font20", 15, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), 0, TEXT_ALIGN_CENTER )
         draw.SimpleText( amount, "BRICKS_SERVER_Font20", w/2, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
     end
     amountBack.DoClick = function()
@@ -1114,7 +1115,7 @@ function PANEL:RefreshSelection()
     descriptionBack.Paint = function( self2, w, h )
         draw.RoundedBox( 5, 0, 0, w, h, BRICKS_SERVER.Func.GetTheme( 3 ) )
 
-        draw.SimpleText( "Description: ", "BRICKS_SERVER_Font20", 15, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), 0, TEXT_ALIGN_CENTER )
+        draw.SimpleText( "Описание: ", "BRICKS_SERVER_Font20", 15, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), 0, TEXT_ALIGN_CENTER )
         draw.SimpleText( (infoTable[2] or "NIL"), "BRICKS_SERVER_Font20", w/2, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
     end
 
@@ -1125,7 +1126,7 @@ function PANEL:RefreshSelection()
     nameBack.Paint = function( self2, w, h )
         draw.RoundedBox( 5, 0, 0, w, h, BRICKS_SERVER.Func.GetTheme( 3 ) )
 
-        draw.SimpleText( "Name: ", "BRICKS_SERVER_Font20", 15, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), 0, TEXT_ALIGN_CENTER )
+        draw.SimpleText( "Название: ", "BRICKS_SERVER_Font20", 15, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), 0, TEXT_ALIGN_CENTER )
         draw.SimpleText( (infoTable[1] or "NIL"), "BRICKS_SERVER_Font20", w/2, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
     end
 
@@ -1325,10 +1326,10 @@ end
 
 local rounded = 5
 function PANEL:Paint( w, h )
+    Derma_DrawBackgroundBlur(self, self.startTime)
     draw.RoundedBox( rounded, 0, 0, w, h, BRICKS_SERVER.Func.GetTheme( 2 ) )
     draw.RoundedBoxEx( rounded, 0, 0, w, self.headerHeight, BRICKS_SERVER.Func.GetTheme( 0 ), true, true, false, false )
-
-    draw.SimpleText( "Marketplace", "BRICKS_SERVER_Font30", 10, (self.headerHeight or 40)/2-2, BRICKS_SERVER.Func.GetTheme( 6 ), 0, TEXT_ALIGN_CENTER )
+    draw.SimpleText( "Аукцион", "BRICKS_SERVER_Font30", 10, (self.headerHeight or 40)/2-2, BRICKS_SERVER.Func.GetTheme( 6 ), 0, TEXT_ALIGN_CENTER )
 end
 
 vgui.Register( "bricks_server_ui_npc_marketplace", PANEL, "DFrame" )

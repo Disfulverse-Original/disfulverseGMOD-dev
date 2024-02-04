@@ -49,7 +49,7 @@ function ENT:HitTree( damage, attacker )
 				attacker:BRS():AddInventoryItem( itemData, 1 )
 	
 				local itemInfo = BRICKS_SERVER.Func.GetEntTypeField( itemData[1], "GetInfo" )( itemData )
-				DarkRP.notify( attacker, 1, 5, "You received x1 " .. itemInfo[1] .. " from woodcutting!" )
+				DarkRP.notify( attacker, 1, 5, "Вы получили x1 " .. itemInfo[1] .. " срубив это дерево!" )
 			else
 				local resourceEnt = ents.Create( "bricks_server_resource_" .. string.Replace( string.lower( (self:GetResource() or "") ), " ", "" ) )
 				if( IsValid( resourceEnt ) ) then
@@ -57,15 +57,16 @@ function ENT:HitTree( damage, attacker )
 					resourceEnt:Spawn()
 				end
 
-				DarkRP.notify( attacker, 1, 5, "Your inventory is full, dropping resource!" )
+				DarkRP.notify( attacker, 1, 5, "Ваш инвентарь переполнен, ресурсы будут на полу!" )
 			end
 		end
 
 		if( BRICKS_SERVER.Func.IsSubModuleEnabled( "essentials", "levelling" ) ) then
 			attacker:AddExperience( (BRICKS_SERVER.CONFIG.LEVELING["EXP Gained - Tree Chopped"] or 0), "Forestry" )
+    		attacker:SL_AddExperience( Sublime.Config.BricksRockTreeGarbageEXP, "за выполненную работу.")
 		end
 
-		attacker:AddCraftingSkillExp( "woodcutting", 50 )
+		--attacker:AddCraftingSkillExp( "woodcutting", 50 )
 	end
 
 	self:Remove()

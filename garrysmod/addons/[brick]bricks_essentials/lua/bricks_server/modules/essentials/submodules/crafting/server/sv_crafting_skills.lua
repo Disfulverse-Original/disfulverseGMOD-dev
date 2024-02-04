@@ -1,3 +1,4 @@
+--[[
 local playerMeta = FindMetaTable( "Player" )
 
 util.AddNetworkString( "BRS.Net.SendCraftingSkills" )
@@ -35,3 +36,4 @@ function playerMeta:AddCraftingSkillExp( skillKey, experience )
 
     self:SendCraftingSkills( skillKey )
 end
+--]]
