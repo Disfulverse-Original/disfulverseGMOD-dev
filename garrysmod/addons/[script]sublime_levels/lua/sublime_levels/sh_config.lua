@@ -31,7 +31,9 @@ Sublime.Config.BaseExperience = 1000;
 --- It would be:
 --- (10 * 1000) * 3 = 30,000;
 --- 
-Sublime.Config.ExperienceTimes = 1.5;
+Sublime.Config.ExperienceTimes = 1.35;
+
+Sublime.Config.BricksRockTreeGarbageEXP = 350;
 
 ---
 --- This is for Tommy's SpecDM

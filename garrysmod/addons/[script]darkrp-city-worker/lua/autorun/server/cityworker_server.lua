@@ -238,16 +238,18 @@ function CITYWORKER.Finish(ply, ent)
     if not ply.CW_isWorking then return end
 
     local pay = ent.time * CITYWORKER.Config[CITYWORKER_DEFINITIONS[ent:GetClass()][1]].Payout
-
+    --bricks
     ply:AddExperience(BRICKS_SERVER.CONFIG.LEVELING["EXP Gained - CityWorker"], "Work Success")
-
+    --sublime
+    ply:SL_AddExperience( CITYWORKER.Config.SublimeExp, "за выполненную работу.")
+    
     CITYWORKER.Stop(ply, ent)
 
     CITYWORKER.Remove(ply)
 
     local str = string.Replace(CITYWORKER.Config.Language["PAYOUT"], "%s", DarkRP.formatMoney(pay))
     DarkRP.notify(ply, NOTIFY_CLEANUP, 4, str)
-
+    ply:addMoney(pay)
     hook.Run("CITYWORKER.Finish", ply)
 end
 

@@ -12,7 +12,7 @@ AAS.Lang = "ru"
 
 --[[ Here you can change the title of the main menu ( "WELCOME, WHAT ARE YOU BUYING?" )]]
 --[[ Don't touch if you want to get the basic text ]]
-AAS.TitleMenu = ""
+AAS.TitleMenu = "Disfulverse"
 
 --[[ Set to true if you want to activate the download of all materials ]]
 AAS.FastDL = true
@@ -88,7 +88,7 @@ AAS.ModifyOffset = true
                                                                                                                                                                                                                                                                                                                                                                                                                                                        -- 211b2def519ae9f141af89ab258a00a77f195a848e72e920543b1ae6f5d7c0c1
 
 AAS.LoadWorkshop = {
-    ["572310302"] = true,
+    ["572310302"] = false,
     ["148215278"] = false,
     ["282958377"] = false,
     ["158532239"] = false,

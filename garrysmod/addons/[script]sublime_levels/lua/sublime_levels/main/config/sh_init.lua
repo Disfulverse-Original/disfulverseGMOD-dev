@@ -13,7 +13,7 @@ Sublime.Settings.Table = Sublime.Settings.Table or {
         ["kills"] = {
             ["player_on_kill_experience"]   = 0,
             ["headshot_modifier"]           = 1,
-            ["npc_on_kill_experience"]      = 50,
+            ["npc_on_kill_experience"]      = 500,
         },
         
         ["other"] = {

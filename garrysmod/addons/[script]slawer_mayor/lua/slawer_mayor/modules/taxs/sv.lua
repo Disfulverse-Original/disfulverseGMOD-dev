@@ -20,7 +20,12 @@ end)
 hook.Add("playerGetSalary", "Slawer.Mayor:Taxs:playerGetSalary", function(pPlayer, intSalary)
 
 	local intPercentage = Slawer.Mayor.JobTaxs[pPlayer:Team()] or 0
-   
+   	disfulversedbonus = 1
+
+   	if pPlayer:GetUserGroup() == "disfulversed" then
+   		disfulversedbonus = 1.75
+   	end
+
 	if (not Sublime.Settings.Get("other", "skills_enabled", "boolean")) then
         return;
     end
@@ -36,7 +41,7 @@ hook.Add("playerGetSalary", "Slawer.Mayor:Taxs:playerGetSalary", function(pPlaye
     end
 
 	local intTaken = math.floor(intSalary * intPercentage / 100) --45 * 0.25 = 125
-	local intGiven = math.floor(intSalary * sublimeexpmodifier - intTaken ) --45 * 1.2 - 0  = 54
+	local intGiven = math.floor( (intSalary * sublimeexpmodifier) * disfulversedbonus  - intTaken ) --45 * 1.2 - 0  = 54
 	
 	for intID, tbl in pairs(Slawer.Mayor.CFG.Upgrades) do
 		if tbl.Condition && not tbl.Condition(pPlayer) then continue end
@@ -50,7 +55,6 @@ hook.Add("playerGetSalary", "Slawer.Mayor:Taxs:playerGetSalary", function(pPlaye
 
 	pPlayer:addMoney(-intSalary) -- = 45
 	pPlayer:addMoney(intGiven) -- = 54 (salary*modifier)
-
 	--pPlayer:ChatPrint( sublimeexpmodifier )
 	--pPlayer:ChatPrint( intGiven  )
 
