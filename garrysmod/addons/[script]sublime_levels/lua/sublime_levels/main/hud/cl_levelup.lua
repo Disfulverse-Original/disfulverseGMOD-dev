@@ -56,7 +56,7 @@ hook.Add("Sublime.LevelUpNotification", path, function(nLevel)
     table.insert(texts, {text = "Вы достигли\n" .. nLevel .. " уровня.", shouldDisplay = CurTime() + 2, alpha = 0, font = "Sublime.36", padding = 20});
     
     if (Sublime.Settings.Table["SERVER"]["other"]["skills_enabled"]) then
-        table.insert(texts, {text = "Вам был выдано очко навыка.", shouldDisplay = CurTime() + 4, alpha = 0, font = "Sublime.30", padding = 50});
+        table.insert(texts, {text = "Вам было выдано очко навыка.", shouldDisplay = CurTime() + 4, alpha = 0, font = "Sublime.30", padding = 50});
     end
     
     //table.insert(texts, {text = "Ваше место в рейтинге было изменено.", shouldDisplay = CurTime() + 5, alpha = 0, font = "Sublime.30", padding = 50});
