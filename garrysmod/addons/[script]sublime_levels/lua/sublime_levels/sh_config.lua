@@ -33,7 +33,7 @@ Sublime.Config.BaseExperience = 1000;
 --- 
 Sublime.Config.ExperienceTimes = 1.35;
 
-Sublime.Config.BricksRockTreeGarbageEXP = 350;
+Sublime.Config.BricksRockTreeGarbageEXP = 125;
 
 ---
 --- This is for Tommy's SpecDM

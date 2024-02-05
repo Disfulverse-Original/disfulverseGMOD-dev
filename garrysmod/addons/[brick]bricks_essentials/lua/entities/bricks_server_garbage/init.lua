@@ -74,7 +74,7 @@ function ENT:RewardPly( ply )
                 ply:BRS():AddInventoryItem( itemData, 1 )
 
 				local itemInfo = BRICKS_SERVER.Func.GetEntTypeField( itemData[1], "GetInfo" )( itemData )				
-				DarkRP.notify( attacker, 1, 5, "Вы получили x1 " .. itemInfo[1] .. " из этой кучи мусора!" )
+				DarkRP.notify( ply, 1, 5, "Вы получили x1 " .. itemInfo[1] .. " из этой кучи мусора!" )
 			end
 		end
 	end
@@ -83,7 +83,7 @@ function ENT:RewardPly( ply )
 
 	if( BRICKS_SERVER.Func.IsSubModuleEnabled( "essentials", "levelling" ) ) then
 		ply:AddExperience( (BRICKS_SERVER.CONFIG.LEVELING["EXP Gained - Garbage Searched"] or 0), "Scavenging" )
-    	attacker:SL_AddExperience( Sublime.Config.BricksRockTreeGarbageEXP, "за выполненную работу.")
+    	ply:SL_AddExperience( Sublime.Config.BricksRockTreeGarbageEXP, "за выполненную работу.")
 	end
 
 	self:Remove()

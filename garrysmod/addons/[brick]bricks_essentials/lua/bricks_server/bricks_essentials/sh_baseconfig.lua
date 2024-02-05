@@ -47,6 +47,7 @@ BRICKS_SERVER.BASECONFIG.F4.Tabs = {
         { "Статистика", 7 }, 
         { "Логи", 8 }
     } },
+    [6] = { "Организации", "gangs.png", 12 },
     --[6] = { true },
     --[7] = { "Discord", "discord_24.png", "https://discord.gg/crBpKpR" },
     --[8] = { "Контент", "crate_24.png", "https://steamcommunity.com/sharedfiles/filedetails/?id=3148772701" },
@@ -86,7 +87,7 @@ BRICKS_SERVER.BASECONFIG.PRINTERS["EXP Required Increase"] = 1.1
 BRICKS_SERVER.BASECONFIG.PRINTERS["Printer EXP Per Print"] = 30
 BRICKS_SERVER.BASECONFIG.PRINTERS["Money Increase Per Level"] = 0.01
 BRICKS_SERVER.BASECONFIG.PRINTERS["Ink Lost Per Print"] = 2
-BRICKS_SERVER.BASECONFIG.PRINTERS["Replace Cooldown"] = 180
+BRICKS_SERVER.BASECONFIG.PRINTERS["Replace Cooldown"] = 600
 BRICKS_SERVER.BASECONFIG.PRINTERS.Tiers = {
     [1] = {
         Name = "Принтер Т1",

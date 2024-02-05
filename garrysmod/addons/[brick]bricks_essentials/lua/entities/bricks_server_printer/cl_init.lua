@@ -10,18 +10,18 @@ function ENT:CreateVGUI()
 
 	if( not IsValid( self.printerVGUI )  ) then
 		local ProgressBars = {}
-		table.insert( ProgressBars, { "HP", function() 
+		table.insert( ProgressBars, { "ХП", function() 
 			return self:Health()/BRICKS_SERVER.CONFIG.PRINTERS.Tiers[self:GetTier() or 1].Health
 		end, BRICKS_SERVER.DEVCONFIG.BaseThemes.Red } )
 
-		table.insert( ProgressBars, { "Ink", function()
+		table.insert( ProgressBars, { "Чернила", function()
 			return self:GetInk()/BRICKS_SERVER.CONFIG.PRINTERS.Tiers[self:GetTier() or 1].MaxInk
 		end, Color( 100, 100, 100 ) } )
 
 		local printerSlotTable = (BRS_PRINTERS or {})[self:GetSlotID()]
 		if( printerSlotTable ) then
 			table.insert( ProgressBars, { function() 
-				return "Lvl " .. (self:GetLevel() or 1) 
+				return "Ур. " .. (self:GetLevel() or 1) 
 			end, function() 
 				return math.Clamp( (printerSlotTable[4] or 0)/BRICKS_SERVER.Func.GetPrinterExpToLevel( (printerSlotTable[3] or 1), (printerSlotTable[3] or 1)+1 ), 0, 1 ) 
 			end } )
