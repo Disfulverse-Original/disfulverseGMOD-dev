@@ -1,1 +1,0 @@
-VoidFactions.Deposit = VoidFactions.Deposit or {}
