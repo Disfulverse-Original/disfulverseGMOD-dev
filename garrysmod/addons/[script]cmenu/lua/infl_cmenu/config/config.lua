@@ -139,7 +139,6 @@ PIS.Config:AddMenu("Остальное", 			"action", 		"Разное", 			info,
 
 	{name = "Написать администрации", 				mat = "admin_menu", col = red, func = function() PIS.OpenTextBox("Админ-чат","Укажите текст жалобы","@") end},
 	{name = "Вид от 3 лица", 			mat = "third_person", col = white, func = function() RunConsoleCommand("thirdperson_toggle") end},
-	{name = "Организации", 			mat = "organization", col = white, func = function() RunConsoleCommand("say", "!factions") end},
 	{name = "Способности", 			mat = "atom", col = violet, func = function() RunConsoleCommand("say", "!slevels") end},
 	{name = "Поддержать проект", 			mat = "good", col = gold, func = function() RunConsoleCommand("say", "!store") end},
 
