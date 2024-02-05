@@ -468,12 +468,17 @@ function AAS.ItemMenu()
     end
 end
 
+
 function AAS.PopupMenu(uniqueId, sell, price)
+
     local linearGradient = {
         {offset = 0, color = AAS.Gradient["upColor"]},
         {offset = 0.4, color = AAS.Gradient["midleColor"]},
         {offset = 1, color = AAS.Gradient["downColor"]},
     }
+
+    if AAS.ItemIsBought(uniqueId) then return end
+
 
     if IsValid(popupFrame) then return end
     popupFrame = vgui.Create("DPanel", accessoriesFrame)
@@ -491,7 +496,7 @@ function AAS.PopupMenu(uniqueId, sell, price)
         draw.RoundedBoxEx(8, 0, 0, w, AAS.ScrH*0.047, AAS.Colors["background"], true, true, false, false)
         draw.RoundedBox(6, 0, AAS.ScrH*0.045, w, AAS.ScrH*0.005, AAS.Colors["black150"])
 
-        draw.SimpleText(sell and AAS.GetSentence("sellaccessory") or AAS.GetSentence("buyaccessory"), "AAS:Font:06", w*0.174, AAS.ScrH*0.021, AAS.Colors["white"], TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+        draw.SimpleText(AAS.GetSentence("buyaccessory"), "AAS:Font:06", w*0.174, AAS.ScrH*0.021, AAS.Colors["white"], TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
         draw.SimpleText(AAS.GetSentence("sure"), "AAS:Font:07", w/2, h*0.465, AAS.Colors["white"], TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
 
         surface.SetDrawColor(AAS.Colors["white"])
@@ -504,7 +509,7 @@ function AAS.PopupMenu(uniqueId, sell, price)
     payButton:SetSize(AAS.ScrW*0.09, AAS.ScrH*0.042)
     payButton:SetPos(AAS.ScrW*0.005, AAS.ScrH*0.105)
     payButton:SetFont("AAS:Font:02")
-    payButton:SetText((sell and string.upper(AAS.GetSentence("sell")) or string.upper(AAS.GetSentence("buy"))).." "..AAS.formatMoney(sell and (price*AAS.SellValue/100) or price))
+    payButton:SetText((string.upper(AAS.GetSentence("buy"))).." "..price)
     payButton:SetTextColor(AAS.Colors["white"])
     payButton.Paint = function(self,w,h)
         lerpFirstButton = Lerp(FrameTime()*10, lerpFirstButton, self:IsHovered() and 255 or 100)

@@ -66,10 +66,10 @@ AAS.LoadItemsSaved = false
 AAS.LoadModelSaved = false
 
 --[[ Refund pourcentage of the accessory ]]
-AAS.SellValue = 50
+AAS.SellValue = 0
 
 --[[ If the player can modify the offset of items bought ]]
-AAS.ModifyOffset = true
+AAS.ModifyOffset = false
 
 --[[
     You need to restart the server when you add a new content into this table
@@ -142,7 +142,7 @@ AAS.Gradient = {
 AAS.SwepName = "Inventory Swep"
 
 --[[ If you want to be able to buy, sell item when you open the menu with the swep ]]
-AAS.BuyItemWithSwep = true
+AAS.BuyItemWithSwep = false
                                                                                                                                                                                                                                                                                                                                                                                                                                                        -- 76561198402768773
 
 --[[ If you want to activate the weight module ]]

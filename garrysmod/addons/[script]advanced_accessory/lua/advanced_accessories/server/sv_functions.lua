@@ -8,6 +8,7 @@ util.AddNetworkString("AAS:BodyGroups")
 util.AddNetworkString("AAS:Inventory")
 util.AddNetworkString("AAS:Models")
 
+
 AAS.Table = AAS.Table or {
     ["items"] = {},
     ["customOffset"] = {},
@@ -671,7 +672,7 @@ function PLAYER:AASAddMoney(price)
     end
 end
 
---[[ Sell the item and remove it into the inventory of the player ]]
+--[[
 function PLAYER:AASSellItem(uniqueId)
     uniqueId = tonumber(uniqueId)
     if not isnumber(uniqueId) then return end
@@ -695,7 +696,7 @@ function PLAYER:AASSellItem(uniqueId)
         self:AASUnEquipAccessoryById(uniqueId)
     end)
 end
-
+--]]
 --[[ Equip an accessory with his uniqueId ]]
 function PLAYER:AASEquipAccessory(uniqueId, noNotify)
     uniqueId = tonumber(uniqueId)
