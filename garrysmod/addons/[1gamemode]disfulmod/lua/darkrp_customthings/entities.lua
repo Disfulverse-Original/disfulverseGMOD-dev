@@ -491,7 +491,8 @@ DarkRP.createEntity("Стимулятор", {
     price = 400,
     max = 0,
     allowed = {
-        TEAM_BARACH
+        TEAM_BARACH,
+        TEAM_DET
     },
     category = "Разное",
 })
@@ -502,7 +503,8 @@ DarkRP.createEntity("Бронепластина", {
     price = 650,
     max = 0,
     allowed = {
-        TEAM_BARACH
+        TEAM_BARACH,
+        TEAM_DET
     },
     category = "Разное",
 })

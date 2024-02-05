@@ -49,7 +49,7 @@ DarkRP.createCategory {
     color = Color(215, 247, 238),
     sortOrder = 3,
     canSee = function(ply) 
-         return table.HasValue({TEAM_BARACH}, ply:Team()) 
+         return table.HasValue({TEAM_BARACH, TEAM_DET}, ply:Team()) 
     end,
 }
 DarkRP.createCategory {

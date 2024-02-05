@@ -298,18 +298,18 @@ TEAM_CRYPTMINER = DarkRP.createJob("Крипто-Майнер / 45 lvl", {
 
 
 --Marauders--
-TEAM_NAEB = DarkRP.createJob("Наёмник-Мародер / 30 lvl", {
+TEAM_NAEB = DarkRP.createJob("Наёмник-мародер / 30 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/Humans/Group03/Male_04.mdl",
-        "models/Humans/Group03/male_08.mdl",
-        "models/Humans/Group03/male_09.mdl",
-        "models/Humans/Group03/Female_02.mdl",
-        "models/Humans/Group03/Male_05.mdl",
-        "models/Humans/Group03/male_03.mdl",
-        "models/Humans/Group03/Male_06.mdl" 
+        "models/player/Group03/male_04.mdl",
+        "models/player/Group03/male_08.mdl",
+        "models/player/Group03/male_09.mdl",
+        "models/player/Group03/Female_02.mdl",
+        "models/player/Group03/Male_05.mdl",
+        "models/player/Group03/male_03.mdl",
+        "models/player/Group03/Male_06.mdl" 
     },
-    description = [[Незаурядный вооруженный бандит, работает за деньги и способен на малое в одиночку, но на многое в группе.]],
+    description = [[Незаурядный вооруженный бандит, работает за деньги.]],
     weapons = {},
     command = "p1gbged",
     max = 4,
@@ -341,7 +341,7 @@ TEAM_PMC = DarkRP.createJob("Оператор ЧВК [Dis+] / 50 lvl", {
     model = {
         "models/arty/codmw2022/mp/dmz/shadowcompany/smg/smg_pm.mdl"
     },
-    description = [[Опытный боец ЧВК Scorpion, неизвестное прошлое, известные цели. Зароботок денег. Работает на всех и ни на кого. Может заниматься чем угодно за деньги.]],
+    description = [[Опытный боец ЧВК Scorpion, неизвестное прошлое, известные цели. Заработок денег. Работает на всех и ни на кого. Может заниматься чем угодно за деньги.]],
     weapons = {},
     command = "isdfgs",
     max = 3,
