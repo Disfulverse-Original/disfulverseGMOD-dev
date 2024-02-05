@@ -217,7 +217,7 @@ function AAS.PlayerSettings(itemTable)
     secondButton.Paint = function(self,w,h)
         lerpSecondButton = Lerp(FrameTime()*10, lerpSecondButton, self:IsHovered() and 255 or 100)
 
-        draw.RoundedBox(5, 0, 0, w, h, ColorAlpha(AAS.Colors["blue77"], lerpSecondButton))
+        draw.RoundedBox(5, 0, 0, w, h, ColorAlpha(AAS.Colors["selectedBlue"], lerpSecondButton))
     end
     secondButton.DoClick = function()
         net.Start("AAS:Inventory")

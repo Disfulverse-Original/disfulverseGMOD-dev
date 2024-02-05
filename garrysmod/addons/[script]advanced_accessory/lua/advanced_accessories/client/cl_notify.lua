@@ -36,7 +36,7 @@ hook.Add("DrawOverlay", "AAS:DrawOverlay", function()
                                                                                                                                                                                                                                                                                                                                                                                                                                                        -- bd51170ee3a15f0e8d5e6b12ded39977f6a3f8896bd2c58844ad6ead73ef34eb
             
             draw.RoundedBox(4, v.RLerp, (AAS.ScrH*0.055*k)-AAS.ScrH*0.038, SizeText + AAS.ScrH*0.07, AAS.ScrH*0.043, AAS.Colors["black18200"])
-            draw.RoundedBox(4, v.RLerp, (AAS.ScrH*0.055*k)-AAS.ScrH*0.038, AAS.ScrH*0.043, AAS.ScrH*0.043, AAS.Colors["notifycolor"])
+            draw.RoundedBox(4, v.RLerp, (AAS.ScrH*0.055*k)-AAS.ScrH*0.038, AAS.ScrH*0.043, AAS.ScrH*0.043, AAS.Colors["selectedBlue"])
             
             local width, height = (v.Material:Width()*AAS.ScrW/1920), (v.Material:Height()*AAS.ScrH/1080)
             surface.SetDrawColor(AAS.Colors["white"])

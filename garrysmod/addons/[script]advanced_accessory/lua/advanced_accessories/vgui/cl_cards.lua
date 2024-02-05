@@ -87,10 +87,10 @@ function PANEL:AddItemView(itemScroll, accessoriesFrame, itemContainer, tbl)
             sizeY = sizeY - ((itemY+itemH) - (scrollY+scrollH))
         end
 
-        draw.RoundedBoxEx(16, 0, 0, w, h, AAS.Colors["white"], false, true, true, false)
-        draw.RoundedBoxEx(14, AAS.ScrW*0.001, h*0.0695, w-AAS.ScrW*0.0022, h*0.92, AAS.Gradient["downColor"], false, true, true, false)
+        draw.RoundedBoxEx(3, 0, 0, w, h, AAS.Colors["itemcolor"], false, true, true, false)
+        --draw.RoundedBoxEx(3, AAS.ScrW*0.001, h*0.0695, w-AAS.ScrW*0.0022, h*0.92, AAS.Gradient["downColor"], false, true, true, false)
 
-        AAS.SimpleLinearGradient(posX + AAS.ScrW*0.001, posY, w - AAS.ScrW*0.002, sizeY, AAS.Colors["white"], AAS.Gradient["downColor"])
+        AAS.SimpleLinearGradient(posX, posY+25,sizeX, sizeY, AAS.Colors["itemcolor"], AAS.Gradient["downColor"])
         
         local newTime = istable(self.AASTable["options"]) and tonumber(self.AASTable["options"]["date"]) or 0
 
@@ -179,13 +179,13 @@ function PANEL:AddItemView(itemScroll, accessoriesFrame, itemContainer, tbl)
         if not isnumber(panel.LerpColor) then panel.LerpColor = 0 end 
         
         if panel:IsHovered() then 
-            panel.LerpColor = Lerp(FrameTime()*15, panel.LerpColor, 255)
+            panel.LerpColor = Lerp(FrameTime()*15, panel.LerpColor, 254)
             
             buttonHover.AASColor = AAS.Colors["white"]
                                                                                                                                                                                                                                                                                                                                                                                                                                                        /* 76561198402768773 */
             
-            draw.RoundedBoxEx(16, 0, 0, w, h, ColorAlpha(AAS.Colors["white"], panel.LerpColor), false, true, true, false)
-            draw.RoundedBoxEx(16, 1, 1, w-2, h-2, ColorAlpha(AAS.Colors["dark34"], panel.LerpColor), false, true, true, false)
+            --draw.RoundedBoxEx(16, 0, 0, w, h, ColorAlpha(AAS.Colors["white"], panel.LerpColor), false, true, true, false)
+            draw.RoundedBoxEx(3, 1, 1, w-2, h-2, ColorAlpha(AAS.Colors["itemhovercolorblack"], panel.LerpColor), false, true, true, false)
             draw.DrawText(text, "AAS:Font:03", w/2.1, h*0.25, ColorAlpha(AAS.Colors["white"], panel.LerpColor), TEXT_ALIGN_CENTER)
         else
             buttonHover.AASColor = AAS.Colors["black18"]

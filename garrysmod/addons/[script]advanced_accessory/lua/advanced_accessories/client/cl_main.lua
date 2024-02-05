@@ -286,18 +286,23 @@ function AAS.BaseMenu(title, info, sizeX, icon, text)
     accessoriesFrame.startTime = SysTime()
     accessoriesFrame:SetAlpha(200)
     accessoriesFrame:AlphaTo( 255, 0.3, 0 )
+    accessoriesFrame.Init = function()
+        self.startTime = SysTime()
+    end
+
     accessoriesFrame.Paint = function(self,w,h)
+        Derma_DrawBackgroundBlur(self, self.startTime)
         local x, y = accessoriesFrame:GetPos()
 
-        draw.RoundedBoxEx(8, 0, 0, w, AAS.ScrH*0.047, AAS.Colors["background"], true, true, false, false)
+        draw.RoundedBoxEx(2, 0, 0, w, AAS.ScrH*0.047, AAS.Colors["background"], true, true, false, false)
         draw.RoundedBox(0, 0, AAS.ScrH*0.04, w, AAS.ScrH*0.009, AAS.Colors["black150"])
-        draw.RoundedBoxEx(8, 0, AAS.ScrH*0.047, w, h-AAS.ScrH*0.047, AAS.Colors["black18"], false, false, true, true)
+        draw.RoundedBoxEx(2, 0, AAS.ScrH*0.047, w, h-AAS.ScrH*0.047, AAS.Colors["black18"], false, false, true, true)
 
         AAS.LinearGradient(x, y + AAS.ScrH*0.047, AAS.ScrW*0.038, h-AAS.ScrH*0.065, linearGradient, false)
         AAS.LinearGradient(x + w-sizeX, y + AAS.ScrH*0.047, sizeX, h-AAS.ScrH*0.065, linearGradient, false)
 
-        draw.RoundedBoxEx(8, 0, AAS.ScrH*0.63, AAS.ScrW*0.038, AAS.ScrH*0.02, AAS.Gradient["downColor"], false, false, true, false)
-        draw.RoundedBoxEx(8, w-sizeX, AAS.ScrH*0.63, sizeX, AAS.ScrH*0.02, AAS.Gradient["downColor"], false, false, false, true)
+        draw.RoundedBoxEx(2, 0, AAS.ScrH*0.63, AAS.ScrW*0.038, AAS.ScrH*0.02, AAS.Gradient["downColor"], false, false, true, false)
+        draw.RoundedBoxEx(2, w-sizeX, AAS.ScrH*0.63, sizeX, AAS.ScrH*0.02, AAS.Gradient["downColor"], false, false, false, true)
 
         draw.SimpleText(title, "AAS:Font:01", AAS.ScrW*0.039, AAS.ScrH*0.019, AAS.Colors["white"], TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
 
@@ -514,7 +519,7 @@ function AAS.PopupMenu(uniqueId, sell, price)
     payButton.Paint = function(self,w,h)
         lerpFirstButton = Lerp(FrameTime()*10, lerpFirstButton, self:IsHovered() and 255 or 100)
 
-        draw.RoundedBox(8, 0, 0, w, h,  ColorAlpha(AAS.Colors["blue75"], lerpFirstButton))
+        draw.RoundedBox(8, 0, 0, w, h,  ColorAlpha(AAS.Colors["selectedBlue"], lerpFirstButton))
     end
     payButton.DoClick = function()
         net.Start("AAS:Inventory")

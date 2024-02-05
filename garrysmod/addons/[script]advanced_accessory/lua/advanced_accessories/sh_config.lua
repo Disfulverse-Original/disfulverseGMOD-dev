@@ -126,9 +126,9 @@ AAS.ItemsMenuCommand = "/aas"
 
 --[[ White Theme ]]
 AAS.Gradient = {
-    ["upColor"] = Color(18, 30, 42, 200), 
-    ["midleColor"] = Color(27, 59, 89, 200),
-    ["downColor"] = Color(54, 140, 220), 
+    ["upColor"] = Color(45, 45, 47, 150), 
+    ["midleColor"] = Color(35, 35, 40, 175),
+    ["downColor"] = Color(15, 15, 18, 200), 
 }
 
 --[[ Dark Theme ]]
@@ -226,28 +226,30 @@ AAS.CustomModelTable = {
 --[[ White theme ]]
 AAS.Colors = {
     ["whiteConfig"] = Color(255,255,255),
-    ["white"] = Color(240,240,240),
-    ["black"] = Color(0,0,0),
+    ["itemcolor"] = Color(237, 244, 255),
+    ["itemhovercolorblack"] = Color(10, 10, 12),
+    ["white"] = Color(255,255,255),
+    ["black"] = Color(0,0,0, 250),
     ["black100"] = Color(0,0,0,100),
     ["black150"] = Color(0,0,0,150),
-    ["black18"] = Color(18, 30, 42),
+    ["black18"] = Color(25, 25, 26, 225),
     ["black18230"] = Color(18, 30, 42, 230),
     ["black18200"] = Color(18, 30, 42, 200),
     ["black18100"] = Color(18, 30, 42, 100),
-    ["background"] = Color(25, 40, 55),
-    ["selectedBlue"] = Color(53, 139, 219),
+    ["background"] = Color(48, 47, 49, 245),
+    ["selectedBlue"] = Color(79, 80, 92, 250),
     ["white200"] = Color(255,255,255,200),
     ["white50"] = Color(255,255,255,50),
     ["yellow"] = Color(255, 198, 57),
-    ["darkBlue"] = Color(49, 98, 255),
+    ["darkBlue"] = Color(29, 29, 29, 250),
     ["dark34"] = Color(34,34,34),
-    ["blue77"] = Color(77, 128, 255),
+    ["blue77"] = Color(79, 80, 92, 250),
     ["red49"] = Color(255, 49, 84), 
     ["grey"] = Color(189,190,191,255),
-    ["blue75"] = Color(75, 168, 255),
+    ["blue75"] = Color(79, 80, 92, 250),
     ["grey53"] = Color(53, 139, 219),
     ["grey165"] = Color(165, 165, 165),
-    ["notifycolor"] = Color(54, 140, 220),
+    ["notifycolor"] = Color(79, 80, 92, 250),
     ["white200"] = Color(240,240,240),
     ["bought"] = Color(252, 186, 3),
 }

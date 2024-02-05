@@ -136,7 +136,7 @@ function AAS.InventoryMenu(itemMenuAccess)
             draw.RoundedBox(4, AAS.ScrW*0.004, AAS.ScrH*0.0175 + AAS.ScrH*0.002, AAS.ScrW*0.0424-AAS.ScrW*0.0025, AAS.ScrH*0.071, ColorAlpha(AAS.Colors["dark34"], LerpDeploy))
 
             draw.RoundedBoxEx(14, AAS.ScrW*0.32, AAS.ScrH*0.05, AAS.ScrW*0.0424, AAS.ScrH*0.075, AAS.Colors["white"], true, false, false, true)
-            draw.RoundedBoxEx(12, AAS.ScrW*0.32 + AAS.ScrH*0.0017, AAS.ScrH*0.05 + AAS.ScrH*0.002, AAS.ScrW*0.0424-AAS.ScrW*0.0025, AAS.ScrH*0.071, AAS.Colors["grey53"], true, false, false, true)
+            draw.RoundedBoxEx(12, AAS.ScrW*0.32 + AAS.ScrH*0.0017, AAS.ScrH*0.05 + AAS.ScrH*0.002, AAS.ScrW*0.0424-AAS.ScrW*0.0025, AAS.ScrH*0.071, AAS.Colors["selectedBlue"], true, false, false, true)
 
             draw.SimpleText(string.upper((v.uniqueName or "")), "AAS:Font:12", w*0.14, AAS.ScrH*0.03, AAS.Colors["white"], TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
 
@@ -414,7 +414,7 @@ function AAS.SettingsPopupMenu(itemTable)
     equipButton.Paint = function(self,w,h)
         lerpFirstButton = Lerp(FrameTime()*10, lerpFirstButton, self:IsHovered() and 255 or 100)
 
-        draw.RoundedBox(8, 0, 0, w, h,  ColorAlpha(AAS.Colors["blue75"], lerpFirstButton))
+        draw.RoundedBox(8, 0, 0, w, h,  ColorAlpha(AAS.Colors["selectedBlue"], lerpFirstButton))
     end
     equipButton.DoClick = function()
         AAS.PlayerSettings(itemTable)

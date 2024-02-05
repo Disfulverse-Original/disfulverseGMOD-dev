@@ -38,8 +38,8 @@ function PANEL:Paint(w, h)
     self.lerpCircle = Lerp(FrameTime()*10, self.lerpCircle, self.activateButton and w*0.63 or w*0.45 )
                                                                                                                                                                                                                                                                                                                                                                                                                                                        -- 0fd22f1243f0001f31e3d159f2ecd1adb4d5513bd78688f3c34a090a154e38c5
 
-    local textColor = self.activateButton and (self.AASTheme and AAS.Colors["yellow"] or AAS.Colors["darkBlue"]) or AAS.Colors["grey"]
-    draw.SimpleText(self.AASTheme and "VIP" or "NEW", "AAS:Font:04", self.AASTheme and w*0.09 or 0, h/2, textColor, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+    --local textColor = self.activateButton and (self.AASTheme and AAS.Colors["yellow"] or AAS.Colors["darkBlue"]) or AAS.Colors["grey"]
+    draw.SimpleText(self.AASTheme and "VIP" or "NEW", "AAS:Font:04", self.AASTheme and w*0.09 or 0, h/2, color_white, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
                                                                                                                                                                                                                                                                                                                                                                                                                                                        -- bd51170ee3a15f0e8d5e6b12ded39977f6a3f8896bd2c58844ad6ead73ef34eb
 
     surface.SetDrawColor(AAS.Colors["white"])
