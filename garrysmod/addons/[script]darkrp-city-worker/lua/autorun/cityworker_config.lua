@@ -24,7 +24,7 @@ CITYWORKER.Config = CITYWORKER.Config or {}
 -- How often should we check (in seconds) for City Workers with no assigned jobs, so we can give them?
 CITYWORKER.Config.Time = 15
 
-CITYWORKER.Config.SublimeExp = 200
+CITYWORKER.Config.SublimeExp = 105
 
 -- Configuration for the DarkRP job.
 CITYWORKER.Config.Job = {
@@ -83,7 +83,7 @@ CITYWORKER.Config.FireHydrant.Enabled = true
 CITYWORKER.Config.FireHydrant.Time = { min = 5, max = 10 }
 
 -- Payout per second it takes to fix a fire hydrant.
-CITYWORKER.Config.FireHydrant.Payout = 25
+CITYWORKER.Config.FireHydrant.Payout = 45
 
 -----------
 -- LEAKS --
@@ -99,7 +99,7 @@ CITYWORKER.Config.Leak.Enabled = true
 CITYWORKER.Config.Leak.Time = { min = 5, max = 10 }
 
 -- Payout per second it takes to fix a leak.
-CITYWORKER.Config.Leak.Payout = 25
+CITYWORKER.Config.Leak.Payout = 45
 
 --------------
 -- ELECTRIC --
@@ -115,7 +115,7 @@ CITYWORKER.Config.Electric.Enabled = true
 CITYWORKER.Config.Electric.Time = { min = 5, max = 10 }
 
 -- Payout per second it takes to fix an electrical problem.
-CITYWORKER.Config.Electric.Payout = 25
+CITYWORKER.Config.Electric.Payout = 50
 
 ----------------------------
 -- LANGUAGE CONFIGURATION --
