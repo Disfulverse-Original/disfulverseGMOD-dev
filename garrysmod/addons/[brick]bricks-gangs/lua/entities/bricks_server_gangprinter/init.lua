@@ -110,6 +110,7 @@ function ENT:Overheat()
 				self:Remove()
 			end
 		end )
+
 	end
 end
 

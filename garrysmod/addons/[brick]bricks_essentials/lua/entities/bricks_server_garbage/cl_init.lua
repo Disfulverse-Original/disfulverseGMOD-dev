@@ -12,7 +12,7 @@ hook.Add( "HUDPaint", "BRS.HUDPaint_DrawGarbageHUD", function()
 
 		if( LocalPlayer():GetEyeTrace().Entity:GetClass() == "bricks_server_garbage" ) then
 			if( Distance < 10000 ) then
-				local text = "Press " .. string.upper( (input.LookupBinding( "+use" ) or "UNBOUND") ) .. " to search garbage"
+				local text = "Нажмите " .. string.upper( (input.LookupBinding( "+use" ) or "UNBOUND") ) .. " чтобы порыться в мусоре."
 				draw.SimpleText( text, "BRICKS_SERVER_Font40", ScrW()/2+1, (ScrH()-(ScrH()/3))-1, Color( 0, 0, 0 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
 				draw.SimpleText( text, "BRICKS_SERVER_Font40", ScrW()/2-1, (ScrH()-(ScrH()/3))+1, Color( 0, 0, 0 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
 				draw.SimpleText( text, "BRICKS_SERVER_Font40", ScrW()/2, (ScrH()-(ScrH()/3)), BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )

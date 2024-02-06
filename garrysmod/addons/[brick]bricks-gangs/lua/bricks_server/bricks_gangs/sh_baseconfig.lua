@@ -18,272 +18,268 @@ BRICKS_SERVER.BASECONFIG.MODULES["gangs"] = { true, {
 
 --[[ GANGS CONFIG ]]--
 BRICKS_SERVER.BASECONFIG.GANGS = {}
-BRICKS_SERVER.BASECONFIG.GANGS["Max Level"] = 100
-BRICKS_SERVER.BASECONFIG.GANGS["Original EXP Required"] = 100
-BRICKS_SERVER.BASECONFIG.GANGS["EXP Required Increase"] = 1.25
-BRICKS_SERVER.BASECONFIG.GANGS["Creation Fee"] = 1500
-BRICKS_SERVER.BASECONFIG.GANGS["Minimum Deposit"] = 1000
-BRICKS_SERVER.BASECONFIG.GANGS["Minimum Withdraw"] = 1000
-BRICKS_SERVER.BASECONFIG.GANGS["Max Storage Item Stack"] = 10
-BRICKS_SERVER.BASECONFIG.GANGS["Territory Capture Distance"] = 20000
-BRICKS_SERVER.BASECONFIG.GANGS["Territory UnCapture Time"] = 3
-BRICKS_SERVER.BASECONFIG.GANGS["Territory Capture Time"] = 3
+BRICKS_SERVER.BASECONFIG.GANGS["Max Level"] = 15
+BRICKS_SERVER.BASECONFIG.GANGS["Original EXP Required"] = 10000
+BRICKS_SERVER.BASECONFIG.GANGS["EXP Required Increase"] = 1.01
+BRICKS_SERVER.BASECONFIG.GANGS["Creation Fee"] = 75000
+BRICKS_SERVER.BASECONFIG.GANGS["Minimum Deposit"] = 500
+BRICKS_SERVER.BASECONFIG.GANGS["Minimum Withdraw"] = 500
+BRICKS_SERVER.BASECONFIG.GANGS["Max Storage Item Stack"] = 30
+BRICKS_SERVER.BASECONFIG.GANGS["Territory Capture Distance"] = 75000
+BRICKS_SERVER.BASECONFIG.GANGS["Territory UnCapture Time"] = 25
+BRICKS_SERVER.BASECONFIG.GANGS["Territory Capture Time"] = 15
 BRICKS_SERVER.BASECONFIG.GANGS["Leaderboard Refresh Time"] = 300
-BRICKS_SERVER.BASECONFIG.GANGS["Gang Display Limit"] = 10
+BRICKS_SERVER.BASECONFIG.GANGS["Gang Display Limit"] = 0
 BRICKS_SERVER.BASECONFIG.GANGS["Gang Friendly Fire"] = true
 BRICKS_SERVER.BASECONFIG.GANGS["Disable Gang Chat"] = false
 BRICKS_SERVER.BASECONFIG.GANGS["Gang Display Distance"] = 10000
+
 BRICKS_SERVER.BASECONFIG.GANGS.Upgrades = {
     ["MaxMembers"] = {
-        Name = "Max Members", 
-        Description = "Maximum allowed members.",
+        Name = "Кол-во участников", 
+        Description = "Количество участников в банде.",
         Icon = "members_upgrade.png",
-        Default = { 4 },
+        Default = { 5 },
         Tiers = {
             [1] = {
-                Price = 5000,
-                ReqInfo = { 8 }
+                Price = 25000,
+                ReqInfo = { 10 }
             },
             [2] = {
-                Price = 25000,
-                ReqInfo = { 16 }
+                Price = 50000,
+                ReqInfo = { 15 }
+            },
+            [3] = {
+                Price = 100000,
+                ReqInfo = { 20 }
             }
         }
     },
     ["MaxBalance"] = {
-        Name = "Max Balance", 
-        Description = "Maximum allowed balance.",
+        Name = "Кол-во денег в бюджете", 
+        Description = "Количество денег в бюджете банды.",
         Icon = "balance.png",
-        Default = { 10000 },
+        Default = { 25000 },
         Tiers = {
             [1] = {
-                Price = 5000,
-                ReqInfo = { 25000 }
+                Price = 25000,
+                ReqInfo = { 50000 }
             },
             [2] = {
-                Price = 25000,
-                ReqInfo = { 100000 }
+                Price = 50000,
+                ReqInfo = { 150000 }
+            },
+            [2] = {
+                Price = 150000,
+                ReqInfo = { 750000 }
             }
         }
     },
     ["StorageSlots"] = {
-        Name = "Storage Slots", 
-        Description = "Amount of storage slots.",
+        Name = "Хранилище банды", 
+        Description = "Количество слотов в хранилище банды.",
         Icon = "storage_64.png",
-        Default = { 10 },
+        Default = { 0 },
         Tiers = {
             [1] = {
-                Price = 5000,
-                ReqInfo = { 20 }
+                Price = 25000,
+                ReqInfo = { 5 }
             },
             [2] = {
-                Price = 25000,
-                ReqInfo = { 40 }
+                Price = 50000,
+                ReqInfo = { 10 }
+            },
+            [3] = {
+                Price = 100000,
+                ReqInfo = { 15 }
+            },
+            [4] = {
+                Price = 200000,
+                ReqInfo = { 20 }
             }
         }
     },
     ["Health"] = {
-        Name = "Increased Health", 
-        Description = "Gives extra health on spawn.",
+        Name = "Увеличенное ХП", 
+        Description = "Увеличивает кол-во ХП при спавне.",
         Icon = "health_upgrade.png",
         Default = { 0 },
         Tiers = {
             [1] = {
-                Price = 5000,
-                ReqInfo = { 25 }
+                Price = 200000,
+                ReqInfo = { 5 }
             },
             [2] = {
-                Price = 10000,
-                ReqInfo = { 50 }
-            },
-            [3] = {
-                Price = 25000,
-                ReqInfo = { 75 }
-            },
-            [4] = {
-                Price = 50000,
-                ReqInfo = { 100 }
+                Price = 750000,
+                ReqInfo = { 10 }
             }
         }
     },
     ["Armor"] = {
-        Name = "Increased Armor", 
-        Description = "Gives extra armor on spawn.",
+        Name = "Увеличенная Броня", 
+        Description = "Увеличивает кол-во БРОНИ при спавне.",
         Icon = "armor_upgrade.png",
         Default = { 0 },
         Tiers = {
             [1] = {
-                Price = 5000,
+                Price = 200000,
+                ReqInfo = { 5 }
+            },
+            [2] = {
+                Price = 750000,
                 ReqInfo = { 10 }
-            },
-            [2] = {
-                Price = 10000,
-                ReqInfo = { 25 }
-            },
-            [3] = {
-                Price = 25000,
-                ReqInfo = { 50 }
             }
         }
-    },
-    ["Salary"] = {
-        Name = "Increased Salary", 
-        Description = "Gives a higher salary.",
-        Icon = "salary_upgrade.png",
-        Default = { 0 },
-        Tiers = {
-            [1] = {
-                Price = 5000,
-                ReqInfo = { 75 }
-            },
-            [2] = {
-                Price = 10000,
-                ReqInfo = { 150 }
-            },
-            [3] = {
-                Price = 25000,
-                ReqInfo = { 250 }
-            }
-        }
-    },
-    ["Weapon_1"] = {
-        Name = "Permanent AK47",
-        Description = "All members spawn with an AK47!",
-        Icon = "https://i.imgur.com/iDezZ62.png",
-        Price = 5000,
-        Type = "Weapon",
-        ReqInfo = { "weapon_ak472" }
-    },
-    ["Weapon_2"] = {
-        Name = "Permanent Sniper",
-        Description = "All members spawn with a sniper!",
-        Icon = "https://i.imgur.com/mPSQunx.png",
-        Price = 15000,
-        Type = "Weapon",
-        ReqInfo = { "ls_sniper" }
     }
 }
 
 BRICKS_SERVER.BASECONFIG.GANGS.Achievements = {
-    [1] = {
-        Name = "Members 1", 
-        Description = "Reach a member count of 4.",
-        Icon = "members_upgrade.png",
-        Category = "Members Achievements",
-        Type = "Members",
-        ReqInfo = { 4 },
-        Rewards = { ["GangBalance"] = { 500 }, ["GangExperience"] = { 100 } }
-    },
     [2] = {
-        Name = "Members 2", 
-        Description = "Reach a member count of 8.",
-        Icon = "members_upgrade.png",
-        Category = "Members Achievements",
-        Type = "Members",
-        ReqInfo = { 8 },
-        Rewards = { ["GangBalance"] = { 1000 }, ["GangExperience"] = { 200 } }
+        Name = "2 Уровень", 
+        Description = "Достигните 2 уровня банды.",
+        Icon = "levelling.png",
+        Category = "Level Achievements",
+        Type = "Level",
+        ReqInfo = { 2 },
+        Rewards = { ["GangBalance"] = { 20000 }, ["GangExperience"] = { 2000 } }
     },
     [3] = {
-        Name = "Members 3", 
-        Description = "Reach a member count of 16.",
-        Icon = "members_upgrade.png",
-        Category = "Members Achievements",
-        Type = "Members",
-        ReqInfo = { 16 },
-        Rewards = { ["GangBalance"] = { 2000 }, ["GangExperience"] = { 400 } }
+        Name = "3 Уровень", 
+        Description = "Достигните 3 уровня банды.",
+        Icon = "levelling.png",
+        Category = "Level Achievements",
+        Type = "Level",
+        ReqInfo = { 3 },
+        Rewards = { ["GangBalance"] = { 30000 }, ["GangExperience"] = { 3000 } }
     },
     [4] = {
-        Name = "Balance 1", 
-        Description = "Reach a gang balance of $10,000.",
-        Icon = "balance.png",
-        Category = "Balance Achievements",
-        Type = "Balance",
-        ReqInfo = { 10000 },
-        Rewards = { ["GangBalance"] = { 500 }, ["GangExperience"] = { 100 } }
+        Name = "4 Уровень", 
+        Description = "Достигните 4 уровня банды.",
+        Icon = "levelling.png",
+        Category = "Level Achievements",
+        Type = "Level",
+        ReqInfo = { 4 },
+        Rewards = { ["GangBalance"] = { 40000 }, ["GangExperience"] = { 4000 } }
     },
     [5] = {
-        Name = "Balance 2", 
-        Description = "Reach a gang balance of $25,000.",
-        Icon = "balance.png",
-        Category = "Balance Achievements",
-        Type = "Balance",
-        ReqInfo = { 25000 },
-        Rewards = { ["GangBalance"] = { 1000 }, ["GangExperience"] = { 200 } }
+        Name = "5 Уровень", 
+        Description = "Достигните 5 уровня банды.",
+        Icon = "levelling.png",
+        Category = "Level Achievements",
+        Type = "Level",
+        ReqInfo = { 5 },
+        Rewards = { ["GangBalance"] = { 50000 }, ["GangExperience"] = { 5000 } }
     },
     [6] = {
-        Name = "Balance 3", 
-        Description = "Reach a gang balance of $100,000.",
-        Icon = "balance.png",
-        Category = "Balance Achievements",
-        Type = "Balance",
-        ReqInfo = { 100000 },
-        Rewards = { ["GangBalance"] = { 2000 }, ["GangExperience"] = { 400 } }
+        Name = "6 Уровень", 
+        Description = "Достигните 6 уровня банды.",
+        Icon = "levelling.png",
+        Category = "Level Achievements",
+        Type = "Level",
+        ReqInfo = { 6 },
+        Rewards = { ["GangBalance"] = { 60000 }, ["GangExperience"] = { 6000 } }
     },
     [7] = {
-        Name = "Storage 1", 
-        Description = "Have at least 5 items in storage.",
-        Icon = "inventory_64.png",
-        Category = "Storage Achievements",
-        Type = "Storage",
-        ReqInfo = { 5 },
-        Rewards = { ["GangBalance"] = { 500 }, ["GangExperience"] = { 100 } }
+        Name = "7 Уровень", 
+        Description = "Достигните 7 уровня банды.",
+        Icon = "levelling.png",
+        Category = "Level Achievements",
+        Type = "Level",
+        ReqInfo = { 7 },
+        Rewards = { ["GangBalance"] = { 70000 }, ["GangExperience"] = { 7000 } }
     },
     [8] = {
-        Name = "Storage 2", 
-        Description = "Have at least 15 items in storage.",
-        Icon = "inventory_64.png",
-        Category = "Storage Achievements",
-        Type = "Storage",
-        ReqInfo = { 15 },
-        Rewards = { ["GangBalance"] = { 1000 }, ["GangExperience"] = { 200 } }
+        Name = "8 Уровень", 
+        Description = "Достигните 8 уровня банды.",
+        Icon = "levelling.png",
+        Category = "Level Achievements",
+        Type = "Level",
+        ReqInfo = { 8 },
+        Rewards = { ["GangBalance"] = { 80000 }, ["GangExperience"] = { 8000 } }
     },
     [9] = {
-        Name = "Storage 3", 
-        Description = "Have at least 35 items in storage.",
-        Icon = "inventory_64.png",
-        Category = "Storage Achievements",
-        Type = "Storage",
-        ReqInfo = { 35 },
-        Rewards = { ["GangBalance"] = { 2000 }, ["GangExperience"] = { 400 } }
+        Name = "9 Уровень", 
+        Description = "Достигните 9 уровня банды.",
+        Icon = "levelling.png",
+        Category = "Level Achievements",
+        Type = "Level",
+        ReqInfo = { 9 },
+        Rewards = { ["GangBalance"] = { 90000 }, ["GangExperience"] = { 9000 } }
     },
     [10] = {
-        Name = "Level 10", 
-        Description = "Reach a gang level of 10.",
+        Name = "10 Уровень", 
+        Description = "Достигните 10 уровня банды.",
         Icon = "levelling.png",
         Category = "Level Achievements",
         Type = "Level",
         ReqInfo = { 10 },
-        Rewards = { ["GangBalance"] = { 500 }, ["GangExperience"] = { 100 } }
+        Rewards = { ["GangBalance"] = { 100000 }, ["GangExperience"] = { 10000 } }
     },
     [11] = {
-        Name = "Level 25", 
-        Description = "Reach a gang level of 25.",
+        Name = "11 Уровень", 
+        Description = "Достигните 11 уровня банды.",
         Icon = "levelling.png",
         Category = "Level Achievements",
         Type = "Level",
-        ReqInfo = { 25 },
-        Rewards = { ["GangBalance"] = { 1000 }, ["GangExperience"] = { 200 } }
+        ReqInfo = { 11 },
+        Rewards = { ["GangBalance"] = { 110000 }, ["GangExperience"] = { 11000 } }
+    },
+    [12] = {
+        Name = "12 Уровень", 
+        Description = "Достигните 12 уровня банды.",
+        Icon = "levelling.png",
+        Category = "Level Achievements",
+        Type = "Level",
+        ReqInfo = { 12 },
+        Rewards = { ["GangBalance"] = { 120000 }, ["GangExperience"] = { 12000 } }
+    },
+    [13] = {
+        Name = "13 Уровень", 
+        Description = "Достигните 13 уровня банды.",
+        Icon = "levelling.png",
+        Category = "Level Achievements",
+        Type = "Level",
+        ReqInfo = { 13 },
+        Rewards = { ["GangBalance"] = { 130000 }, ["GangExperience"] = { 13000 } }
+    },
+    [14] = {
+        Name = "14 Уровень", 
+        Description = "Достигните 14 уровня банды.",
+        Icon = "levelling.png",
+        Category = "Level Achievements",
+        Type = "Level",
+        ReqInfo = { 14 },
+        Rewards = { ["GangBalance"] = { 140000 }, ["GangExperience"] = { 14000 } }
+    },
+    [15] = {
+        Name = "15 Уровень", 
+        Description = "Достигните 15 уровня банды.",
+        Icon = "levelling.png",
+        Category = "Level Achievements",
+        Type = "Level",
+        ReqInfo = { 15 },
+        Rewards = { ["GangBalance"] = { 150000 }, ["GangExperience"] = { 15000 } }
     }
 }
 
 BRICKS_SERVER.BASECONFIG.GANGS.Leaderboards = {
     [1] = {
-        Name = "Most Experience", 
+        Name = "Наибольшее кол-во опыта", 
         Type = "Experience",
         Color = Color( 22, 160, 133 )
     },
     [2] = {
-        Name = "Most Members", 
+        Name = "Наибольшее число участников", 
         Type = "Members",
         Color = Color( 41, 128, 185 )
     },
     [3] = {
-        Name = "Highest Balance", 
+        Name = "Наибольший капитал", 
         Type = "Balance",
         Color = Color( 39, 174, 96 )
     },
     [4] = {
-        Name = "Most Items", 
+        Name = "Наибольшее кол-во предметов", 
         Type = "StorageItems",
         Color = Color( 231, 76, 60 )
     }
@@ -291,16 +287,22 @@ BRICKS_SERVER.BASECONFIG.GANGS.Leaderboards = {
 
 BRICKS_SERVER.BASECONFIG.GANGS.Territories = {
     [1] = {
-        Name = "Fountain",
-        Color = Color( 52, 152, 219 ),
+        Name = "[1] Канализации",
+        Color = Color( 171, 171, 237 ),
         RewardTime = 60,
-        Rewards = { ["GangBalance"] = { 250 }, ["GangExperience"] = { 25 } }
+        Rewards = { ["GangBalance"] = { 1500 }, ["GangExperience"] = { 25 } }
     },
     [2] = {
-        Name = "Park",
-        Color = Color( 231, 76, 60 ),
+        Name = "[2] Цех",
+        Color = Color( 210, 201, 245 ),
         RewardTime = 120,
-        Rewards = { ["GangBalance"] = { 500 }, ["GangExperience"] = { 50 } }
+        Rewards = { ["GangBalance"] = { 2000 }, ["GangExperience"] = { 50 } }
+    },
+    [3] = {
+        Name = "[3] Трущобы",
+        Color = Color( 184, 124, 217 ),
+        RewardTime = 30,
+        Rewards = { ["GangBalance"] = { 500 }, ["GangExperience"] = { 75 } }
     }
 }
 
@@ -310,139 +312,125 @@ BRICKS_SERVER.BASECONFIG.GANGPRINTERS["Income Update Time"] = 10
 BRICKS_SERVER.BASECONFIG.GANGPRINTERS["Base Printer Health"] = 100
 BRICKS_SERVER.BASECONFIG.GANGPRINTERS.Printers = {
     [1] = {
-        Name = "Printer 1",
-        Price = 5000,
-        ServerPrices = { 1000, 1500, 2500, 4000, 6500, 8000 },
-        ServerAmount = 100,
-        ServerHeat = 8,
-        MaxHeat = 60,
-        BaseHeat = 20,
-        ServerTime = 2
-    },
-    [2] = {
-        Name = "Printer 2",
-        Price = 15000,
-        ServerPrices = { 1500, 2500, 4000, 6500, 8000, 10000 },
-        ServerAmount = 100,
-        ServerHeat = 8,
-        MaxHeat = 60,
-        BaseHeat = 20,
-        ServerTime = 3
+        Name = "Принтер 1",
+        Price = 120000,
+        ServerPrices = { 30000, 30000, 30000, 30000, 30000, 30000 },
+        ServerAmount = 500,
+        ServerHeat = 5,
+        MaxHeat = 100,
+        BaseHeat = 10,
+        ServerTime = 30
     }
 }
 BRICKS_SERVER.BASECONFIG.GANGPRINTERS.Upgrades = {
     ["Health"] = {
-        Name = "PRINTER HEALTH",
+        Name = "Прочность принтера",
         Tiers = {
             [1] = { 
-                Price = 1000,
-                ReqInfo = { 10 }
-            },
-            [2] = { 
-                Price = 2500,
+                Price = 30000,
+                Level = 1,
                 ReqInfo = { 25 }
             },
-            [3] = { 
-                Price = 3500,
-                ReqInfo = { 50 }
-            },
-            [4] = { 
-                Price = 4500,
+            [2] = { 
+                Price = 30000,
+                Level = 10,
                 ReqInfo = { 75 }
-            },
-            [5] = { 
-                Price = 5000,
-                ReqInfo = { 90 }
-            },
-            [6] = { 
-                Price = 7500,
-                ReqInfo = { 100 }
-            },
+            }
         }
     },
     ["RGB"] = {
         Name = "RGB LEDS",
-        Price = 2500
+        Price = 60000
     }
 }
 BRICKS_SERVER.BASECONFIG.GANGPRINTERS.ServerUpgrades = {
     ["Cooling"] = {
-        Name = "Cooling",
+        Name = "Охлаждение",
         Tiers = {
             [1] = { 
                 Price = 1000,
-                ReqInfo = { 10 }
+                Level = 2,
+                ReqInfo = { 15 }
             },
             [2] = { 
                 Price = 2500,
                 Level = 5,
-                ReqInfo = { 25 }
+                ReqInfo = { 30 }
+            },
+            [3] = { 
+                Price = 2500,
+                Level = 11,
+                ReqInfo = { 50 }
             }
         }
     },
     ["Speed"] = {
-        Name = "Speed",
+        Name = "Скорость",
         Tiers = {
             [1] = { 
                 Price = 1000,
+                Level = 3,
                 ReqInfo = { 10 }
             },
             [2] = { 
                 Price = 2500,
-                Level = 5,
-                ReqInfo = { 25 }
+                Level = 6,
+                ReqInfo = { 15 }
             },
             [3] = { 
                 Price = 2500,
-                Level = 5,
-                ReqInfo = { 35 }
+                Level = 9,
+                ReqInfo = { 20 }
             },
             [4] = { 
                 Price = 5000,
-                Level = 5,
-                ReqInfo = { 40 }
+                Level = 12,
+                ReqInfo = { 25 }
             },
             [5] = { 
                 Price = 7500,
-                Level = 5,
-                ReqInfo = { 50 }
-            },
-            [6] = { 
-                Price = 10000,
-                Level = 5,
-                ReqInfo = { 75 }
+                Level = 14,
+                ReqInfo = { 35 }
             }
         }
     },
     ["Amount"] = {
-        Name = "Amount",
+        Name = "Кол-во денег за цикл",
         Tiers = {
             [1] = { 
                 Price = 1000,
+                Level = 4,
                 ReqInfo = { 10 }
             },
             [2] = { 
                 Price = 2500,
-                Level = 5,
+                Level = 7,
                 ReqInfo = { 25 }
             },
             [3] = { 
                 Price = 5000,
-                Level = 5,
+                Level = 10,
                 ReqInfo = { 50 }
             },
             [4] = { 
                 Price = 8500,
-                Level = 5,
+                Level = 13,
                 ReqInfo = { 75 }
+            },
+            [5] = { 
+                Price = 8500,
+                Level = 15,
+                ReqInfo = { 100 }
             }
         }
     }
 }
 
---[[ NPCS ]]--
+
 BRICKS_SERVER.BASECONFIG.NPCS = BRICKS_SERVER.BASECONFIG.NPCS or {}
+--[[
 table.insert( BRICKS_SERVER.BASECONFIG.NPCS, {
     Name = "Gang",
     Type = "Gang"
 } )
+--]]

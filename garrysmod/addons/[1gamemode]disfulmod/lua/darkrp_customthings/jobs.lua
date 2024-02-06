@@ -36,7 +36,7 @@ TEAM_RUN = DarkRP.createJob("Бегущий / 100 lvl", {
         "models/dejtriyev/hl1/ryangosling.mdl",
     },
     description = [[Неопределённое сообщество независимо действующих лиц, одурманеное идеей самосовершенствования. There's something inside them.]],
-    weapons = {},
+    weapons = {parkourmod},
     command = "qssw",
     max = 0,
     salary = GAMEMODE.Config.normalsalary,

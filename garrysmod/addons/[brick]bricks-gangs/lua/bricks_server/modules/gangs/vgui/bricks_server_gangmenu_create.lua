@@ -170,8 +170,8 @@ function PANEL:FillPanel()
         surface.DrawTexturedRect( self.leftBorderW+self2.leftW-newIconSize, 0, newIconSize, newIconSize )
 
         local leftMargin = self.leftBorderW+self2.leftW+(h-contentH)/2
-        draw.SimpleText( "CREATE A NEW GANG", "BRICKS_SERVER_Font40B", leftMargin-1, h/2-contentH/2-BRICKS_SERVER.Func.ScreenScale( 10 ), BRICKS_SERVER.Func.GetTheme( 6, 50 ), 0, 0 )
-        draw.SimpleText( "INVITE YOUR FRIENDS AND EARN MONEY!", "BRICKS_SERVER_Font20B", leftMargin, h/2+contentH/2+BRICKS_SERVER.Func.ScreenScale( 4 ), BRICKS_SERVER.Func.GetTheme( 6, 50 ), 0, TEXT_ALIGN_BOTTOM )
+        draw.SimpleText( "СТОИМОСТЬ БАНДЫ:", "BRICKS_SERVER_Font40B", leftMargin-15, h/2-50/2+15-BRICKS_SERVER.Func.ScreenScale( 10 ), BRICKS_SERVER.Func.GetTheme( 6, 50 ), 0, 0 )
+        --draw.SimpleText( "INVITE YOUR FRIENDS AND EARN MONEY!", "BRICKS_SERVER_Font20B", leftMargin, h/2+contentH/2+BRICKS_SERVER.Func.ScreenScale( 4 ), BRICKS_SERVER.Func.GetTheme( 6, 50 ), 0, TEXT_ALIGN_BOTTOM )
     
         if( not self2.startLoading or CurTime() >= self2.startLoading+1 or CurTime()-firstPanel.startLoading < 0.2 ) then return end
 
@@ -210,7 +210,7 @@ function PANEL:FillPanel()
         draw.RoundedBox( rounding, 0, 0, w, h, BRICKS_SERVER.Func.GetTheme( 3, 100 ) )
         render.SetScissorRect( 0, 0, 0, 0, false )
 
-        draw.SimpleText( "CREATE GANG", "BRICKS_SERVER_Font30B", w/2, h/2, BRICKS_SERVER.Func.GetTheme( 6, 50 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+        draw.SimpleText( "Создать банду", "BRICKS_SERVER_Font30B", w/2, h/2, BRICKS_SERVER.Func.GetTheme( 6, 50 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
     end
 
     pricePanel = vgui.Create( "DPanel", headerPanel )
@@ -224,7 +224,7 @@ function PANEL:FillPanel()
     end
 
     -- First Step
-    local firstPanel = self:CreateStepPanel( contentPanel, BRICKS_SERVER.Func.ScreenScale( 150 ), "Gang Name", "A cool name for your new gang." )
+    local firstPanel = self:CreateStepPanel( contentPanel, BRICKS_SERVER.Func.ScreenScale( 150 ), "Название банды", "Придумайте название для банды." )
     contentPanel:SetTall( contentPanel:GetTall()+margin25+firstPanel:GetTall() )
 
     local gangNameEntry = vgui.Create( "bricks_server_textentry", firstPanel )
@@ -255,7 +255,7 @@ function PANEL:FillPanel()
     end
 
     -- Second Step
-    local secondPanel = self:CreateStepPanel( contentPanel, BRICKS_SERVER.Func.ScreenScale( 185 ), "Gang Icon", "An icon used when displaying your gang." )
+    local secondPanel = self:CreateStepPanel( contentPanel, BRICKS_SERVER.Func.ScreenScale( 185 ), "Лого банды", "Будет лицом вашей банды." )
     contentPanel:SetTall( contentPanel:GetTall()+margin25+secondPanel:GetTall() )
 
     secondPanel.bottom = vgui.Create( "Panel", secondPanel )
@@ -314,10 +314,10 @@ function PANEL:FillPanel()
 
     local presetsHeader = vgui.Create( "Panel", secondPanel.bottom )
     presetsHeader:Dock( LEFT )
-    presetsHeader:SetWide( surface.GetTextSize( "Default icons" ) )
+    presetsHeader:SetWide( surface.GetTextSize( "Лого " ) )
     presetsHeader.Paint = function( self2, w, h )
-        draw.SimpleText( "PRESETS", "BRICKS_SERVER_Font22B", 0, h/2+2, BRICKS_SERVER.Func.GetTheme( 4 ), 0, TEXT_ALIGN_BOTTOM )
-        draw.SimpleText( "Default icons", "BRICKS_SERVER_Font20B", 0, h/2-2, BRICKS_SERVER.Func.GetTheme( 6, 50 ), 0, 0 )
+        draw.SimpleText( "Лого", "BRICKS_SERVER_Font22B", 0, h/2+2, BRICKS_SERVER.Func.GetTheme( 4 ), 0, TEXT_ALIGN_BOTTOM )
+        --draw.SimpleText( "Выберите заготовленное лого", "BRICKS_SERVER_Font20B", 0, h/2-2, BRICKS_SERVER.Func.GetTheme( 6, 50 ), 0, 0 )
     end
 
     local presetsPanel = vgui.Create( "Panel", secondPanel.bottom )
@@ -377,10 +377,10 @@ function PANEL:FillPanel()
     
     local customHeader = vgui.Create( "Panel", secondPanel.bottom )
     customHeader:Dock( LEFT )
-    customHeader:SetWide( surface.GetTextSize( "A custom icons" ) )
+    customHeader:SetWide( surface.GetTextSize( "Собственное лого " ) )
     customHeader.Paint = function( self2, w, h )
-        draw.SimpleText( "CUSTOM", "BRICKS_SERVER_Font22B", 0, h/2+2, BRICKS_SERVER.Func.GetTheme( 4 ), 0, TEXT_ALIGN_BOTTOM )
-        draw.SimpleText( "A custom icon", "BRICKS_SERVER_Font20B", 0, h/2-2, BRICKS_SERVER.Func.GetTheme( 6, 50 ), 0, 0 )
+        draw.SimpleText( "Собственное лого", "BRICKS_SERVER_Font22B", 0, h/2+2, BRICKS_SERVER.Func.GetTheme( 4 ), 0, TEXT_ALIGN_BOTTOM )
+        --draw.SimpleText( "Собственное лого", "BRICKS_SERVER_Font20B", 0, h/2-2, BRICKS_SERVER.Func.GetTheme( 6, 50 ), 0, 0 )
     end
 
     local customEntryBar = vgui.Create( "Panel", secondPanel.bottom )
@@ -392,7 +392,7 @@ function PANEL:FillPanel()
         if( not IsValid( customUrlEntry ) or customUrlEntry:GetValue() == "" or customUrlEntry:GetValue() == newGangIcon ) then return end
 
         local oldClipping = DisableClipping( true )
-        draw.SimpleText( "PRESS ENTER TO SAVE", "BRICKS_SERVER_Font20B", w/2, h, BRICKS_SERVER.Func.GetTheme( 6, 50 ), TEXT_ALIGN_CENTER, 0 )
+        draw.SimpleText( "Нажмите ENTER чтобы сохранить", "BRICKS_SERVER_Font20B", w/2, h, BRICKS_SERVER.Func.GetTheme( 6, 50 ), TEXT_ALIGN_CENTER, 0 )
         DisableClipping( oldClipping )
     end
 
@@ -466,7 +466,7 @@ function PANEL:FillPanel()
     end
 
     -- Third Step
-    local thirdPanel = self:CreateStepPanel( contentPanel, BRICKS_SERVER.Func.ScreenScale( 160 ), "Gang Colour", "The colour of your gang, displayed in various places." )
+    local thirdPanel = self:CreateStepPanel( contentPanel, BRICKS_SERVER.Func.ScreenScale( 160 ), "Цвет банды", "Будет отображаться везде где надо." )
     contentPanel:SetTall( contentPanel:GetTall()+margin25+thirdPanel:GetTall() )
 
     thirdPanel.bottom = vgui.Create( "Panel", thirdPanel )

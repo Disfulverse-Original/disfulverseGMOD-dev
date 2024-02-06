@@ -89,13 +89,18 @@ AAS.ModifyOffset = false
 
 AAS.LoadWorkshop = {
     ["572310302"] = false,
-    ["148215278"] = false,
-    ["282958377"] = false,
+    ["148215278"] = true,
+    ["282958377"] = true,
     ["158532239"] = false,
     ["551144079"] = false,
     ["826536617"] = false,
     ["166177187"] = false,
     ["354739227"] = false,
+    ["2664401004"] = true, -- fortnigger
+    ["1117887176"] = true, -- ds demon souls
+    ["1337349392"] = true, -- ds weapons props
+    ["2329902425"] = true, -- berserk dragonslayer
+    
 }
 
 --[[ Time to wear the accessory when you use the swep ]]

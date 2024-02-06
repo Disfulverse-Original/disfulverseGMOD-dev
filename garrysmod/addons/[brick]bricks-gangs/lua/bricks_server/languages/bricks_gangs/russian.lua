@@ -103,7 +103,7 @@ BRICKS_SERVER.Func.AddLanguageStrings( "russian", {
     ["gangDepositMenu"] = "Меню депозита",
     ["gangDepositInventoryQuery"] = "Вы хотите внести депозит %s с вашего инвентаря?",
     ["gangDepositPlayerQuery"] = "Вы хотите внести депозит %s с вашего владения?",
-    ["gangNoDepositItems"] = "У вас нет предметов, которые можно сдать на в хранилище банды!",
+    ["gangNoDepositItems"] = "У вас нет предметов, которые можно сдать в хранилище банды!",
 
     ["gangMenu"] = "Меню банды",
     ["gangNone"] = "Нет банды",

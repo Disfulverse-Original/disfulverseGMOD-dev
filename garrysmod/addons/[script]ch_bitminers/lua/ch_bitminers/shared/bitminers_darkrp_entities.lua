@@ -15,7 +15,7 @@ function CH_BITMINERS_DarkRPEntities()
 	DarkRP.createEntity("Силовой кабель", {
         ent = "ch_bitminer_power_cable",
         model = "models/craphead_scripts/bitminers/utility/plug.mdl",
-        price = 150,
+        price = 300,
         max = 5,
 		category = "Оборудование Крипто-майнера",
         cmd = "buypowercable",
@@ -25,8 +25,8 @@ function CH_BITMINERS_DarkRPEntities()
     DarkRP.createEntity("Генератор", {
         ent = "ch_bitminer_power_generator",
         model = "models/craphead_scripts/bitminers/power/generator.mdl",
-        price = 1500,
-        max = 4,
+        price = 30000,
+        max = 1,
 		category = "Оборудование Крипто-майнера",
         cmd = "buypowergenerator",
         allowed = {TEAM_CRYPTMINER},
@@ -35,8 +35,8 @@ function CH_BITMINERS_DarkRPEntities()
 	DarkRP.createEntity("Солнечная панель", {
         ent = "ch_bitminer_power_solar",
         model = "models/craphead_scripts/bitminers/power/solar_panel.mdl",
-        price = 3000,
-        max = 2,
+        price = 7500,
+        max = 3,
 		category = "Оборудование Крипто-майнера",
         cmd = "buysolarpanel",
         allowed = {TEAM_CRYPTMINER},
@@ -45,7 +45,7 @@ function CH_BITMINERS_DarkRPEntities()
 	DarkRP.createEntity("Объединитель мощности", {
         ent = "ch_bitminer_power_combiner",
         model = "models/craphead_scripts/bitminers/power/power_combiner.mdl",
-        price = 1000,
+        price = 5000,
         max = 2,
 		category = "Оборудование Крипто-майнера",
         cmd = "buypowercombiner",
@@ -55,8 +55,8 @@ function CH_BITMINERS_DarkRPEntities()
 	DarkRP.createEntity("Термоэлектрический генератор", {
         ent = "ch_bitminer_power_rtg",
         model = "models/craphead_scripts/bitminers/power/rtg.mdl",
-        price = 4500,
-        max = 2,
+        price = 50000,
+        max = 1,
 		category = "Оборудование Крипто-майнера",
         cmd = "buynucleargenerator",
         allowed = {TEAM_CRYPTMINER},
@@ -65,8 +65,8 @@ function CH_BITMINERS_DarkRPEntities()
     DarkRP.createEntity("Полка для криптомайнинга", {
         ent = "ch_bitminer_shelf",
         model = "models/craphead_scripts/bitminers/rack/rack.mdl",
-        price = 5000,
-        max = 10,
+        price = 15000,
+        max = 3,
 		category = "Оборудование Крипто-майнера",
         cmd = "buyminingshelf",
         allowed = {TEAM_CRYPTMINER},
@@ -75,7 +75,7 @@ function CH_BITMINERS_DarkRPEntities()
 	DarkRP.createEntity("Охлаждение Тир-1", {
         ent = "ch_bitminer_upgrade_cooling1",
         model = "models/craphead_scripts/bitminers/utility/cooling_upgrade_1.mdl",
-        price = 3000,
+        price = 5000,
         max = 10,
 		category = "Оборудование Крипто-майнера",
         cmd = "buycooling1",
@@ -85,7 +85,7 @@ function CH_BITMINERS_DarkRPEntities()
     DarkRP.createEntity("Охлаждение Тир-2", {
         ent = "ch_bitminer_upgrade_cooling2",
         model = "models/craphead_scripts/bitminers/utility/cooling_upgrade_2.mdl",
-        price = 4000,
+        price = 10000,
         max = 10,
 		category = "Оборудование Крипто-майнера",
         cmd = "buycooling2",
@@ -95,7 +95,7 @@ function CH_BITMINERS_DarkRPEntities()
 	DarkRP.createEntity("Охлаждение Тир-3", {
         ent = "ch_bitminer_upgrade_cooling3",
         model = "models/craphead_scripts/bitminers/utility/cooling_upgrade_3.mdl",
-        price = 5000,
+        price = 20000,
         max = 10,
 		category = "Оборудование Крипто-майнера",
         cmd = "buycooling3",
@@ -105,7 +105,7 @@ function CH_BITMINERS_DarkRPEntities()
     DarkRP.createEntity("Крипто-единица", {
         ent = "ch_bitminer_upgrade_miner",
         model = "models/craphead_scripts/bitminers/utility/miner_solo.mdl",
-        price = 350,
+        price = 1500,
         max = 8,
 		category = "Оборудование Крипто-майнера",
         cmd = "buysingleminer",
@@ -115,7 +115,7 @@ function CH_BITMINERS_DarkRPEntities()
     DarkRP.createEntity("Обновление комплекта RGB", {
         ent = "ch_bitminer_upgrade_rgb",
         model = "models/craphead_scripts/bitminers/utility/rgb_kit.mdl",
-        price = 1000,
+        price = 7500,
         max = 8,
 		category = "Оборудование Крипто-майнера",
         cmd = "buyrgbkit",
@@ -125,7 +125,7 @@ function CH_BITMINERS_DarkRPEntities()
 	DarkRP.createEntity("Модернизация источника питания", {
         ent = "ch_bitminer_upgrade_ups",
         model = "models/craphead_scripts/bitminers/utility/ups_solo.mdl",
-        price = 500,
+        price = 5000,
         max = 8,
 		category = "Оборудование Крипто-майнера",
         cmd = "buyupsupgrade",
@@ -135,7 +135,7 @@ function CH_BITMINERS_DarkRPEntities()
 	DarkRP.createEntity("Топливо - маленькое", {
         ent = "ch_bitminer_power_generator_fuel_small",
         model = "models/craphead_scripts/bitminers/utility/jerrycan.mdl",
-        price = 500,
+        price = 750,
         max = 5,
 		category = "Оборудование Крипто-майнера",
         cmd = "buygeneratorfuelsmall",
@@ -145,7 +145,7 @@ function CH_BITMINERS_DarkRPEntities()
 	DarkRP.createEntity("Топливо - среднее", {
         ent = "ch_bitminer_power_generator_fuel_medium",
         model = "models/craphead_scripts/bitminers/utility/jerrycan.mdl",
-        price = 1000,
+        price = 1500,
         max = 5,
 		category = "Оборудование Крипто-майнера",
         cmd = "buygeneratorfuelmedium",
@@ -155,7 +155,7 @@ function CH_BITMINERS_DarkRPEntities()
 	DarkRP.createEntity("Топливо - большое", {
         ent = "ch_bitminer_power_generator_fuel_large",
         model = "models/craphead_scripts/bitminers/utility/jerrycan.mdl",
-        price = 1500,
+        price = 3000,
         max = 5,
 		category = "Оборудование Крипто-майнера",
         cmd = "buygeneratorfuellarge",
@@ -165,7 +165,7 @@ function CH_BITMINERS_DarkRPEntities()
 	DarkRP.createEntity("Очищающая жидкость", {
         ent = "ch_bitminer_upgrade_clean_dirt",
         model = "models/craphead_scripts/bitminers/cleaning/spraybottle.mdl",
-        price = 500,
+        price = 750,
         max = 5,
 		category = "Оборудование Крипто-майнера",
         cmd = "buydirtcleanfluid",

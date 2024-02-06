@@ -41,18 +41,18 @@ CH_Bitminers.Config.RemoveEntsOnDC = true -- Should bitminer entities be removed
 CH_Bitminers.Config.RemoveEntsOnTeamChange = true -- Should bitminer entities be removed when a player changes his job?
 
 -- Bitminer Shelf
-CH_Bitminers.Config.DefaultBitcoinsMinedPer = 0.015 -- Amount of bitcoins mined on each interval by default (any rank that is not in the table below will fallback to this.
+CH_Bitminers.Config.DefaultBitcoinsMinedPer = 0.011 -- Amount of bitcoins mined on each interval by default (any rank that is not in the table below will fallback to this.
 
 CH_Bitminers.Config.BitcoinsMinedPer = { -- How many bitcoins are mined on each interval based on their usergroup.
-	{ Usergroup = "vip", Bitcoins = 0.02 },
-	{ Usergroup = "gold_member", Bitcoins = 0.025 },
-	{ Usergroup = "admin", Bitcoins = 0.03 },
-	{ Usergroup = "superadmin", Bitcoins = 0.035 },
-	{ Usergroup = "owner", Bitcoins = 0.04 },
+	--{ Usergroup = "vip", Bitcoins = 0.02 },
+	--{ Usergroup = "gold_member", Bitcoins = 0.025 },
+	--{ Usergroup = "admin", Bitcoins = 0.03 },
+	--{ Usergroup = "superadmin", Bitcoins = 0.035 },
+	--{ Usergroup = "owner", Bitcoins = 0.04 },
 }
 
-CH_Bitminers.Config.MaxBitcoinsMined = 500 -- How many bitcoins can a bitminer maximum contain
-CH_Bitminers.Config.WattsRequiredPerMiner = 1225 -- Amount of watts required per miner in order to properly mine bitcoins most optimal
+CH_Bitminers.Config.MaxBitcoinsMined = 3 -- How many bitcoins can a bitminer maximum contain
+CH_Bitminers.Config.WattsRequiredPerMiner = 100 -- Amount of watts required per miner in order to properly mine bitcoins most optimal
 
 CH_Bitminers.Config.ShelfHealth = 150 -- Amount of health before it destroys.
 CH_Bitminers.Config.ShelfStartTemperature = 0 -- Temperature the shelf spawns with.
@@ -72,7 +72,7 @@ CH_Bitminers.Config.FuelCanMediumAmount = 75 -- Amount of fuel the medium canist
 CH_Bitminers.Config.FuelCanLargeAmount = 100 -- Amount of fuel the large canister contains (max is 100)
 
 -- Fuel Generator
-CH_Bitminers.Config.GeneratorWattsInterval = 3 -- Interval for the fuel generator to generate watts in seconds.
+CH_Bitminers.Config.GeneratorWattsInterval = 7 -- Interval for the fuel generator to generate watts in seconds.
 CH_Bitminers.Config.FuelGeneratorHealth = 150 -- Amount of health before it destroys.
 CH_Bitminers.Config.FuelGeneratorExplosion = true -- Should the fuel generator cause an explosion if it takes too much damage?
 
@@ -83,16 +83,16 @@ CH_Bitminers.Config.FuelConsumptionMax = 4 -- Every FuelConsumptionRate it will 
 CH_Bitminers.Config.GeneratorSmokeEffect = true -- Display smoke effect coming out of generator when turned on.
 CH_Bitminers.Config.FuelGeneratorSoundLevel = 75 -- Sound level of the fuel generator when powered on. (0 = muted)
 
-CH_Bitminers.Config.GeneratorWattsMin = 50 -- Minimum amounts of watts generated per interval
-CH_Bitminers.Config.GeneratorWattsMax = 90 -- Maximum amounts of watts generated per interval (IT'S RANDOMIZED)
+CH_Bitminers.Config.GeneratorWattsMin = 7 -- Minimum amounts of watts generated per interval
+CH_Bitminers.Config.GeneratorWattsMax = 20 -- Maximum amounts of watts generated per interval (IT'S RANDOMIZED)
 
 -- Solar Panel
-CH_Bitminers.Config.SolarPanelWattsInterval = 4 -- Interval for the solar panel to generate watts in seconds.
+CH_Bitminers.Config.SolarPanelWattsInterval = 7 -- Interval for the solar panel to generate watts in seconds.
 CH_Bitminers.Config.SolarPanelHealth = 100 -- Amount of health before it destroys.
 CH_Bitminers.Config.SolarPanelExplosion = true -- Should the solar panel cause an explosion if it takes too much damage?
 
-CH_Bitminers.Config.SolarPanelWattsMin = 80 -- Minimum amounts of watts generated per interval
-CH_Bitminers.Config.SolarPanelWattsMax = 120 -- Maximum amounts of watts generated per interval (IT'S RANDOMIZED)
+CH_Bitminers.Config.SolarPanelWattsMin = 5 -- Minimum amounts of watts generated per interval
+CH_Bitminers.Config.SolarPanelWattsMax = 27 -- Maximum amounts of watts generated per interval (IT'S RANDOMIZED)
 
 CH_Bitminers.Config.CollectDirtInterval = 30 -- Amount of seconds between collecting more dirt on the solar panel.
 CH_Bitminers.Config.CollectDirtMin = 1 -- Minimum amount of dirt collected per interval.
@@ -100,7 +100,7 @@ CH_Bitminers.Config.CollectDirtMax = 3 -- Maximum amount of dirt collected per i
 CH_Bitminers.Config.ShowDirt3D2D = 25000 -- -- Distance between player and solar panel for showing dirt 3d2d.
 
 -- RTG Generator
-CH_Bitminers.Config.RTGWattsInterval = 5 -- Interval for the RTG to generate watts in seconds.
+CH_Bitminers.Config.RTGWattsInterval = 7 -- Interval for the RTG to generate watts in seconds.
 CH_Bitminers.Config.RTGGeneratorHealth = 300 -- Amount of health before it destroys.
 CH_Bitminers.Config.RTGGeneratorExplosion = true -- Should the RTG cause an explosion if it takes too much damage? (NOTE: large explosion)
 
@@ -110,8 +110,8 @@ CH_Bitminers.Config.RTGRadiationDamageOwnerOnly = false -- If enabled, should th
 CH_Bitminers.Config.RTGRadiationInterval = 5 -- Amount of seconds between giving damage to players nearby.
 CH_Bitminers.Config.RTGRadiationDistance = 50000 -- Distance from players to RGT before doing damage.
 
-CH_Bitminers.Config.RTGWattsMin = 100 -- Minimum amounts of watts generated per interval
-CH_Bitminers.Config.RTGWattsMax = 150 -- Maximum amounts of watts generated per interval (IT'S RANDOMIZED)
+CH_Bitminers.Config.RTGWattsMin = 30 -- Minimum amounts of watts generated per interval
+CH_Bitminers.Config.RTGWattsMax = 50 -- Maximum amounts of watts generated per interval (IT'S RANDOMIZED)
 
 -- Watts Decrease System
 CH_Bitminers.Config.WattsDecreaseInterval = 5 -- Every 5th second it will decrease the watts if not powered/plugged in with a cable.
@@ -123,11 +123,11 @@ CH_Bitminers.Config.CableRopeLenght = 100 -- Lenght of the rope between the two 
 CH_Bitminers.Config.CableRopeColor = Color( 255, 255, 255, 255 ) -- Sets the color of the rope. Default is just white (no color)
 
 -- Cooling System & Upgrades
-CH_Bitminers.Config.TemperatureInterval = 2 -- Interval between updating temperature on miners in seconds
+CH_Bitminers.Config.TemperatureInterval = 3 -- Interval between updating temperature on miners in seconds
 CH_Bitminers.Config.TempToAddPerMiner = 0.11 -- Temperature added per miner on the shelf.
 
-CH_Bitminers.Config.TempToTakePerCooling = 0.21 -- Temperature removed from shelf per cooling upgrade installed.
-CH_Bitminers.Config.TempToTakeWhenOff = 0.5 -- Temperature to remove every interval if the shelf is turned off.
+CH_Bitminers.Config.TempToTakePerCooling = 0.15 -- Temperature removed from shelf per cooling upgrade installed.
+CH_Bitminers.Config.TempToTakeWhenOff = 0.75 -- Temperature to remove every interval if the shelf is turned off.
 
 -- Donator Features
 CH_Bitminers.Config.MaxBitminersInstalled = {
