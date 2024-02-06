@@ -63,10 +63,10 @@ end)
 
 hook.Add("PlayerCanHearPlayersVoice", "rsrp_policeradio_globalvoice", function(listener, talker)
     if (listener:isCP() or listener:isMedic() or talker:isCP() or talker:isMedic() or RSRP.PoliceRadio.AllowedJobs[team.GetName(talker:Team())] or RSRP.PoliceRadio.AllowedJobs[team.GetName(listener:Team())])
-			and listener.PoliceRadioAudio and talker.PoliceRadio
-			and (listener.PoliceRadioChannel == talker.PoliceRadioChannel or listener:Team() == TEAM_DISPATCHER or talker:Team() == TEAM_DISPATCHER) then
-            return true, false
-        end
+            and listener.PoliceRadioAudio and talker.PoliceRadio
+            and (listener.PoliceRadioChannel == talker.PoliceRadioChannel or listener:Team() == TEAM_DISPATCHER or talker:Team() == TEAM_DISPATCHER) then
+        return true, false
+    end
 end)
 
 hook.Add("OnPlayerChangedTeam", "rsrp_policeradio_onjobchange", function(ply, old, new)
