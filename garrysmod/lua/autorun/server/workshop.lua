@@ -9,8 +9,8 @@ resource.AddWorkshop ( "2005357731" ) --[Content] SlownLS - ATM
 resource.AddWorkshop ( "2001211879" ) --realistic house
 resource.AddWorkshop ( "2567098902" ) --accessory
 resource.AddWorkshop ( "3149367030" ) --cmenu content
-resource.AddWorkshop ( "2986127962" ) --map content
-resource.AddWorkshop ( "2986120857" ) --map 
+--resource.AddWorkshop ( "2986127962" ) --map content
+--resource.AddWorkshop ( "2986120857" ) --map 
 resource.AddWorkshop( "708845241" ) -- Revival Player Defibrillator | DarkRP Friendly 1911629257
 resource.AddWorkshop( "1911629257" ) --supple
 resource.AddWorkshop( "3148691503" ) --weapon custom
@@ -24,9 +24,8 @@ resource.AddWorkshop( "3148801741" ) --ARCCW DISFULVERSE MISC
 resource.AddWorkshop( "3149061543" ) --[Disfulverse] Models I
 resource.AddWorkshop( "3149068041" ) --[Disfulverse] Models II
 resource.AddWorkshop( "3149077248" ) --[Disfulverse] Models III
-
-
-
+--Map
+resource.AddWorkshop( "3155462760" ) --[Disfulverse] Map
 
 
 
