@@ -67,7 +67,7 @@ if( BRICKS_SERVER.Func.IsSubModuleEnabled( "essentials", "crafting" ) ) then
     BRICKS_SERVER.DEVCONFIG.TreeModels = { 
         ["models/props_foliage/tree_deciduous_01a-lod.mdl"] = 12,
         ["models/props_foliage/tree_deciduous_03a.mdl"] = 23,
-        ["models/props/cs_militia/tree_large_militia.mdl"] = 22
+        --["models/props/cs_militia/tree_large_militia.mdl"] = 22
     }
     BRICKS_SERVER.DEVCONFIG.GarbageModels = { 
         "models/props_junk/garbage128_composite001a.mdl",
@@ -106,17 +106,18 @@ if( BRICKS_SERVER.Func.IsSubModuleEnabled( "essentials", "crafting" ) ) then
         },
         ["Entity"] = { 
             ReqInfo = {
-                [1] = { "Entity", "table", "entities" }
+                [1] = { "Entity", "table", "entities" },
+                [2] = { "Amount", "integer" }
             },
             CanCraft = function( ply, reqInfo )
-                if( ply:BRS():IsInventoryFull( 1 ) ) then
+                if( ply:BRS():IsInventoryFull( (reqInfo[2] or 1), true ) ) then
                     return false, "There is not enough space in your inventory!"
                 else
                     return true
                 end
             end,
             OnCraft = function( ply, reqInfo, itemInfo )
-                ply:BRS():AddInventoryItem( { reqInfo[1], itemInfo.Model }, 1 )
+                ply:BRS():AddInventoryItem( { reqInfo[1], itemInfo.Model }, (reqInfo[2] or 1) )
             end
         },
         ["Resource"] = { 
