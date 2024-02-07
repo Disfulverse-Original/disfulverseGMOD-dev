@@ -15,7 +15,7 @@ CreateConVar("arccw_atts_ubglautoload", 0, FCVAR_ARCHIVE, "Automatically load un
 CreateConVar("arccw_atts_pickx", 0, FCVAR_ARCHIVE + FCVAR_REPLICATED, "Limit weapons to this many maximum attachments. 0 = disable system.", 0)
 
 CreateConVar("arccw_npc_replace", 0, FCVAR_ARCHIVE, "Replace NPC weapons with ArcCW weapons.")
-CreateConVar("arccw_npc_atts", 0, FCVAR_ARCHIVE, "Randomly give NPC weapons attachments.")
+CreateConVar("arccw_npc_atts", 1, FCVAR_ARCHIVE, "Randomly give NPC weapons attachments.")
 
 CreateConVar("arccw_truenames", 1, FCVAR_ARCHIVE + FCVAR_REPLICATED, "Use true names instead of fake names, where applicable. Requires restart.")
 

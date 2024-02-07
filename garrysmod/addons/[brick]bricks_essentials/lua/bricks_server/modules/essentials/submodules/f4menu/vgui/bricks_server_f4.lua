@@ -1,12 +1,11 @@
 local PANEL = {}
 
 function PANEL:Init()
-
+    self.startTime = SysTime()
     self:SetSize( ScrW()*0.6, ScrH()*0.65 )
     self:Center()
     self:SetHeader( BRICKS_SERVER.CONFIG.GENERAL["Server Name"] )
     self.removeOnClose = false
-    self.startTime = SysTime()
     self.centerOnSizeChanged = true
     self.onCloseFunc = function()
         if( BRICKS_SERVER.Func.HasAdminAccess( LocalPlayer() ) ) then
