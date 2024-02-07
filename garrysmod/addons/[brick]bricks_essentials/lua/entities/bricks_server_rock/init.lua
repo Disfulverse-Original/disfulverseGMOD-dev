@@ -45,17 +45,27 @@ function ENT:HitRock( Damage, attacker )
 		self:GetPhysicsObject():EnableMotion( false )
 		self:SetStage( 3 )
 
-		local rockTable = BRICKS_SERVER.CONFIG.CRAFTING.RockTypes[self:GetRockType()]
-		if( BRICKS_SERVER.CONFIG.CRAFTING.Resources[(self:GetRockType() or "")] ) then
+	local ChosenResource = ""
+	local ResourcePercent = math.Rand(0, 100)
+	local CurPercent = 0
+	for k, v in pairs( BRICKS_SERVER.CONFIG.CRAFTING.RockTypes ) do
+		if( ResourcePercent > CurPercent and ResourcePercent < CurPercent+v ) then
+			ChosenResource = k
+			break
+		end
+		CurPercent = CurPercent+v
+	end
+
+		if( BRICKS_SERVER.CONFIG.CRAFTING.Resources[ChosenResource] ) then
 			if( not BRICKS_SERVER.CONFIG.CRAFTING["Add Resources Directly To Inventory"] ) then
-				local resourceEnt = ents.Create( "bricks_server_resource_" .. string.Replace( string.lower( (self:GetRockType() or "") ), " ", "" ) )
+				local resourceEnt = ents.Create( "bricks_server_resource_" .. string.Replace( string.lower( ChosenResource ), " ", "" ) )
 				if( IsValid( resourceEnt ) ) then
 					resourceEnt:SetPos( self:GetPos()+Vector( 0, 0, 50 ) )
 					resourceEnt:Spawn()
 				end
 			elseif( IsValid( attacker ) and attacker:IsPlayer() ) then
 
-				local itemData = { "bricks_server_resource", (BRICKS_SERVER.CONFIG.CRAFTING.Resources[self:GetRockType() or ""][1] or ""), self:GetRockType() }
+				local itemData = { "bricks_server_resource", (BRICKS_SERVER.CONFIG.CRAFTING.Resources[ChosenResource][1] or ""), ChosenResource }
                 attacker:BRS():AddInventoryItem( itemData, 1 )
 
 				local itemInfo = BRICKS_SERVER.Func.GetEntTypeField( itemData[1], "GetInfo" )( itemData )				
