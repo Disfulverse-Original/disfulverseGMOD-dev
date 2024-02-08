@@ -1,7 +1,7 @@
 -----------
 -- fonts --
 -----------
-surface.CreateFont( "CHAT22", { font = "Roboto", extended  = false, antialias = true, shadow = false, weight = 1000, size = 18})
+surface.CreateFont( "CHAT22", { font = "Roboto", extended  = true, antialias = true, shadow = false, weight = 1000, size = 18})
 
 -- TODO? save configs
 
