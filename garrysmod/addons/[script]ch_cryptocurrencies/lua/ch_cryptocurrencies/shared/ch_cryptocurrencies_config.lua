@@ -54,7 +54,7 @@ CH_CryptoCurrencies.Config.MaximumTransactionsToShow = 10 -- How many transactio
 	It also really depends how many cryptocurrencies you have added to your configuration.
 --]]
 CH_CryptoCurrencies.Config.FetchCryptosInterval = 600 -- Seconds between updating cryptocurrencies via the API. (Default 10 minutes)
-CH_CryptoCurrencies.Config.NotifyPlayersChatFetch = true -- Should players be notified in chat when the cryptocurrencies prices are updated?
+CH_CryptoCurrencies.Config.NotifyPlayersChatFetch = false -- Should players be notified in chat when the cryptocurrencies prices are updated?
 
 --[[
 	ATM Support
