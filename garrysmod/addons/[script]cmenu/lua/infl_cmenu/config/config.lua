@@ -120,13 +120,14 @@ PIS.Config:AddMenu("Деньги", 			"business", 		"Деньги", 				green, {
 PIS.Config:AddMenu("RP Действия", 			"rp", 		"RP Действия", 			ocean, {
 
 
-	{name = "Выбросить оружие", 	mat = "gun", col = ocean, func = function() RunConsoleCommand("say","/drop") end},
-	{name = "Положить оружие в сумку", 			mat = "box", col = white, func = function() RunConsoleCommand("say", "!holster") end},
-	{name = "Попытка", 				mat = "default", col = ocean, func = function() PIS.OpenTextBox("Попытка","Укажите попытку","/try") end},
-	{name = "Случайное число", 		mat = "dice", col = ocean, func = function() RunConsoleCommand("say","/roll") end},
-	{name = "Действие", 			mat = "default", col = ocean, func = function() PIS.OpenTextBox("Действие","Укажите действие","/me") end},
-	{name = "Реклама", 				mat = "broadcast", col = ocean, func = function() PIS.OpenTextBox("Реклама","Укажите текст рекламы","/advert") end},
-	{name = "Уволить", 				mat = "demote", col = ocean, func = function() PIS.OpenPlyReasonBox("Уволить игрока","Кого вы хотите уволить?","Укажите корректную причину увольнения","/demote") end},
+	{name = "Выбросить оружие", 	mat = "gun", col = white, func = function() RunConsoleCommand("say","/drop") end},
+	{name = "Положить оружие в инвентарь", 			mat = "gun", col = white, func = function() RunConsoleCommand("say", "!holster") end},
+	{name = "Попытка", 				mat = "success", col = white, func = function() PIS.OpenTextBox("Попытка","Укажите попытку","/try") end},
+	{name = "Анонимный.чат", 				mat = "darkweb", col = black, func = function() PIS.OpenTextBox("Анонимный-чат","Ваше имя будет зашифровано","/ano") end},
+	{name = "Бросить кубик", 		mat = "dice", col = white, func = function() RunConsoleCommand("say","/roll") end},
+	{name = "Действие", 			mat = "default", col = white, func = function() PIS.OpenTextBox("Действие","Укажите действие","/me") end},
+	{name = "Реклама", 				mat = "broadcast", col = white, func = function() PIS.OpenTextBox("Реклама","Укажите текст рекламы","/advert") end},
+	{name = "Уволить", 				mat = "demote", col = white, func = function() PIS.OpenPlyReasonBox("Уволить игрока","Кого вы хотите уволить?","Укажите корректную причину увольнения","/demote") end},
 	{name = "Продать все двери", 		mat = "door", col = white, func = function() RunConsoleCommand("say","/unownalldoors") end},
 
 	--
@@ -137,8 +138,8 @@ PIS.Config:AddMenu("RP Действия", 			"rp", 		"RP Действия", 			o
 
 PIS.Config:AddMenu("Остальное", 			"action", 		"Разное", 			info, {
 
-	{name = "Написать администрации", 				mat = "admin_menu", col = red, func = function() PIS.OpenTextBox("Админ-чат","Укажите текст жалобы","@") end},
-	{name = "Вид от 3 лица", 			mat = "third_person", col = white, func = function() RunConsoleCommand("thirdperson_toggle") end},
+	{name = "Написать администратору", 				mat = "admin_menu", col = red, func = function() PIS.OpenTextBox("Админ-чат","Укажите текст жалобы","@") end},
+	{name = "Вид от 3 лица", 			mat = "third_person", col = redy, func = function() RunConsoleCommand("thirdperson_toggle") end},
 	{name = "Способности", 			mat = "atom", col = violet, func = function() RunConsoleCommand("say", "!slevels") end},
 	{name = "Поддержать проект", 			mat = "good", col = gold, func = function() RunConsoleCommand("say", "!store") end},
 
