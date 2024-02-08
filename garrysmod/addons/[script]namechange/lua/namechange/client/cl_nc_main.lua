@@ -1,45 +1,50 @@
 surface.CreateFont( "RCNPC_TitleText", {
 	font = "Roboto",
-	size = 21,
+	size = 19,
 	extended = true,
-	weight = 1000
+	antialias = true,
+	weight = 500
 } )
 surface.CreateFont( "RCNPC_WelcomeText", {
 	font = "Roboto",
-	size = 30,
+	size = 25,
 	extended = true,
-	weight = 1000
+	antialias = true,
+	weight = 500
 } )
 surface.CreateFont( "RCNPC_InfoText", {
 	font = "Roboto",
-	size = 17,
+	size = 20,
 	extended = true,
-	weight = 1000
+	antialias = true,
+	weight = 500
 } )
 surface.CreateFont( "RCNPC_InvalidText", {
 	font = "Roboto",
-	size = 15,
+	size = 16,
 	extended = true,
-	weight = 1000
+	antialias = true,
+	weight = 500
 } )
 surface.CreateFont( "RCNPC_AdminText", {
 	font = "Roboto",
 	size = 15,
 	extended = true,
-	weight = 1000
+	weight = 500
 } )
 surface.CreateFont( "RCNPC_EntryTitle", {
 	font = "Roboto",
 	size = 20,
 	extended = true,
-	weight = 1000
+	weight = 500
 } )
 
 surface.CreateFont( "RCNPC_EntryText", {
 	font = "Roboto",
-	size = 17,
+	size = 19,
 	extended = true,
-	weight = 1000
+	antialias = true,
+	weight = 550
 } )
 
 local blur = Material("pp/blurscreen")

@@ -15,10 +15,10 @@ CH_CryptoCurrencies.Config.NotificationTime = 8 -- Amount of seconds to show not
 CH_CryptoCurrencies.Config.DistanceTo3D2D = 60000 -- Distance between the player and the 3d2d to draw
 
 CH_CryptoCurrencies.Config.UseCryptoNPC = true -- Should the crypto NPC spawn? It allows for opening the crypto menu.
-CH_CryptoCurrencies.Config.UseCryptoChatCommand = true -- Should the chat command be enabled to open the crypto menu?
+CH_CryptoCurrencies.Config.UseCryptoChatCommand = false -- Should the chat command be enabled to open the crypto menu?
 CH_CryptoCurrencies.Config.CryptoMenuChatCommand = "!cryptos" -- If enabled then this is the chat command to open the crypto menu.
 
-CH_CryptoCurrencies.Config.FetchConsolePrints = true -- If you want to disable the fetch crypto console prints then you can set this to false.
+CH_CryptoCurrencies.Config.FetchConsolePrints = false -- If you want to disable the fetch crypto console prints then you can set this to false.
 
 --[[
 	MySQLOO
@@ -60,4 +60,4 @@ CH_CryptoCurrencies.Config.NotifyPlayersChatFetch = true -- Should players be no
 	ATM Support
 	Requires https://www.gmodstore.com/market/view/atm
 --]]
-CH_CryptoCurrencies.Config.UseMoneyFromBankAccount = false -- If you own the addon you can use your bank account to buy/sell cryptocurrencies.
+CH_CryptoCurrencies.Config.UseMoneyFromBankAccount = true -- If you own the addon you can use your bank account to buy/sell cryptocurrencies.

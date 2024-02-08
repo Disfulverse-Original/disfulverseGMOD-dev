@@ -1,5 +1,3 @@
-
-
 --Neutral--
 TEAM_CITIZEN = DarkRP.createJob("Безработный / 0 lvl", {
     color = Color(20, 150, 20, 255),
@@ -22,22 +20,6 @@ TEAM_CITIZEN = DarkRP.createJob("Безработный / 0 lvl", {
     description = [[Безработный гражданин - вы средняя прослойка этого мира, вы просто гражданин, может вам нужно найти работу?]],
     weapons = {},
     command = "qsse",
-    max = 0,
-    salary = GAMEMODE.Config.normalsalary,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = false,
-    category = "Нейтральные",
-})
-TEAM_RUN = DarkRP.createJob("Бегущий / 100 lvl", {
-    color = Color(20, 150, 20, 255),
-    model = {
-        "models/dejtriyev/hl1/ryangosling.mdl",
-    },
-    description = [[Неопределённое сообщество независимо действующих лиц, одурманеное идеей самосовершенствования. There's something inside them.]],
-    weapons = {parkourmod},
-    command = "qssw",
     max = 0,
     salary = GAMEMODE.Config.normalsalary,
     admin = 0,
@@ -83,27 +65,24 @@ TEAM_ZARUB = DarkRP.createJob("Контрабандист [Dis+] / 35 lvl", {
     customCheck = function(ply) 
         return CLIENT or table.HasValue({"disfulversed", "admin", "superadmin"}, ply:GetUserGroup()) 
     end,
-    CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
+    CustomCheckFailMsg = "Только Disfulversed могут взять эту роль!",
     category = "Нейтральные",
 })
-TEAM_BARACH = DarkRP.createJob("Барахольщик [Dis+] / 30 lvl", {
+TEAM_RUN = DarkRP.createJob("Бегущий / 100 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/grim/isa/isa_sniper.mdl"
+        "models/dejtriyev/hl1/ryangosling.mdl",
     },
-    description = [[Загадочный торговец работающий как правило на тех, кто больше платит. В ассортименте всевозможные материалы для крафта, разношёрстное оружие и прочее полезное барахло. ]],
-    weapons = {},
-    command = "d12341xz",
-    max = 1,
-    salary = 75,
+    description = [[Неопределённое сообщество независимо действующих лиц, одурманеное идеей самосовершенствования. There's something inside them.]],
+    weapons = {parkourmod},
+    command = "qssw",
+    max = 0,
+    salary = GAMEMODE.Config.normalsalary,
     admin = 0,
     vote = false,
     hasLicense = false,
-    candemote = true,
-    customCheck = function(ply) 
-        return CLIENT or table.HasValue({"disfulversed", "admin", "superadmin"}, ply:GetUserGroup()) 
-    end,
-    category = "Криминал",
+    candemote = false,
+    category = "Нейтральные",
 })
 --Traders--
 
@@ -169,69 +148,24 @@ TEAM_BANDITLOCKPICKER = DarkRP.createJob("Взломщик / 10 lvl", {
     candemote = true,
     category = "Криминал",
 })
-TEAM_GRABER = DarkRP.createJob("Грабитель [Dis+] / 35 lvl", {
+TEAM_BARACH = DarkRP.createJob("Барахольщик [Dis+] / 30 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/player/suits/robber_tie.mdl",
-        "models/player/suits/robber_shirt.mdl",
-        "models/player/suits/robber_open.mdl"
+        "models/grim/isa/isa_sniper.mdl"
     },
-    description = [[Это грабитель и он умеет грабить, воровать и убивать, если вы не уверены в своём преступном дельце, позовите этого парня, он порешает.]],
-    weapons = {"lockpick2"},
-    command = "11124rr45rrg",
-    max = 1,
-    salary = 45,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = true,
-    customCheck = function(ply) 
-        return CLIENT or table.HasValue({"disfulversed", "admin", "superadmin"}, ply:GetUserGroup()) 
-    end,
-    CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
-    category = "Криминал",
-})
-TEAM_MAF = DarkRP.createJob("Мафиози / 30 lvl", {
-    color = Color(20, 150, 20, 255),
-    model = {
-        "models/player/suits/group1/male_09_shirt.mdl",
-        "models/player/suits/group1/male_02_shirt.mdl",
-        "models/player/suits/group1/male_08_shirt.mdl",
-        "models/player/suits/group2/male_01_open.mdl",
-        "models/player/suits/group2/male_03_open.mdl",
-        "models/player/suits/group3/male_09_open.mdl",
-        "models/player/suits/group3/male_08_open.mdl"
-
-    },
-    description = [[Высшая каста преступного мира на сервере. Занимаются насильным, принудительным взиманием налогов среди торговцев, держателей бизнесов, да и простых граждан. Регулируют все процессы внутри криминального сообщества.]],
+    description = [[Загадочный торговец работающий как правило на тех, кто больше платит. В ассортименте всевозможные материалы для крафта, разношёрстное оружие и прочее полезное барахло. ]],
     weapons = {},
-    command = "123tggfa",
-    max = 10,
+    command = "d12341xz",
+    max = 1,
     salary = 75,
     admin = 0,
     vote = false,
     hasLicense = false,
     candemote = true,
-    category = "Криминал",
-})
-TEAM_MAF41 = DarkRP.createJob("Головорез Мафии [Dis+] / 45 lvl", {
-    color = Color(20, 150, 20, 255),
-    model = {
-        "models/arty/codmw2022/mp/dmz/shadowcompany/dmr/dmr_pm.mdl"
-    },
-    description = [[Ячейка Дона для особых случаев или охраны.]],
-    weapons = {},
-    command = "123tggf1a",
-    max = 2,
-    salary = 100,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = true,
     customCheck = function(ply) 
         return CLIENT or table.HasValue({"disfulversed", "admin", "superadmin"}, ply:GetUserGroup()) 
     end,
-    CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
+    CustomCheckFailMsg = "Только Disfulversed могут взять эту роль!",
     category = "Криминал",
 })
 TEAM_GROVER = DarkRP.createJob("Варщик мета / 30 lvl", {
@@ -264,6 +198,51 @@ TEAM_GROVER = DarkRP.createJob("Варщик мета / 30 lvl", {
     candemote = true,
     category = "Криминал",
 })
+TEAM_MAF = DarkRP.createJob("Мафиози / 30 lvl", {
+    color = Color(20, 150, 20, 255),
+    model = {
+        "models/player/suits/group1/male_09_shirt.mdl",
+        "models/player/suits/group1/male_02_shirt.mdl",
+        "models/player/suits/group1/male_08_shirt.mdl",
+        "models/player/suits/group2/male_01_open.mdl",
+        "models/player/suits/group2/male_03_open.mdl",
+        "models/player/suits/group3/male_09_open.mdl",
+        "models/player/suits/group3/male_08_open.mdl"
+
+    },
+    description = [[Высшая каста преступного мира на сервере. Занимаются насильным, принудительным взиманием налогов среди торговцев, держателей бизнесов, да и простых граждан. Регулируют все процессы внутри криминального сообщества.]],
+    weapons = {},
+    command = "123tggfa",
+    max = 10,
+    salary = 75,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = true,
+    category = "Криминал",
+})
+TEAM_GRABER = DarkRP.createJob("Грабитель [Dis+] / 35 lvl", {
+    color = Color(20, 150, 20, 255),
+    model = {
+        "models/player/suits/robber_tie.mdl",
+        "models/player/suits/robber_shirt.mdl",
+        "models/player/suits/robber_open.mdl"
+    },
+    description = [[Это грабитель и он умеет грабить, воровать и убивать, если вы не уверены в своём преступном дельце, позовите этого парня, он порешает.]],
+    weapons = {"lockpick2"},
+    command = "11124rr45rrg",
+    max = 1,
+    salary = 45,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = true,
+    customCheck = function(ply) 
+        return CLIENT or table.HasValue({"disfulversed", "admin", "superadmin"}, ply:GetUserGroup()) 
+    end,
+    CustomCheckFailMsg = "Только Disfulversed могут взять эту роль!",
+    category = "Криминал",
+})
 TEAM_CRYPTMINER = DarkRP.createJob("Крипто-Майнер / 45 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
@@ -292,6 +271,26 @@ TEAM_CRYPTMINER = DarkRP.createJob("Крипто-Майнер / 45 lvl", {
     vote = false,
     hasLicense = false,
     candemote = true,
+    category = "Криминал",
+})
+TEAM_MAF41 = DarkRP.createJob("Головорез Мафии [Dis+] / 45 lvl", {
+    color = Color(20, 150, 20, 255),
+    model = {
+        "models/arty/codmw2022/mp/dmz/shadowcompany/dmr/dmr_pm.mdl"
+    },
+    description = [[Ячейка Дона для особых случаев или охраны.]],
+    weapons = {},
+    command = "123tggf1a",
+    max = 2,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = true,
+    customCheck = function(ply) 
+        return CLIENT or table.HasValue({"disfulversed", "admin", "superadmin"}, ply:GetUserGroup()) 
+    end,
+    CustomCheckFailMsg = "Только Disfulversed могут взять эту роль!",
     category = "Криминал",
 })
 --Criminal--
@@ -353,7 +352,7 @@ TEAM_PMC = DarkRP.createJob("Оператор ЧВК [Dis+] / 50 lvl", {
     customCheck = function(ply) 
         return CLIENT or table.HasValue({"disfulversed", "admin", "superadmin"}, ply:GetUserGroup()) 
     end,
-    CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
+    CustomCheckFailMsg = "Только Disfulversed могут взять эту роль!",
     category = "Мародёры",
 })
 --Marauders--
@@ -374,7 +373,7 @@ TEAM_PATP = DarkRP.createJob("Патрульная полиция / 10 lvl", {
         "models/roro/police_male_8.mdl",
         "models/roro/police_male_9.mdl"
     },
-    description = [[Патрульный отдел полиции, выходит на операции низкой сложности, охраняют стратегически важные объекты и тому прочее.]],
+    description = [[Патрульный отдел полиции специализируется на выполнении операций низкой сложности. Его обязанности включают в себя охрану стратегически важных объектов, поддержание общественного порядка и реагирование на события, не требующие высокого уровня специализированных навыков.]],
     weapons = {"weapon_rpt_finebook", "weapon_rpt_handcuff", "weapon_rpt_stungun"},
     command = "usdbsdgar",
     max = 10,
@@ -390,7 +389,7 @@ TEAM_SPEZ = DarkRP.createJob("Спецназ CTSFO / 30 lvl", {
     model = {
         "models/arty/codmw2019/mp/coalition/ctsfo/ctsfo_pm.mdl"
     },
-    description = [[Отдел быстрого реагирования, выходит на операции средней сложности, охраняют стратегически важные объекты и тому прочее.]],
+    description = [[Отдел быстрого реагирования специализируется на оперативном реагировании на события средней сложности. Занимается обеспечением безопасности и охраной стратегически значимых объектов, а также выполняет прочие задачи, связанные с поддержанием общественного порядка и безопасности.]],
     weapons = {"weapon_rpt_finebook", "weapon_rpt_handcuff", "weapon_rpt_stungun"},
     command = "ybsdxce",
     max = 5,
@@ -399,26 +398,6 @@ TEAM_SPEZ = DarkRP.createJob("Спецназ CTSFO / 30 lvl", {
     vote = false,
     hasLicense = true,
     candemote = false,
-    category = "Правительство",
-})
-TEAM_DISAG = DarkRP.createJob("Отдел Disag [Dis+] / 45 lvl", {
-    color = Color(20, 150, 20, 255),
-    model = {
-        "models/bread/cod/characters/milsim/shadow_company.mdl"
-    },
-    description = [[Спец войска, занимаются рейдами, захватами точек, штурмами и прочими тяжелыми и сложными тактико-военными операциями. По слухам состоят из бывших наемников.]],
-    weapons = {"weapon_rpt_finebook", "weapon_rpt_handcuff", "weapon_rpt_stungun"},
-    command = "tsdg444",
-    max = 3,
-    salary = 150,
-    admin = 0,
-    vote = false,
-    hasLicense = true,
-    candemote = false,
-    customCheck = function(ply) 
-        return CLIENT or table.HasValue({"disfulversed", "admin", "superadmin"}, ply:GetUserGroup()) 
-    end,
-    CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
     category = "Правительство",
 })
 TEAM_DET = DarkRP.createJob("Детектив / 35 lvl", {
@@ -434,7 +413,7 @@ TEAM_DET = DarkRP.createJob("Детектив / 35 lvl", {
         "models/kerry/detective/male_08.mdl",
         "models/kerry/detective/male_09.mdl"
     },
-    description = [[Ведёт расследования, сотрудничает с отделом MI5.]],
+    description = [[Осуществляет проведение расследований и взаимодействует с Отделом Безопасности в рамках своей деятельности.]],
     weapons = {"weapon_rpt_finebook", "weapon_rpt_handcuff", "weapon_rpt_stungun"},
     command = "rsdffggggbn",
     max = 1,
@@ -445,29 +424,32 @@ TEAM_DET = DarkRP.createJob("Детектив / 35 lvl", {
     candemote = false,
     category = "Правительство",
 })
-TEAM_MAYOR = DarkRP.createJob("Администратор города / 75 lvl", {
+TEAM_DISAG = DarkRP.createJob("Отдел Disag [Dis+] / 45 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/player/suits/group3/male_09_open.mdl"
+        "models/bread/cod/characters/milsim/shadow_company.mdl"
     },
-    description = [[Сам мэр, принимает законы, регулирует цены и т.д]],
-    weapons = {},
-    command = "gfvdcze",
-    max = 1,
-    salary = 175,
+    description = [[Специальные военные подразделения, специализирующиеся на проведении рейдов, захватах стратегических точек, штурмах и других сложных тактических военных операциях. Согласно распространенным сообщениям, члены этих подразделений предположительно являются бывшими наемниками.]],
+    weapons = {"weapon_rpt_finebook", "weapon_rpt_handcuff", "weapon_rpt_stungun"},
+    command = "tsdg444",
+    max = 3,
+    salary = 150,
     admin = 0,
     vote = false,
     hasLicense = true,
-    mayor = true,
     candemote = false,
+    customCheck = function(ply) 
+        return CLIENT or table.HasValue({"disfulversed", "admin", "superadmin"}, ply:GetUserGroup()) 
+    end,
+    CustomCheckFailMsg = "Только Disfulversed могут взять эту роль!",
     category = "Правительство",
 })
-TEAM_OTDELBEZ = DarkRP.createJob("Отдел Контрразведки MI5 [Dis+] / 45 lvl", {
+TEAM_OTDELBEZ = DarkRP.createJob("Отдел Безопасности [Dis+] / 45 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
         "models/bread/cod/characters/kortac/horangi_kpop.mdl"
     },
-    description = [[Защита Мэра и Администрации города. Занимаются серьёзными невоенными делами. Расследованиями внутри гос. структур, а так же поиском особо опасных преступников.]],
+    description = [[Орган, ответственный за обеспечение безопасности и защиты Администрации города, осуществляет решение важных невоенных вопросов. В его компетенции ведение расследований внутри государственных структур, а также выявление и преследование особо опасных преступников.]],
     weapons = {"weapon_rpt_finebook", "weapon_rpt_handcuff", "weapon_rpt_stungun"},
     command = "wkloldd",
     max = 2,
@@ -479,13 +461,30 @@ TEAM_OTDELBEZ = DarkRP.createJob("Отдел Контрразведки MI5 [Dis
     customCheck = function(ply) 
         return CLIENT or table.HasValue({"disfulversed", "admin", "superadmin"}, ply:GetUserGroup()) 
     end,
-    CustomCheckFailMsg = "Только Dis+ могут взять эту роль!",
+    CustomCheckFailMsg = "Только Disfulversed могут взять эту роль!",
     --[[bodygroups = {
         ["pathes"] = {1},
         ["legs"] = {0,1,2,3,4,5},
         ["beanies"] = {0,1,2},
         ["glasses"] = {0,1},
     }]]
+    category = "Правительство",
+})
+TEAM_MAYOR = DarkRP.createJob("Администратор города / 75 lvl", {
+    color = Color(20, 150, 20, 255),
+    model = {
+        "models/player/suits/group3/male_09_open.mdl"
+    },
+    description = [[Администратор города, обладающий полномочиями по управлению городом и решению различных проблем, в том числе принятия мер, таких как объявление комендантского часа. В случае занятия должности мэра, вся полнота власти переходит в его ведение.]],
+    weapons = {},
+    command = "gfvdcze",
+    max = 1,
+    salary = 175,
+    admin = 0,
+    vote = false,
+    hasLicense = true,
+    mayor = true,
+    candemote = false,
     category = "Правительство",
 })
 TEAM_STAFF = DarkRP.createJob("Отдел поддержки [ADM]", {

@@ -17,7 +17,7 @@ CH_SupplyCrate.Config.RequiredTeams = { -- These are the names of the jobs that 
 	"Отдел Disag [Dis+] / 45 lvl",
 	"Детектив / 35 lvl",
 	"Администратор города / 75 lvl",
-	"Отдел Контрразведки MI5 [Dis+] / 45 lvl"
+	"Отдел Безопасности [Dis+] / 45 lvl"
 }
 
 CH_SupplyCrate.Config.GovernmentTeams = { -- These are your government teams. They will receive messages when robberies start. Use the actual team name, as shown below.
@@ -26,7 +26,7 @@ CH_SupplyCrate.Config.GovernmentTeams = { -- These are your government teams. Th
 	"Отдел Disag [Dis+] / 45 lvl",
 	"Детектив / 35 lvl",
 	"Администратор города / 75 lvl",
-	"Отдел Контрразведки MI5 [Dis+] / 45 lvl"
+	"Отдел Безопасности [Dis+] / 45 lvl"
 }
 
 CH_SupplyCrate.Config.AllowedTeams = { -- These are the teams that are allowed to rob the supply crate.

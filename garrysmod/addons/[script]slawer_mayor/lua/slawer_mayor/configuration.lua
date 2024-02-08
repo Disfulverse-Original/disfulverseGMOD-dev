@@ -41,7 +41,8 @@ cfg.SafeSize = 1
 
 -- Jobs that cannot have salary taxes
 cfg.TaxesBlacklist = {
-	["Gangster"] = true
+	["Головорез Мафии [Dis+] / 45 lvl"] = true,
+	["Оператор ЧВК [Dis+] / 50 lvl"] = true
 }
 
 -- Can mayor fire a policeman?

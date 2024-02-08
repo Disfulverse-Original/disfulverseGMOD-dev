@@ -14,7 +14,7 @@ CH_Bitminers.Config.RateUpdateInterval = 20 -- Default 20. So it will randomize 
 CH_Bitminers.Config.MinBitcoinRate = 4000 -- The lowest the bitcoin rate can hit.
 CH_Bitminers.Config.MaxBitcoinRate = 20000 -- The maximum the bitcoin rate can go to.
 
-CH_Bitminers.Config.NotifyPlayersChatRateUpdate = true -- Should all players be notified in chat when the bitcoin rate updates?
+CH_Bitminers.Config.NotifyPlayersChatRateUpdate = false -- Should all players be notified in chat when the bitcoin rate updates?
 
 -- CH_Bitminers.Config.MineMoneyInterval[[AMOUNT OF MINERS] = INTERVAL BETWEEN MINING MONEY
 -- Here it illustrates that having 1 miner will take 15 seconds before it mines bitcoins. The more miners, the less interval.

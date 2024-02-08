@@ -3,7 +3,7 @@ local THEME = Slawer.Jobs.CFG["Theme"]
 local PANEL = {}
 
 function PANEL:Init()
-    self:SetSize(ScrH() * 1.3, ScrH() * 0.73)
+    self:SetSize(ScrH() * 1.35, ScrH() * 0.75)
     self:Center()
 
     self.dSidebar = vgui.Create("Slawer.Jobs:DScrollPanel", self)

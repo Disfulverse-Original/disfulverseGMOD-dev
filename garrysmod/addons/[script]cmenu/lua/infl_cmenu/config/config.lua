@@ -146,6 +146,17 @@ PIS.Config:AddMenu("Остальное", 			"action", 		"Разное", 			info,
 
 })
 
+PIS.Config:AddMenu("SuperAdmin-only", 			"binary-code", 		"SuperAdmin-only", 			red, {
+
+	{name = "Weapon.Customise", 			mat = "binary-code", col = red, func = function() RunConsoleCommand("say", "!project0") end},
+	{name = "Zone.Creator", 			mat = "binary-code", col = red, func = function() RunConsoleCommand("brs_zone_editor") end},
+	{name = "ATM.Admin", 			mat = "binary-code", col = red, func = function() RunConsoleCommand("say", "!adminatm") end},
+	{name = "Name.Editor", 			mat = "binary-code", col = red, func = function() RunConsoleCommand("say", "!nameadmin") end},
+	{name = "House.Editor", 			mat = "binary-code", col = red, func = function() RunConsoleCommand("say", "/rpsconfig") end},
+	{name = "Accessory.Editor", 			mat = "binary-code", col = red, func = function() RunConsoleCommand("say", "/aasconfig") end},
+
+},function(ply) return ply:IsSuperAdmin() end)
+
 PIS.Config:AddMenu("Меню полиции", 		"police", 		"Меню полиции", 			blue, {
 
 

@@ -112,7 +112,7 @@ Realistic_Properties.PoliceJob = { -- Police Job which can see the owner of prop
     ["Отдел Disag [Dis+] / 45 lvl"] = true, 
     ["Детектив / 35 lvl"] = true,
     ["Администратор города / 75 lvl"] = true,
-    ["Отдел Контрразведки MI5 [Dis+] / 45 lvl"] = true,
+    ["Отдел Безопасности [Dis+] / 45 lvl"] = true,
     ["Отдел поддержки [ADM]"] = true,
 }
 

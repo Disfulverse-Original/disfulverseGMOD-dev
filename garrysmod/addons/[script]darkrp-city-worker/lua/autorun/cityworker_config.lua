@@ -32,6 +32,7 @@ CITYWORKER.Config.Job = {
 
     color = Color( 20, 150, 20, 255 ),
     model = {
+        "models/arty/codmw2022/mp/dmz/shadowcompany/boss/trap/trap_pm.mdl",
         "models/arty/codmw2022/mp/dmz/shadowcompany/boss/trap/trap_pm.mdl"
     },
     description = "Работа городского рабочего состоит в том, чтобы ходить и устранять утечки, пожарные гидранты, завалы и проблемы с электричеством по всему городу, и получать за это деньги!",
