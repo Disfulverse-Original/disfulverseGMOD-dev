@@ -81,12 +81,12 @@ BRICKS_SERVER.BASECONFIG.LEVELING.AmmoLevels = {}
 
 --[[ PRINTERS ]]--
 BRICKS_SERVER.BASECONFIG.PRINTERS = {}
-BRICKS_SERVER.BASECONFIG.PRINTERS["Max Level"] = 100
-BRICKS_SERVER.BASECONFIG.PRINTERS["Original EXP Required"] = 1000
-BRICKS_SERVER.BASECONFIG.PRINTERS["EXP Required Increase"] = 1.1
-BRICKS_SERVER.BASECONFIG.PRINTERS["Printer EXP Per Print"] = 30
-BRICKS_SERVER.BASECONFIG.PRINTERS["Money Increase Per Level"] = 0.01
-BRICKS_SERVER.BASECONFIG.PRINTERS["Ink Lost Per Print"] = 2
+BRICKS_SERVER.BASECONFIG.PRINTERS["Max Level"] = 5
+BRICKS_SERVER.BASECONFIG.PRINTERS["Original EXP Required"] = 5000
+BRICKS_SERVER.BASECONFIG.PRINTERS["EXP Required Increase"] = 1.5
+BRICKS_SERVER.BASECONFIG.PRINTERS["Printer EXP Per Print"] = 50
+BRICKS_SERVER.BASECONFIG.PRINTERS["Money Increase Per Level"] = 0.025
+BRICKS_SERVER.BASECONFIG.PRINTERS["Ink Lost Per Print"] = 1
 BRICKS_SERVER.BASECONFIG.PRINTERS["Replace Cooldown"] = 600
 BRICKS_SERVER.BASECONFIG.PRINTERS.Tiers = {
     [1] = {
@@ -95,10 +95,10 @@ BRICKS_SERVER.BASECONFIG.PRINTERS.Tiers = {
         ModelColor = Color( 192, 192, 192 ),
         ScreenColor = Color( 192, 192, 192 ),
         Health = 150,
-        MaxInk = 150,
+        MaxInk = 50,
         PrintAmount = 50,
         MoneyStorage = 20000,
-        PrintSpeed = 60
+        PrintSpeed = 40
     },
     [2] = {
         Name = "Принтер Т2",
@@ -106,7 +106,7 @@ BRICKS_SERVER.BASECONFIG.PRINTERS.Tiers = {
         ModelColor = Color( 238, 191, 39 ),
         ScreenColor = Color( 234, 213, 39 ),
         Health = 150,
-        MaxInk = 150,
+        MaxInk = 50,
         PrintAmount = 150,
         MoneyStorage = 30000,
         PrintSpeed = 30
@@ -117,10 +117,10 @@ BRICKS_SERVER.BASECONFIG.PRINTERS.Tiers = {
         ModelColor = Color( 16, 231, 255 ),
         ScreenColor = Color( 74, 255, 245 ),
         Health = 150,
-        MaxInk = 150,
+        MaxInk = 50,
         PrintAmount = 250,
         MoneyStorage = 40000,
-        PrintSpeed = 15
+        PrintSpeed = 20
     },
     [4] = {
         Name = "Принтер Т4",
@@ -128,10 +128,10 @@ BRICKS_SERVER.BASECONFIG.PRINTERS.Tiers = {
         ModelColor = Color( 65, 34, 119 ),
         ScreenColor = Color( 83, 63, 112 ),
         Health = 150,
-        MaxInk = 150,
+        MaxInk = 50,
         PrintAmount = 300,
         MoneyStorage = 50000,
-        PrintSpeed = 5
+        PrintSpeed = 10
     }
 }
 BRICKS_SERVER.BASECONFIG.PRINTERS.PrinterSlots = {
