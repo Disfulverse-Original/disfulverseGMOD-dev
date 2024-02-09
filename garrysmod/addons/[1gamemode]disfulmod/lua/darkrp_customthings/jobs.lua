@@ -9,13 +9,7 @@ TEAM_CITIZEN = DarkRP.createJob("Безработный / 0 lvl", {
         "models/player/Group01/male_05.mdl",
         "models/player/Group01/male_01.mdl",
         "models/player/Group01/male_03.mdl",
-        "models/player/Group01/male_04.mdl",
-        "models/player/Group01/female_01.mdl",
-        "models/player/Group01/female_02.mdl",
-        "models/player/Group01/female_03.mdl",
-        "models/player/Group01/female_05.mdl",
-        "models/player/Group01/female_06.mdl",
-        "models/player/Group01/female_04.mdl"
+        "models/player/Group01/male_04.mdl"
     },
     description = [[Безработный гражданин - вы средняя прослойка этого мира, вы просто гражданин, может вам нужно найти работу?]],
     weapons = {},
@@ -91,12 +85,6 @@ TEAM_RUN = DarkRP.createJob("Бегущий / 100 lvl", {
 TEAM_BANDIT = DarkRP.createJob("Бандит / 10 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/drem/cch/female_01.mdl",
-        "models/drem/cch/female_02.mdl",
-        "models/drem/cch/female_03.mdl",
-        "models/drem/cch/female_04.mdl",
-        "models/drem/cch/female_06.mdl",
-        "models/drem/cch/female_07.mdl",
         "models/drem/cch/male_01.mdl",
         "models/drem/cch/male_02.mdl",
         "models/drem/cch/male_03.mdl",
@@ -121,12 +109,6 @@ TEAM_BANDIT = DarkRP.createJob("Бандит / 10 lvl", {
 TEAM_BANDITLOCKPICKER = DarkRP.createJob("Взломщик / 10 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/drem/cch/female_01.mdl",
-        "models/drem/cch/female_02.mdl",
-        "models/drem/cch/female_03.mdl",
-        "models/drem/cch/female_04.mdl",
-        "models/drem/cch/female_06.mdl",
-        "models/drem/cch/female_07.mdl",
         "models/drem/cch/male_01.mdl",
         "models/drem/cch/male_02.mdl",
         "models/drem/cch/male_03.mdl",
@@ -171,12 +153,6 @@ TEAM_BARACH = DarkRP.createJob("Барахольщик [Dis+] / 30 lvl", {
 TEAM_GROVER = DarkRP.createJob("Варщик мета / 30 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/drem/cch/female_01.mdl",
-        "models/drem/cch/female_02.mdl",
-        "models/drem/cch/female_03.mdl",
-        "models/drem/cch/female_04.mdl",
-        "models/drem/cch/female_06.mdl",
-        "models/drem/cch/female_07.mdl",
         "models/drem/cch/male_01.mdl",
         "models/drem/cch/male_02.mdl",
         "models/drem/cch/male_03.mdl",
@@ -246,12 +222,6 @@ TEAM_GRABER = DarkRP.createJob("Грабитель [Dis+] / 35 lvl", {
 TEAM_CRYPTMINER = DarkRP.createJob("Крипто-Майнер / 45 lvl", {
     color = Color(20, 150, 20, 255),
     model = {
-        "models/drem/cch/female_01.mdl",
-        "models/drem/cch/female_02.mdl",
-        "models/drem/cch/female_03.mdl",
-        "models/drem/cch/female_04.mdl",
-        "models/drem/cch/female_06.mdl",
-        "models/drem/cch/female_07.mdl",
         "models/drem/cch/male_01.mdl",
         "models/drem/cch/male_02.mdl",
         "models/drem/cch/male_03.mdl",
@@ -303,7 +273,6 @@ TEAM_NAEB = DarkRP.createJob("Наёмник-мародер / 30 lvl", {
         "models/player/Group03/male_04.mdl",
         "models/player/Group03/male_08.mdl",
         "models/player/Group03/male_09.mdl",
-        "models/player/Group03/Female_02.mdl",
         "models/player/Group03/Male_05.mdl",
         "models/player/Group03/male_03.mdl",
         "models/player/Group03/Male_06.mdl" 
