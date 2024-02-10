@@ -108,7 +108,7 @@ SWEP.HipDispersion = 1250
 SWEP.MoveDispersion = 500
 SWEP.JumpDispersion = 700 -- tactical unrealism    set to 700 later
 
-SWEP.Primary.Ammo = "ar2"
+SWEP.Primary.Ammo = "SniperPenetratedRound"
 SWEP.MagID = "awp"
 
 SWEP.HeatCapacity = 75
