@@ -72,11 +72,17 @@ hook.Add("RenderScreenspaceEffects", "renderBlurEffect", renderBlurEffect)
 local function drawPlayerDeathThink()
     if drawDeathEffects == true then
 	    local ply = LocalPlayer()
+	    local leng = tostring(math.floor(ply:GetNWFloat("deathTimeLeft")*10*Lerp(math.floor(ply:GetNWFloat("deathTimeLeft")) + CurTime(), 0, 1)))
+	    local quickReviveString = "Удерживайте ЛКМ для быстрого возрождения."
 		    draw.DrawText(drawString, "DeathFont", ScrW() / 2, ScrH() / 2 - 275, Color(255, 0, 0, 150), TEXT_ALIGN_CENTER)
 		    draw.DrawText(drawString, "DeathFont", ScrW() / 2 - 1, ScrH() / 2 - 274, Color(0, 0, 0, 125), TEXT_ALIGN_CENTER)
+		    draw.DrawText(quickReviveString, "DeathFont", ScrW() / 2, ScrH() / 2 - 190, Color(0, 0, 0, 125), TEXT_ALIGN_CENTER)
+		    draw.DrawText(quickReviveString, "DeathFont", ScrW() / 2 - 1, ScrH() / 2 - 189, Color(255, 255, 255, 150), TEXT_ALIGN_CENTER)
 		    --draw.DrawText("Время до возрождения " .. tostring(math.floor(ply:GetNWFloat("deathTimeLeft"))) .. " секунд.", "DermaLarge", ScrW() / 2, ScrH() / 2 - 225, Color(255, 255, 255, 175), TEXT_ALIGN_CENTER)
 		    --draw.DrawText("Время до возрождения " .. tostring(math.floor(ply:GetNWFloat("deathTimeLeft"))) .. " секунд.", "DermaLarge", ScrW() / 2 - 1, ScrH() / 2 - 224, Color(0, 0, 0, 125), TEXT_ALIGN_CENTER)
-		    draw.RoundedBox( 2, ScrW() / 2 - 250, ScrH() / 2 - 215, tostring(math.floor(ply:GetNWFloat("deathTimeLeft")*10*Lerp(math.floor(ply:GetNWFloat("deathTimeLeft")) + CurTime(), 0, 1))), 15, Color( 255, 255, 255, 175 ) )
+		    draw.RoundedBox( 2, ScrW() / 2 - 250, ScrH() / 2 - 215, 449, 15, Color( 2, 0, 3, 175 ) )
+		    draw.RoundedBox( 2, ScrW() / 2 - 250, ScrH() / 2 - 215, leng, 15, Color( 255, 255, 255, 235 ) )
+
 	end
 end
 hook.Add("HUDPaint", "drawPlayerDeathThink", drawPlayerDeathThink)
