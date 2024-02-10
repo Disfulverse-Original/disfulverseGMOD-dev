@@ -14,17 +14,17 @@ function PANEL:FillPanel( f4Panel, sheetButton )
     local jobSortBy = vgui.Create( "bricks_server_combo", jobTopBar )
     jobSortBy:Dock( RIGHT )
     jobSortBy:DockMargin( 5, 0, 0, 0 )
-    jobSortBy:SetWide( 150 )
-    jobSortBy:SetValue( "Default" )
+    jobSortBy:SetWide( 250 )
+    jobSortBy:SetValue( "Стандарт." )
     local jobPanel
     local jobSortChoice = "default"
-    jobSortBy:AddChoice( "Default", "default" )
+    jobSortBy:AddChoice( "Стандарт.", "default" )
     if( BRICKS_SERVER.Func.IsSubModuleEnabled( "essentials", "levelling" ) ) then
-        jobSortBy:AddChoice( "Lowest Level", "level_low_to_high" )
-        jobSortBy:AddChoice( "Highest Level", "level_high_to_low" )
+        jobSortBy:AddChoice( "За уровнем, возрастание", "level_low_to_high" )
+        jobSortBy:AddChoice( "За уровнем, убывание", "level_high_to_low" )
     end
-    jobSortBy:AddChoice( "Lowest Salary", "salary_low_to_high" )
-    jobSortBy:AddChoice( "Highest Salary", "salary_high_to_low" )
+    jobSortBy:AddChoice( "За з/п, убывание", "price_low_to_high" )
+    jobSortBy:AddChoice( "За з/п, возрастание", "price_high_to_low" )
     jobSortBy.OnSelect = function( self2, index, value, data )
         jobSortChoice = data
         jobPanel.FillJobs() 

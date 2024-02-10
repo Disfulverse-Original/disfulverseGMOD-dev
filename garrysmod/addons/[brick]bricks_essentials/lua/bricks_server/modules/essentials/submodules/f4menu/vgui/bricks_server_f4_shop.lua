@@ -14,17 +14,17 @@ function PANEL:FillPanel( f4Panel, sheetButton )
     local shopSortBy = vgui.Create( "bricks_server_combo", shopTopBar )
     shopSortBy:Dock( RIGHT )
     shopSortBy:DockMargin( 5, 0, 0, 0 )
-    shopSortBy:SetWide( 150 )
-    shopSortBy:SetValue( "Default" )
+    shopSortBy:SetWide( 250 )
+    shopSortBy:SetValue( "Стандарт." )
     local shopPanel
     local shopSortChoice = "default"
-    shopSortBy:AddChoice( "Default", "default" )
+    shopSortBy:AddChoice( "Стандарт.", "default" )
     if( BRICKS_SERVER.Func.IsSubModuleEnabled( "essentials", "levelling" ) ) then
-        shopSortBy:AddChoice( "Lowest Level", "level_low_to_high" )
-        shopSortBy:AddChoice( "Highest Level", "level_high_to_low" )
+        shopSortBy:AddChoice( "За уровнем, возрастание", "level_low_to_high" )
+        shopSortBy:AddChoice( "За уровнем, убывание", "level_high_to_low" )
     end
-    shopSortBy:AddChoice( "Lowest Price", "price_low_to_high" )
-    shopSortBy:AddChoice( "Highest Price", "price_high_to_low" )
+    shopSortBy:AddChoice( "За ценой, убывание", "price_low_to_high" )
+    shopSortBy:AddChoice( "За ценой, возрастание", "price_high_to_low" )
     shopSortBy.OnSelect = function( self2, index, value, data )
         shopSortChoice = data
         shopPanel.FillShop() 

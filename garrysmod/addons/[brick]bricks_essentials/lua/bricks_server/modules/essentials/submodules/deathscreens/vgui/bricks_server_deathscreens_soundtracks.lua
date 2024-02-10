@@ -30,11 +30,11 @@ function PANEL:FillPanel()
     sortBy:SetValue( "Lowest Level" )
     local sortChoice = "level_low_to_high"
     if( BRICKS_SERVER.Func.IsSubModuleEnabled( "essentials", "levelling" ) ) then
-        sortBy:AddChoice( "Lowest Level", "level_low_to_high" )
-        sortBy:AddChoice( "Highest Level", "level_high_to_low" )
+        sortBy:AddChoice( "За уровнем, возрастание", "level_low_to_high" )
+        sortBy:AddChoice( "За уровнем, убывание", "level_high_to_low" )
     end
-    sortBy:AddChoice( "Lowest Price", "price_low_to_high" )
-    sortBy:AddChoice( "Highest Price", "price_high_to_low" )
+    sortBy:AddChoice( "За ценой, убывание", "price_low_to_high" )
+    sortBy:AddChoice( "За ценой, возрастание", "price_high_to_low" )
     sortBy.OnSelect = function( self2, index, value, data )
         sortChoice = data
         self.RefreshItems()

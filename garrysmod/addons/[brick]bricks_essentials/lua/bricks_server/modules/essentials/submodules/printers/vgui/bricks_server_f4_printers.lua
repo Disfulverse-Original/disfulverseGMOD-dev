@@ -72,17 +72,17 @@ function PANEL:FillPanel( f4Panel, sheetButton )
                 draw.RoundedBox( 5, 5, 5, h-10, h-10, BRICKS_SERVER.Func.GetTheme( 2 ) )
 
                 if( not v.Group ) then
-                    draw.SimpleText( "Slot " .. k, "BRICKS_SERVER_Font33", h+15, 5, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
+                    draw.SimpleText( "Слот " .. k, "BRICKS_SERVER_Font33", h+15, 5, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
                 else
-                    draw.SimpleText( "Slot " .. k .. " - " .. v.Group, "BRICKS_SERVER_Font33", h+15, 5, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
+                    draw.SimpleText( "Слот " .. k .. " - " .. v.Group, "BRICKS_SERVER_Font33", h+15, 5, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
                 end
 
                 if( unlocked ) then
-                    draw.SimpleText( "Tier: " .. (printerTable.Name or "None"), "BRICKS_SERVER_Font20", h+15, 32, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
-                    draw.SimpleText( "Level: " .. (BRS_PRINTERS[k][3] or 1), "BRICKS_SERVER_Font20", h+15, 47, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
+                    draw.SimpleText( "Тир: " .. (printerTable.Name or "-"), "BRICKS_SERVER_Font20", h+15, 32, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
+                    draw.SimpleText( "Уровень: " .. (BRS_PRINTERS[k][3] or 1), "BRICKS_SERVER_Font20", h+15, 47, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
                 else
-                    draw.SimpleText( "Tier: None", "BRICKS_SERVER_Font20", h+15, 32, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
-                    draw.SimpleText( "Level: 1", "BRICKS_SERVER_Font20", h+15, 47, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
+                    draw.SimpleText( "Тир: -", "BRICKS_SERVER_Font20", h+15, 32, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
+                    draw.SimpleText( "Уровень: 1", "BRICKS_SERVER_Font20", h+15, 47, BRICKS_SERVER.Func.GetTheme( 6 ), 0, 0 )
                 end
             end
 
@@ -108,7 +108,7 @@ function PANEL:FillPanel( f4Panel, sheetButton )
             end
 
             local printerActions = {
-                [1] = { "Place", function( ply, slotID )
+                [1] = { "Заспавнить", function( ply, slotID )
                     net.Start( "BRS.Net.PlacePrinter" )
                         net.WriteUInt( slotID, 8 )
                     net.SendToServer()
@@ -116,7 +116,7 @@ function PANEL:FillPanel( f4Panel, sheetButton )
             }
 
             if( unlocked and (BRS_PRINTERS[k][2] or 1) < #BRICKS_SERVER.CONFIG.PRINTERS.Tiers ) then
-                printerActions[2] = { "Upgrade", function( ply, slotID )
+                printerActions[2] = { "Улучшить", function( ply, slotID )
                     net.Start( "BRS.Net.PrinterUpgrade" )
                         net.WriteUInt( slotID, 8 )
                     net.SendToServer()
@@ -169,7 +169,7 @@ function PANEL:FillPanel( f4Panel, sheetButton )
                 printerAction:DockMargin( 5, 25, 0, 25 )
                 local tall = 50
                 surface.SetFont( "BRICKS_SERVER_Font25" )
-                local textX, textY = surface.GetTextSize( "Unlock" )
+                local textX, textY = surface.GetTextSize( "Разблокировать" )
                 surface.SetFont( "BRICKS_SERVER_Font20" )
                 local text2X, text2Y = surface.GetTextSize( DarkRP.formatMoney( v.Price or 0 ) )
                 local textTall = textY+text2Y-5
@@ -191,15 +191,15 @@ function PANEL:FillPanel( f4Panel, sheetButton )
                     surface.SetAlphaMultiplier( 1 )
 
                     if( v.Price ) then
-                        draw.SimpleText( "Unlock", "BRICKS_SERVER_Font25", w/2, (h/2)-(textTall/2), BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, 0 )
+                        draw.SimpleText( "Разблокировать", "BRICKS_SERVER_Font25", w/2, (h/2)-(textTall/2), BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, 0 )
                         draw.SimpleText( DarkRP.formatMoney( v.Price ), "BRICKS_SERVER_Font20", w/2, (h/2)-(textTall/2)+textY-5, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, 0 )
                     else
-                        draw.SimpleText( "Unlock", "BRICKS_SERVER_Font25", w/2, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+                        draw.SimpleText( "Разблокировать", "BRICKS_SERVER_Font25", w/2, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
                     end
                 end
                 printerAction.DoClick = function()
                     if( BRS_PRINTERS and BRS_PRINTERS[k] and BRS_PRINTERS[k][1] == true ) then
-                        notification.AddLegacy( "You already have this slot unlocked!", 1, 5 )
+                        notification.AddLegacy( "У вас уже разблокирован этот слот!", 1, 5 )
                         return
                     end
         
@@ -225,20 +225,20 @@ function PANEL:FillPanel( f4Panel, sheetButton )
                     surface.SetAlphaMultiplier( 1 )
 
                     if( BRS_PRINTERS[k] and BRS_PRINTERS[k][1] == true and BRS_PRINTERS[k][5] and BRS_PRINTERS[k][5] > os.time() ) then
-                        draw.SimpleText( "DESTROYED - On cooldown for " .. BRICKS_SERVER.Func.FormatTime( math.max( 0, math.Round( BRS_PRINTERS[k][5]-os.time() ) ) ), "BRICKS_SERVER_HUDFontS", w/2, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+                        draw.SimpleText( "УНИЧТОЖЕН - Время до восстановления: " .. BRICKS_SERVER.Func.FormatTime( math.max( 0, math.Round( BRS_PRINTERS[k][5]-os.time() ) ) ), "BRICKS_SERVER_HUDFontS", w/2, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
                         return
                     end
 
                     if( BRICKS_SERVER.Func.IsSubModuleEnabled( "essentials", "levelling" ) and v.Level ) then
                         if( BRS_LEVEL < v.Level ) then
-                            draw.SimpleText( "LOCKED - Level " .. v.Level, "BRICKS_SERVER_HUDFontS", w/2, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+                            draw.SimpleText( "Закрыт - Уровень " .. v.Level, "BRICKS_SERVER_HUDFontS", w/2, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
                             return
                         end
                     end
 
                     if( v.Group ) then
                         if( not BRICKS_SERVER.Func.IsInGroup( LocalPlayer(), v.Group ) ) then
-                            draw.SimpleText( "LOCKED - " .. v.Group, "BRICKS_SERVER_HUDFontS", w/2, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+                            draw.SimpleText( "Закрыт - " .. v.Group, "BRICKS_SERVER_HUDFontS", w/2, h/2, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
                             return
                         end
                     end

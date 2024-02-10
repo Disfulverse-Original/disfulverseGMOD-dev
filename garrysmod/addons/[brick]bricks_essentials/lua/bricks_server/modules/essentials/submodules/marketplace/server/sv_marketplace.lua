@@ -159,17 +159,17 @@ net.Receive( "BRS.Net.MarketplaceBid", function( len, ply )
 	local marketItem = BRS_MARKETPLACE[marketKey]
 
 	if( (table.GetWinningKey( marketItem[8] or {} ) or "") == ply:SteamID() ) then
-		DarkRP.notify( ply, 1, 5, "You are already the highest bidder!" )
+		DarkRP.notify( ply, 1, 5, "У вас уже наивысшая ставка!" )
 		return
 	end
 
 	if( bidAmount < math.floor( (marketItem[2] or 1000)*(BRICKS_SERVER.CONFIG.MARKETPLACE["Minimum Bid Increment"] or 1.1) ) ) then
-		DarkRP.notify( ply, 1, 5, "You must bid at least 10% more than the current value!" )
+		DarkRP.notify( ply, 1, 5, "Вы должны поставить хотя бы на 10% больше чем текущее значение!" )
 		return
 	end
 
 	if( os.time() >= ((marketItem[4] or 0)+(marketItem[3] or 0)) ) then
-		DarkRP.notify( ply, 1, 5, "The auction has already ended for this item!" )
+		DarkRP.notify( ply, 1, 5, "Аукцион за этот предмет уже закончился!" )
 		return
 	end
 
@@ -202,9 +202,9 @@ net.Receive( "BRS.Net.MarketplaceBid", function( len, ply )
 		BRICKS_SERVER.Func.UpdateMarketplaceEntry( marketKey, 8, BRS_MARKETPLACE[marketKey][8] )
 		BRICKS_SERVER.Func.UpdateMarketplace()
 
-		DarkRP.notify( ply, 1, 5, "Bid of " .. currencyTable.formatFunction( bidAmount ) .. " placed!" )
+		DarkRP.notify( ply, 1, 5, "Ставка в размере " .. currencyTable.formatFunction( bidAmount ) .. " поставлена!" )
 	else
-		DarkRP.notify( ply, 1, 5, "You don't have enough money for this bid!" )
+		DarkRP.notify( ply, 1, 5, "У вас недостаточно денег для этой ставки!" )
 	end
 end )
 

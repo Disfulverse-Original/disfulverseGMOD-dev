@@ -185,51 +185,66 @@ DarkRP.createShipment("Model 329PD [x3]", {
 DarkRP.createShipment("Glock", {
     entity = "arccw_ud_glock",
     model = "models/weapons/arccw/c_ud_glock.mdl",
-    amount = 1,
-    pricesep = 99999,
-    price = 99999,
+    amount = 0,
+    pricesep = 9999999999999,
+    price = 9999999999999999,
     noship = false,
     separate = false,
-    category = "Вооружение"
+    category = "Вооружение",
+    allowed = {
+        TEAM_STAFF
+    },
 })
 DarkRP.createShipment("MP5A4", {
     entity = "arccw_ur_mp5",
     model = "models/weapons/arccw/c_ur_mp5.mdl",
-    amount = 1,
-    pricesep = 99999,
-    price = 99999,
+    amount = 0,
+    pricesep = 99999999999,
+    price = 99999999999,
     noship = false,
     separate = false,
-    category = "Вооружение"
+    category = "Вооружение",
+    allowed = {
+        TEAM_STAFF
+    },
 })
 DarkRP.createShipment("Benelli M4", {
     entity = "arccw_ud_m1014",
     model = "models/weapons/arccw/c_ud_m1014.mdl",
-    amount = 1,
-    pricesep = 99999,
-    price = 99999,
+    amount = 0,
+    pricesep = 99999999999,
+    price = 999999999999,
     noship = false,
     separate = false,
-    category = "Вооружение"
+    category = "Вооружение",
+    allowed = {
+        TEAM_STAFF
+    },
 })
 DarkRP.createShipment("SPAS-12", {
     entity = "arccw_ur_spas12",
     model = "models/weapons/arccw/c_ur_spas12.mdl",
-    amount = 1,
-    pricesep = 99999,
-    price = 99999,
+    amount = 0,
+    pricesep = 99999999999,
+    price = 99999999999,
     noship = false,
     separate = false,
-    category = "Вооружение"
+    category = "Вооружение",
+    allowed = {
+        TEAM_STAFF
+    },
 })
 DarkRP.createShipment("M16", {
     entity = "arccw_ud_m16",
     model = "models/weapons/arccw/c_ud_m16.mdl",
-    amount = 1,
-    pricesep = 99999,
-    price = 99999,
+    amount = 0,
+    pricesep = 99999999999,
+    price = 99999999999,
     noship = false,
     separate = false,
-    category = "Вооружение"
+    category = "Вооружение",
+    allowed = {
+        TEAM_STAFF
+    },
 })
 -- Полицейские

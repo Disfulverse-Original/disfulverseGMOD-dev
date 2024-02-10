@@ -87,19 +87,19 @@ net.Receive( "BRS.Net.PlacePrinter", function( len, ply )
 			plyPrinters[slotID][5] = nil
 			ply:SetPrinters( plyPrinters )
 		else
-			DarkRP.notify( ply, 1, 5, "You can't place a printer when it is on cooldown!" )
+			DarkRP.notify( ply, 1, 5, "Вы не можете поставить принтер так как он на восстановлении!" )
 			return
 		end
 	end
 	
 	if( BRS_ACTIVE_PRINTERS and BRS_ACTIVE_PRINTERS[ply:SteamID64()] and BRS_ACTIVE_PRINTERS[ply:SteamID64()][slotID] and IsValid( BRS_ACTIVE_PRINTERS[ply:SteamID64()][slotID] ) ) then
-		DarkRP.notify( ply, 1, 5, "This printer has already been placed, it must destroyed before replacing it!" )
+		DarkRP.notify( ply, 1, 5, "Этот принтер уже был размещен, он должен быть уничтожен, прежде чем вы сможете заменить его!" )
 		return
 	end
 
 	local printerEnt = ents.Create( "bricks_server_printer" )
 	if ( !IsValid( printerEnt ) ) then 
-		DarkRP.notify( ply, 1, 5, "There was an error when spawning this printer!" )
+		DarkRP.notify( ply, 1, 5, "Произошла ошибка при создании этого принтера!" )
 		return 
 	end
 	printerEnt:SetAngles( ply:GetAngles() )
@@ -139,10 +139,10 @@ net.Receive( "BRS.Net.PrinterUpgrade", function( len, ply )
 				BRS_ACTIVE_PRINTERS[ply:SteamID64()][slotID]:SetPrinterTier( plyPrinters[slotID][2] )
 			end
 
-			DarkRP.notify( ply, 0, 5, "Printer successfully upgraded to " .. (BRICKS_SERVER.CONFIG.PRINTERS.Tiers[plyPrinters[slotID][2]].Name or "ERROR") .. " tier for " .. DarkRP.formatMoney( upgradeCost ) .. "!" )
+			DarkRP.notify( ply, 0, 5, "Принтер успешно улучшен до " .. (BRICKS_SERVER.CONFIG.PRINTERS.Tiers[plyPrinters[slotID][2]].Name or "ERROR") .. " за " .. DarkRP.formatMoney( upgradeCost ) .. "!" )
 			ply:SetPrinters( plyPrinters )
 		else
-			DarkRP.notify( ply, 1, 5, "You don't have enough money to upgrade this printer!" )
+			DarkRP.notify( ply, 1, 5, "У вас недостаточно денег, чтобы улучшить этот принтер!" )
 		end
 	end
 end )
@@ -172,7 +172,7 @@ net.Receive( "BRS.Net.AdminUnlockPrinter", function( len, ply )
 
 		ply:BRS():AdminSendInventory( requestedPly )
 
-		DarkRP.notify( ply, 1, 5, "You have unlocked " .. requestedPly:Nick() .. "'s printer slot " .. slotID .. "!" )
+		DarkRP.notify( ply, 1, 5, "Вы разблокировали для игрока " .. requestedPly:Nick() .. " слот" .. slotID .. "!" )
 		DarkRP.notify( requestedPly, 1, 5, "An admin has unlocked your printer slot " .. slotID .. "!" )
 	else
 		DarkRP.notify( ply, 1, 5, "Error unlocking printer slot!" )
