@@ -13,7 +13,7 @@ function creditstore:OpenStore()
     if (IsValid(self.frame)) then
         return
     end
-
+    
     self.frame = vgui.Create('onyx.creditstore.Frame')
     self.frame:SetSize(ScrW() * .65, ScrH() * .65)
     self.frame:MakePopup()

@@ -24,11 +24,10 @@ local colorTertiary = onyx:Config('colors.tertiary')
 
 function PANEL:Init()
     local client = LocalPlayer()
-
     onyx.creditstore.frame = self
-
     self.container = self:Add('Panel')
     self.container.PaintOver = function(p, w, h)
+
         local text1 = 'LOADING INVENTORY'
         local text2 = 'PROCESSING THINGS'
         local subtext = 'Please do not disconnect'
@@ -103,6 +102,8 @@ function PANEL:Init()
     self:SetTitle('')
     self:LoadTabs()
 end
+
+
 
 function PANEL:PerformLayout(w, h)
     self.BaseClass.PerformLayout(self, w, h)
@@ -225,6 +226,7 @@ function PANEL:LoadTabs()
 
     self.sidebar:ChooseTab(1)
 end
+
 
 onyx.gui.Register('onyx.creditstore.Frame', PANEL, 'onyx.Frame')
 
