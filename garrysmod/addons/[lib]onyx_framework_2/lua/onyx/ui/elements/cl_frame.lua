@@ -13,6 +13,7 @@ local colorPrimary = onyx:Config('colors.primary')
 local colorBG = onyx.OffsetColor(colorPrimary, -5)
 
 function PANEL:Init()
+    self.startTime = SysTime()
     self.divHeader = self:Add('onyx.Frame.Header')
 
     self:Combine(self.divHeader, 'SetTitle')
@@ -32,6 +33,7 @@ function PANEL:PerformLayout(w, h)
 end
 
 function PANEL:Paint(w, h)
+    Derma_DrawBackgroundBlur(self, self.startTime)
     local x, y = self:LocalToScreen(0, 0)
 
     if (self.focused and self.focusMultiplier > 0) then

@@ -103,8 +103,6 @@ function PANEL:Init()
     self:LoadTabs()
 end
 
-
-
 function PANEL:PerformLayout(w, h)
     self.BaseClass.PerformLayout(self, w, h)
 
@@ -226,7 +224,6 @@ function PANEL:LoadTabs()
 
     self.sidebar:ChooseTab(1)
 end
-
 
 onyx.gui.Register('onyx.creditstore.Frame', PANEL, 'onyx.Frame')
 
