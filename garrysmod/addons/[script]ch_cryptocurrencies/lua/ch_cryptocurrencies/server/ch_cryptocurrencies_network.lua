@@ -56,7 +56,7 @@ function CH_CryptoCurrencies.FetchCryptoCurrencies()
 			end
 		)
 	end
-	
+	--[[
 	-- Wait 10 seconds before networking it to ensure it has fetched on the server
 	timer.Simple( 10, function()
 		for k, ply in ipairs( player.GetAll() ) do
@@ -76,6 +76,7 @@ function CH_CryptoCurrencies.FetchCryptoCurrencies()
 			end
 		end
 	end )
+	--]]
 end
 
 --[[
