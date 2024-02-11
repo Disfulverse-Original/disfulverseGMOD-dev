@@ -510,3 +510,114 @@ DarkRP.createEntity("Бронепластина", {
 })
 
 -- Барахольщик
+
+
+
+-- Метоварщик
+
+DarkRP.createEntity("Газ", {
+    ent = "eml_gas",
+    cmd = "gas5",
+    model = "models/props_junk/propane_tank001a.mdl",
+    price = 500,
+    max = 3,
+    allowed = {
+        TEAM_GROVER
+    },
+    category = "Метоварка",
+})
+DarkRP.createEntity("Плита", {
+    ent = "eml_gas",
+    cmd = "plitastove6",
+    model = "models/props_c17/furnitureStove001a.mdl",
+    price = 7000,
+    max = 1,
+    allowed = {
+        TEAM_GROVER
+    },
+    category = "Метоварка",
+})
+
+--kraft кристалл йод
+DarkRP.createEntity("Соляная кислота", {
+    ent = "eml_macid",
+    cmd = "mac21id",
+    model = "models/props_junk/garbage_plasticbottle001a.mdl",
+    price = 750,
+    max = 2,
+    allowed = {
+        TEAM_GROVER
+    },
+    category = "Метоварка",
+})
+DarkRP.createEntity("Жидкий йод", {
+    ent = "eml_iodine",
+    cmd = "iodin",
+    model = "models/props_lab/jar01b.mdl",
+    price = 500,
+    max = 2,
+    allowed = {
+        TEAM_GROVER
+    },
+    category = "Метоварка",
+})
+DarkRP.createEntity("Вода", {
+    ent = "eml_water",
+    cmd = "wod312a",
+    model = "models/props_junk/garbage_plasticbottle003a.mdl",
+    price = 250,
+    max = 2,
+    allowed = {
+        TEAM_GROVER
+    },
+    category = "Метоварка",
+})
+--крафт красный фосфор
+DarkRP.createEntity("Жидкая сера", {
+    ent = "eml_sulfur",
+    cmd = "sulfir",
+    model = "models/props_lab/jar01b.mdl",
+    price = 500,
+    max = 2,
+    allowed = {
+        TEAM_GROVER
+    },
+    category = "Метоварка",
+})
+
+-- крафт тейблы
+DarkRP.createEntity("Банка", {
+    ent = "eml_jar",
+    cmd = "jararara2",
+    model = "models/props_lab/jar01a.mdl",
+    price = 1500,
+    max = 1,
+    allowed = {
+        TEAM_GROVER
+    },
+    category = "Метоварка",
+})
+DarkRP.createEntity("Кастрюля под фосфор", {
+    ent = "eml_pot",
+    cmd = "poppoodt",
+    model = "models/props_c17/metalpot001a.mdl",
+    price = 2000,
+    max = 1,
+    allowed = {
+        TEAM_GROVER
+    },
+    category = "Метоварка",
+})
+DarkRP.createEntity("Кастрюля под голубое небо", {
+    ent = "eml_spot",
+    cmd = "spoootptp",
+    model = "models/props_c17/metalpot001a.mdl",
+    price = 3500,
+    max = 1,
+    allowed = {
+        TEAM_GROVER
+    },
+    category = "Метоварка",
+})
+
+-- Метоварщик

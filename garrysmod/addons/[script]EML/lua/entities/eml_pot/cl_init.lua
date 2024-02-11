@@ -38,9 +38,9 @@ function ENT:Draw()
 		cam.Start3D2D(pos + ang:Up()*8, ang, 0.055)
 			draw.SimpleText("Красный фосфор", "methFont34", 0, -56, Color(255, 255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER);
 
-			surface.SetDrawColor(Color(0, 0, 0, 200));
+			surface.SetDrawColor(Color(0, 0, 0, 100));
 			surface.DrawRect(-104, -32, 204, 24);			
-			surface.SetDrawColor(Color(255, 255, 255, 100));
+			surface.SetDrawColor(Color(255, 255, 255, 250));
 			surface.DrawRect(-101.5, -30, math.Round((self:GetNWInt("time")*198)/self:GetNWInt("maxTime")), 20);		
 			
 			draw.SimpleText("Ингредиенты", "methFont34", -101, 8, Color(255, 255, 255, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER);
@@ -60,7 +60,7 @@ function ENT:Draw()
 			draw.SimpleText("Жидкая сера ("..self:GetNWInt("sulfur")..")", "methFont34", -101, 68, sulfurColor, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER);				
 		cam.End3D2D();	
 		cam.Start3D2D(pos + ang:Up()*8, ang, 0.035)		
-			draw.SimpleText(potTime, "methFont34", -152, -32, Color(255, 255, 255, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER);		
+			draw.SimpleText(potTime, "methFont34", -152, -32, Color(0, 0, 0, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER);		
 		cam.End3D2D();					
 	end;
 end;
