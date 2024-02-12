@@ -48,15 +48,15 @@ Realistic_Properties.NameNpc = "Риелтор" -- Name of the NPC
 
 Realistic_Properties.DoorsLock = true -- If all doors which is in the data was lock 
 
-Realistic_Properties.EntitiesRemove = false -- If when the property was sell the entities are removed
+Realistic_Properties.EntitiesRemove = true -- If when the property was sell the entities are removed
 
 Realistic_Properties.DeliverySystem = true -- true == Activate / false == Desactivate
 
 Realistic_Properties.SaveProps = true -- Save props when the property is rented 
 
-Realistic_Properties.SpawnProps = true -- Desactivate = false / Activate = true spawn props outside property
+Realistic_Properties.SpawnProps = false -- Desactivate = false / Activate = true spawn props outside property
 
-Realistic_Properties.MaxRentalDay = 20 -- Max Rental Day
+Realistic_Properties.MaxRentalDay = 14 -- Max Rental Day
 
 Realistic_Properties.ModelOfTheBox = "models/kobralost/case/caseveeds.mdl" -- Model of the Delivery Box 
 
@@ -78,7 +78,7 @@ Realistic_Properties.CanBuyPropertyWithF2 = false  -- When you buy a property wi
  
 Realistic_Properties.PropsDelivery = true -- Delivery system for the props 
 
-Realistic_Properties.PriceProps = 0 -- Price when you try to spawn a props with the props delivery system 
+Realistic_Properties.PriceProps = 50 -- Price when you try to spawn a props with the props delivery system 
 
 Realistic_Properties.EntityCompatibility = { -- Here is the entity which is compatible with my addon
     ["darkrp_tip_jar"] = true, 
@@ -102,8 +102,12 @@ Realistic_Properties.JobCanSpawnProps = { -- Which job can spawn props outside h
 Realistic_Properties.PropertiesDelivery = true -- If when the player don't have property he can buy an entity ( The entity will spawn on him )
 
 Realistic_Properties.BuyEntitiesWithoutProperties = { -- Which job can buy entities without property when Realistic_Properties.PropertiesDelivery = false
-    ["Fruit Slicer"] = true,
-    ["Scientific Police"] = true,
+    ["Продавец оружия / 25 lvl"] = true,
+    ["Контрабандист [Dis+] / 35 lvl"] = true,
+    ["Барахольщик [Dis+] / 30 lvl"] = true,
+    ["Детектив / 35 lvl"] = true,
+    ["Варщик мета / 30 lvl"] = true,
+    ["Крипто-Майнер / 45 lvl"] = true,
 }
 
 Realistic_Properties.PoliceJob = { -- Police Job which can see the owner of property 
