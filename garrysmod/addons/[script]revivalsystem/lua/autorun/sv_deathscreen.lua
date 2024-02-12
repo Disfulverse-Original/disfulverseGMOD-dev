@@ -49,7 +49,7 @@ hook.Add("DoPlayerDeath", "initializeCustomThinkDeath", initializeCustomThinkDea
 -- check time while death until can be respawned
 local function dev_customThinkDeath(ply)
 
-    if ply:IsSuperAdmin() then ply:Spawn() ply.nextspawn = math.huge deathcheck = false return end
+    if ply:IsSuperAdmin() then ply:Spawn() ply.nextspawn = math.huge deadcheck = false return end
 
     if ply:GetNWBool("IsQuickRespawning", false) then
     	--ply:ChatPrint(quickRespawnTime)
