@@ -78,7 +78,7 @@ Realistic_Properties.CanBuyPropertyWithF2 = false  -- When you buy a property wi
  
 Realistic_Properties.PropsDelivery = true -- Delivery system for the props 
 
-Realistic_Properties.PriceProps = 50 -- Price when you try to spawn a props with the props delivery system 
+Realistic_Properties.PriceProps = 0 -- Price when you try to spawn a props with the props delivery system 
 
 Realistic_Properties.EntityCompatibility = { -- Here is the entity which is compatible with my addon
     ["darkrp_tip_jar"] = true, 
