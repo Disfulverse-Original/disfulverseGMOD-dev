@@ -1,4 +1,7 @@
 local function openMenu(setDoorOwnerAccess, doorSettingsAccess)
+
+    if !LocalPlayer():IsSuperAdmin() then return false end
+
     local trace = LocalPlayer():GetEyeTrace()
     local ent = trace.Entity
     -- Don't open the menu if the entity is not ownable, the entity is too far away or the door settings are not loaded yet
