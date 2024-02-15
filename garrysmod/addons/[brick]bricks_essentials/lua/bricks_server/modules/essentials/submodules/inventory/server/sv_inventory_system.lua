@@ -40,13 +40,13 @@ function BRICKS_SERVER.PLAYERMETA:AddInventoryEnt( itemEntity )
 	local itemData, amount = BRICKS_SERVER.Func.GetEntTypeField( itemEntity:GetClass(), "GetItemData" )( itemEntity )
 
 	if( self:IsInventoryFull( amount, false ) ) then 
-		DarkRP.notify( self.Player, 1, 5, "Your inventory is full!" )
+		DarkRP.notify( self.Player, 1, 5, "Ваш инвентарь полон!" )
 		return
 	end
 
 	self:AddInventoryItem( itemData, amount )
 
-	DarkRP.notify( self.Player, 1, 5, "Added 1 item to your inventory." )
+	DarkRP.notify( self.Player, 1, 5, "Добавлен 1 предмет в ваш инвентарь." )
 	itemEntity:Remove()
 end	
 
@@ -199,9 +199,9 @@ net.Receive( "BRS.Net.InventoryDropItem", function( len, ply )
 
 			ply:BRS():SetInventory( inventoryTable )
 
-			DarkRP.notify( ply, 1, 5, "Dropped 1 item from your inventory." )
+			DarkRP.notify( ply, 1, 5, "Выброшен 1 предмет из вашего инвентаря." )
 		else
-			DarkRP.notify( ply, 1, 5, errorMessage or "You can't drop that!" )
+			DarkRP.notify( ply, 1, 5, errorMessage or "Вы не можете выбросить это!" )
 		end
 	end
 end )
@@ -229,9 +229,9 @@ net.Receive( "BRS.Net.InventoryDropAllItem", function( len, ply )
 			inventoryTable[itemKey] = nil
 			ply:BRS():SetInventory( inventoryTable )
 
-			DarkRP.notify( ply, 1, 5, "Dropped 1 item from your inventory." )
+			DarkRP.notify( ply, 1, 5, "Выброшен 1 предмет из вашего инвентаря." )
 		else
-			DarkRP.notify( ply, 1, 5, errorMessage or "You can't drop that!" )
+			DarkRP.notify( ply, 1, 5, errorMessage or "Вы не можете выбросить это!" )
 		end
 	end
 end )
@@ -263,12 +263,12 @@ net.Receive( "BRS.Net.InventoryUseItem", function( len, ply )
 				end
 				ply:BRS():SetInventory( inventoryTable )
 
-				DarkRP.notify( ply, 1, 5, "Used 1 item from your inventory." )
+				DarkRP.notify( ply, 1, 5, "Использован 1 предмет из вашего инвентаря." )
 			else
-				DarkRP.notify( ply, 1, 5, "You can't use that!" )
+				DarkRP.notify( ply, 1, 5, "Вы не можете использовать это!" )
 			end
 		else
-			DarkRP.notify( ply, 1, 5, "You can't use that!" )
+			DarkRP.notify( ply, 1, 5, "Вы не можете использовать это!" )
 		end
 	end
 end )
@@ -302,12 +302,12 @@ net.Receive( "BRS.Net.InventoryEquipItem", function( len, ply )
 
 				ply:BRS():SetInventory( inventoryTable )
 
-				DarkRP.notify( ply, 1, 5, "Equipped 1 item from your inventory." )
+				DarkRP.notify( ply, 1, 5, "Экипирован 1 предмет из вашего инвентаря." )
 			else
-				DarkRP.notify( ply, 1, 5, "You can't equip that!" )
+				DarkRP.notify( ply, 1, 5, "Вы не можете экипировать это!" )
 			end
 		else
-			DarkRP.notify( ply, 1, 5, errorMessage or "You can't equip that!" )
+			DarkRP.notify( ply, 1, 5, errorMessage or "Вы не можете экипировать это!" )
 		end
 	end
 end )
@@ -338,9 +338,9 @@ net.Receive( "BRS.Net.InventoryUnEquipItem", function( len, ply )
 
 			ply:BRS():SetInventory( inventoryTable )
 
-			DarkRP.notify( ply, 1, 5, "Un equipped 1 item from your inventory." )
+			DarkRP.notify( ply, 1, 5, "Снят 1 предмет из вашего инвентаря." )
 		else
-			DarkRP.notify( ply, 1, 5, "You can't un equip that!" )
+			DarkRP.notify( ply, 1, 5, "Вы не можете снять предмет!" )
 		end
 	end
 end )
@@ -434,7 +434,7 @@ net.Receive( "BRS.Net.InventoryAdminRequest", function( len, ply )
 	if( IsValid( requestedPly ) ) then
 		ply:BRS():AdminSendInventory( requestedPly )
 	else
-		DarkRP.notify( ply, 1, 5, "Invalid player inventory requested!" )
+		DarkRP.notify( ply, 1, 5, "Запрошен неверный инвентарь игрока" )
 	end
 end )
 
@@ -459,7 +459,7 @@ net.Receive( "BRS.Net.InventoryAdminRemove", function( len, ply )
 
 		ply:BRS():AdminSendInventory( requestedPly )
 	else
-		DarkRP.notify( ply, 1, 5, "Error removing item!" )
+		DarkRP.notify( ply, 1, 5, "Ошибка при удалении предмета!" )
 	end
 end )
 
@@ -538,12 +538,12 @@ function BRICKS_SERVER.Func.HolsterWeapon( ply )
 	local canDrop = hook.Run( "canDropWeapon", ply, activeWeapon )
 
 	if( not canDrop or activeWeapon:GetClass() == "bricks_server_invpickup" ) then
-		DarkRP.notify( ply, 1, 5, "You cannot holster this weapon!" )
+		DarkRP.notify( ply, 1, 5, "Вы не можете убрать это оружие!" )
 		return
 	end
 
 	if( ply:BRS():IsInventoryFull( 1, false ) ) then
-		DarkRP.notify( ply, 1, 5, "Your inventory is full!" )
+		DarkRP.notify( ply, 1, 5, "Ваш инвентарь полон!" )
 		return
 	end
 

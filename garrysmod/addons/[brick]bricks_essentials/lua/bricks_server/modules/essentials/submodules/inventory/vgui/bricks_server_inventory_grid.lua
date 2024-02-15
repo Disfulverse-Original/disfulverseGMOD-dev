@@ -99,7 +99,7 @@ function PANEL:FillPanel( panel, sheetButton, gridWide )
             end
             
             if( canUse ) then
-                actions["Use"] = function() 
+                actions["Использовать"] = function() 
                     net.Start( "BRS.Net.InventoryUseItem" )
                         net.WriteUInt( itemKey, 10 )
                     net.SendToServer()
@@ -114,7 +114,7 @@ function PANEL:FillPanel( panel, sheetButton, gridWide )
             end
             
             if( canEquip ) then
-                actions["Equip"] = function() 
+                actions["Экипировать"] = function() 
                     net.Start( "BRS.Net.InventoryEquipItem" )
                         net.WriteUInt( itemKey, 10 )
                     net.SendToServer()
@@ -127,7 +127,7 @@ function PANEL:FillPanel( panel, sheetButton, gridWide )
             end
             
             if( canUnEquip ) then
-                actions["Un Equip"] = function() 
+                actions["Снять"] = function() 
                     net.Start( "BRS.Net.InventoryUnEquipItem" )
                         net.WriteUInt( itemKey, 10 )
                     net.SendToServer()
