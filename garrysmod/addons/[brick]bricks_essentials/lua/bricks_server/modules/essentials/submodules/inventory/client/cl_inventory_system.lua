@@ -94,11 +94,11 @@ hook.Add( "OnEntityCreated", "BRS.OnEntityCreated_CreateEntityToolTips", functio
 				local pickupText = ""
 				local binds = (BRICKS_SERVER.CONFIG.INVENTORY.Whitelist or {})[entClass]
 				if( binds[1] and binds[2] ) then
-					pickupText = "Press " .. (BRICKS_SERVER.Func.GetClientBind( "PickupBind1" ) or "UNBOUND") .. "+" .. (BRICKS_SERVER.Func.GetClientBind( "PickupBind2" ) or "UNBOUND") .. " to put in inventory"
+					pickupText = "Нажмите, " .. (BRICKS_SERVER.Func.GetClientBind( "PickupBind1" ) or "UNBOUND") .. "+" .. (BRICKS_SERVER.Func.GetClientBind( "PickupBind2" ) or "UNBOUND") .. " чтобы положить в инвентарь"
 				elseif( binds[2] ) then
-					pickupText = "Press " .. string.upper( (BRICKS_SERVER.Func.GetClientBind( "PickupBind2" ) or "UNBOUND") ) .. " to put in inventory"
+					pickupText = "Нажмите, " .. string.upper( (BRICKS_SERVER.Func.GetClientBind( "PickupBind2" ) or "UNBOUND") ) .. " чтобы положить в инвентарь"
 				elseif( binds[1] ) then
-					pickupText = "Press " .. string.upper( (BRICKS_SERVER.Func.GetClientBind( "PickupBind1" ) or "UNBOUND") ) .. " to put in inventory"
+					pickupText = "Нажмите, " .. string.upper( (BRICKS_SERVER.Func.GetClientBind( "PickupBind1" ) or "UNBOUND") ) .. " чтобы положить в инвентарь"
 				end
 				
 				local tooltipInfo = {}
