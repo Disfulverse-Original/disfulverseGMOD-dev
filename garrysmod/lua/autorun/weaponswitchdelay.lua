@@ -9,7 +9,7 @@ local CountdownTimerDecimals = 1.5
 -- View model when player is switching weapons.
 local ShouldViewModel = true
 -- If ShouldViewModel is true then it will show this model.
-local WeaponSwitchModel = "models/weapons/w_defuser.mdl"
+local WeaponSwitchModel = "models/konnie/asapgaming/fortnite/backpacks/nerd.mdl"
 
 -- Key to cancel the switching. If you want to disable this change it to nil.
 local SwitchingCancelKey = IN_RELOAD
@@ -29,7 +29,7 @@ local function SendChatMessage( ply, weaponName )
 	if DarkRP then
 		ply:ConCommand( "say /me достал " .. weaponName .. "!" )
 	else
-		ply:ChatPrint( "Сменил на " .. weaponName .. "!" )
+		ply:ChatPrint( "Меняем оружие." --[[.. weaponName .. "!"]] )
 	end
 	
 end
@@ -54,7 +54,7 @@ local ReducedTimeGroups = {
 	-- Group, Reduced time (e.g. 0.5 makes it half the normal time, Reduced time times the normal time)
 	-- This will also reduce the time of different time weapons.
 	{"EXAMPLEGROUP1", 2},
-	{"superadmin", 0.6}
+	{"superadmin", 0.2}
 }
 
 -- Color of the text.
@@ -374,7 +374,7 @@ if CLIENT then
    				draw.SimpleText(math.Round(NewEquipTime - (TimerW*NewEquipTime), CountdownTimerDecimals), "RobotoFont", (ScrW()/2) + (bw/2) + 10, (ScrH()/2) + 10, TextColor, TEXT_ALIGN_LEFT, TEXT_ALIGN_BOTTOM)
 			end]]
 			
-			draw.SimpleText("Меняем на " .. WeaponName, "RobotoFont", (ScrW()/2), (ScrH()/2) + bh + 18, TextColor, TEXT_ALIGN_CENTER)
+			draw.SimpleText("Меняем оружие." --[[.. WeaponName]], "RobotoFont", (ScrW()/2), (ScrH()/2) + bh + 18, TextColor, TEXT_ALIGN_CENTER)
 			if SwitchingCancelKeyName and FirstSwitch then
     			draw.SimpleText("Отмените, нажав " .. SwitchingCancelKeyName, "RobotoFont", (ScrW()/2), (ScrH()/2) + bh + 30, TextColor, TEXT_ALIGN_CENTER)
 			end
@@ -397,11 +397,11 @@ if CLIENT then
 				if ply:Crouching() and ply:IsOnGround() then
 					pos.z = pos.z + 65
 				else
-					pos.z = pos.z + 80
+					pos.z = pos.z + 75
 				end
 				
-				angle.yaw = angle.yaw + FrameTime()*150
-				angle.roll = angle.roll + FrameTime()*150
+				angle.yaw = angle.yaw + FrameTime()*95
+				angle.roll = angle.roll + FrameTime()*0
 				
 				render.Model({model = WeaponSwitchModel, pos = pos, angle = angle})
 			
