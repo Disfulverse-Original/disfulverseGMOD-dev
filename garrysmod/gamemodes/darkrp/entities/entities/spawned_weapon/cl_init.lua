@@ -1,9 +1,9 @@
 include("shared.lua")
 
-local color_red = Color(140, 0, 0, 100)
+local color_red = Color(48, 47, 49, 200)
 local color_white = color_white
 
-function ENT:Draw()
+--[[function ENT:Draw()
     local ret = hook.Call("onDrawSpawnedWeapon", nil, self)
     if ret ~= nil then return end
     self:DrawModel()
@@ -29,7 +29,7 @@ function ENT:Draw()
     cam.Start3D2D(Pos + Ang:Up() * 3, Ang, 0.11)
         draw.WordBox(2, -TextWidth, -40, text, "HUDNumber5", color_red, color_white)
     cam.End3D2D()
-end
+end]]
 
 --[[---------------------------------------------------------------------------
 Create a shipment from a spawned_weapon
