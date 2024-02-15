@@ -1,6 +1,5 @@
 --[[---------------------------------------------------------------------------
 Vote regulations
-- hobo's can't vote for anything (no voting rights for hobo's!)
 - Government jobs can't vote for gangster related things
 - Criminal jobs can't vote for government related things
 - Civilians can vote for anything
@@ -26,8 +25,6 @@ end
 
 local function decide(ply, target)
     if not GovernmentJobs then config() end
-
-    if ply:Team() == TEAM_HOBO then return false, DarkRP.getPhrase("hobos_no_rights") end
 
     if GangsterJobs[ply:Team()] and GovernmentJobs[target:Team()] then
         return false, DarkRP.getPhrase("gangsters_cant_vote_for_government")

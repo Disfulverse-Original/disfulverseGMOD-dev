@@ -53,7 +53,6 @@ DarkRP.disabledDefaults["jobs"] = {
     ["cp"]        = true,
     ["gangster"]  = true,
     ["gundealer"] = true,
-    ["hobo"]      = true,
     ["mayor"]     = true,
     ["medic"]     = true,
     ["mobboss"]   = true,
@@ -79,11 +78,8 @@ DarkRP.disabledDefaults["shipments"] = {
 Entities
 ---------------------------------------------------------------------------]]
 DarkRP.disabledDefaults["entities"] = {
-    ["Drug lab"]      = true,
-    ["Gun lab"]       = true,
     ["Money printer"] = true,
     ["Microwave"]     = true, --Hungermod only
-    ["Tip Jar"]       = true,
 }
 
 --[[---------------------------------------------------------------------------
