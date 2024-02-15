@@ -161,8 +161,6 @@ function GAMEMODE:PlayerBindPress(ply, bind, pressed)
 			lastAction = RealTime()
 		end
 
-		surface.PlaySound("")
-
 		return true
 	elseif bind:find("invnext", nil, true) and not (ply:GetActiveWeapon():IsValid() and ply:GetActiveWeapon():GetClass() == "weapon_physgun" and ply:KeyDown(IN_ATTACK)) then
 		update()
@@ -187,11 +185,9 @@ function GAMEMODE:PlayerBindPress(ply, bind, pressed)
 
 		if GetConVarNumber("hud_fastswitch") > 0 then
 			newinv = loadout[curTab][curSlot].classname
-			surface.PlaySound("")
 		else
 			lastAction = RealTime()
 			alpha = 1
-			surface.PlaySound("")
 		end
 
 		return true
@@ -215,14 +211,12 @@ function GAMEMODE:PlayerBindPress(ply, bind, pressed)
 			until loadout[curTab]
 			curSlot = #loadout[curTab]
 		end
-
 		if GetConVarNumber("hud_fastswitch") > 0 then
 			newinv = loadout[curTab][curSlot].classname
-			surface.PlaySound("")
+
 		else
 			lastAction = RealTime()
 			alpha = 1
-			surface.PlaySound("")
 		end
 
 		return true
@@ -230,7 +224,6 @@ function GAMEMODE:PlayerBindPress(ply, bind, pressed)
 		if loadout[curTab] and loadout[curTab][curSlot] and not bind:find("+attack2", nil, true) then
 			newinv = loadout[curTab][curSlot].classname
 		end
-		surface.PlaySound("")
 		alpha = 0
 
 		return true
