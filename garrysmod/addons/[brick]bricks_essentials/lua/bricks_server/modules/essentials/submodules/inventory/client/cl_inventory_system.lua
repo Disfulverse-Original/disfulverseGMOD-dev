@@ -18,8 +18,8 @@ end )
 function BRICKS_SERVER.Func.OpenInventory( context )
 	if( not IsValid( BRICKS_SERVER_INVENTORY ) ) then
 		BRICKS_SERVER_INVENTORY = (context and g_ContextMenu:Add( "bricks_server_dframepanel" )) or vgui.Create( "bricks_server_dframe" )
-		BRICKS_SERVER_INVENTORY:SetHeader( "Inventory" )
-		BRICKS_SERVER_INVENTORY:SetSize( ScrW()*0.4, ScrH()*0.3 )
+		BRICKS_SERVER_INVENTORY:SetHeader( "" )
+		BRICKS_SERVER_INVENTORY:SetSize( ScrW()*0.4, ScrH()*0.33 )
 		BRICKS_SERVER_INVENTORY:SetPos( (ScrW()/2)-(BRICKS_SERVER_INVENTORY:GetWide()/2), ScrH()-20-BRICKS_SERVER_INVENTORY:GetTall() )
 		BRICKS_SERVER_INVENTORY:SetMouseInputEnabled( true )
 
