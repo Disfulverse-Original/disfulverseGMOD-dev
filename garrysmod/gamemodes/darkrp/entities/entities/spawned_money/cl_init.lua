@@ -1,6 +1,6 @@
 include("shared.lua")
 
-local color_red = Color(140, 0, 0, 100)
+local color_red = Color(48, 47, 49, 200)
 local color_white = color_white
 
 function ENT:Draw()
