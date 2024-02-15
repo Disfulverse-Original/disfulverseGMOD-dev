@@ -6,7 +6,7 @@ end
 
 if CLIENT then
     SWEP.Slot = 1
-    SWEP.SlotPos = 2
+    SWEP.SlotPos = 1
     SWEP.DrawAmmo = false
     SWEP.DrawCrosshair = false
 

@@ -34,7 +34,7 @@ local function loadFonts()
         weight = 500,
         antialias = true,
         shadow = false,
-        font = "Trebuchet MS",
+        font = "Roboto",
         extended = true,
     })
 
@@ -43,7 +43,7 @@ local function loadFonts()
         weight = 500,
         antialias = true,
         shadow = false,
-        font = "Trebuchet MS",
+        font = "Roboto",
         extended = true,
     })
 
@@ -52,7 +52,7 @@ local function loadFonts()
         weight = 500,
         antialias = true,
         shadow = false,
-        font = "Trebuchet MS",
+        font = "Roboto",
         extended = true,
     })
 
@@ -61,7 +61,7 @@ local function loadFonts()
         weight = 500,
         antialias = true,
         shadow = false,
-        font = "Trebuchet MS",
+        font = "Roboto",
         extended = true,
     })
 
@@ -79,7 +79,7 @@ local function loadFonts()
         weight = 800,
         antialias = true,
         shadow = false,
-        font = "Verdana",
+        font = "Roboto",
         extended = true,
     })
 
@@ -88,7 +88,7 @@ local function loadFonts()
         weight = 800,
         antialias = true,
         shadow = false,
-        font = "Verdana",
+        font = "Roboto",
         extended = true,
     })
 
@@ -142,16 +142,7 @@ local function loadFonts()
         weight = 500,
         antialias = true,
         shadow = false,
-        font = "Akbar",
-        extended = true,
-    })
-
-    surface.CreateFont("DarkRP_tipjar", {
-        size = 100,
-        weight = 500,
-        antialias = true,
-        shadow = true,
-        font = "Verdana",
+        font = "Roboto",
         extended = true,
     })
 end

@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
 if CLIENT then
-    SWEP.Slot = 2
+    SWEP.Slot = 3
     SWEP.SlotPos = 1
     SWEP.DrawAmmo = false
     SWEP.DrawCrosshair = false
@@ -82,7 +82,7 @@ function SWEP:PrimaryAttack()
     self:SetIsLockpicking(true)
     self:SetLockpickEnt(ent)
     self:SetLockpickStartTime(CurTime())
-    local endDelta = hook.Call("lockpickTime", nil, Owner, ent) or util.SharedRandom("DarkRP_Lockpick" .. self:EntIndex() .. "_" .. self:GetTotalLockpicks(), 20, 20)
+    local endDelta = hook.Call("lockpickTime", nil, Owner, ent) or util.SharedRandom("DarkRP_Lockpick" .. self:EntIndex() .. "_" .. self:GetTotalLockpicks(), 15, 30)
     self:SetLockpickEndTime(CurTime() + endDelta)
     self:SetTotalLockpicks(self:GetTotalLockpicks() + 1)
 

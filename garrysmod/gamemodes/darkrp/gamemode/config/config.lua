@@ -89,8 +89,6 @@ GM.Config.dropweapondeath               = false
 GM.Config.dropspawnedweapons            = false
 -- dynamicvoice - Enable/disable whether only people in the same room as you can hear your mic.
 GM.Config.dynamicvoice                  = true
--- earthquakes - Enable/disable earthquakes.
-GM.Config.earthquakes                   = false
 -- enablebuypistol - Turn /buy on of off.
 GM.Config.enablebuypistol               = true
 -- enforceplayermodel - Whether or not to force players to use their role-defined character models.
@@ -206,20 +204,14 @@ GM.Config.demotetime                    = 120
 GM.Config.doorcost                      = 30
 -- entremovedelay - how long to wait before removing a bought entity after disconnect.
 GM.Config.entremovedelay                = 0
--- gunlabweapon - The weapon that the gunlab spawns.
-GM.Config.gunlabweapon                  = "weapon_p2282"
 -- jailtimer - Sets the jailtimer (in seconds).
 GM.Config.jailtimer                     = 120
 -- lockdowndelay - The amount of time a mayor must wait before starting the next lockdown.
 GM.Config.lockdowndelay                 = 120
 -- maxadvertbillboards - The maximum number of /advert billboards a player can place.
 GM.Config.maxadvertbillboards           = 3
--- maxCheques - The maximum number of cheques someone can write
-GM.Config.maxCheques                    = 5
 -- maxdoors - Sets the max amount of doors one can own.
 GM.Config.maxdoors                      = 20
--- maxdrugs - Sets max drugs.
-GM.Config.maxdrugs                      = 2
 -- maxfoods - Sets the max food cartons per Microwave owner.
 GM.Config.maxfoods                      = 2
 -- maxfooditems - Sets the max amount of food items a player can buy from the F4 menu.
@@ -234,12 +226,6 @@ GM.Config.maxlotterycost                = 250
 GM.Config.maxvehicles                   = 5
 -- microwavefoodcost - Sets the sale price of Microwave Food.
 GM.Config.microwavefoodcost             = 30
--- gunlabguncost - Sets the initial price of a gun from a gunlab. Note that the
--- gunlab owner can change this price.
-GM.Config.gunlabguncost                 = 200
--- druglabdrugcost - Sets the initial price of drugs from a drugs lab. Note that
--- the drugs lab owner can change this price.
-GM.Config.druglabdrugcost               = 100
 -- minlotterycost - Minimum payment the mayor can set to join a lottery.
 GM.Config.minlotterycost                = 30
 -- Money packets will get removed if they don't get picked up after a while. Set to 0 to disable.
@@ -260,8 +246,6 @@ GM.Config.pricecap                      = 500
 GM.Config.pricemin                      = 50
 -- propcost - How much prop spawning should cost (prop paying must be enabled for this to have an effect).
 GM.Config.propcost                      = 10
--- quakechance - Chance of an earthquake happening.
-GM.Config.quakechance                   = 4000
 -- respawntime - Minimum amount of seconds a player has to wait before respawning.
 GM.Config.respawntime                   = 1
 -- changejobtime - Minimum amount of seconds a player has to wait before changing job.
@@ -387,7 +371,6 @@ GM.Config.DefaultWeapons = {
 GM.Config.CategoryOverride = {
     jobs = {
         ["Citizen"]                             = "Citizens",
-        ["Hobo"]                                = "Citizens",
         ["Gun Dealer"]                          = "Citizens",
         ["Medic"]                               = "Citizens",
         ["Civil Protection"]                    = "Civil Protection",
@@ -397,9 +380,7 @@ GM.Config.CategoryOverride = {
         ["Mayor"]                               = "Civil Protection",
     },
     entities = {
-        ["Drug lab"]                            = "Other",
         ["Money printer"]                       = "Other",
-        ["Gun lab"]                             = "Other",
 
     },
     shipments = {
@@ -434,12 +415,10 @@ GM.Config.AdminWeapons = {
 GM.Config.DefaultLaws = {
     "Do not attack other citizens except in self-defence.",
     "Do not steal or break into people's homes.",
-    "Money printers/drugs are illegal.",
 }
 
 GM.Config.PocketBlacklist = {
     ["fadmin_jail"] = true,
-    ["meteor"] = true,
     ["door"] = true,
     ["func_"] = true,
     ["player"] = true,
@@ -449,7 +428,6 @@ GM.Config.PocketBlacklist = {
     ["path_"] = true,
     ["prop_physics"] = true,
     ["money_printer"] = true,
-    ["gunlab"] = true,
     ["prop_dynamic"] = true,
     ["prop_vehicle_prisoner_pod"] = true,
     ["keypad_wire"] = true,
@@ -476,7 +454,6 @@ GM.Config.noStripWeapons = {
 -- This only applies when removeclassitems is set to true.
 -- Note: entities will only be removed when the player changes to a job that is not allowed to have the entity.
 GM.Config.preventClassItemRemoval = {
-    ["gunlab"] = false,
     ["microwave"] = false,
     ["spawned_shipment"] = false,
 }

@@ -62,12 +62,6 @@ local my_language = {
     property_tax_cant_afford = "You couldn't pay the taxes! Your property has been taken away from you!",
     taxday = "Tax Day! %s%% of your income was taken!",
 
-    found_cheque = "You have found %s%s in a cheque made out to you from %s.",
-    cheque_details = "This cheque is made out to %s.",
-    cheque_torn = "You have torn up the cheque.",
-    cheque_pay = "Pay: %s",
-    signed = "Signed: %s",
-
     found_cash = "You have picked up %s%d!", -- backwards compatibility
     found_money = "You have picked up %s!",
 
@@ -96,8 +90,8 @@ local my_language = {
     wanted_expired = "%s is no longer wanted by the Police.",
     wanted_revoked = "%s is no longer wanted by the Police.\nRevoked by: %s",
     cant_arrest_other_cp = "You cannot arrest other CPs!",
-    must_be_wanted_for_arrest = "The player must be wanted in order to be able to arrest them.",
     cant_arrest_fadmin_jailed = "You cannot arrest a player who has been jailed by an admin.",
+    must_be_wanted_for_arrest = "The player must be wanted in order to be able to arrest them.",
     cant_arrest_no_jail_pos = "You cannot arrest people since there are no jail positions set!",
     cant_arrest_spawning_players = "You cannot arrest players who are spawning.",
 
@@ -135,14 +129,6 @@ local my_language = {
     has_not_been_made_team = "%s has not been made %s!",
     job_has_become = "%s has been made a %s!",
 
-    -- Disasters
-    meteor_approaching = "WARNING: Meteor storm approaching!",
-    meteor_passing = "Meteor storm passing.",
-    meteor_enabled = "Meteor Storms are now enabled.",
-    meteor_disabled = "Meteor Storms are now disabled.",
-    earthquake_report = "Earthquake reported of magnitude %sMw",
-    earthtremor_report = "Earth tremor reported of magnitude %sMw",
-
     -- Keys, vehicles and doors
     keys_allowed_to_coown = "You are allowed to co-own this\n(Press Reload with keys or press F2 to co-own)\n",
     keys_other_allowed = "Allowed to co-own:",
@@ -156,7 +142,6 @@ local my_language = {
     door_sold = "You have sold this for %s",
     door_already_owned = "This door is already owned by someone!",
     door_cannot_afford = "You can not afford this door!",
-    door_hobo_unable = "You can not buy a door if you are a hobo!",
     vehicle_cannot_afford = "You can not afford this vehicle!",
     door_bought = "You've bought this door for %s%s",
     vehicle_bought = "You've bought this vehicle for %s%s",
@@ -178,17 +163,12 @@ local my_language = {
     no_doors_owned = "You don't own any doors!",
 
     -- Entities
-    drugs = "drugs",
-    Drugs = "Drugs",
-    drug_lab = "Drug Lab",
-    gun_lab = "Gun Lab",
     any_lab = "any lab",
     gun = "gun",
     microwave = "Microwave",
     food = "food",
     Food = "Food",
     money_printer = "Money Printer",
-    tip_jar = "Tip Jar",
 
     sign_this_letter = "Sign this letter",
     signed_yours = "Yours,",
@@ -480,7 +460,6 @@ local my_language = {
     no_active_hit = "You have no active hit!",
 
     -- Vote Restrictions
-    hobos_no_rights = "Hobos have no voting rights!",
     gangsters_cant_vote_for_government = "Gangsters cannot vote for government things!",
     government_cant_vote_for_gangsters = "Government officials cannot vote for gangster things!",
 

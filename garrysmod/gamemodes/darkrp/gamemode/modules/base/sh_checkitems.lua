@@ -263,12 +263,6 @@ DarkRP.validateJob = fn.FAnd{baseSchema, tc.checkTable{
             "The cook value must be either true or false."
         ),
 
-    hobo =
-        tc.addHint(
-            tc.optional(isbool),
-            "The hobo value must be either true or false."
-        ),
-
     playerClass =
         tc.addHint(
             tc.optional(isstring),

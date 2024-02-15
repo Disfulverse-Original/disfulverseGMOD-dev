@@ -117,39 +117,12 @@ DarkRP.createShipment("Sniper rifle", {
     category = "Snipers",
 })
 
-DarkRP.createEntity("Drug lab", {
-    ent = "drug_lab",
-    model = "models/props_lab/crematorcase.mdl",
-    price = 400,
-    max = 3,
-    cmd = "buydruglab",
-    allowed = {TEAM_GANG, TEAM_MOB}
-})
-
 DarkRP.createEntity("Money printer", {
     ent = "money_printer",
     model = "models/props_c17/consolebox01a.mdl",
     price = 1000,
     max = 2,
     cmd = "buymoneyprinter"
-})
-
-DarkRP.createEntity("Tip Jar", {
-    ent = "darkrp_tip_jar",
-    model = "models/props_lab/jar01a.mdl",
-    price = 0,
-    max = 2,
-    cmd = "tipjar",
-    allowTools = true,
-})
-
-DarkRP.createEntity("Gun lab", {
-    ent = "gunlab",
-    model = "models/props_c17/TrapPropeller_Engine.mdl",
-    price = 500,
-    max = 1,
-    cmd = "buygunlab",
-    allowed = TEAM_GUN
 })
 
 if not DarkRP.disabledDefaults["modules"]["hungermod"] then

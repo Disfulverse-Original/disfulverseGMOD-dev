@@ -59,13 +59,6 @@ hook.Add("KeyPress", "darkrp_animations", function(ply, key)
             -- Saying hi/hello to a player
             if class == "weapon_physgun" then
                 physGunCheck(ply)
-
-            -- Hobo throwing poop!
-            elseif class == "weapon_bugbait" then
-                local Team = ply:Team()
-                if RPExtraTeams[Team] and RPExtraTeams[Team].hobo then
-                    ply:DoAnimationEvent(ACT_GMOD_GESTURE_ITEM_THROW)
-                end
             end
         end
     end
