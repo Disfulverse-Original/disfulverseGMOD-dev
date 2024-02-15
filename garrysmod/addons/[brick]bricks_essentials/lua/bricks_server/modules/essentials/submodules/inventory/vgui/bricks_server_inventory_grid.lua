@@ -85,7 +85,7 @@ function PANEL:FillPanel( panel, sheetButton, gridWide )
         BRICKS_SERVER.Func.GetEntTypeField( (((itemTable or {})[2] or {})[1] or ""), "ModelDisplay" )( itemModel, itemTable[2] )
 
         local actions = {
-            ["Drop"] = function() 
+            ["Выкинуть"] = function() 
                 net.Start( "BRS.Net.InventoryDropItem" )
                     net.WriteUInt( itemKey, 10 )
                 net.SendToServer()
@@ -136,7 +136,7 @@ function PANEL:FillPanel( panel, sheetButton, gridWide )
         end
 
         if( BRICKS_SERVER.Func.GetInvTypeCFG( itemTable[2][1] or "" ).CanDropMultiple and (itemTable[1] or 1) > 1 ) then
-            actions["Drop all"] = function() 
+            actions["Выкинуть все"] = function() 
                 net.Start( "BRS.Net.InventoryDropAllItem" )
                     net.WriteUInt( itemKey, 10 )
                 net.SendToServer()
