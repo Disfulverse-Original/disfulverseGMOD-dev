@@ -4,26 +4,26 @@ local anim = framework:Class("Animations")
 local panels = framework:Class("Panels")
 
 surface.CreateFont("Nexus.PingSystem.3D.Type", {
-	font = "Montserrat",
+	font = "Roboto",
 	size = 24,
 	weight = 800
 })
 
 surface.CreateFont("Nexus.PingSystem.3D.Cancel", {
-	font = "Montserrat",
+	font = "Roboto",
 	size = 24,
 	weight = 500
 })
 
 surface.CreateFont("Nexus.PingSystem.3D.CancelButton", {
-	font = "Montserrat",
+	font = "Roboto",
 	size = 20,
 	weight = 1200
 })
 
 
 surface.CreateFont("Nexus.PingSystem.3D.Dist", {
-	font = "Montserrat",
+	font = "Roboto",
 	size = 20,
 	weight = 500
 })
