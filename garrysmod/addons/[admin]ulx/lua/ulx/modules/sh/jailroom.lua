@@ -89,27 +89,39 @@ end
 
 function UnJail(ply, after_relog)
 	if ply.jailed == true then
+		local isSuperadmin = ply:IsSuperAdmin()
+
 		if after_relog == true then
+			if not isSuperadmin then
+				ply:ChatPrint("Вы не можете снять с себя бан.")
+				return
+			end
+
 			ply.jailed = false
 			ply.LastPos = nil
 		else
+			if not isSuperadmin then
+				ply:ChatPrint("Вы не можете снять с себя бан.")
+				return
+			end
+
 			ply.jailed = false
 			ply.LastPos = nil
 		end
 
 		hook.Run("ulxPlayerUnjailed", ply)
 	end
-	
-		timer.Remove(ply:UniqueID().."ulxJailTimer")
-		net.Start("ulxTakeUnJailInfo")
-		net.Send(ply)
-		timer.Simple(5,function ()
-			ply:Spawn()
-			ply:GodDisable()
-			ply:ChatPrint("Ваше наказание закончилось!")
-		end)
-		
-	end
+
+	timer.Remove(ply:UniqueID().."ulxJailTimer")
+	net.Start("ulxTakeUnJailInfo")
+	net.Send(ply)
+
+	timer.Simple(5, function()
+		ply:Spawn()
+		ply:GodDisable()
+		ply:ChatPrint("Ваше наказание закончилось!")
+	end)
+end
 
 	
 hook.Add("OnPlayerChangedTeam", "ulxForceJailAfterJobChange", function (ply, oldTeam, newTeam)
@@ -136,7 +148,7 @@ end)
 
 hook.Add("canBuyCustomEntity", "ulxBlockEntityPurchaseInJail", function(ply)
     if ply.jailed == true then
-        return false, "Вы не можете покупать предметы, пока находитесь в тюрьме!"
+        return false, "Вы не можете покупать сущности, пока находитесь в тюрьме!"
     end
 end)
 
@@ -148,7 +160,7 @@ end)
 	
 hook.Add("canBuyShipment", "ulxBlockShipmentPurchaseInJail", function(ply)
 	if ply.jailed == true then
-		return false, "Вы не можете покупать оружие, пока находитесь в тюрьме!"
+		return false, "Вы не можете покупать отправки, пока находитесь в тюрьме!"
 	end
 end)
 	
@@ -250,7 +262,7 @@ if CLIENT then
 
     hook.Add("HUDPaint", "ulxPaintJailInfo", function()
         if jailed and math.Round((jail_curtime + jail_timer) - CurTime()) > 0 then
-            local text1 = 'Вы забанены! Причина: ' .. jail_reason .. '.'
+            local text1 = 'Вы заджайлины! Причина: ' .. jail_reason .. '.'
             local text2 = 'Осталось: ' .. math.Round((jail_curtime + jail_timer) - CurTime()) .. ' секунд.'
 
             surface.SetFont("DisplayJailTimer")
@@ -283,7 +295,7 @@ if SERVER then
 		if ply:IsValid() then
 			local query = sql.Query("SELECT * FROM jailed WHERE steamid = "..sql.SQLStr(ply:SteamID()))
 			if query then
-				JailRoom(ply, "Вы вышли с сервера.", query[1]['time'], true)
+				JailRoom(ply, "Вы вышли из сервера.", query[1]['time'], true)
 				sql.Query("DELETE FROM jailed WHERE steamid = '"..ply:SteamID().."'")
 				timer.Simple(5,function ()
 					ply:GodEnable()
