@@ -7,14 +7,14 @@
 --]]
 
 surface.CreateFont( "mLog_small", {
-	font = "Roboto Medium",
+	font = "Roboto",
 	size = 15,
 })
 surface.CreateFont( "mLog_smaller", {
 	size = 13,
 })
 surface.CreateFont( "mLog_big", {
-	font = "Roboto Medium",
+	font = "Roboto",
 	size = 24,
 })
 function mLog.OutlinedBox( x, y, w, h, thickness, clr )

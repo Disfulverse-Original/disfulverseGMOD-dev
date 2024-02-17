@@ -67,49 +67,49 @@ function createfonts()
     })
 
     surface.CreateFont("ahud_Icon40", {
-        font = "Akulla_SVG1",
+        font = "Roboto",
         size = ahud.GetSize(40),
         antialias = true,
     })
 
     surface.CreateFont("ahud_Icon30", {
-        font = "Akulla_SVG1",
+        font = "Roboto",
         size = ahud.GetSize(30),
         antialias = true,
     })
 
     surface.CreateFont("ahud_Icon128", {
-        font = "Akulla_SVG1",
+        font = "Roboto",
         size = ahud.GetSize(128),
         antialias = true,
     })
 
     surface.CreateFont("ahud_Icon64", {
-        font = "Akulla_SVG1",
+        font = "Roboto",
         size = ahud.GetSize(64),
         antialias = true,
     })
 
     surface.CreateFont("ahud_Icon22", {
-        font = "Akulla_SVG1",
+        font = "Roboto",
         size = ahud.GetSize(22),
         antialias = true,
     })
 
     surface.CreateFont("ahud_Icon16", {
-        font = "Akulla_SVG1",
+        font = "Roboto",
         size = ahud.GetSize(16),
         antialias = true,
     })
 
     surface.CreateFont("ahud_Icon14", {
-        font = "Akulla_SVG1",
+        font = "Roboto",
         size = ahud.GetSize(14),
         antialias = true,
     })
 
     surface.CreateFont("ahud_Oops", {
-        font = "Volaroid Script",
+        font = "Roboto",
         size = ahud.GetSize(250),
         antialias = true,
     })

@@ -153,7 +153,7 @@ end)
 
 if CLIENT then	
 	surface.CreateFont( "DisplayJailTimer", {
-		font = "Trebuchet24",
+		font = "Roboto",
 		size = (ScrH() + ScrW()) * .011,
 		weight = 300, 
 		blursize = 0, 

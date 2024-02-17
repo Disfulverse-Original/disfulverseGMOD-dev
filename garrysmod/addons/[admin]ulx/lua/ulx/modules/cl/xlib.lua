@@ -1026,7 +1026,7 @@ vgui.Register( "xlibColorPanel", PANEL, "DPanel" )
 
 -- Create font for Ban Message preview to match the font used in the actual banned/disconnect dialog.
 surface.CreateFont ("DefaultLarge", {
-	font = "Tahoma",
+	font = "Roboto",
 	size = 16,
 	weight = 0,
 })

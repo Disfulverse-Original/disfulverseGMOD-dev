@@ -1,5 +1,5 @@
 surface.CreateFont("UCWepSel", {
-    font = "Bahnschrift",
+    font = "Roboto",
     size = 36,
     weight = 0,
     blursize = 0,
@@ -7,7 +7,7 @@ surface.CreateFont("UCWepSel", {
 })
 
 surface.CreateFont("UCWepSel2", {
-    font = "Bahnschrift Light",
+    font = "Roboto",
     size = 17,
     weight = 0,
     blursize = 0,
@@ -15,7 +15,7 @@ surface.CreateFont("UCWepSel2", {
 })
 
 surface.CreateFont("UCWepSel3", {
-    font = "Bahnschrift Light",
+    font = "Roboto",
     size = 13,
     weight = 0,
     blursize = 0,

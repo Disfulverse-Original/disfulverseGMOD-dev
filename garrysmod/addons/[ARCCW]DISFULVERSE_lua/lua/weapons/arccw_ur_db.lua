@@ -72,7 +72,7 @@ SWEP.DamageMin = 10 -- 10 pellets to kill
 SWEP.Range = 40
 SWEP.RangeMin = 6
 SWEP.Num = 8
-SWEP.Penetration = 2
+SWEP.Penetration = 1.3
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 365
@@ -90,7 +90,7 @@ SWEP.RejectMagSizeChange = true -- Signals to attachments that mag size shouldn'
 
 -- Recoil --
 
-SWEP.Recoil = 2.8
+SWEP.Recoil = 10
 SWEP.RecoilSide = 2
 
 SWEP.RecoilRise = 0.24
