@@ -2,7 +2,7 @@
 local EquipTime = 1.5
 
 -- Show the count down timer next to the progress bar.
-local ShowCountdownTimer = true
+local ShowCountdownTimer = false
 -- How many decimals you want to show (default = 2 so it will be this: 1.59)
 local CountdownTimerDecimals = 1.5
 
