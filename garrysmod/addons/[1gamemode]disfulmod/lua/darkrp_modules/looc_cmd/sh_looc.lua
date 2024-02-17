@@ -1,10 +1,10 @@
 
 LOOCCONF = { 
-	tchatmsg = " (LOOC | Локальный) ",
+	tchatmsg = " [LOOC] ",
 	cmd = "looc",
 }
 
 LOOCCONFL = { 
-	tchatmsg = " (LOOC | Локальный) ",
+	tchatmsg = " [LOOC] ",
 	cmd = "l",
 }

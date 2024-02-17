@@ -23,8 +23,8 @@ local function PM(ply, args)
         local col = team.GetColor(ply:Team())
         local pname = ply:Nick()
         local col2 = color_white
-        DarkRP.talkToPerson(target, col, "(PM) " .. pname, col2, msg, ply)
-        DarkRP.talkToPerson(ply, col, "(PM) " .. pname, col2, msg, ply)
+        DarkRP.talkToPerson(target, col, "[PM] " .. pname, col2, msg, ply)
+        DarkRP.talkToPerson(ply, col, "[PM] " .. pname, col2, msg, ply)
     else
         DarkRP.notify(ply, 1, 4, DarkRP.getPhrase("could_not_find", tostring(name)))
     end
@@ -39,7 +39,7 @@ local function Whisper(ply, args)
             DarkRP.notify(ply, 1, 4, DarkRP.getPhrase("invalid_x", DarkRP.getPhrase("arguments"), ""))
             return ""
         end
-        DarkRP.talkToRange(ply, "(" .. DarkRP.getPhrase("whisper") .. ") " .. ply:Nick(), text, GAMEMODE.Config.whisperDistance)
+        DarkRP.talkToRange(ply, ply:Nick() .. " " .. DarkRP.getPhrase("whisper") , text, GAMEMODE.Config.whisperDistance)
     end
     return args, DoSay
 end
@@ -51,7 +51,7 @@ local function Yell(ply, args)
             DarkRP.notify(ply, 1, 4, DarkRP.getPhrase("invalid_x", DarkRP.getPhrase("arguments"), ""))
             return ""
         end
-        DarkRP.talkToRange(ply, "(" .. DarkRP.getPhrase("yell") .. ") " .. ply:Nick(), text, GAMEMODE.Config.yellDistance)
+        DarkRP.talkToRange(ply, ply:Nick() .. " " .. DarkRP.getPhrase("yell"), text, GAMEMODE.Config.yellDistance)
     end
     return args, DoSay
 end
@@ -93,8 +93,8 @@ local function OOC(ply, args)
             DarkRP.notify(ply, 1, 4, DarkRP.getPhrase("invalid_x", DarkRP.getPhrase("arguments"), ""))
             return ""
         end
-        local col = team.GetColor(ply:Team())
-        local col2 = color_white
+        local col = Color(151, 161, 191) 
+        local col2 = Color(232, 234, 237)
         if not ply:Alive() then
             col2 = Color(255, 200, 200, 255)
             col = col2
@@ -103,7 +103,7 @@ local function OOC(ply, args)
         local phrase = DarkRP.getPhrase("ooc")
         local name = ply:Nick()
         for _, v in ipairs(player.GetAll()) do
-            DarkRP.talkToPerson(v, col, "(" .. phrase .. ") " .. name, col2, text, ply)
+            DarkRP.talkToPerson(v, col, "[" .. phrase .. "] " .. name, col2, text, ply)
         end
     end
     return args, DoSay

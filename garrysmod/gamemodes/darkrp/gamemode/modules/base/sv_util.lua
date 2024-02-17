@@ -78,6 +78,35 @@ function DarkRP.talkToRange(ply, PlayerName, Message, size)
     net.Send(filter)
 end
 
+function DarkRP.talkToRangeLOOC(ply, PlayerName, Message, size)
+    local ents = player.GetHumans()
+    local col = Color(232, 234, 237)
+    local filter = {}
+
+    local plyPos = ply:EyePos()
+    local sizeSqr = size * size
+
+    for _, v in ipairs(ents) do
+        if (v:EyePos():DistToSqr(plyPos) <= sizeSqr) and (v == ply or hook.Run("PlayerCanSeePlayersChat", PlayerName .. ": " .. Message, false, v, ply) ~= false) then
+            table.insert(filter, v)
+        end
+    end
+
+    if PlayerName == ply:Nick() then PlayerName = "" end -- If it's just normal chat, why not cut down on networking and get the name on the client
+
+    net.Start("DarkRP_Chat")
+        net.WriteUInt(col.r, 8)
+        net.WriteUInt(col.g, 8)
+        net.WriteUInt(col.b, 8)
+        net.WriteString(PlayerName)
+        net.WriteEntity(ply)
+        net.WriteUInt(255, 8)
+        net.WriteUInt(255, 8)
+        net.WriteUInt(255, 8)
+        net.WriteString(Message)
+    net.Send(filter)
+end
+
 function DarkRP.talkToPerson(receiver, col1, text1, col2, text2, sender)
     if not IsValid(receiver) then return end
     if receiver:IsBot() then return end
