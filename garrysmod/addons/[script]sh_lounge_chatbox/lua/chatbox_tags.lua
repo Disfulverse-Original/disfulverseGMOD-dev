@@ -22,8 +22,40 @@ LOUNGE_CHAT.TagDeadConsole = {Color(255, 0, 0), "*DEAD* "}
 LOUNGE_CHAT.TagTeamConsole = {"(TEAM) "}
 
 /**
+* Name Color configuration
+*/
+
+-- Here you can set up custom name colors for specific usergroups.
+-- By default the name color is the player's team color.
+LOUNGE_CHAT.CustomColorsGroups = {
+	["superadmin"] = Color(255, 0, 0),
+}
+
+-- Here you can set up custom name colors for specific players.
+-- This takes priority over the usergroup custom color.
+-- By default the name color is the player's team color.
+LOUNGE_CHAT.CustomColorsPlayers = {
+	["STEAM_0:1:8039869"] = Color(0, 255, 255),
+	["76561197976345467"] = Color(0, 255, 255),
+}
+
+/**
+* Team Tags configuration
+*/
+
+-- Set to true to display the player's team name before their name.
+LOUNGE_CHAT.TeamTags = false
+
+-- Set to 1 to change the team tag's case to uppercase.
+-- Set to -1 to change it to lowercase.
+LOUNGE_CHAT.TeamTagsCase = 1
+
+-- (Advanced) String format of the team tag. Leave it alone if you don't know what this does.
+LOUNGE_CHAT.TeamTagsFormat = "[%s]"
+
+/**
 * DayZ Tags configuration
-* Because the generic DayZ gamemode for sale on ScriptFodder is terribly coded in general,
+* Because the generic DayZ gamemode for sale on gmodstore is terribly coded in general,
 * we have to discard its tag system and use our own instead.
 * Don't touch this if you don't know what this does.
 **/
@@ -69,6 +101,6 @@ LOUNGE_CHAT.CustomTagsGroups = {
 -- This takes priority over the usergroup custom tag.
 -- You can use parsers here.
 LOUNGE_CHAT.CustomTagsPlayers = {
-	["STEAM_0:1:8039869"] = "<color=aquamarine>(:script: Chatbox author)</color>",
+	["STEAM_0:0:221251534"] = "<color=white>:tux: (Console)</color>",
 	["76561197976345467"] = "<color=aquamarine>(:script: Chatbox author)</color>",
 }

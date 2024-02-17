@@ -7,7 +7,7 @@
 -- %hostname% : Shows the server's name
 -- %players% : Shows the player count on the server
 -- %uptime% : Uptime of the server
-LOUNGE_CHAT.ChatTitle = "%hostname%"
+LOUNGE_CHAT.ChatTitle = "%hostname% (%players%)"
 
 -- Show the player's avatar when sending a message
 LOUNGE_CHAT.ShowPlayerAvatar = true
@@ -23,6 +23,31 @@ LOUNGE_CHAT.ConsoleName = "Console"
 
 -- Whether to use Workshop or the FastDl for the custom content used by the add-on
 LOUNGE_CHAT.UseWorkshop = true
+
+-- Prevent players from using parsers in their name?
+LOUNGE_CHAT.DisallowParsersInName = false
+
+/**
+* Profanity filter
+**/
+
+-- Which usergroups are allowed to bypass the profanity filter?
+LOUNGE_CHAT.ProfanityBypass = {
+	["admin"] = true,
+	["superadmin"] = true,
+}
+
+-- Words filtered out by the profanity filter. Case insensitive.
+-- Do keep in mind that this profanity filter iS CLIENTSIDE. It will not kick out players for saying banned words.
+-- Use a dedicated script for that.
+-- You can also use lua patterns to have better detection: http://lua-users.org/wiki/PatternsTutorial
+LOUNGE_CHAT.ProfanityFilter = {
+	"this server sucks",
+}
+
+-- Character to use when censoring banned words.
+-- Example: shit -> ****
+LOUNGE_CHAT.CensorCharacter = "*"
 
 /**
 * Advanced configuration
@@ -43,15 +68,20 @@ LOUNGE_CHAT.UseUTF8 = true
 -- Maximum messages allowed in the chatbox before deletion of the oldest messages.
 LOUNGE_CHAT.MaxMessages = 200
 
+-- Disable having to wrap an emoticon's name in : (like :thumb_up: becomes thumb_up)
+-- This option has not been fully tested in all the possible cases so some text might look bad, or might straight up crash
+-- the client. Change at your own risk.
+LOUNGE_CHAT.EmoticonsNoColon = false
+
 /**
 * Style configuration
 **/
 
 -- Font to use for normal text throughout the chatbox.
-LOUNGE_CHAT.FontName = "Roboto-Regular"
+LOUNGE_CHAT.FontName = "Roboto"
 
 -- Font to use for bold text throughout the chatbox.
-LOUNGE_CHAT.FontNameBold = "Roboto-Bold"
+LOUNGE_CHAT.FontNameBold = "Roboto"
 
 -- Color sheet.
 LOUNGE_CHAT.Style = {

@@ -1,8 +1,7 @@
 -----------
 -- fonts --
 -----------
-surface.CreateFont( "ShChatBox", { font = "Roboto", extended  = true, antialias = true, shadow = false, weight = 1000, size = 18})
-surface.CreateFont( "ShChatBox1", { font = "Roboto", extended  = true, antialias = true, shadow = false, weight = 1000, size = 16})
+surface.CreateFont( "CHAT22", { font = "Roboto", extended  = false, antialias = true, shadow = false, weight = 1000, size = 18})
 
 -- TODO? save configs
 
@@ -60,9 +59,9 @@ local matOptions = Material("shenesis/chat/options.png", "noclamp smooth")
 LOUNGE_CHAT.ChatboxOpen = false
 LOUNGE_CHAT.History = {}
 
-LOUNGE_CHAT.ChatboxFont = "ShChatBox"
-LOUNGE_CHAT.GlowFont = "ShChatBox"
-LOUNGE_CHAT.TimestampFont = "ShChatBox"
+LOUNGE_CHAT.ChatboxFont = "CHAT22"
+LOUNGE_CHAT.GlowFont = "CHAT22"
+LOUNGE_CHAT.TimestampFont = "CHAT22"
 
 local function IsPlayer(e)
 	return type(e) == "Player" and IsValid(e)
@@ -195,7 +194,7 @@ function LOUNGE_CHAT:CreateChatbox()
 	end
 	frame.ShowMenu = function(me)
 		local menu = self.Menu()
-		
+
 			menu:AddOption(self.Lang("clear_chat"), function()
 				RunConsoleCommand("lounge_chat_clear")
 			end)
@@ -222,7 +221,7 @@ function LOUNGE_CHAT:CreateChatbox()
 	end
 	_LOUNGE_CHAT = frame
 
-		local title = self.Label("", "ShChatBox1", self.Color("text"), frame)
+		local title = self.Label("", "LOUNGE_CHAT_16", self.Color("text"), frame)
 		title:SetPaintedManually(true)
 		title:AlignTop(11 - title:GetTall() * 0.5)
 		title.x = title.y * 2
@@ -540,7 +539,7 @@ function LOUNGE_CHAT:ShowParsers()
 
 			local title = self.Lang("chat_parsers")
 
-			local titlelbl = self.Label(title, "ShChatBox1", self.Color("text"), header)
+			local titlelbl = self.Label(title, "LOUNGE_CHAT_24", self.Color("text"), header)
 			titlelbl:Dock(LEFT)
 			titlelbl:DockMargin(m, 0, 0, 0)
 
@@ -611,11 +610,11 @@ function LOUNGE_CHAT:ShowParsers()
 					end
 				end
 
-					local lbl = self.Label(ex.tx, "ShChatBox1", self.Color("header"), pnl)
+					local lbl = self.Label(ex.tx, "LOUNGE_CHAT_16_B", self.Color("header"), pnl)
 					lbl:Dock(TOP)
 					lbl:DockMargin(0, 0, 0, m5)
 
-					local lbl = self.Label(self.Lang("usage") .. ": " .. ex.example, "ShChatBox1", self.Color("text"), pnl)
+					local lbl = self.Label(self.Lang("usage") .. ": " .. ex.example, "LOUNGE_CHAT_16", self.Color("text"), pnl)
 					lbl:Dock(TOP)
 
 					local parsed = self:ParseLineWrap({ex.example}, pnl:GetWide() - m5 * 2, pnl, LocalPlayer())
