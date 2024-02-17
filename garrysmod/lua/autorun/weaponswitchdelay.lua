@@ -29,7 +29,7 @@ local function SendChatMessage( ply, weaponName )
 	if DarkRP then
 		ply:ConCommand( "say /me достал " .. weaponName .. "!" )
 	else
-		ply:ChatPrint( "Меняем оружие." --[[.. weaponName .. "!"]] )
+		ply:ChatPrint( "Меняем оружие" --[[.. weaponName .. "!"]] )
 	end
 	
 end
@@ -374,7 +374,7 @@ if CLIENT then
    				draw.SimpleText(math.Round(NewEquipTime - (TimerW*NewEquipTime), CountdownTimerDecimals), "RobotoFont", (ScrW()/2) + (bw/2) + 10, (ScrH()/2) + 10, TextColor, TEXT_ALIGN_LEFT, TEXT_ALIGN_BOTTOM)
 			end]]
 			
-			draw.SimpleText("Меняем оружие." --[[.. WeaponName]], "RobotoFont", (ScrW()/2), (ScrH()/2) + bh + 18, TextColor, TEXT_ALIGN_CENTER)
+			draw.SimpleText("Меняем оружие" --[[.. WeaponName]], "RobotoFont", (ScrW()/2), (ScrH()/2) + bh + 18, TextColor, TEXT_ALIGN_CENTER)
 			if SwitchingCancelKeyName and FirstSwitch then
     			draw.SimpleText("Отмените, нажав " .. SwitchingCancelKeyName, "RobotoFont", (ScrW()/2), (ScrH()/2) + bh + 30, TextColor, TEXT_ALIGN_CENTER)
 			end
