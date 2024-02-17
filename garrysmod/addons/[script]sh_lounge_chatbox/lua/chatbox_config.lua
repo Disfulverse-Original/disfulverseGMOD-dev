@@ -55,9 +55,9 @@ LOUNGE_CHAT.FontNameBold = "Roboto-Bold"
 
 -- Color sheet.
 LOUNGE_CHAT.Style = {
-	header = Color(32, 32, 39, 135),
-	bg = Color(27, 27, 27, 135),
-	inbg = Color(33, 33, 33, 145),
+	header = Color(2, 2, 4, 135),
+	bg = Color(1, 1, 1, 135),
+	inbg = Color(3, 3, 3, 145),
 
 	close_hover = Color(231, 76, 60),
 	hover = Color(255, 255, 255, 10),
