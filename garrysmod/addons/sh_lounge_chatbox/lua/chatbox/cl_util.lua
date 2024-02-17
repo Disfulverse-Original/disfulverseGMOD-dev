@@ -253,7 +253,7 @@ function LOUNGE_CHAT:Avatar(ply, siz, par)
 	pnl:SetSize(siz, siz)
 	pnl:SetDrawBackground(false)
 	pnl.Paint = function() end
-
+		
 		local av = vgui.Create("AvatarImage", pnl)
 		if (isstring(ply)) then
 			av:SetSteamID(ply, siz)
@@ -399,7 +399,7 @@ function LOUNGE_CHAT.DownloadImage(url, success, failed)
 			file.Write(path, body)
 			success(Material("data/" .. path, "noclamp smooth"))
 		end)
-
+		
 		if (!ok) then
 			failed()
 		end
@@ -458,7 +458,7 @@ function LOUNGE_CHAT.utf8.sub(str, s, e)
 		maxchars = utf8.len(str) - math.abs(e)
 		e = str:len()
 	end
-
+	
 	local ns = ""
 	for p, c in utf8.codes(str) do
 		if (p < s) or (c == 2560) then
@@ -466,15 +466,7 @@ function LOUNGE_CHAT.utf8.sub(str, s, e)
 		elseif (p > e) then
 			break end
 
-		local ch
-		local ok = pcall(function()
-			ch = utf8.char(c)
-		end)
-
-		if (!ok) then
-			continue end
-
-		ns = ns .. ch
+		ns = ns .. utf8.char(c)
 
 		if (maxchars > 0) then
 			maxchars = maxchars - 1

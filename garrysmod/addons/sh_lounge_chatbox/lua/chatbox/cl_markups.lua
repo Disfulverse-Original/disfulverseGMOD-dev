@@ -326,23 +326,17 @@ LOUNGE_CHAT:RegisterChatMarkup("url", "(%s?)http(%w?)://(.+)", function(data)
 	return {(data.args[1] or ""), lbl[1], lbl[2], lbl[3], " ", table.concat(expl, " ", 2)}
 end)
 
-LOUNGE_CHAT:RegisterChatMarkup("line break", "<br>", function(data)
-	return {{linebreak = true}}
-end)
-
-LOUNGE_CHAT:RegisterChatMarkup("emoticon", LOUNGE_CHAT.EmoticonsNoColon and "([_%w]+)" or ":([_%w]+):", function(data)
+LOUNGE_CHAT:RegisterChatMarkup("emoticon", ":([_%w]+):", function(data)
 	if (chat_hide_images:GetBool()) then
 		return end
 
 	local id = data.args[1]
 	if (!id) then
 		return end
-		
-	local nid = LOUNGE_CHAT.EmoticonsNoColon and id or ":" .. id .. ":"
 
 	local em = LOUNGE_CHAT.Emoticons[id]
 	if (!em) then
-		return noparse(nid)
+		return noparse(":" .. id .. ":")
 	end
 
 	local sender = data.sender
@@ -361,7 +355,7 @@ LOUNGE_CHAT:RegisterChatMarkup("emoticon", LOUNGE_CHAT.EmoticonsNoColon and "([_
 		end
 
 		if (!ok) then
-			return noparse(nid)
+			return noparse(":" .. id .. ":")
 		end
 	end
 
@@ -394,10 +388,14 @@ LOUNGE_CHAT:RegisterChatMarkup("emoticon", LOUNGE_CHAT.EmoticonsNoColon and "([_
 		img:SetImage(em.path)
 	end
 
-	img:SetToolTip(nid)
+	img:SetToolTip(":" .. id .. ":")
 	img:SetSize(em.w, em.h)
 
 	return img
+end)
+
+LOUNGE_CHAT:RegisterChatMarkup("line break", "<br>", function(data)
+	return {{linebreak = true}}
 end)
 
 -- Examples to display in the parsers list

@@ -10,16 +10,13 @@ hook.Add("TTTPlayerRadioCommand", "LOUNGE_CHAT.TTTPlayerRadioCommand", function(
 	local name = ""
 
 	local ent = msg_target
-	if (!isstring(msg_target) and IsValid(msg_target)) then
+	if (IsValid(msg_target)) then
 		if (ent:IsPlayer()) then
 			name = ent:Nick()
 		elseif (ent:GetClass() == "prop_ragdoll") then
 			name = LANG.NameParam("quick_corpse_id")
 			rag_name = CORPSE.GetPlayerNick(ent, "A Terrorist")
 		end
-	elseif (isstring(msg_target)) then
-		-- lang string
-		name = LANG.NameParam(msg_target)
 	end
 
 	net.Start("LOUNGE_CHAT.TTTRadio")
@@ -41,4 +38,6 @@ else
 	resource.AddFile("materials/shenesis/chat/close.png")
 	resource.AddFile("materials/shenesis/chat/smile.png")
 	resource.AddFile("materials/shenesis/chat/options.png")
+	resource.AddFile("resource/fonts/circular.ttf")
+	resource.AddFile("resource/fonts/circular_bold.ttf")
 end

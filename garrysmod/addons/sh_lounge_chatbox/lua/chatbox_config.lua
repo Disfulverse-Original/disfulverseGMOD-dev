@@ -24,31 +24,6 @@ LOUNGE_CHAT.ConsoleName = "Console"
 -- Whether to use Workshop or the FastDl for the custom content used by the add-on
 LOUNGE_CHAT.UseWorkshop = true
 
--- Prevent players from using parsers in their name?
-LOUNGE_CHAT.DisallowParsersInName = false
-
-/**
-* Profanity filter
-**/
-
--- Which usergroups are allowed to bypass the profanity filter?
-LOUNGE_CHAT.ProfanityBypass = {
-	["admin"] = true,
-	["superadmin"] = true,
-}
-
--- Words filtered out by the profanity filter. Case insensitive.
--- Do keep in mind that this profanity filter iS CLIENTSIDE. It will not kick out players for saying banned words.
--- Use a dedicated script for that.
--- You can also use lua patterns to have better detection: http://lua-users.org/wiki/PatternsTutorial
-LOUNGE_CHAT.ProfanityFilter = {
-	"this server sucks",
-}
-
--- Character to use when censoring banned words.
--- Example: shit -> ****
-LOUNGE_CHAT.CensorCharacter = "*"
-
 /**
 * Advanced configuration
 * Only modify these if you know what you're doing.
@@ -68,26 +43,21 @@ LOUNGE_CHAT.UseUTF8 = true
 -- Maximum messages allowed in the chatbox before deletion of the oldest messages.
 LOUNGE_CHAT.MaxMessages = 200
 
--- Disable having to wrap an emoticon's name in : (like :thumb_up: becomes thumb_up)
--- This option has not been fully tested in all the possible cases so some text might look bad, or might straight up crash
--- the client. Change at your own risk.
-LOUNGE_CHAT.EmoticonsNoColon = false
-
 /**
 * Style configuration
 **/
 
 -- Font to use for normal text throughout the chatbox.
-LOUNGE_CHAT.FontName = "Roboto"
+LOUNGE_CHAT.FontName = "Circular Std Medium"
 
 -- Font to use for bold text throughout the chatbox.
-LOUNGE_CHAT.FontNameBold = "Roboto"
+LOUNGE_CHAT.FontNameBold = "Circular Std Bold"
 
 -- Color sheet.
 LOUNGE_CHAT.Style = {
-	header = Color(40, 40, 40, 255),
-	bg = Color(49, 49, 49, 255),
-	inbg = Color(68, 68, 68, 255),
+	header = Color(52, 152, 219, 255),
+	bg = Color(52, 73, 94, 255),
+	inbg = Color(44, 62, 80, 255),
 
 	close_hover = Color(231, 76, 60),
 	hover = Color(255, 255, 255, 10),
@@ -122,7 +92,7 @@ LOUNGE_CHAT.BlurSize = 2
 -- FRENCH Translation: https://pastebin.com/pnQfQ82k
 
 LOUNGE_CHAT.Language = {
-	players_online = "Игроки Онлайн",
+	players_online = "Players online",
 	server_uptime = "Server uptime",
 	click_to_load_image = "Click to load image",
 	failed_to_load_image = "Failed to load image",
@@ -137,9 +107,9 @@ LOUNGE_CHAT.Language = {
 	usage = "Usage",
 	example = "Example",
 
-	send = "Клик!",
-	copy_message = "Скопировать сообщение",
-	copy_url = "Скопировать URL",
+	send = "Send",
+	copy_message = "Copy message",
+	copy_url = "Copy URL",
 
 	-- options
 	general = "General",

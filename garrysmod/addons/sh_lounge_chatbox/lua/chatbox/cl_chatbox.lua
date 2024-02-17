@@ -1,8 +1,3 @@
------------
--- fonts --
------------
-surface.CreateFont( "CHAT22", { font = "Roboto", extended  = true, antialias = true, shadow = false, weight = 1000, size = 18})
-
 -- TODO? save configs
 
 local chat_x = CreateClientConVar("lounge_chat_x", 2 / 1080, true, false)
@@ -59,9 +54,9 @@ local matOptions = Material("shenesis/chat/options.png", "noclamp smooth")
 LOUNGE_CHAT.ChatboxOpen = false
 LOUNGE_CHAT.History = {}
 
-LOUNGE_CHAT.ChatboxFont = "CHAT22"
-LOUNGE_CHAT.GlowFont = "CHAT22"
-LOUNGE_CHAT.TimestampFont = "CHAT22"
+LOUNGE_CHAT.ChatboxFont = "LOUNGE_CHAT_18"
+LOUNGE_CHAT.GlowFont = "LOUNGE_CHAT_18_G"
+LOUNGE_CHAT.TimestampFont = "LOUNGE_CHAT_16"
 
 local function IsPlayer(e)
 	return type(e) == "Player" and IsValid(e)
@@ -93,7 +88,7 @@ function LOUNGE_CHAT:CreateChatboxFonts()
 	local fntnamebold = self.FontNameBold
 	local weight = 500
 	local boldweight = 1000
-	local sizes = {10, 12, 14, 16, 18, 20, 24, 28}
+	local sizes = {8, 10, 12, 14, 16, 18, 20, 24}
 
 	for _, v in ipairs (sizes) do
 		local n = "LOUNGE_CHAT_" .. v
@@ -1101,19 +1096,14 @@ function LOUNGE_CHAT:ParseLineWrap(cont, maxwi, parent, sender)
 				underline = el.underline
 			end
 		elseif (IsPlayer(el)) then
-			local coltouse = team.GetColor(el:Team())
-			if (ROLE_DETECTIVE and el.IsActiveDetective and el:IsActiveDetective()) then
-				coltouse = Color(50, 200, 255)
-			end
-
-			ele = self:MakeChatLabel(el:Nick(), defaultfont, coltouse, contents)
+			ele = self:MakeChatLabel(el:Nick(), defaultfont, team.GetColor(el:Team()), contents)
 		elseif (ispanel(el)) then
 			ele = el
 		end
 
 		if (lua and ispanel(ele) and IsValid(ele)) then
 			local func = lua.lua
-
+		
 			ele:SetMouseInputEnabled(true)
 			ele:SetCursor("user")
 			ele.m_Lua = lua
@@ -1168,10 +1158,8 @@ function LOUNGE_CHAT:ParseLineWrap(cont, maxwi, parent, sender)
 				end
 			end
 
-			if (ele:GetName() ~= "DButton") then
-				ele.OnMousePressed = function(me, mc)
-					line:OnMousePressed(mc)
-				end
+			ele.OnMousePressed = function(me, mc)
+				line:OnMousePressed(mc)
 			end
 
 			ele:SetPos(x, y + lh * 0.5 - he * 0.5)
@@ -1291,10 +1279,6 @@ function LOUNGE_CHAT:OpenChatbox(bteam)
 
 	_LOUNGE_CHAT.m_Entry.m_iCurPos = nil
 	_LOUNGE_CHAT.m_Entry:RequestFocus()
-
-	if (ROLE_TRAITOR and LocalPlayer().IsSpecial and !LocalPlayer():IsSpecial()) then
-		bteam = false
-	end
 	_LOUNGE_CHAT.m_bTeam = bteam
 
 	self.ChatboxOpen = true
@@ -1315,7 +1299,6 @@ function LOUNGE_CHAT:CloseChatbox()
 		net.WriteBool(false)
 	net.SendToServer()
 
-	hook.Call("ChatTextChanged", GAMEMODE, "")
 	hook.Call("FinishChat", GAMEMODE)
 
 	-- Fade out
@@ -1409,12 +1392,6 @@ function LOUNGE_CHAT:OnPlayerChat(ply, text, bteam, bdead, preftext, prefcolor, 
 	local textcol = color_white
 	local namecol = IsValid(ply) and team.GetColor(ply:Team()) or color_white
 
-	if (IsValid(ply)) then
-		local ccp = self.CustomColorsPlayers[ply:SteamID()] or self.CustomColorsPlayers[ply:SteamID64()]
-		local ccu = self.CustomColorsGroups[ply:GetUserGroup()]
-		namecol = ccp or ccu or namecol
-	end
-
 	-- (shitty) dayz tags
 	if (engine.ActiveGamemode() == "dayz") or (DrawHPImage and DrawAmmoInfo) then
 		local sign = text:sub(1, 1)
@@ -1431,8 +1408,8 @@ function LOUNGE_CHAT:OnPlayerChat(ply, text, bteam, bdead, preftext, prefcolor, 
 		end
 	end
 
+	-- customtags
 	if (IsValid(ply)) then
-		-- customtags
 		if (ATAG) then
 			local pieces, messageColor, nameColor = ply:getChatTag()
 			if (pieces) then
@@ -1458,40 +1435,6 @@ function LOUNGE_CHAT:OnPlayerChat(ply, text, bteam, bdead, preftext, prefcolor, 
 				end
 			end
 		end
-
-		-- TeamTags
-		if (self.TeamTags) then
-			local t = ply:Team()
-
-			local tx = string.format(self.TeamTagsFormat, team.GetName(t))
-			if (self.TeamTagsCase == 1) then
-				tx = tx:upper()
-			elseif (self.TeamTagsCase == -1) then
-				tx = tx:lower()
-			end
-
-			Add({
-				team.GetColor(t),
-				tx
-			})
-		end
-
-		if (!self.ProfanityBypass[ply:GetUserGroup()]) then
-			for _, word in pairs (self.ProfanityFilter) do
-				local tries = 0
-				local s, e = string.find(text:lower(), word)
-				while (s and tries <= 128) do
-					text = text:sub(1, s - 1) .. string.rep(self.CensorCharacter, e - s + 1) .. text:sub(e + 1)
-					tries = tries + 1
-					s, e = string.find(text, word)
-				end
-			end
-		end
-	end
-
-	-- TTT detective color
-	if (IsValid(ply) and ROLE_DETECTIVE and ply.IsActiveDetective and ply:IsActiveDetective()) then
-		namecol = Color(50, 200, 255)
 	end
 
 	if (bdead) then
@@ -1500,10 +1443,6 @@ function LOUNGE_CHAT:OnPlayerChat(ply, text, bteam, bdead, preftext, prefcolor, 
 	end
 
 	if (bteam) then
-		if (ROLE_TRAITOR and LocalPlayer().IsSpecial and !LocalPlayer():IsSpecial()) then
-			bteam = false
-		end
-
 		if (bteam == true and IsValid(ply)) then
 			Add({team.GetColor(ply:Team()), self.TagTeam})
 
@@ -1552,11 +1491,7 @@ function LOUNGE_CHAT:OnPlayerChat(ply, text, bteam, bdead, preftext, prefcolor, 
 		table.insert(con, ": " .. text)
 	else
 		if (IsValid(ply)) then
-			if (self.DisallowParsersInName) then
-				Add({namecol, {noparse = true}, ply:Nick(), {noparse = false}}, true)
-			else
-				Add({namecol, ply:Nick()}, true)
-			end
+			Add({namecol, ply:Nick()}, true)
 		else
 			Add(self.ConsoleName, true)
 		end
@@ -1654,7 +1589,6 @@ hook.Add("Think", "LOUNGE_CHAT.Think", function()
 		-- TTT override
 		if (ROLE_TRAITOR) then
 			net.Receive("TTT_RoleChat", LOUNGE_CHAT.TTT_RoleChat)
-			net.Receive("TTT_LastWordsMsg", LOUNGE_CHAT.TTT_LastWordsMsg)
 		end
 	end
 end)
@@ -1689,15 +1623,7 @@ net.Receive("LOUNGE_CHAT.TTTRadio", function()
 	end
 
 	if (sender:IsDetective()) then
-		LOUNGE_CHAT:OnPlayerChat(
-			sender,
-			text,
-			{
-				color = Color(20, 100, 255),
-				text = Format("(%s) ", string.upper(LANG.GetTranslation("detective")))
-			},
-			false
-		)
+		AddDetectiveText(sender, text)
 	else
 		LOUNGE_CHAT:OnPlayerChat(sender, text, false, false)
 	end
@@ -1712,42 +1638,8 @@ function LOUNGE_CHAT.TTT_RoleChat()
 	local text = net.ReadString()
 
 	if (role == ROLE_TRAITOR) then
-		LOUNGE_CHAT:OnPlayerChat(
-			sender,
-			text,
-			{
-				color = Color(255, 30, 40),
-				text = Format("(%s) ", string.upper(LANG.GetTranslation("traitor")))
-			},
-			false
-		)
+		LOUNGE_CHAT:OnPlayerChat(sender, text, {color = Color(255, 30, 40), text = Format("(%s) ", string.upper(LANG.GetTranslation("traitor")))}, false)
 	elseif (role == ROLE_DETECTIVE) then
-		LOUNGE_CHAT:OnPlayerChat(
-			sender,
-			text,
-			{
-				color = Color(20, 100, 255),
-				text = Format("(%s) ", string.upper(LANG.GetTranslation("detective")))
-			},
-			false
-		)
+		LOUNGE_CHAT:OnPlayerChat(sender, text, {color = Color(20, 100, 255), text = Format("(%s) ", string.upper(LANG.GetTranslation("detective")))}, false)
 	end
-end
-
-function LOUNGE_CHAT.TTT_LastWordsMsg()
-	local sender = net.ReadEntity()
-	if not (IsValid(sender)) then
-		return end
-
-	local text = net.ReadString()
-
-	LOUNGE_CHAT:OnPlayerChat(
-		sender,
-		text,
-		{
-			color = Color(150, 150, 150),
-			text = Format("(%s) ", string.upper(LANG.GetTranslation("last_words"))),
-		},
-		false
-	)
 end
