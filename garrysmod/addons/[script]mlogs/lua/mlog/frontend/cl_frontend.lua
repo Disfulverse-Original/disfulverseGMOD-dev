@@ -8,14 +8,21 @@
 
 surface.CreateFont( "mLog_small", {
 	font = "Roboto",
-	size = 15,
+	size = 19,
+	extended = true,
+	antialias = true,
 })
 surface.CreateFont( "mLog_smaller", {
+	font = "Roboto",
 	size = 13,
+	extended = true,
+	antialias = true,
 })
 surface.CreateFont( "mLog_big", {
 	font = "Roboto",
 	size = 24,
+	extended = true,
+	antialias = true,
 })
 function mLog.OutlinedBox( x, y, w, h, thickness, clr )
 	surface.SetDrawColor( clr )
@@ -134,7 +141,7 @@ function mLog.OpenMenu()
 	main:Center()
 	main.Paint = function(self,w,h) 
 		draw.RoundedBox(0,0,0,w,h,mLog.config.colors.bg) 
-		draw.SimpleText("Логи NoxusRP", "mLog_small", 4,4, mLog.config.colors.tx)
+		draw.SimpleText("Логи Disfulverse", "mLog_small", 4,4, mLog.config.colors.tx)
 		
 		if self.PopupText and not self.PopupTime then
 			self.PopupTime = CurTime() + 4
