@@ -215,7 +215,7 @@ local my_language = {
     request = "(ВЫЗОВ!)",
     group = "(группе)",
     demote = "(УВОЛЬНЕНИЕ)",
-    ooc = "глобальный",
+    ooc = "Глобальный чат",
     radio_x = "Радио %d",
 
     talk = "разговор",
