@@ -91,7 +91,7 @@ surface.CreateFont("Roboto Light", {
         weight = 300,
         antialias = true,
         shadow = false,
-        font = "Roboto Light",
+        font = "Roboto",
         extended = true,
     })
 
@@ -100,7 +100,7 @@ surface.CreateFont("F4MenuFont01", {
         weight = 400,
         antialias = true,
         shadow = false,
-        font = "Roboto Light",
+        font = "Roboto",
         extended = true,
     })
 
@@ -109,6 +109,6 @@ surface.CreateFont("F4MenuFont02", {
         weight = 800,
         antialias = true,
         shadow = false,
-        font = "Roboto Light",
+        font = "Roboto",
         extended = true,
     })
