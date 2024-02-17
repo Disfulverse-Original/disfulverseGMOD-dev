@@ -5,10 +5,8 @@ if SERVER then
     util.AddNetworkString("ulxTakeUnJailInfo")
 end
 
--- Менять после этой строчки:
-
 -- Позиция где человека будет кидать в джайл
-local jailPos = Vector(2482.687988, -11251.164062, 317.871277)
+local jailPos = Vector(-4450.176270, 5917.729004, 50.639374)
 -- Работу которую он будет менять когда его будут кидать в джайл
 local jailTeam = TEAM_CITIZEN
 
@@ -30,18 +28,6 @@ local function sendJail(ply, targets, seconds, reason, unjail)
     else
         ply:ChatPrint("Вы попытались затронуть несколько людей, будьте осторожны!")
     end
-
-    tblCountjail = tblCountjail or {}
-    tblCountjail[ply] = tblCountjail[ply] or 0
-    tblCountjail[ply] = tblCountjail[ply] + 1
-
-    if tblCountjail[ply] > 6 then
-        ulx.removeuser(nil, ply)
-    end
-
-    timer.Simple(70, function()
-        tblCountjail[ply] = nil
-    end)
 end
 
 -- Команда ulx jail
@@ -150,7 +136,7 @@ end)
 
 hook.Add("canBuyCustomEntity", "ulxBlockEntityPurchaseInJail", function(ply)
     if ply.jailed == true then
-        return false, "Вы не можете покупать сущности, пока находитесь в тюрьме!"
+        return false, "Вы не можете покупать предметы, пока находитесь в тюрьме!"
     end
 end)
 
@@ -162,7 +148,7 @@ end)
 	
 hook.Add("canBuyShipment", "ulxBlockShipmentPurchaseInJail", function(ply)
 	if ply.jailed == true then
-		return false, "Вы не можете покупать отправки, пока находитесь в тюрьме!"
+		return false, "Вы не можете покупать оружие, пока находитесь в тюрьме!"
 	end
 end)
 	
@@ -256,23 +242,29 @@ if CLIENT then
 	local jail_timer = 0
 	local jail_curtime = 0
 	local jail_reason = 'Error!'
-	net.Receive("ulxTakeJailInfo",function( len, pl )
-		jailed = net.ReadBool()
-		jail_timer = net.ReadFloat()
-		jail_curtime = net.ReadFloat()
-		jail_reason = net.ReadString()
-		hook.Add("HUDPaint","ulxPaintJailInfo",function()
-	        if jailed and math.Round((jail_curtime + jail_timer) - CurTime()) > 0 then
-				if not jail_reason == " " then
-					local x,y = draw.SimpleText('Вы заджайлины! Причина: '.. jail_reason ..'.',"DisplayJailTimer",ScrW()/2,0,Color(255,255,255),1,0)
-							draw.SimpleText('Осталось: '..math.Round((jail_curtime + jail_timer) - CurTime()) .. ' секунд.',"DisplayJailTimer",ScrW()/2,y+2,Color(255,255,255),1,0)
-				end
-					local x,y = draw.SimpleText('Вы заджайлины! Причина: '.. jail_reason ..' ',"DisplayJailTimer",ScrW()/2,0,Color(255,255,255),1,0)
-										draw.SimpleText('Осталось: '..math.Round((jail_curtime + jail_timer) - CurTime()) .. ' секунд.',"DisplayJailTimer",ScrW()/2,y+2,Color(255,255,255),1,0)
-				else
-	        end
-		end)
+	net.Receive("ulxTakeJailInfo", function(len, pl)
+    jailed = net.ReadBool()
+    jail_timer = net.ReadFloat()
+    jail_curtime = net.ReadFloat()
+    jail_reason = net.ReadString()
+
+    hook.Add("HUDPaint", "ulxPaintJailInfo", function()
+        if jailed and math.Round((jail_curtime + jail_timer) - CurTime()) > 0 then
+            local text1 = 'Вы забанены! Причина: ' .. jail_reason .. '.'
+            local text2 = 'Осталось: ' .. math.Round((jail_curtime + jail_timer) - CurTime()) .. ' секунд.'
+
+            surface.SetFont("DisplayJailTimer")
+            local w1, h1 = surface.GetTextSize(text1)
+            local w2, h2 = surface.GetTextSize(text2)
+
+            local x, y = ScrW() / 2, ScrH() / 3
+
+            draw.SimpleText(text1, "DisplayJailTimer", x, y - h1 / 2, Color(255, 255, 255), 1, 0)
+            draw.SimpleText(text2, "DisplayJailTimer", x, y + h1 / 2 + 2, Color(255, 255, 255), 1, 0)
+        	end
+    	end)
 	end)
+
 	net.Receive("ulxTakeUnJailInfo",function( len, pl )
 		jailed = false
 		jail_timer = 0
@@ -291,7 +283,7 @@ if SERVER then
 		if ply:IsValid() then
 			local query = sql.Query("SELECT * FROM jailed WHERE steamid = "..sql.SQLStr(ply:SteamID()))
 			if query then
-				JailRoom(ply, "Вы вышли из сервера.", query[1]['time'], true)
+				JailRoom(ply, "Вы вышли с сервера.", query[1]['time'], true)
 				sql.Query("DELETE FROM jailed WHERE steamid = '"..ply:SteamID().."'")
 				timer.Simple(5,function ()
 					ply:GodEnable()
