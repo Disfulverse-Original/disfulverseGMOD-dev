@@ -1,5 +1,3 @@
--- fastdl
-resource.AddWorkshop("2002491440")
 
 function Slawer.Mayor:GetMoneyBG()
 	if Slawer.Mayor:GetFunds() == 0 then

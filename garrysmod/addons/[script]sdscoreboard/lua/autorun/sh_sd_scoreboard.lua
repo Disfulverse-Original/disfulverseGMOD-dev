@@ -19,7 +19,6 @@ if SERVER then
 	AddCSLuaFile("sd_scoreboard/client/panels/cl_web.lua")
 
 	include("sd_scoreboard/sv_init.lua")
-	resource.AddWorkshop( "2338826934" )
 
 elseif CLIENT then
 	hook.Add("OnGamemodeLoaded", "sd_scoreboard_wait", function()

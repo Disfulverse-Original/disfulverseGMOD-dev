@@ -6,8 +6,6 @@
 
     if not SERVER then return end
 
-    resource.AddWorkshop( '1300407557' )
-
     Executioner.HitTracker = Executioner.HitTracker or {}
     Executioner.BonusTracker = Executioner.BonusTracker or {}
     Executioner.PhoneTracker = Executioner.PhoneTracker or {}

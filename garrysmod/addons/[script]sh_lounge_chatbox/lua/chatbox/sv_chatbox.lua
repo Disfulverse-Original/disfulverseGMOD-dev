@@ -5,6 +5,11 @@ net.Receive("LOUNGE_CHAT.Typing", function(len, ply)
 	ply:SetNWBool("LOUNGE_CHAT.Typing", net.ReadBool())
 end)
 
+resource.AddFile("materials/shenesis/chat/checked.png")
+resource.AddFile("materials/shenesis/chat/close.png")
+resource.AddFile("materials/shenesis/chat/smile.png")
+resource.AddFile("materials/shenesis/chat/options.png")
+
 -- shitty override for a shitty gamemode
 hook.Add("TTTPlayerRadioCommand", "LOUNGE_CHAT.TTTPlayerRadioCommand", function(ply, msg_name, msg_target)
 	local name = ""
@@ -33,12 +38,3 @@ hook.Add("TTTPlayerRadioCommand", "LOUNGE_CHAT.TTTPlayerRadioCommand", function(
 
 	return true
 end)
-
-if (LOUNGE_CHAT.UseWorkshop) then
-	resource.AddWorkshop("893244794")
-else
-	resource.AddFile("materials/shenesis/chat/checked.png")
-	resource.AddFile("materials/shenesis/chat/close.png")
-	resource.AddFile("materials/shenesis/chat/smile.png")
-	resource.AddFile("materials/shenesis/chat/options.png")
-end

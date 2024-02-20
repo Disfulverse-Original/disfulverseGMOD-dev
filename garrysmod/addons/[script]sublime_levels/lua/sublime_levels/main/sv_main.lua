@@ -1,4 +1,3 @@
-resource.AddWorkshop("1780556842");
 
 util.AddNetworkString("Sublime.GetLeaderboardsData");
 util.AddNetworkString("Sublime.SendLeaderboardsData");

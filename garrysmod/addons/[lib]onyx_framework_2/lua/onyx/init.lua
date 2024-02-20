@@ -10,10 +10,6 @@ Email: tochnonement@gmail.com
 local Run = hook.Run
 local IncludeFolder = onyx.IncludeFolder
 
-if (SERVER) then
-    resource.AddWorkshop('852839002')
-end
-
 Run('PreOnyxLoad')
 
 -- non recursive

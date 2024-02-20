@@ -1,4 +1,3 @@
-resource.AddWorkshop( "1911629257")
 
 util.AddNetworkString( "CRATE_RestartCooldown" )
 util.AddNetworkString( "CRATE_StopCooldown" )

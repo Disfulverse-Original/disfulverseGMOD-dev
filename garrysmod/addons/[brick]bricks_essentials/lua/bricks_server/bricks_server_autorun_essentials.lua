@@ -31,9 +31,6 @@ hook.Add( "BRS.Hooks.DevConfigLoad", "BRS.Hooks.DevConfigLoad_Essentials", funct
 end )
 
 if( SERVER ) then
-    resource.AddWorkshop( "2126843730" ) -- Brick's Essentials
-    resource.AddWorkshop( "2136421687" ) -- Brick's Server
-
     hook.Add( "BRS.Hooks.SQLLoad", "BRS.Hooks.SQLLoad_Essentials", function()
         if( BRICKS_SERVER.ESSENTIALS.LUACFG.UseMySQL ) then
             include( "bricks_server/bricks_essentials/sv_mysql.lua" )

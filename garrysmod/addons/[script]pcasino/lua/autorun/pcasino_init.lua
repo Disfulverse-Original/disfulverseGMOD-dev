@@ -20,7 +20,7 @@ print("Loading PerfectCasino")
 
 local path = "PerfectCasino/"
 if SERVER then
-	resource.AddWorkshop("2228228831")
+
 	local files, folders = file.Find(path .. "*", "LUA")
 	
 	for _, folder in SortedPairs(folders, true) do

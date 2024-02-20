@@ -587,6 +587,7 @@ concommand.Add( "holster", function( ply, cmd, args )
 	end
 end )
 
+--[[
 hook.Add( "PlayerLoadout", "BRS.PlayerLoadout_InventorySWEP", function( ply )
 	ply:Give( "bricks_server_invpickup" )
 
@@ -596,6 +597,7 @@ hook.Add( "PlayerLoadout", "BRS.PlayerLoadout_InventorySWEP", function( ply )
 		ply:Give( v[2][3] )
 	end
 end)
+--]]
 
 hook.Add( "canDropWeapon", "BRS.canDropWeapon_Inventory", function( ply, wep )
 	for k, v in pairs( ply:BRS():GetInventory() or {} ) do

@@ -106,7 +106,7 @@ BRICKS_SERVER.Func.AddLanguageStrings( "russian", {
     ["unselected"] = "Не выбрано",
     ["add"] = "Добавить",
 
-    ["shootyStick"] = "Стрелка!",
+    ["shootyStick"] = "Оружие.",
     ["permanent"] = "Вечная",
     ["tierX"] = "(Уровень %d)",
     ["someDescription"] = "Некоторое описание.",

@@ -1,5 +1,3 @@
--- Workshop content
-resource.AddWorkshop( "2742214519" )
 
 -- Network strings
 util.AddNetworkString( "CH_ATM_Net_ChangeATMColor" )

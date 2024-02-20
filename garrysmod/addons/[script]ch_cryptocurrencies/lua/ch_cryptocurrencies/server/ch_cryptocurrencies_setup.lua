@@ -1,6 +1,3 @@
--- Workshop content
-resource.AddWorkshop( "2688654158" )
-
 -- Network strings
 util.AddNetworkString( "CH_CryptoCurrencies_Net_NetworkCurrencies" )
 util.AddNetworkString( "CH_CryptoCurrencies_Net_BuyCrypto" )

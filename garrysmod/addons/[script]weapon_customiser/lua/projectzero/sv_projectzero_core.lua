@@ -4,8 +4,6 @@
 --ds server - https://discord.gg/V329W7Ce8g
 --ds - matveicher
 
-resource.AddWorkshop( 3148691503 )
-
 include( "projectzero/sv_database.lua" )
 
 -- CLIENT LOAD --

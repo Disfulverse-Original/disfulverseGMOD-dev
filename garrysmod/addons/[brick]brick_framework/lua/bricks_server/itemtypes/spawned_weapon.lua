@@ -105,7 +105,7 @@ ITEM.GetInfo = function( itemData )
 
     local itemDescription = BRICKS_SERVER.Func.L( "shootyStick" )
     if( BRICKS_SERVER.ESSENTIALS and BRICKS_SERVER.ESSENTIALS.LUACFG.ItemDescriptions and BRICKS_SERVER.ESSENTIALS.LUACFG.ItemDescriptions[(itemData[3] or "")] ) then
-        itemDescription = BRICKS_SERVER.ESSENTIALS.LUACFG.ItemDescriptions[(itemData[3] or "")]
+        itemDescription = BRICKS_SERVER.ESSENTIALS.LUACFG.ItemDescriptions[(itemData[3] or "") ] 
     end
 
     if( BRICKS_SERVER.Func.IsSubModuleEnabled( "essentials", "swepupgrader" ) and isnumber( itemData[4] or 0 ) and (itemData[4] or 0) > 0 ) then

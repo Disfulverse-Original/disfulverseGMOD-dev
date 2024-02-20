@@ -1,8 +1,5 @@
 print( "[BITMINERS BY CRAP-HEAD] Initializing Script" )
 
--- Workshop content
-resource.AddWorkshop( "2072136134" )
-
 -- Network strings
 util.AddNetworkString( "CH_BITMINERS_UpdateBitcoinRates" )
 util.AddNetworkString( "CH_BITMINERS_CryptoOptions" )
