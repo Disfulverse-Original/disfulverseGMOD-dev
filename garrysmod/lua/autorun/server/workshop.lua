@@ -14,12 +14,13 @@
 	resource.AddWorkshop( "1911629257" ) --supply robbers//
 	resource.AddWorkshop( "3148691503" ) --weapon custom//
 	resource.AddWorkshop( "2923379220" ) --Wheatleys parkour//
+
+	resource.AddWorkshop( "2131057232" ) --ARCCW BASE
 --gmodstore]]
 
 
 --dis
 	--weapons
-	resource.AddWorkshop( "2131057232" ) --ARCCW BASE
 	resource.AddWorkshop( "3148798807" ) --ARCCW DISFULVERSE CON1
 	resource.AddWorkshop( "3148800269" ) --ARCCW DISFULVERSE CON2
 	resource.AddWorkshop( "3148801741" ) --ARCCW DISFULVERSE MISC
