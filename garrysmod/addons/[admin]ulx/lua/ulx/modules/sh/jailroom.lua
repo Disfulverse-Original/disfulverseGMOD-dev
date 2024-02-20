@@ -54,7 +54,7 @@ function JailRoom(ply, reason, seconds, after_relog)
 	ply:SetPos(jailPos)
 	timer.Simple(1,function ()
 		if not (ply:Team() == jailTeam) then
-			ply:changeTeam(jailTeam, true)
+			ply:changeTeam(TEAM_CITIZEN, true)
 			ply:Spawn()
 			ply:SetPos(jailPos)
 			timer.Simple(1,function ()
