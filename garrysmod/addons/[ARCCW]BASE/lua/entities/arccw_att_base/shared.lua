@@ -90,7 +90,7 @@ end
 function ENT:Draw()
     self:DrawModel()
 
-    if !GetConVar("arccw_2d3d"):GetBool() then return end
+    --if !GetConVar("arccw_2d3d"):GetBool() then return end
 
     if self.PrintName == "Base Dropped Attachment" and self:GetNWInt("attid", -1) != -1 then
         local att = ArcCW.AttachmentIDTable[self:GetNWInt("attid", -1)]

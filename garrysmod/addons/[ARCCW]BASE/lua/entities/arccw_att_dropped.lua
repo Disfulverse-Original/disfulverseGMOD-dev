@@ -11,7 +11,7 @@ ENT.Model = "models/Items/BoxMRounds.mdl"
 function ENT:Draw()
     self:DrawModel()
 
-    if !GetConVar("arccw_2d3d"):GetBool() then return end
+    --if !GetConVar("arccw_2d3d"):GetBool() then return end
 
     if (EyePos() - self:WorldSpaceCenter()):LengthSqr() <= 262144 then -- 512^2
         local ang = LocalPlayer():EyeAngles()

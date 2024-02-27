@@ -278,7 +278,7 @@ elseif CLIENT then
 
     function ENT:Draw()
         self:DrawModel()
-
+        --[[
         if !GetConVar("arccw_2d3d"):GetBool() then return end
 
         if (EyePos() - self:GetPos()):LengthSqr() <= 262144 then -- 512^2
@@ -305,6 +305,7 @@ elseif CLIENT then
                 end
             cam.End3D2D()
         end
+        --]]
     end
 
 end
