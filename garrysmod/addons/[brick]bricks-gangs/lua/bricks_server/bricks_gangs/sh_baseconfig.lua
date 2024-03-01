@@ -43,15 +43,15 @@ BRICKS_SERVER.BASECONFIG.GANGS.Upgrades = {
         Tiers = {
             [1] = {
                 Price = 25000,
-                ReqInfo = { 10 }
+                ReqInfo = { 7 }
             },
             [2] = {
                 Price = 50000,
-                ReqInfo = { 15 }
+                ReqInfo = { 10 }
             },
             [3] = {
                 Price = 100000,
-                ReqInfo = { 20 }
+                ReqInfo = { 15 }
             }
         }
     },
@@ -69,7 +69,7 @@ BRICKS_SERVER.BASECONFIG.GANGS.Upgrades = {
                 Price = 50000,
                 ReqInfo = { 150000 }
             },
-            [2] = {
+            [3] = {
                 Price = 150000,
                 ReqInfo = { 750000 }
             }
@@ -87,15 +87,15 @@ BRICKS_SERVER.BASECONFIG.GANGS.Upgrades = {
             },
             [2] = {
                 Price = 50000,
-                ReqInfo = { 10 }
+                ReqInfo = { 15 }
             },
             [3] = {
                 Price = 100000,
-                ReqInfo = { 15 }
+                ReqInfo = { 20 }
             },
             [4] = {
                 Price = 200000,
-                ReqInfo = { 20 }
+                ReqInfo = { 25 }
             }
         }
     },

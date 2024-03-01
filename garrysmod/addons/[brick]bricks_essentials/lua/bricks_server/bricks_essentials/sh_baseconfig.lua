@@ -57,7 +57,7 @@ BRICKS_SERVER.BASECONFIG.F4.Tabs = {
 BRICKS_SERVER.BASECONFIG.LEVELING = {}
 BRICKS_SERVER.BASECONFIG.LEVELING["Max Level"] = 100
 BRICKS_SERVER.BASECONFIG.LEVELING["Original EXP Required"] = 1000
-BRICKS_SERVER.BASECONFIG.LEVELING["EXP Required Increase"] = 1.04
+BRICKS_SERVER.BASECONFIG.LEVELING["EXP Required Increase"] = 1.15
 BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Killing NPC"] = 500
 BRICKS_SERVER.BASECONFIG.LEVELING["Playing On Server Reward Time"] = 300
 BRICKS_SERVER.BASECONFIG.LEVELING["EXP Gained - Playing On Server"] = 150
@@ -160,15 +160,15 @@ BRICKS_SERVER.BASECONFIG.INVENTORY["Inventory Slots"] = {
     ["Staff"] = 40,
     --["VIP++"] = 35,
     --["VIP+"] = 30,
-    ["Dis+"] = 35,
-    ["Default"] = 15
+    ["Dis+"] = 30,
+    ["Default"] = 10
 }
 BRICKS_SERVER.BASECONFIG.INVENTORY["Bank Slots"] = {
     ["Staff"] = 40,
     --["VIP++"] = 35,
     --["VIP+"] = 30,
-    ["Dis+"] = 40,
-    ["Default"] = 20
+    ["Dis+"] = 25,
+    ["Default"] = 5
 }
 
 --[[ BOOSTERS ]]--
