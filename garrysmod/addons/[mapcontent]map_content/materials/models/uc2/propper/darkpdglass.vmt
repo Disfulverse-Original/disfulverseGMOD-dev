@@ -1,0 +1,13 @@
+vertexlitgeneric
+{
+	$basetexture "unioncity2/miscellaneous/darkpdglass"
+	$bumpmap "unioncity2/miscellaneous/displayglass_n"
+	$envmap env_cubemap
+ 
+	$normalmapalphaenvmapmask 1
+
+	$envmaptint "[0.95 0.95 0.95]"
+	
+	
+	$surfaceprop glass
+}

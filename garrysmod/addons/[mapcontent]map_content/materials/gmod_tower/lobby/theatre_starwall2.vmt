@@ -1,0 +1,14 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "gmod_tower/lobby/Theatre_starwall2"
+	$selfillum 1
+	$selfillumtint "[1 1 1]"
+	"$bumpmap" "gmod_tower/lobby/Theatre_starwall2_normal"
+	"$surfaceprop" "metal"
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" 1
+	"$envmapcontrast" .75
+	"$envmapsaturation" .9
+	"$envmaptint" "[ 1 1 1 ]"
+	"%keywords" "pixeltail pt lobby"
+}

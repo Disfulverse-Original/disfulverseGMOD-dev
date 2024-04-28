@@ -1,0 +1,11 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "unioncity/club/clubcounter"
+	$bumpmap "unioncity/club/clubcounter_n"
+	
+	$envmap env_cubemap
+	$normalmapalphaenvmapmask 1
+	$envmaptint "[.2 .2 .2]"
+	
+	$surfaceprop metal
+}

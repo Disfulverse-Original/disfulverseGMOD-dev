@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/props_club/are_prop_backstage_flightcase_df"
+	$bumpmap "models/props_club/are_prop_backstage_flightcase_nm"
+	
+	$envmap env_cubemap
+	$normalmapalphaenvmapmask 1
+	$envmaptint "[.5 .5 .5]"
+    $phong "1"
+    $phongtint "[.8 .7 .5]"
+    $phongexponent "55"
+    $phongboost "1.2"
+    $phongfresnelranges "[1 2 5]"
+}

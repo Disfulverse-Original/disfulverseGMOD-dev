@@ -1,0 +1,7 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "vtmb/concrete/oilsewerd"
+	"$envmap" "env_cubemap"
+	"$envmapmask" "vtmb/concrete/oilsewerd_ref"
+	"$surfaceprop" "concrete"
+}

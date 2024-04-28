@@ -1,0 +1,8 @@
+"patch"
+{
+	"include"		"materials/DE_CHATEAU/WALL04PNL.vmt"
+	"replace"
+	{
+		"$envmap"		"maps/rp_downtown_ifn_v4/c0_0_0"
+	}
+}

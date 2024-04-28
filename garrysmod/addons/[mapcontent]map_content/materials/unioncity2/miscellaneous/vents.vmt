@@ -1,0 +1,14 @@
+LightmappedGeneric
+{
+	$baseTexture "unioncity2/miscellaneous/vents"
+	$bumpmap "unioncity2/miscellaneous/vents_n"
+	
+	$envmap env_cubemap
+	$normalmapalphaenvmapmask 1
+	$envmaptint "[.02 .02 .02]"
+	$fresnelreflection 20
+	$envmapcontrast 1.01
+	$envmapsaturation .6
+	
+	$surfaceprop metal 
+}

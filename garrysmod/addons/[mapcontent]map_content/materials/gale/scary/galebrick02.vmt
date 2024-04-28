@@ -1,0 +1,19 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "Brick/brickwall034e"
+	"$surfaceprop" "brick"
+	"$bumpmap" "gale/Scary/galebrick02"
+	$ssbump 1
+
+	"$detail" "detail\noise_detail_01"
+	"$detailscale" "7.740"
+	"$detailblendfactor" .8
+	"$detailblendmode" 0
+	
+	"$normalmapalphaenvmapmask" 1
+	"$envmapsaturation" 1
+	"$envmaptint" "[ 0.5 0.5 0.5 ]"
+	"$envmap" "env_cubemap"
+
+	"%keywords" "c17downtown"
+}

@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "unioncity/decals/graffiti/decal_graffitiart_underground_24"
+	"$translucent" 1
+	"$decal" 1
+	$alpha .85
+	$decalscale .5
+}

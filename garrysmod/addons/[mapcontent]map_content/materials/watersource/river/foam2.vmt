@@ -1,0 +1,18 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "WaterSource/River/Foam"
+	"$bumpmap" "Watersource/river/foam_n"
+	"$translucent" 1
+	$alpha 0.5
+	"$ssbump" "1"
+
+	Proxies
+	{
+		TextureScroll
+		{
+			texturescrollvar $Basetexturetransform
+			texturescrollrate 0.125
+			texturescrollangle 0.00
+		}
+	}
+}

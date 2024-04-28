@@ -1,0 +1,10 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "unioncity/floorground/dwntwn_church_step_a_diff"
+	
+	$bumpmap "unioncity/floorground/dwntwn_church_step_a_n"
+	
+	
+	$surfaceprop concrete
+
+}

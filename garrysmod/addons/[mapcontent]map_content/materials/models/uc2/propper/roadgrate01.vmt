@@ -1,0 +1,5 @@
+vertexlitgeneric
+{
+$basetexture "concrete/roadgrate01"
+$surfaceprop concrete
+}

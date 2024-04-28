@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "maps/ministry/ministry_office_ceiling_01"
+	"$bumpmap" "maps/ministry/ministry_office_ceiling_01_normal"
+
+	$surfaceprop "tile"
+	"%keywords" "ins2, wood, ministry"
+}

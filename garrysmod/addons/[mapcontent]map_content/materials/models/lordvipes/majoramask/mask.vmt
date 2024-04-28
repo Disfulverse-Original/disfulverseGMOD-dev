@@ -1,0 +1,20 @@
+"VertexLitGeneric"
+{
+	"$baseTexture"		"models/lordvipes/majoramask/mask"
+	"$bumpmap"		"models/lordvipes/majoramask/mask_bump"
+	"$selfillum"		 "1"
+	"$halflambert"		 "1"
+
+	"$phong"			"1"
+	"$phongboost"		"1"
+	"$phongfresnelranges"	"[.5 .5 .5]"
+	"$phongexponent"		"80"
+	"$PhongBrightnessScalar"	"0.5"
+
+	"$rimlight"			"1"
+	"$rimlightexponent"		"30"
+	"$rimlightboost"		"0.125"									// Boost for ambient cube component of rim lighting
+	
+	"$detail" 			"models/lordvipes/majoramask/wooddetail"
+	"$detailscale" 		"3"
+}

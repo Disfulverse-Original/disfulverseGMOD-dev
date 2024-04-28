@@ -1,0 +1,6 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "unioncity2/miscellaneous/bankpillar"
+	
+	$surfaceprop concrete
+}

@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/Highrise/cubicle_pc_02"
+	"$surfaceprop" "computer"
+	"$bumpmap" "models/Highrise/cubicle_pc_02_normal"
+	"$envmap" "env_cubemap"
+	"$envmapconstrast" "1"
+	"$normalmapalphaenvmapmask" 1
+	"$envmapsaturation" 1
+	"$envmaptint" "[ .56 .67 .75 ]"
+	"$selfillum" 1
+	
+
+}
+

@@ -1,0 +1,51 @@
+"Water"
+{
+	"$abovewater" 0
+	"$forceexpensive" 0
+	"%compilewater" 1
+
+	%tooltexture "patriot\water\water001a_normal"
+
+	"$reflectamount" "1.0"
+	"$reflectentities" 1
+
+	"$refract" 1
+	"$refracttexture" "_rt_WaterRefraction"
+	"$fogcolor" "{12 27 17}"
+	"$refractamount" "1"
+
+	"$bumpmap" "patriot\water\water001a_normal"
+	"$normalmap" "patriot\water\water001a_normal"
+
+	"$surfaceprop" water
+
+	"$bumpframe" 0
+
+	"$fogenable" 1
+
+	"$fogstart" -2536
+	"$fogend" 512
+
+	"$underwateroverlay" "patriot\water\water001a_underwatereffect"
+	r_drawunderwateroverlay 1
+
+	"Proxies"
+	{
+		"AnimatedTexture"
+		{
+			animatedtexturevar $normalmap
+			animatedtextureframenumvar $bumpframe
+			animatedtextureframerate "20.00"
+		}
+
+		"TextureScroll"
+		{
+			texturescrollvar $bumptransform
+			texturescrollrate "0.15"
+			texturescrollangle "45.00"
+		}
+		"WaterLOD"
+		{
+		}
+	}
+}

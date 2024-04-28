@@ -1,0 +1,28 @@
+"VertexLitGeneric"
+{
+	"$phong"	1
+	"$energyconservative"	0
+	"$blinn_fresnel"	0
+	"$bumpscale"	1.50
+	"$reflectivity"	0.20
+	"$gloss"	0.72
+	"$fresnel"	1.00
+	"$wrap"	0.00
+	"$specular"	1.00
+	"$envmap_boost"	1.00
+	"$basetexture"		"models/maps/cs_aquarium/cs_aquarium_stone_b_01"
+	"$envmap"		"env_cubemap"
+	"$envmaptint"		"[ 0.750000 0.750000 0.750000 ]"
+	"$envmapcontrast"	0.700000
+	"$envmapsaturation"	1.000000
+	"$envmapboost"		0.100000
+	"$phongexponent"	30.000000
+	"$phongboost"		0.600000
+	"$bumpmap"		"models/maps/cs_aquarium/cs_aquarium_stone_b_01_normal"
+
+	"$normalmapalphaenvmapmask" "1"
+	"$phongtint" "[1 1 1]"
+	"$phongexponet" "100"
+	"$specularmask" "100"
+	//"$SharpAmbient" "1"
+}

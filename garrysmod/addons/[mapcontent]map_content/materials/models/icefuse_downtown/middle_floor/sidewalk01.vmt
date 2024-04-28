@@ -1,0 +1,5 @@
+vertexlitgeneric
+{
+$basetexture "gale/new/concrete/sidewalk01"
+$surfaceprop concrete
+}

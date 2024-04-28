@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "unioncity2/decals/paintsplatter01"
+	
+	$decal 1
+	$translucent 1
+	$alpha .9
+}

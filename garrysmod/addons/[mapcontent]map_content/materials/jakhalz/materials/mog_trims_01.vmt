@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture"           "maps/market/mog_trims_01"
+	//"$basetexture"           "jakhalz/materials/mog_trims_01"
+	"$bumpmap" 	   "maps/market/mog_trims_01_n"
+
+	"$model" 1 
+	
+
+	
+	"$surfaceprop" "metal"
+
+}

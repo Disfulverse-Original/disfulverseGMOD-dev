@@ -1,0 +1,7 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "unioncity2/decals/graffiti/glgraf"
+	$decal 1
+	$decalscale .25
+	$translucent 1
+}

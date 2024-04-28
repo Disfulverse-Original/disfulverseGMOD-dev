@@ -1,0 +1,26 @@
+"VertexLitGeneric"
+{
+	"$basetexture"		"models/maps/cs_aquarium/cs_aquarium_shark_01"
+	"$envmap"		"env_cubemap"
+	"$envmaptint"		"[ 0.750000 0.750000 0.750000 ]"
+	"$envmapcontrast"	0.000000
+	"$envmapsaturation"	1.000000
+	"$envmapboost"		0.150000
+	"$phongexponent"	32.000000
+	"$phongboost"		0.800000
+	"$phong"		1
+	"$bumpscale"		1.000000
+	"$bumpmap"		"models/maps/cs_aquarium/cs_aquarium_shark_01_normal"
+	"$rimlight"		0
+	"$rimlightexponent"	4.000000
+	"$rimlightboost"	1.000000
+	"$rimlightcolorblend"	1.000000
+	"$rimmask"		0
+	"$overheat"		0.000000
+
+	"$normalmapalphaenvmapmask" "1"
+	"$phongtint" "[1 1 1]"
+	"$phongexponet" "100"
+	"$specularmask" "100"
+	//"$SharpAmbient" "1"
+}

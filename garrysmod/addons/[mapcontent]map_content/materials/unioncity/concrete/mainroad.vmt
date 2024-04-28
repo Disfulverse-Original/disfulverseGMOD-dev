@@ -1,0 +1,10 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "unioncity/concrete/mainroad"
+	//$bumpmap "unioncity/concrete/mainroad_n"
+	//$bumpmap "concrete/roadparkinglot_n"
+	//$envmap env_cubemap
+	//$normalmapalphaenvmapmask 1
+	//$envmaptint "[.4 .4 .4]"
+	$surfaceprop concrete
+}

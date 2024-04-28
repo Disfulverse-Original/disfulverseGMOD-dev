@@ -1,0 +1,4 @@
+vertexlitgeneric
+{
+ $baseTexture "models/props_misc/barrier_pole"
+}

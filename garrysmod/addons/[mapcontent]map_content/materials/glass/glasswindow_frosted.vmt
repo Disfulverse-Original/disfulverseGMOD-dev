@@ -1,0 +1,16 @@
+LightmappedGeneric
+{
+$basetexture "Glass/glasswindow_frosted_002b"
+$envmap "env_cubemap"
+$envmapmask "glass/glasswindow_frosted_002b_mask"
+
+$envmapsaturation .1
+$envmaptint "[ .1 .2 .3 ]"
+$surfaceprop glass
+$translucent 1
+
+
+
+"%noportal" 1
+"%keywords" portal2
+}

@@ -1,0 +1,27 @@
+"VertexLitGeneric"
+{
+	
+"$basetexture"		"models\static_fittings\light02_on"
+"$selfillum"	"1"
+//	"$bumpmap" 			"dev\flat_normal"
+"$envmap" "env_cubemap"
+"$envmapmask" "models\static_fittings\light02_s"
+"$envmaptint" "[1 1 1]"
+"$envmapcontrast" "1"
+"$envmapsaturation" "1"
+	
+//	$detail detail\metal_detail
+//	$detailscale 09
+//	$detailblendfactor 2
+//	$detailblendmode 0
+
+//	"$phong" 					"1"
+//	"$phongexponent"				"24"
+//	"$phongboost" 				".25"	
+//	"$phongfresnelranges"		"[1 5 3]" 
+//	$rimlight               1
+//  $rimlightexponent       8
+//	$rimlightboost          .05
+}
+
+

@@ -1,0 +1,12 @@
+LightmappedGeneric
+{
+$basetexture "agency\concrete\concretewall03"
+$bumpmap "agency\concrete\concretewall03_n"
+$envmap env_cubemap
+//$normalmapalphaenvmapmask "1"
+$envmapsaturation "1"
+$envmapcontrast "1"
+$envmaptint "[.1 .1 .1]"
+$surfaceprop concrete
+"%keywords" agency
+}

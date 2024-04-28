@@ -1,0 +1,11 @@
+"Lightmappedgeneric"
+
+{
+ "$basetexture" "decals\letters\decal_numbers_01"
+ "$basetexture2" "decals\color_black" 
+ "$decal" 1
+ "$decalscale" 0.25
+ "$translucent" 1
+ "$color" "[ 0 0 0 ]"
+	"%keywords" "bms"
+}

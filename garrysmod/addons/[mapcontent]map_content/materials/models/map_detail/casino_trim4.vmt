@@ -1,0 +1,16 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\map_detail/casino_trim4"
+	"$bumpmap" "models/map_detail/casino_trim4_normal"
+        "$envmap" "env_cubemap"
+	$envmapsaturation 0
+	$envmaptint "[1 1 1]"
+	$normalmapalphaenvmapmask 1
+
+	 $phong 1
+	$phongexponent 16
+	$phongboost 1
+	$phongfresnelranges "[1 3 8]" 
+	"$rimlight" 1
+	"$rimlightboost" "1"
+}

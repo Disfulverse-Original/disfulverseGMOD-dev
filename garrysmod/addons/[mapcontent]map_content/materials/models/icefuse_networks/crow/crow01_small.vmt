@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	// Original shader: VertexLitTranslucentTexture
+	 "$translucent" 1
+	// "$additive" "1"
+	"$basetexture" "models\icefuse_networks\crow\crow01_small"
+ // "$alphatest" 1
+"$nocull" "1"	
+}

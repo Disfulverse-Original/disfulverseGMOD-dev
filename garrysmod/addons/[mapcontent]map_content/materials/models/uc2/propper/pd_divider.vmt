@@ -1,0 +1,6 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "unioncity2/miscellaneous/pd_divider"
+
+	$surfaceprop wood
+}

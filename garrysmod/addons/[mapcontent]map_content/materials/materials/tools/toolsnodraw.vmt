@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "Tools/toolsnodraw"
+	"%compilenodraw" 1
+}

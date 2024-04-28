@@ -1,0 +1,7 @@
+lightmappedgeneric
+{
+ $baseTexture "decals\doors/door-4"
+ $decal 0
+ $surfaceprop metal
+ 
+}

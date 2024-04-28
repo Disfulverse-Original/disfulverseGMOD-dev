@@ -1,0 +1,10 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "unioncity/misc/marble_gen_067_diff2"
+
+	$envmap env_cubemap
+	$envmaptint "[0.25 0.25 0.25]"
+	
+	$surfaceprop tile
+
+}

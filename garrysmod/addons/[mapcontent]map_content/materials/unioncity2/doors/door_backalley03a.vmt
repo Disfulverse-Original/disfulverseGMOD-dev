@@ -1,0 +1,10 @@
+Lightmappedgeneric
+{
+$baseTexture "unioncity2/doors/door_backalley03a"
+$bumpmap "unioncity2/doors/door_backalley03a_n"
+
+	$envmap env_cubemap
+	$normalmapalphaenvmapmask 1
+	$envmaptint "[.1 .1 .1]"
+	$surfaceprop metal
+}

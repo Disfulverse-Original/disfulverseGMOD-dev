@@ -1,0 +1,9 @@
+LightmappedGeneric
+{
+	$basetexture "cs_east_borough/treeplanter"
+
+	$translucent 1
+	$decal 1
+
+	$decalscale 0.25
+}
