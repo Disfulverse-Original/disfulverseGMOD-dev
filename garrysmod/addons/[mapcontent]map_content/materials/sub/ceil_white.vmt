@@ -1,6 +1,0 @@
-"LightmappedGeneric"
-{
-	"$basetexture" "sub/ceil_white"
-	"$surfaceprop" "carpet"
-	"$bumpmap" "sub/ceil_white_normal"
-}

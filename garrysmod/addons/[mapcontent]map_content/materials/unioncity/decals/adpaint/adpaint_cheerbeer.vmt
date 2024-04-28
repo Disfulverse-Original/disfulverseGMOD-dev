@@ -1,8 +1,0 @@
-"LightmappedGeneric"
-{
-	"$basetexture" "unioncity/decals/adpaint/adpaint_cheerbeer"
-
-	$translucent 1
-	
-	"$decal" 1
-}

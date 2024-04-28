@@ -1,6 +1,0 @@
-"vertexlitgeneric"
-{
-	"$basetexture" "unioncity2/miscellaneous/banktellermetal"
-	
-	$surfaceprop metal_box
-}

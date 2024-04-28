@@ -1,6 +1,0 @@
-"LightmappedGeneric"
-{
-    $basetexture "contagion/harvest/harvest_wall01a"
-    //    $bumpmap "contagion/harvest/harvest_ceiling01_norm"
-    %keywords "harvest"
-}

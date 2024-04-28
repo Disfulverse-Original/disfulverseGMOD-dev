@@ -1,8 +1,0 @@
-"LightmappedGeneric"
-{
-	"$basetexture" "unioncity/club/glowbig_a"
-	
-	$selfillum 1
-	
-	$surfaceprop glass
-}

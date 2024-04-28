@@ -1,8 +1,0 @@
-"LightmappedGeneric"
-{
-	"$basetexture" "unioncity/decals/roadmarkings/markings_streetcrossing"
-	"$translucent" 1
-	$decal 1
-	$alpha 0.55
-	$surfaceprop concrete
-}

@@ -1,9 +1,0 @@
-"LightmappedGeneric"
-{
-	"$basetexture" "unioncity2/miscellaneous/metalladder"
-
-	$alphatest 1
-	%compilepassbullets 1
-	$surfaceprop metal_box
-	$color "[3 3 3]"
-}

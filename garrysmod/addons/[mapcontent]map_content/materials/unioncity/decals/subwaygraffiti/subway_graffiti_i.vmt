@@ -1,7 +1,0 @@
-"LightmappedGeneric"
-{
-	"$basetexture" "unioncity/decals/subwaygraffiti/subway_graffiti_i"
-	"$translucent" 1
-	"$decal" 1
-	$alpha .7
-}

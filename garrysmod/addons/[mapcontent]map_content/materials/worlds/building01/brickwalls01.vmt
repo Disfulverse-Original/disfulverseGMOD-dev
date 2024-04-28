@@ -1,9 +1,0 @@
-"LightmappedGeneric"
-{
-	"$basetexture" "worlds\building01\brickwalls01"
-	"$bumpmap" "worlds\building01\brickwalls_n"
-	"$surfaceprop" "brick"
-	"$detail" "worlds\misc01\detailtexture01" 
-	"$detailscale" ".3"
-}
-

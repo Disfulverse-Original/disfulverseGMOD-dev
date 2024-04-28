@@ -1,6 +1,0 @@
-vertexlitgeneric
-{
-    $basetexture                "contagion/bricks/contagion_downtown_walltrim02"
-    $bumpmap                    "contagion/bricks/contagion_downtown_walltrim02_norm"
-    %keywords                   "cont, brick, wall, downtown, city"
-}

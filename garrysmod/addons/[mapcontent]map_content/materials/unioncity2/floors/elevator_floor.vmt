@@ -1,6 +1,0 @@
-"LightmappedGeneric"
-{
-$basetexture "unioncity2/floors/elevator_floor"
-
-$surfaceprop metal
-}

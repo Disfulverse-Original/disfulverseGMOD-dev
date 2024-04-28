@@ -1,9 +1,0 @@
-"LightmappedGeneric"
-{
-	"$basetexture" "vtmb/stone/twrlbywllc"
-	"$surfaceprop" "concrete"
-	"$envmap" "env_cubemap"
-	"$envmapmask" "vtmb/stone/twrlbywllc_ref"
-	
-	$envmaptint "[.1 .1 .1]"
-}

@@ -1,8 +1,0 @@
-"patch"
-{
-	"include"		"materials/unioncity2/miscellaneous/sewerwater.vmt"
-	"insert"
-	{
-		"$waterdepth"		"192"
-	}
-}

@@ -1,6 +1,0 @@
-"LightmappedGeneric"
-{
-	"$basetexture" "talo/modern_tile2"
-	"$bumpmap" "talo/modern_tile_bump"
-	"$surfaceprop" "Tile"
-}

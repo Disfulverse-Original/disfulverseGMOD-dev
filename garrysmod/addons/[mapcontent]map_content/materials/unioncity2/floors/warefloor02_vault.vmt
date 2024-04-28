@@ -1,9 +1,0 @@
-"LightmappedGeneric"
-{
-	"$basetexture" "unioncity2/floors/warefloor02"
-	
-	//$reflectivity "[.01 .01 .01]"
-	$color "[.8 .8 .8]"
-
-	$surfaceprop concrete
-}

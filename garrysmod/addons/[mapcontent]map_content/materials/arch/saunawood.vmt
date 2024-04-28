@@ -1,7 +1,0 @@
-"lightmappedGeneric"
-{
-	"$baseTexture" "arch/sauna_wood"
-      	"$surfaceprop" "wood"
-	"$bumpmap" 	"arch/sauna_wood_normal"
-      	"%keywords" "arch" 
-}

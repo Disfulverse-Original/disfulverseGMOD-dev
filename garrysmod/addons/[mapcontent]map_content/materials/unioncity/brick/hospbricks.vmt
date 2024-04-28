@@ -1,9 +1,0 @@
-"LightmappedGeneric"
-{
-$basetexture "unioncity/brick/pdbricks"
-$bumpmap "unioncity/brick/pdbricks_n"
-
-$color "[ 0.7 0.78 1 ]"
-
-$surfaceprop brick
-}

@@ -1,6 +1,0 @@
-"vertexlitgeneric"
-{
-	"$basetexture" "unioncity/wall/gn_wood_panel_04_d"
-	$bumpmap "unioncity/wall/gn_wood_panel_04_n"
-	$surfaceprop wood
-}

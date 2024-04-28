@@ -1,9 +1,0 @@
-"LightMappedGeneric"
-{
-	"$color"			"[1 1 1]"
-	"$baseTexture"			"brush/vegas/wall_int/wall_int_panel_02"
-	"$bumpMap"			"brush/vegas/wall_int/wall_int_panel_02_normal"
-	"$normalMapAlphaEnvMapMask"	1
-	"$envmaptint"			"[0.28 0.2 0.2]"
-	"$surfaceprop" 			"wood"
-}

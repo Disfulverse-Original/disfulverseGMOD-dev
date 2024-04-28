@@ -1,7 +1,0 @@
-"LightmappedGeneric"
-{
-	"$basetexture" "unioncity2/decals/hospital_floormotif"
-	
-	$decal 1
-	$translucent 1
-}

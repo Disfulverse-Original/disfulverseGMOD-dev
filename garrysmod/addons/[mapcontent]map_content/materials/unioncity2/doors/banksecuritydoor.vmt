@@ -1,6 +1,0 @@
-"LightmappedGeneric"
-{
-	"$basetexture" "unioncity2/doors/banksecuritydoor"
-	
-	$surfaceprop metal_box
-}

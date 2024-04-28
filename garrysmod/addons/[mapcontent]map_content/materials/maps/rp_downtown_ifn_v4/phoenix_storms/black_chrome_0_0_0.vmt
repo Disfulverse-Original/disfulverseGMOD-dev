@@ -1,8 +1,0 @@
-"patch"
-{
-	"include"		"materials/PHOENIX_STORMS/BLACK_CHROME.vmt"
-	"replace"
-	{
-		"$envmap"		"maps/rp_downtown_ifn_v4/c0_0_0"
-	}
-}

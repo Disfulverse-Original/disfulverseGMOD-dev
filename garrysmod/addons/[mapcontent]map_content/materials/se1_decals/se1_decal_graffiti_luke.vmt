@@ -1,8 +1,0 @@
-"LightmappedGeneric"
-{
-	"$basetexture" "SE1_Decals/se1_decal_graffiti_luke"
-	"$translucent" 1
-	"$decal" 1
-	"$decalscale" 0.25
-	"%keywords" "SE1_Decals"
-}

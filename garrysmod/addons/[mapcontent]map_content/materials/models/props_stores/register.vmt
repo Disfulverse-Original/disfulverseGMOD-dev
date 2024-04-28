@@ -1,6 +1,0 @@
-"VertexLitGeneric"
-{
-	"$basetexture" "models/props_stores/register"
-	$selfillum 1
-	$selfillummask "models/props_stores/register_lum"
-}

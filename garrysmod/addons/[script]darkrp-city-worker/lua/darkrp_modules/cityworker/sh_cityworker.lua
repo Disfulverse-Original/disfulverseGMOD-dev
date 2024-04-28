@@ -1,3 +1,0 @@
--- 76561198366199812
-
-TEAM_CITYWORKER = DarkRP.createJob( CITYWORKER.Config.Job.name, CITYWORKER.Config.Job )

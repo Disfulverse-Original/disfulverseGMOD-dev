@@ -1,7 +1,0 @@
-"LightmappedGeneric"
-{
-	"$basetexture" "vtmb/tile/twrelevflra"
-	"$surfaceprop" "tile"
-	"$envmap" "env_cubemap"
-	"$envmapmask" "vtmb/tile/twrelevflra_ref"
-}

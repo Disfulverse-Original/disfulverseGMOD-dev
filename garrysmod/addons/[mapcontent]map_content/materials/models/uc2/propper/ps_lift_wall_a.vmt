@@ -1,6 +1,0 @@
-"vertexlitgeneric"
-{
-	"$basetexture" "p3tex/ps_lift_wall_a"
-	
-	$surfaceprop metal_box
-}

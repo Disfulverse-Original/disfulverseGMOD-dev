@@ -1,7 +1,0 @@
-"LightmappedGeneric"
-{
-	"$basetexture" "sgtsicktextures/metalgreybp"
-	"$envmap" "env_cubemap"
-	"$surfaceprop" "Metal"
-	"%keywords" "bp"
-}

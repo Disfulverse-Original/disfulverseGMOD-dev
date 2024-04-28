@@ -1,8 +1,0 @@
-"LightmappedGeneric"
-{
-	"$basetexture" "unioncity2/decals/vaultsign"
-	
-	$decal 1
-	$translucent 1
-
-}

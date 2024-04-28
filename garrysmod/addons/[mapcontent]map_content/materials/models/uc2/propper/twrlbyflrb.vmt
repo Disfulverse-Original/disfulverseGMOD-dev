@@ -1,7 +1,0 @@
-"vertexlitgeneric"
-{
-	"$basetexture" "vtmb/tile/twrlbyflrb"
-	"$surfaceprop" "tile"
-	"$envmap" "env_cubemap"
-	"$envmapmask" "vtmb/tile/twrlbyflrb_ref"
-}

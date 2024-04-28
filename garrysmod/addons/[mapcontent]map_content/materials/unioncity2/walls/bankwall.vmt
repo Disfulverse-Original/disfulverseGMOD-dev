@@ -1,6 +1,0 @@
-"LightmappedGeneric"
-{
-$basetexture "unioncity2/walls/bankwall"
-
-$surfaceprop concrete
-}

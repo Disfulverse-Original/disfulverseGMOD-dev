@@ -1,6 +1,0 @@
-"UnlitGeneric"
-{
-	"$basetexture" "unioncity2/miscellaneous/alarmbutton"
-	$surfaceprop computer
-	$color "[.45 .45 .45]"
-}
