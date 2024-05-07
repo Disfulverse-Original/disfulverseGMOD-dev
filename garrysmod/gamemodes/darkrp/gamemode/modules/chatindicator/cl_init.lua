@@ -1,3 +1,4 @@
+--[[
 local function drawIndicator(ply)
     if not ply:IsTyping() then
         if ply.indicator then
@@ -68,3 +69,4 @@ hook.Add("player_disconnect", "DarkRP_ChatIndicator", function(data)
         ply.indicator = nil
     end
 end)
+--]]
