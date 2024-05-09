@@ -9,6 +9,7 @@ AddCSLuaFile()
 TOOL.Category = "Advanced Accessory System"
 TOOL.Name = "Entity-Setup"
 TOOL.Author = "Kobralost"
+TOOL.Admin = true
 
 if CLIENT then 
 	TOOL.Information = {

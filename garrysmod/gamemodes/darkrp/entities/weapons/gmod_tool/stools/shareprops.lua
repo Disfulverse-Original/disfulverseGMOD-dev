@@ -2,6 +2,7 @@ TOOL.Category           = "Falco Prop Protection"
 TOOL.Name               = "Share props"
 TOOL.Command            = nil
 TOOL.ConfigName         = ""
+TOOL.Admin = true
 
 function TOOL:RightClick(trace)
     local ent = trace.Entity

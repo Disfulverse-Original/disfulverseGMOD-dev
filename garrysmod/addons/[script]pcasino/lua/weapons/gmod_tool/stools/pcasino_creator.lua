@@ -5,7 +5,8 @@ TOOL.Information = {
 	{name = "left"},
 	{name = "right"},
 	{name = "reload"}
-} 
+}
+TOOL.Admin = true
 
 
 if CLIENT then

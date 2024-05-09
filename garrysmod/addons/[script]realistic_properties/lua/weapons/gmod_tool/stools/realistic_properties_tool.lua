@@ -12,6 +12,7 @@ AddCSLuaFile()
 TOOL.Category = "Realistic Properties"
 TOOL.Name = "Rps-Setup"
 TOOL.Author = "Kobralost"
+TOOL.Admin = true
 TOOL.StepId = 1
 TOOL.RealisticPropertiesCamPos = {}
 TOOL.RealisticPropertiesTableDoorsData = {} 

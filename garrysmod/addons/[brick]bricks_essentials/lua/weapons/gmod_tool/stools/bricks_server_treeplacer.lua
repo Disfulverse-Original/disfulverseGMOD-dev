@@ -2,7 +2,8 @@ TOOL.Category = "Bricks Server"
 TOOL.Name = "Tree Spawns"
 TOOL.Command = nil
 TOOL.ConfigName = "" --Setting this means that you do not have to create external configuration files to define the layout of the tool config-hud 
- 
+TOOL.Admin = true
+
 local function SaveTreeSpawns()
 	if( timer.Exists( "bricks_server_timer_savetreespawns" ) ) then
 		timer.Remove( "bricks_server_timer_savetreespawns" )

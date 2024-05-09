@@ -2,6 +2,7 @@ TOOL.Category = "Bricks Server"
 TOOL.Name = "Territory Placer"
 TOOL.Command = nil
 TOOL.ConfigName = ""
+TOOL.Admin = true
 
 function TOOL:LeftClick( trace )
 	if( !trace.HitPos || IsValid( trace.Entity ) && trace.Entity:IsPlayer() ) then return false end

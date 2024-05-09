@@ -12,7 +12,8 @@ AddCSLuaFile()
 TOOL.Category = "Realistic Police"
 TOOL.Name = "Camera-Setup"
 TOOL.Author = "Kobralost"
-RPTDeployTool = false  
+TOOL.Admin = true
+RPTDeployTool = false
 
 if CLIENT then 
 	TOOL.Information = {

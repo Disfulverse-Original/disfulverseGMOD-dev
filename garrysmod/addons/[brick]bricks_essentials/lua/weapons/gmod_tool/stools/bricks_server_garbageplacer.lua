@@ -1,7 +1,8 @@
 TOOL.Category = "Bricks Server"
 TOOL.Name = "Garbage Spawns"
 TOOL.Command = nil
-TOOL.ConfigName = "" --Setting this means that you do not have to create external configuration files to define the layout of the tool config-hud 
+TOOL.ConfigName = "" --Setting this means that you do not have to create external configuration files to define the layout of the tool config-hud
+TOOL.Admin = true
  
 local function SaveGarbageSpawns()
 	if( timer.Exists( "bricks_server_timer_savegarbagespawns" ) ) then

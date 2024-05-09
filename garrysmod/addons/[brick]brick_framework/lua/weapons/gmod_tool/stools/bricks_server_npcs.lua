@@ -1,7 +1,8 @@
 TOOL.Category = "Bricks Server"
 TOOL.Name = "NPC Placer"
 TOOL.Command = nil
-TOOL.ConfigName = "" --Setting this means that you do not have to create external configuration files to define the layout of the tool config-hud 
+TOOL.ConfigName = "" --Setting this means that you do not have to create external configuration files to define the layout of the tool config-hud
+TOOL.Admin = true
 
 function TOOL:LeftClick( trace )
 	if( !trace.HitPos || IsValid( trace.Entity ) && trace.Entity:IsPlayer() ) then return false end

@@ -8,6 +8,7 @@ TOOL.Category = "Project0"
 TOOL.Name = "Menu NPC Placer"
 TOOL.Command = nil
 TOOL.ConfigName = ""
+TOOL.Admin = true
 
 function TOOL:LeftClick( trace )
 	local ply = self:GetOwner()

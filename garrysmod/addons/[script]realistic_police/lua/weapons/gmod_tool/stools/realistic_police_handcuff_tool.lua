@@ -12,6 +12,7 @@ AddCSLuaFile()
 TOOL.Category = "Realistic Police"
 TOOL.Name = "HandCuff-Setup"
 TOOL.Author = "Kobralost"
+TOOL.Admin = true
 TOOL.StepId = 1
 
 if CLIENT then 

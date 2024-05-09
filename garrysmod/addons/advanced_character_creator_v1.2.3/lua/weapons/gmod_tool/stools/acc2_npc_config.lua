@@ -14,6 +14,7 @@ AddCSLuaFile()
 TOOL.Category = "Advanced Character Creator"
 TOOL.Name = "Setup NPC"
 TOOL.Author = "Kobralost"
+TOOL.Admin = true
 
 if CLIENT then 
 	TOOL.Information = {
