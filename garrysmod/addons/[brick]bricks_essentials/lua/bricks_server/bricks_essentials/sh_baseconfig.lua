@@ -160,7 +160,7 @@ BRICKS_SERVER.BASECONFIG.INVENTORY["Inventory Slots"] = {
     ["Staff"] = 40,
     --["VIP++"] = 35,
     --["VIP+"] = 30,
-    ["Disfulversed"] = 25,
+    ["Disfulversed"] = 20,
     ["Default"] = 15
 }
 BRICKS_SERVER.BASECONFIG.INVENTORY["Bank Slots"] = {

@@ -56,24 +56,11 @@ function CH_CryptoCurrencies.FetchCryptoCurrencies()
 			end
 		)
 	end
-	--[[
 	-- Wait 10 seconds before networking it to ensure it has fetched on the server
 	timer.Simple( 10, function()
 		for k, ply in ipairs( player.GetAll() ) do
 			-- Network the new crypto prices to all online players
 			CH_CryptoCurrencies.NetworkCryptoToPlayer( ply )
-			
-			-- Notify players via chat if config is enabled
-			if CH_CryptoCurrencies.Config.NotifyPlayersChatFetch then
-				local text = CH_CryptoCurrencies.LangString( "All cryptocurrency exchange rates has just been updated with live data." )
-				
-				net.Start( "CH_CryptoCurrencies_Net_ColorChatPrint" )
-					net.WriteUInt( 52, 8 )
-					net.WriteUInt( 152, 8 )
-					net.WriteUInt( 219, 8 )
-					net.WriteString( text )
-				net.Send( ply )
-			end
 		end
 	end )
 	--]]

@@ -258,6 +258,14 @@ local function createFonts()
 		outline = false,
 	} )
 
+	surface.CreateFont( "BRICKS_SERVER_Font12", {
+		font = "Roboto",
+		extended = true,
+		size = BRICKS_SERVER.Func.ScreenScale( 12 ),
+		weight = 5000,
+		outline = false,
+	} )
+
 	surface.CreateFont( "BRICKS_SERVER_Font13", {
 		font = "Roboto",
 		extended = true,

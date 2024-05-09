@@ -237,7 +237,7 @@ GM.Config.normalsalary                  = 5
 -- npckillpay - Sets the money given for each NPC kill.
 GM.Config.npckillpay                    = 250
 -- paydelay - Sets how long it takes before people get salary.
-GM.Config.paydelay                      = 600
+GM.Config.paydelay                      = 3600
 -- pocketitems - Sets the amount of objects the pocket can carry.
 GM.Config.pocketitems                   = 0
 -- pricecap - The maximum price of items (using /price).

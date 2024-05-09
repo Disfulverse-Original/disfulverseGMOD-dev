@@ -136,7 +136,7 @@ PIS.Config:AddMenu("Остальное", 			"action", 		"Разное", 			info,
 	{name = "Способности", 			mat = "atom", col = violet, func = function() RunConsoleCommand("say", "!slevels") end},
 	{name = "Поддержать проект", 			mat = "good", col = gold, func = function() RunConsoleCommand("say", "!store") end},
 	{name = "Ежедневные награды", 			mat = "dice", col = redy, func = function() RunConsoleCommand("say", "!rewards") end},
-	{name = "Жалоба", 			mat = "shield", col = red, func = function() RunConsoleCommand("say", "!ticket") end},
+	{name = "Тикет", 			mat = "shield", col = red, func = function() RunConsoleCommand("say", "!ticket") end},
 })
 
 PIS.Config:AddMenu("Admin-only", 			"3d", 		"Admin-only", 			white, {
@@ -154,6 +154,7 @@ PIS.Config:AddMenu("SuperAdmin-only", 			"binary-code", 		"SuperAdmin-only", 			
 	{name = "Name.Editor", 			mat = "binary-code", col = red, func = function() RunConsoleCommand("say", "/acc2") end},
 	{name = "House.Editor", 			mat = "binary-code", col = red, func = function() RunConsoleCommand("say", "/rpsconfig") end},
 	{name = "Accessory.Editor", 			mat = "binary-code", col = red, func = function() RunConsoleCommand("say", "/aasconfig") end},
+	{name = "SPECTATOR", 			mat = "fly", col = red, func = function() RunConsoleCommand("say", "!spectate") end},
 
 },function(ply) return ply:IsSuperAdmin() end)
 

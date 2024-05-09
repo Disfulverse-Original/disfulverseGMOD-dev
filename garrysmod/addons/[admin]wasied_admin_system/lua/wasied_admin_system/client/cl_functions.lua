@@ -24,7 +24,7 @@ function WasiedAdminSystem:Font(size)
             font = "Roboto",
             extended = true,
             antialias = true,
-            size = 21,
+            size = 19,
             weight = 500,
         })
         fonts[size] = true

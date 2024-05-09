@@ -48,7 +48,7 @@ hook.Add("HUDPaint", "Wasied:AdminSystem:HUDPaint", function()
 			local plyNickLen = string.len(plyNick)
 
 			-- Name
-			surface.SetDrawColor(Color(0, 0, 0, 130))
+			surface.SetDrawColor(Color(0, 0, 0, 65))
 			surface.DrawRect(x-62, y-71, 50+plyNickLen*8, 20)
 
 			surface.SetDrawColor(Color(255, 255, 255))
@@ -62,7 +62,7 @@ hook.Add("HUDPaint", "Wasied:AdminSystem:HUDPaint", function()
 			local jobName = team.GetName(victim:Team())
 			local jobLen = string.len(jobName)
 
-			surface.SetDrawColor(jobColor)
+			surface.SetDrawColor(Color(0, 0, 0, 65))--surface.SetDrawColor(jobColor) 
 			surface.DrawRect(x-62, y-50, 50+jobLen*8, 20)
 
 			surface.SetDrawColor(Color(255, 255, 255))
@@ -71,13 +71,13 @@ hook.Add("HUDPaint", "Wasied:AdminSystem:HUDPaint", function()
 
 			draw.SimpleTextOutlined(jobName, WasiedAdminSystem:Font(20), x-35, y-50, WasiedAdminSystem.Constants["colors"][5], 0, 3, 1, color_black)
 
-			if contextIsOpen && ply:GetPos():DistToSqr(victim:GetShootPos()) < WasiedAdminSystem.Config.DistToShowExtra^2 then
+			if --[[contextIsOpen &&]] ply:GetPos():DistToSqr(victim:GetShootPos()) < WasiedAdminSystem.Config.DistToShowExtra^2 then
 
 				-- Money
 				local money = victim:getDarkRPVar("money") or 0
 				local moneyString = string.len(tostring(money))
 
-				surface.SetDrawColor(Color(0, 204, 0, 90))
+				surface.SetDrawColor(Color(0, 0, 0, 65))
 				surface.DrawRect(x-62, y-92, 58+moneyString*8, 20)
 
 				surface.SetDrawColor(Color(255, 255, 255))
@@ -90,7 +90,7 @@ hook.Add("HUDPaint", "Wasied:AdminSystem:HUDPaint", function()
 				local plyHealth = math.Clamp(victim:Health(), 0, 100)
 				local plyHealthLen = string.len(tostring(plyHealth))
 
-				surface.SetDrawColor(WasiedAdminSystem.Constants["colors"][4])
+				surface.SetDrawColor(Color(0, 0, 0, 65))
 				surface.DrawRect(x-62, y-114, 58+plyHealthLen*8, 20)
 
 				surface.SetDrawColor(WasiedAdminSystem.Constants["colors"][3])
@@ -103,7 +103,7 @@ hook.Add("HUDPaint", "Wasied:AdminSystem:HUDPaint", function()
 				local plyArmor = math.Clamp(victim:Armor(), 0, 100)
 				local plyArmorLen = string.len(tostring(plyArmor))
 
-				surface.SetDrawColor(Color(50, 60, 255, 90))
+				surface.SetDrawColor(Color(0, 0, 0, 65))
 				surface.DrawRect(x-62, y-136, 58+plyArmorLen*8, 20)
 				
 				surface.SetDrawColor(Color(255, 255, 255))
@@ -112,7 +112,7 @@ hook.Add("HUDPaint", "Wasied:AdminSystem:HUDPaint", function()
 
 				draw.SimpleTextOutlined(victim:Armor()..WasiedAdminSystem.Constants["strings"][15], WasiedAdminSystem:Font(20), x-35, y-136, WasiedAdminSystem.Constants["colors"][5], 0, 3, 1, color_black)
 
-				-- Hunger
+				--[[-- Hunger
 				local plyHunger = math.Round(victim:getDarkRPVar("Energy") or 0)
 				local plyHungerLen = string.len(tostring(plyHunger))
 
@@ -123,20 +123,19 @@ hook.Add("HUDPaint", "Wasied:AdminSystem:HUDPaint", function()
 				surface.SetMaterial(WasiedAdminSystem.Constants["materials"][6])
 				surface.DrawTexturedRect(x-60, y-156, 16, 16)
 
-				draw.SimpleTextOutlined(plyHunger..WasiedAdminSystem.Constants["strings"][15], WasiedAdminSystem:Font(20), x-35, y-158, color_white, 0, 3, 1, color_black)
-				
+				draw.SimpleTextOutlined(plyHunger..WasiedAdminSystem.Constants["strings"][15], WasiedAdminSystem:Font(20), x-35, y-158, color_white, 0, 3, 1, color_black)]]
 				-- Rank
 				local plyRank = victim:GetUserGroup()
 				local plyRankLen = string.len(plyRank)
 
-				surface.SetDrawColor(Color(255, 10, 0, 90))
-				surface.DrawRect(x-62, y-178, 50+plyRankLen*8, 20)
+				surface.SetDrawColor(Color(0, 0, 0, 65))
+				surface.DrawRect(x-62, y-158, 58+plyRankLen*8, 20)
 
 				surface.SetDrawColor(Color(255, 255, 255))
 				surface.SetMaterial(WasiedAdminSystem.Constants["materials"][7])
-				surface.DrawTexturedRect(x-60, y-176, 16, 16)
+				surface.DrawTexturedRect(x-60, y-156, 16, 16)
 
-				draw.SimpleTextOutlined(plyRank, WasiedAdminSystem:Font(20), x-35, y-179, color_white, 0, 3, 1, color_black)
+				draw.SimpleTextOutlined(plyRank, WasiedAdminSystem:Font(20), x-35, y-159, color_white, 0, 3, 1, color_black)
 
 			end
 		end

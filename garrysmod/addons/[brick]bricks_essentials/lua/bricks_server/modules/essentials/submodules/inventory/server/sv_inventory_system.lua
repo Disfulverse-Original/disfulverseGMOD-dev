@@ -148,7 +148,7 @@ hook.Add( "PlayerButtonDown", "BRS.PlayerButtonDown_InventoryPickup", function( 
 	if( ply:GetEyeTrace() and ply:GetEyeTrace().Entity and IsValid( ply:GetEyeTrace().Entity ) ) then
 		local entClass = ply:GetEyeTrace().Entity:GetClass()
 		local Distance = ply:GetPos():DistToSqr( ply:GetEyeTrace().Entity:GetPos() )
-		--print(entClass)
+
 		if entClass == "spawned_weapon" then
 			return
 		end

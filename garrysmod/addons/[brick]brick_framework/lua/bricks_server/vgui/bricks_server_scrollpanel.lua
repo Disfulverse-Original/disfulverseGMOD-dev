@@ -17,8 +17,9 @@ function PANEL:Init()
 
 	-- Create the scroll bar
 	self.VBar = vgui.Create( "DVScrollBar", self )
+	self.VBar:SetWide(0)
 	self.VBar:Dock( RIGHT )
-	self.VBar:SetWide( 0 )
+
 
 	self:SetPadding( 0 )
 	self:SetMouseInputEnabled( true )
@@ -27,7 +28,6 @@ function PANEL:Init()
 	self:SetPaintBackgroundEnabled( false )
 	self:SetPaintBorderEnabled( false )
 	self:SetPaintBackground( false )
-
 end
 
 function PANEL:AddItem( pnl )

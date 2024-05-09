@@ -21,7 +21,7 @@ SWEP.HoldType = "melee";
 
 SWEP.UseHands = true
 
-SWEP.Spawnable = true	
+SWEP.Spawnable = false	
 SWEP.Category = "Bricks Server"
 
 SWEP.Sound = Sound("physics/wood/wood_box_impact_hard3.wav")

@@ -23,7 +23,7 @@ SWEP.WorldModel = Model("models/sterling/w_crafting_pickaxe.mdl")
 SWEP.HoldType = "melee";
 SWEP.UseHands = true
 
-SWEP.Spawnable = true	
+SWEP.Spawnable = false	
 SWEP.Category = "Bricks Server"
 
 SWEP.Sound = Sound("physics/wood/wood_box_impact_hard3.wav")
@@ -93,7 +93,7 @@ function SWEP:PrimaryAttack()
 			if (IsValid(trace.Entity)) then
 				if( trace.Entity:GetClass() == "bricks_server_rock" ) then
 					if( BRICKS_SERVER.CONFIG.CRAFTING.RockTypes[trace.Entity:GetRockType() or ""] ) then
-						trace.Entity:HitRock( 13, self.Owner ) --6 hits
+						trace.Entity:HitRock( 7.2, self.Owner ) --4 hits
 					end
 				end
 			end;

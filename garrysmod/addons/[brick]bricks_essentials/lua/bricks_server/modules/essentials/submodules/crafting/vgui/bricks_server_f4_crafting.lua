@@ -62,7 +62,7 @@ function PANEL:FillPanel( f4Panel, sheetButton )
     local popoutWide, popoutTall = panelWide*0.5, panelTall
 
     local spacing = 5
-    local gridWide = panelWide-30
+    local gridWide = panelWide-90
     local slotsWide = 2
     local slotWide = (gridWide-((slotsWide-1)*spacing))/slotsWide
     local slotTall = 75

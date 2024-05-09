@@ -1,3 +1,13 @@
+surface.CreateFont( "TicketFont", {
+ font = "Roboto",
+ size = 100,
+ weight = 700,
+ blursize = 0,
+ scanlines = 0,
+ antialias = true,
+ extended = true
+} )
+
 local AdminSystem_TicketTimer = 0
 function WasiedAdminSystem:OpenTicketMenu()
 	if not LocalPlayer():Alive() then return end
@@ -23,9 +33,9 @@ function WasiedAdminSystem:OpenTicketMenu()
 	if WasiedAdminSystem:CheckStaff(LocalPlayer()) then basicFrame:ReturnAdminButton(true) end
 	basicFrame:SetLibTitle(WasiedAdminSystem:Lang(10).." "..WasiedAdminSystem:Lang(3).." "..WasiedAdminSystem.Config.ServerName)
 	function basicFrame:PaintOver(w, h)
-		draw.SimpleText(WasiedAdminSystem:Lang(69), WasiedAdminSystem:Font(20), WasiedAdminSystem:RespX(150), WasiedAdminSystem:RespX(85), color_white, TEXT_ALIGN_CENTER, TEXT_ALIGN_TOP)
-		draw.SimpleText(WasiedAdminSystem:Lang(70), WasiedAdminSystem:Font(20), WasiedAdminSystem:RespX(315), WasiedAdminSystem:RespX(85), color_white, TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP)
-		draw.SimpleText(WasiedAdminSystem:Lang(71), WasiedAdminSystem:Font(20), WasiedAdminSystem:RespX(315), WasiedAdminSystem:RespX(165), color_white, TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP)
+		draw.SimpleText(WasiedAdminSystem:Lang(69), WasiedAdminSystem:Font(20), WasiedAdminSystem:RespX(145), WasiedAdminSystem:RespX(75), color_white, TEXT_ALIGN_CENTER, TEXT_ALIGN_TOP)
+		draw.SimpleText(WasiedAdminSystem:Lang(70), WasiedAdminSystem:Font(20), WasiedAdminSystem:RespX(315), WasiedAdminSystem:RespX(80), color_white, TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP)
+		draw.SimpleText(WasiedAdminSystem:Lang(71), WasiedAdminSystem:Font(20), WasiedAdminSystem:RespX(315), WasiedAdminSystem:RespX(163), color_white, TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP)
 	end
 
 	--[[ PLAYER LIST ]]--

@@ -1,5 +1,5 @@
 if CLIENT then
-    SWEP.PrintName = "Кирка T1"
+    SWEP.PrintName = "Качественная кирка"
     SWEP.Slot = 2
     SWEP.SlotPos = 1
     SWEP.DrawAmmo = false
@@ -93,7 +93,7 @@ function SWEP:PrimaryAttack()
 			if (IsValid(trace.Entity)) then
 				if( trace.Entity:GetClass() == "bricks_server_rock" ) then
 					if( BRICKS_SERVER.CONFIG.CRAFTING.RockTypes[trace.Entity:GetRockType() or ""] ) then
-						trace.Entity:HitRock( 11, self.Owner ) --5 hits // 1 dmg - 1 hit
+						trace.Entity:HitRock( 10, self.Owner ) --5 hits // 1 dmg - 1 hit
 					end
 				end
 			end;

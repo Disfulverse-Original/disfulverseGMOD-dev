@@ -21,12 +21,14 @@ WasiedAdminSystem.Config.MainColor = Color(100,152,219)
 WasiedAdminSystem.Config.RanksAllowed = {
     ["superadmin"] = true,
     ["admin"] = true,
+    ["sadmin"] = true,
+    ["helper"] = true,
 }
 
 -- High-ranks allowed to use high-level features
 WasiedAdminSystem.Config.HighRanks = {
     ["superadmin"] = true,
-    ["admin"] = true,
+    ["admin"] = false,
 }
 
 
@@ -80,7 +82,7 @@ WasiedAdminSystem.Config.ShowExtraInfos = false
 WasiedAdminSystem.Config.ShowVehiclesInfos = true
 
 -- How far away from the staff does the player's basic informations disappear ?
-WasiedAdminSystem.Config.DistToShow = 3000
+WasiedAdminSystem.Config.DistToShow = 20000
 
 -- How far away from the staff does the player's advanced informations disappear ?
 WasiedAdminSystem.Config.DistToShowExtra = 1500
@@ -109,7 +111,9 @@ WasiedAdminSystem.Config.MinDescriptionLen = 5
 
 -- Pre-defined reasons for a ticket
 WasiedAdminSystem.Config.TicketsReasons = {
-    "Другое"
+    "Вопрос",
+    "Жалоба",
+    "Помощь"
 }
 
 -- The time in seconds after which the ticket is automatically deleted if it has not been processed.

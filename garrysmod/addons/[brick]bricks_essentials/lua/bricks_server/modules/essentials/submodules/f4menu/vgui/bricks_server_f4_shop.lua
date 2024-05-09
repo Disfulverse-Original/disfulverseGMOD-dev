@@ -70,7 +70,7 @@ function PANEL:FillPanel( f4Panel, sheetButton )
     local panelWide = ScrW()*0.6-BRICKS_SERVER.DEVCONFIG.MainNavWidth
 
     local spacing = 5
-    local gridWide = panelWide-30
+    local gridWide = panelWide-90
     local slotsWide = 2
     local slotWide = (gridWide-((slotsWide-1)*spacing))/slotsWide
     local slotTall = 75

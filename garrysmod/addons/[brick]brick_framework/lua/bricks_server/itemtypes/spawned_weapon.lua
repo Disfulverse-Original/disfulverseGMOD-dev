@@ -172,13 +172,13 @@ ITEM.GetInfo = function( itemData )
         itemName = (list.Get( "Weapon" ) or {})[(itemData[3] or "")].PrintName
     end
 
-    itemData[6] = itemData[6]
-    itemData[7] = itemData[7]
+    itemData[6] = itemData[6] or 0
+    itemData[7] = itemData[7] or 0
 
     local Ammo = ""
-    if itemData[6] and itemData[7] then
+    if itemData[6] > 0 and itemData[7] > 0 then
         Ammo = "Аммуниция: " .. tostring(itemData[6]) .. " / " .. tostring(itemData[7])
-    elseif itemData[6] then
+    elseif itemData[6] > 0 then
     	Ammo = "Аммуниция: " .. tostring(itemData[6]) .. " / 0"
     else
         Ammo = nil

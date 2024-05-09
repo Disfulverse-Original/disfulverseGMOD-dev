@@ -59,7 +59,7 @@ function PANEL:FillPanel( gangTable )
                 local goalXP = math.max( 0, BRICKS_SERVER.Func.GetGangExpToLevel( (gangTable.Level or 0), (gangTable.Level or 0)+1 ) )
                 return {
                     { string.Comma( math.floor( currentXP ) ) }, 
-                    { "/" .. string.Comma( math.floor( goalXP ) ) .. " XP", "BRICKS_SERVER_Font28B", Color( BRICKS_SERVER.Func.GetTheme( 6 ).r, BRICKS_SERVER.Func.GetTheme( 6 ).g, BRICKS_SERVER.Func.GetTheme( 6 ).b, 75 ) }
+                    { "/" .. string.Comma( math.floor( goalXP ) ) .. " XP", "BRICKS_SERVER_Font20B", Color( BRICKS_SERVER.Func.GetTheme( 6 ).r, BRICKS_SERVER.Func.GetTheme( 6 ).g, BRICKS_SERVER.Func.GetTheme( 6 ).b, 75 ) }
                 }
             end,
         }
@@ -183,14 +183,14 @@ function PANEL:FillPanel( gangTable )
             draw.SimpleText( v.BottomTitle, "BRICKS_SERVER_Font21", 2, startY, Color( BRICKS_SERVER.Func.GetTheme( 6 ).r, BRICKS_SERVER.Func.GetTheme( 6 ).g, BRICKS_SERVER.Func.GetTheme( 6 ).b, 75 ), TEXT_ALLIGN_CENTER, TEXT_ALLIGN_CENTER )
 
             if( not istable( v.BottomSubTitle() ) ) then
-                draw.SimpleText( v.BottomSubTitle(), "BRICKS_SERVER_Font33", 0, startY+bottomTitleY+textSpacing, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALLIGN_LEFT, TEXT_ALLIGN_CENTER )
+                draw.SimpleText( v.BottomSubTitle(), "BRICKS_SERVER_Font20B", 0, startY+bottomTitleY+textSpacing*0.5, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALLIGN_CENTER, TEXT_ALLIGN_CENTER )
             else
                 local previousTextW = 0
                 for k, v in pairs( v.BottomSubTitle() ) do
-                    surface.SetFont( v[2] or "BRICKS_SERVER_Font33" )
+                    surface.SetFont( v[2] or "BRICKS_SERVER_Font20B" )
                     local newTextW, newTextH = surface.GetTextSize( v[1] or "" )
 
-                    draw.SimpleText( v[1], (v[2] or "BRICKS_SERVER_Font33"), 2+previousTextW, startY+bottomTitleY+textSpacing+bottomSubTitleY, (v[3] or BRICKS_SERVER.Func.GetTheme( 6 )), 0, TEXT_ALIGN_BOTTOM )
+                    draw.SimpleText( v[1], (v[2] or "BRICKS_SERVER_Font20B"), 2+previousTextW, startY+bottomTitleY+textSpacing*0.5, (v[3] or BRICKS_SERVER.Func.GetTheme( 6 )), 0, TEXT_ALLIGN_CENTER, TEXT_ALLIGN_CENTER )
 
                     previousTextW = previousTextW+newTextW
                 end

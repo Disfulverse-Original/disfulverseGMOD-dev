@@ -1178,13 +1178,13 @@ function PANEL:RefreshSelection()
             return
         end
 
-        if( buyoutPrice <= auctionPrice ) then
-            notification.AddLegacy( "Цена выкупа не может быть меньше чем цена начальной ставки!", 1, 3 )
+        if( not buyoutPrice ) then
+            notification.AddLegacy( "Укажите цену выкупа!", 1, 3 )
             return
         end
 
-        if( buyoutPrice < 0 ) then
-            notification.AddLegacy( "Укажите цену выкупа!", 1, 3 )
+        if( buyoutPrice <= auctionPrice ) then
+            notification.AddLegacy( "Цена выкупа не может быть меньше чем цена начальной ставки!", 1, 3 )
             return
         end
 
@@ -1329,7 +1329,7 @@ function PANEL:RefreshSelection()
     local minbuyout = auctionPrice*2
     buyoutpriceBack.DoClick = function()
         BRICKS_SERVER.Func.StringRequest( "Аукцион", "Какой должна быть цена выкупа цена?", minbuyout, function( number )
-            if number > auctionPrice then 
+            if isnumber( tonumber(number) ) and number > auctionPrice then 
                 buyoutPrice = number
             else
                 notification.AddLegacy( "Укажите цену выкупа больше чем начальная ставка.", 1, 3 )

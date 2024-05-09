@@ -46,4 +46,4 @@ function PANEL:UnselectAll()
 
 end
 
-derma.DefineControl( "bricks_server_dcategorylist", "", PANEL, "bricks_server_scrollpanel" )
+derma.DefineControl( "bricks_server_dcategorylist", "", PANEL, "bricks_server_scrollpanel_bar" )
