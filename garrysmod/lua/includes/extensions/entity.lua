@@ -32,6 +32,16 @@ function meta:__index( key )
 		if ( tabval != nil ) then return tabval end
 	end
 
+	--[[ test disfulverse
+    if IsValid(self) then
+		local tab = self:GetTable()
+		if ( tab ) then
+			local tabval = tab[ key ]
+			if ( tabval != nil ) then return tabval end
+		end
+    end
+	--]]
+
 	--
 	-- Legacy: sometimes use self.Owner to get the owner.. so lets carry on supporting that stupidness
 	-- This needs to be retired, just like self.Entity was.
