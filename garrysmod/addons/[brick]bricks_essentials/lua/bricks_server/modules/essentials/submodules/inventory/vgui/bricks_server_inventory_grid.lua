@@ -73,7 +73,7 @@ function PANEL:FillPanel( panel, sheetButton, gridWide )
 
             draw.RoundedBoxEx( 5, 0, h-boxH, w, boxH, BRICKS_SERVER.Func.GetTheme( 2 ), false, false, true, true )
 
-            draw.SimpleText( itemInfo[1], #itemInfo[1] > 20 and "BRICKS_SERVER_Font12" or "BRICKS_SERVER_Font15", w/2, h-(boxH/2)-1, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+            draw.SimpleText( itemInfo[1], #itemInfo[1] > 20 and "BRICKS_SERVER_Font15" or "BRICKS_SERVER_Font17", w/2, h-(boxH/2)-1, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
             draw.SimpleText( "x" .. (itemTable[1] or 1), "BRICKS_SERVER_Font17", w-7, 2, BRICKS_SERVER.Func.GetTheme( 6 ), TEXT_ALIGN_RIGHT, 0 )
         end
 
