@@ -508,7 +508,7 @@ BRICKS_SERVER.BASECONFIG.ARMORY.Items = {
         Type = "Weapon",
         ReqInfo = { "arccw_ur_mp5" },
 		Model = "models/weapons/arccw/c_ur_mp5.mdl",
-        Level = 15
+        Level = 25
 	},
 	[3] = {
         Name = "Benelli M4",
@@ -526,10 +526,10 @@ BRICKS_SERVER.BASECONFIG.ARMORY.Items = {
         Model = "models/weapons/arccw/c_ur_spas12.mdl",
         Level = 30,
         Restrictions = { 
-            ["ybsdxce"] = true,--["Детектив / 35 lvl"] = true, 
-            ["tsdg444"] = true,--["Спецназ CTSFO / 30 lvl"] = true,
-            ["rsdffggggbn"] = true,--["Отдел Disag [Dis+] / 45 lvl"] = true,
-            ["wkloldd"] = true--["Отдел Контрразведки MI5 [Dis+] / 45 lvl"] = true
+            ["ybsdxce"] = true,--["Детектив / 30 lvl"] = true, 
+            ["tsdg444"] = true,--["Спецназ CTSFO / 25 lvl"] = true,
+            ["rsdffggggbn"] = true,--["Отдел Disag [Dis+] / 35 lvl"] = true,
+            ["wkloldd"] = true--["Отдел Контрразведки MI5 [Dis+] / 35 lvl"] = true
         }
     },
     [5] = {
@@ -614,7 +614,7 @@ BRICKS_SERVER.BASECONFIG.ARMORY.Items = {
         Type = "Ammo",
         ReqInfo = { "SMG1", 30, 90 },
 		Model = "models/items/arccw/smg_ammo.mdl",
-        Level = 15
+        Level = 25
 	},
     [13] = {
         Name = "Buckshot",
