@@ -74,7 +74,7 @@ hook.Add("PreRender", "TFA_Viewbob_Delta", function()
 	local velocity = math.max(rawVel:Length2D() * AirWalkScale(ply) - rawVel.z * 0.5, 0)
 	local rate = math.Clamp(math.sqrt(velocity / ply:GetRunSpeed()) * 1.75, 0.15, 2)
 	ViewBobTime = ViewBobTime + FrameTime() * rate * .9
-	ViewBobIntensity = 0.001 + velocity / ply:GetRunSpeed()
+	ViewBobIntensity = 0.15 + velocity / ply:GetRunSpeed()
 end)
 
 local ISCALC = false
