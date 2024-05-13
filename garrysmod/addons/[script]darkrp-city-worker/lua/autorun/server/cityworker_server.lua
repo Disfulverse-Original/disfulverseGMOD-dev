@@ -450,7 +450,7 @@ net.Receive( "CITYWORKER.Add", function( len, ply )
     elseif class == "cityworker_rubble" then
         ang:RotateAroundAxis( ang:Right(), 180 )
         ang.x = 180
-        pos.z = pos.z + 64
+        pos.z = pos.z + 5
     elseif class == "cityworker_electric" then
         ang:RotateAroundAxis( Vector( 1, 0, 0 ), 180 )
         ang.x = 180
