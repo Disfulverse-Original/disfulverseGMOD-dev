@@ -60,9 +60,6 @@ CITYWORKER.Config.Rubble.Enabled = true
 CITYWORKER.Config.Rubble.Models = {
     ["models/props_debris/concrete_debris128pile001a.mdl"] = { min = 5, max = 10 },
     ["models/props_debris/concrete_debris128pile001b.mdl"] = { min = 5, max = 10 },
-    ["models/props_debris/concrete_floorpile01a.mdl"] = { min = 5, max = 10 },
-    ["models/props_debris/concrete_cornerpile01a.mdl"] = { min = 5, max = 10 },
-    ["models/props_debris/concrete_spawnplug001a.mdl"] = { min = 5, max = 10 },
     ["models/props_debris/plaster_ceilingpile001a.mdl"] = { min = 5, max = 10 },
 }
 
