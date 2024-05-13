@@ -220,7 +220,7 @@ function BRICKS_SERVER.Func.RespawnRocks()
 	
 					local dontSpawn = false
 					for k, v in pairs( nearbyEnts ) do
-						if( v:GetClass() == "bricks_server_rock" ) then
+						if( v:GetClass() == "bricks_server_rock" or "player" ) then
 							if( v:GetStage() == 3 ) then
 								v:SetModel("models/2rek/brickwall/bwall_rock_1_phys_3.mdl")
 								v:PhysicsInit( SOLID_VPHYSICS )
@@ -306,7 +306,7 @@ function BRICKS_SERVER.Func.RespawnGarbage()
 
 			local dontSpawn = false
 			for k, v in pairs( nearbyEnts ) do
-				if( v:GetClass() == "bricks_server_garbage" ) then
+				if( v:GetClass() == "bricks_server_garbage" or "player" ) then
 					dontSpawn = true
 					break
 				end
