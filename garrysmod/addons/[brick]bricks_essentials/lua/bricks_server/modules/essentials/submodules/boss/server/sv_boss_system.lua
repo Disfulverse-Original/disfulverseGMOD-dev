@@ -187,7 +187,7 @@ hook.Add("PlayerDeath", "BRS.PlayerDeath_BossDamage", function(victim, inflictor
     --PrintTable(BRICKS_SERVER.TEMP.BOSS_DAMAGE)
     --print(attacker)
 
-    if BRICKS_SERVER.TEMP.BOSS_DAMAGE[attacker] then
+    if BRICKS_SERVER.TEMP.BOSS_DAMAGE and BRICKS_SERVER.TEMP.BOSS_DAMAGE[attacker] then
     	--PrintTable(BRICKS_SERVER.TEMP.BOSS_DAMAGE[1])
         for k, damageTable in pairs(BRICKS_SERVER.TEMP.BOSS_DAMAGE[attacker]) do
         	--print(k)
