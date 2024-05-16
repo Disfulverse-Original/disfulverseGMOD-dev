@@ -270,13 +270,16 @@ function BRICKS_SERVER.Func.RespawnTrees()
 				end
 
 				if( BRICKS_SERVER.CONFIG.CRAFTING.TreeTypes[treeType or ""] ) then
-					local nearbyEnts = ents.FindInSphere( position, 5 )
+					local nearbyEnts = ents.FindInSphere( position, 10 )
 	
 					local dontSpawn = false
 					for k, v in pairs( nearbyEnts ) do
 						if( v:GetClass() == "bricks_server_tree" ) then
 							dontSpawn = true
 							break
+						elseif(v:GetClass() == "player" ) then
+							dontSpawn = true
+							break	
 						end
 					end
 	
@@ -302,13 +305,16 @@ function BRICKS_SERVER.Func.RespawnGarbage()
 		local angles = Angle( tableString[4], tableString[5], tableString[6] )
 
 		if( position and angles ) then
-			local nearbyEnts = ents.FindInSphere( position, 5 )
+			local nearbyEnts = ents.FindInSphere( position, 10 )
 
 			local dontSpawn = false
 			for k, v in pairs( nearbyEnts ) do
-				if( v:GetClass() == "bricks_server_garbage" or "player" ) then
+				if( v:GetClass() == "bricks_server_garbage" ) then
 					dontSpawn = true
 					break
+				elseif(v:GetClass() == "player" ) then
+					dontSpawn = true
+					break	
 				end
 			end
 
