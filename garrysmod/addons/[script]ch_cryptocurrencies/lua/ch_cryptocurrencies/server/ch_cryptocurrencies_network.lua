@@ -22,6 +22,7 @@ function CH_CryptoCurrencies.FetchCryptoCurrencies()
 			-- onSuccess
 			function( body, length, headers, code )
 				local returned_json = util.JSONToTable( body )
+				if !returned_json then print("CryptoCurrencies seems to not work, nice govno addon. (disfulMSG)") return end
 				
 				if not returned_json["data"] then
 					if CH_CryptoCurrencies.Config.FetchConsolePrints then
