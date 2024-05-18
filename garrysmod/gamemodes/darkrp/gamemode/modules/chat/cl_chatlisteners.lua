@@ -169,6 +169,12 @@ local function loadChatReceivers()
     end)
 
     --[[---------------------------------------------------------------------------
+        Event [disfulverse]
+        ---------------------------------------------------------------------------]]
+    DarkRP.addChatReceiver("/event", DarkRP.getPhrase("speak_in_ooc"), function(ply) return true end)
+
+
+    --[[---------------------------------------------------------------------------
         Voice chat receivers
         ---------------------------------------------------------------------------]]
     local voiceDistance = GM.Config.voiceDistance * GM.Config.voiceDistance
