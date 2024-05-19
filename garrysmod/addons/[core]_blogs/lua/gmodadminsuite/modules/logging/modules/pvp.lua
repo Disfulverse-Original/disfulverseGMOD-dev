@@ -329,9 +329,8 @@ PVP_COMBAT_MODULE:Setup(function()
 				pvp_event:AddDamage("pvp_player_damage", victim, attacker, nil, dmginfo, GAS.Logging:FormatPlayer(attacker), GAS.Logging:FormatPlayer(victim))
 			end
 		elseif (GAS.Logging.PvP.PlayerEvents[account_id] ~= nil) then
-			local pvp_event = GAS.Logging.PvP:GetEvent(nil, victim, dmginfo)
 			for _,event in ipairs(GAS.Logging.PvP.PlayerEvents[account_id]) do
-				pvp_event:AddDamage("pvp_misc_dmg", victim, nil, nil, dmginfo, GAS.Logging:FormatPlayer(victim), GAS.Logging:FormatEntity(attacker))
+				event:AddDamage("pvp_misc_dmg", victim, nil, nil, dmginfo, GAS.Logging:FormatPlayer(victim), GAS.Logging:FormatEntity(attacker))
 			end
 		end
 	end
