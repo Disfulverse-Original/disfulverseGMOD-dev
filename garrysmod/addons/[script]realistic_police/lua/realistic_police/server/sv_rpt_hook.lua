@@ -206,14 +206,14 @@ hook.Add("PlayerInitialSpawn", "RPT:PlayerInitialSpawn", function(ply)
     end ) 
 end ) 
 
-hook.Add("OnEntityCreated", "RPT:OnEntityCreated", function(ent)
+--[[hook.Add("OnEntityCreated", "RPT:OnEntityCreated", function(ent)
     -- Set information of the plate on the vehicle 
     timer.Simple(1, function()
         if IsValid(ent) then 
             Realistic_Police.SetInfoVehc(ent)
         end 
     end ) 
-end ) 
+end )--]] 
 
 -- Check if the Vehicle have a fine and the player can enter into the vehicle
 hook.Add("CanPlayerEnterVehicle", "RPT:PlayerEnteredVehicle", function(ply, vehc)
