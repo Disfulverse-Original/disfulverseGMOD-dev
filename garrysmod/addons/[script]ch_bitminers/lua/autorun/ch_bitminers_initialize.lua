@@ -1,34 +1,60 @@
 -- INITIALIZE SCRIPT
 if SERVER then
-	for k, v in ipairs( file.Find( "ch_bitminers/shared/*.lua", "LUA" ) ) do
-		include( "ch_bitminers/shared/" .. v )
-		--print("shared: ".. v)
+	-- Load shared files efficiently
+	local sharedFiles = file.Find( "ch_bitminers/shared/*.lua", "LUA" )
+	for k, v in ipairs( sharedFiles ) do
+		local filePath = "ch_bitminers/shared/" .. v
+		if file.Exists( filePath, "LUA" ) then
+			include( filePath )
+			AddCSLuaFile( filePath )
+		else
+			print( "[CH_BITMINERS] ERROR: Shared file not found - " .. v )
+		end
 	end
 	
-	for k, v in ipairs( file.Find( "ch_bitminers/shared/*.lua", "LUA" ) ) do
-		AddCSLuaFile( "ch_bitminers/shared/" .. v )
-		--print("cs shared: ".. v)
+	-- Load server files
+	local serverFiles = file.Find( "ch_bitminers/server/*.lua", "LUA" )
+	for k, v in ipairs( serverFiles ) do
+		local filePath = "ch_bitminers/server/" .. v
+		if file.Exists( filePath, "LUA" ) then
+			include( filePath )
+		else
+			print( "[CH_BITMINERS] ERROR: Server file not found - " .. v )
+		end
 	end
 	
-	for k, v in ipairs( file.Find( "ch_bitminers/server/*.lua", "LUA" ) ) do
-		include( "ch_bitminers/server/" .. v )
-		--print("server: ".. v)
-	end
-	
-	for k, v in ipairs( file.Find( "ch_bitminers/client/*.lua", "LUA" ) ) do
-		AddCSLuaFile( "ch_bitminers/client/" .. v )
-		--print("cs client: ".. v)
+	-- Add client files to download
+	local clientFiles = file.Find( "ch_bitminers/client/*.lua", "LUA" )
+	for k, v in ipairs( clientFiles ) do
+		local filePath = "ch_bitminers/client/" .. v
+		if file.Exists( filePath, "LUA" ) then
+			AddCSLuaFile( filePath )
+		else
+			print( "[CH_BITMINERS] ERROR: Client file not found - " .. v )
+		end
 	end
 end
 
 if CLIENT then
-	for k, v in ipairs( file.Find( "ch_bitminers/shared/*.lua", "LUA" ) ) do
-		include( "ch_bitminers/shared/" .. v )
-		--print("shared client: ".. v)
+	-- Load shared files
+	local sharedFiles = file.Find( "ch_bitminers/shared/*.lua", "LUA" )
+	for k, v in ipairs( sharedFiles ) do
+		local filePath = "ch_bitminers/shared/" .. v
+		if file.Exists( filePath, "LUA" ) then
+			include( filePath )
+		else
+			print( "[CH_BITMINERS] ERROR: Shared file not found - " .. v )
+		end
 	end
 	
-	for k, v in ipairs( file.Find( "ch_bitminers/client/*.lua", "LUA" ) ) do
-		include( "ch_bitminers/client/" .. v )
-		--print("client: ".. v)
+	-- Load client files
+	local clientFiles = file.Find( "ch_bitminers/client/*.lua", "LUA" )
+	for k, v in ipairs( clientFiles ) do
+		local filePath = "ch_bitminers/client/" .. v
+		if file.Exists( filePath, "LUA" ) then
+			include( filePath )
+		else
+			print( "[CH_BITMINERS] ERROR: Client file not found - " .. v )
+		end
 	end
 end

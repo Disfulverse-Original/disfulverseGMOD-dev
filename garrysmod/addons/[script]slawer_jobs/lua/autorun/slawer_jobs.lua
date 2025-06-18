@@ -8,29 +8,51 @@ local function loadDirectory(strDir, strFileType)
     local tblFiles = file.Find(strMainDir .. strDir .. "*", "LUA")
 
     for k, v in pairs(tblFiles) do
-        if strFileType == "server" then
-            if SERVER then include(strMainDir .. strDir .. v) end
-        elseif strFileType == "client" then
-            if SERVER then
-                AddCSLuaFile(strMainDir .. strDir .. v)
-            else
-                include(strMainDir .. strDir .. v)
+        local filePath = strMainDir .. strDir .. v
+        if file.Exists(filePath, "LUA") then
+            if strFileType == "server" then
+                if SERVER then include(filePath) end
+            elseif strFileType == "client" then
+                if SERVER then
+                    AddCSLuaFile(filePath)
+                else
+                    include(filePath)
+                end
+            elseif strFileType == "shared" then
+                if SERVER then AddCSLuaFile(filePath) end
+                include(filePath)
             end
-        elseif strFileType == "shared" then
-            if SERVER then AddCSLuaFile(strMainDir .. strDir .. v) end
-            include(strMainDir .. strDir .. v)
+        else
+            print("[SLAWER_JOBS] ERROR: File not found - " .. filePath)
         end
     end
 end
 
 loadDirectory("", "shared")
 
-local sDir = "slawer_jobs/languages/" .. (Slawer.Jobs.CFG.Lang or "en") .. ".lua"
-AddCSLuaFile(sDir)
-local tLang = include(sDir)
+-- Load language file with error handling
+local defaultLang = "en"
+local configLang = Slawer.Jobs.CFG.Lang or defaultLang
+local sDir = "slawer_jobs/languages/" .. configLang .. ".lua"
 
-function Slawer.Jobs:L(strTag)
-    return tLang[strTag] or strTag
+if file.Exists(sDir, "LUA") then
+    AddCSLuaFile(sDir)
+    local tLang = include(sDir)
+    
+    function Slawer.Jobs:L(strTag)
+        if tLang and tLang[strTag] then
+            return tLang[strTag]
+        else
+            return strTag or "Missing translation"
+        end
+    end
+else
+    print("[SLAWER_JOBS] ERROR: Language file not found - " .. sDir)
+    
+    -- Fallback function
+    function Slawer.Jobs:L(strTag)
+        return strTag or "Missing translation"
+    end
 end
 
 loadDirectory("shared/", "shared")

@@ -10,56 +10,92 @@
 
 Realistic_Police = Realistic_Police or {}
 
-include("realistic_police/sh_rpt_config.lua")
-include("realistic_police/sh_rpt_lang.lua")
-include("realistic_police/sh_rpt_materials.lua")
-include("realistic_police/sh_rpt_advanced.lua")
+-- Load shared files efficiently
+local sharedFiles = {
+	"realistic_police/sh_rpt_config.lua",
+	"realistic_police/sh_rpt_lang.lua",
+	"realistic_police/sh_rpt_materials.lua",
+	"realistic_police/sh_rpt_advanced.lua"
+}
 
-timer.Simple(2,function()
-    include("realistic_police/sh_rpt_config.lua")
-    include("realistic_police/sh_rpt_lang.lua")
-    include("realistic_police/sh_rpt_materials.lua")
-    include("realistic_police/sh_rpt_advanced.lua")
-end ) 
+for _, filePath in ipairs(sharedFiles) do
+	if file.Exists(filePath, "LUA") then
+		include(filePath)
+	else
+		print("[REALISTIC_POLICE] ERROR: Shared file not found - " .. filePath)
+	end
+end
 
 if SERVER then 
-    include("realistic_police/server/sv_rpt_function.lua")
-    include("realistic_police/server/sv_rpt_hook.lua")
-    include("realistic_police/server/sv_rpt_net.lua")
-    include("realistic_police/server/sv_rpt_tool.lua")
+	-- Load server files
+	local serverFiles = {
+		"realistic_police/server/sv_rpt_function.lua",
+		"realistic_police/server/sv_rpt_hook.lua",
+		"realistic_police/server/sv_rpt_net.lua",
+		"realistic_police/server/sv_rpt_tool.lua"
+	}
+	
+	for _, filePath in ipairs(serverFiles) do
+		if file.Exists(filePath, "LUA") then
+			include(filePath)
+		else
+			print("[REALISTIC_POLICE] ERROR: Server file not found - " .. filePath)
+		end
+	end
 
-    AddCSLuaFile("realistic_police/client/cl_rpt_main.lua")
-    AddCSLuaFile("realistic_police/client/cl_rpt_fonts.lua")
-
-    AddCSLuaFile("realistic_police/client/cl_rpt_criminal.lua")
-    AddCSLuaFile("realistic_police/client/cl_rpt_listreport.lua")
-    AddCSLuaFile("realistic_police/client/cl_rpt_report.lua")
-    AddCSLuaFile("realistic_police/client/cl_rpt_firefox.lua")
-    AddCSLuaFile("realistic_police/client/cl_rpt_camera.lua")
-    AddCSLuaFile("realistic_police/client/cl_rpt_license.lua")
-    AddCSLuaFile("realistic_police/client/cl_rpt_cmd.lua")
-    AddCSLuaFile("realistic_police/client/cl_rpt_fining.lua")
-    AddCSLuaFile("realistic_police/client/cl_rpt_handcuff.lua")
-
-    AddCSLuaFile("realistic_police/client/cl_rpt_notify.lua")
-    
-    AddCSLuaFile("realistic_police/sh_rpt_config.lua")
-    AddCSLuaFile("realistic_police/sh_rpt_lang.lua")
-    AddCSLuaFile("realistic_police/sh_rpt_materials.lua")
-    AddCSLuaFile("realistic_police/sh_rpt_advanced.lua")
+	-- Add client files to download
+	local clientFiles = {
+		"realistic_police/client/cl_rpt_main.lua",
+		"realistic_police/client/cl_rpt_fonts.lua",
+		"realistic_police/client/cl_rpt_criminal.lua",
+		"realistic_police/client/cl_rpt_listreport.lua",
+		"realistic_police/client/cl_rpt_report.lua",
+		"realistic_police/client/cl_rpt_firefox.lua",
+		"realistic_police/client/cl_rpt_camera.lua",
+		"realistic_police/client/cl_rpt_license.lua",
+		"realistic_police/client/cl_rpt_cmd.lua",
+		"realistic_police/client/cl_rpt_fining.lua",
+		"realistic_police/client/cl_rpt_handcuff.lua",
+		"realistic_police/client/cl_rpt_notify.lua"
+	}
+	
+	for _, filePath in ipairs(clientFiles) do
+		if file.Exists(filePath, "LUA") then
+			AddCSLuaFile(filePath)
+		else
+			print("[REALISTIC_POLICE] ERROR: Client file not found - " .. filePath)
+		end
+	end
+	
+	-- Add shared files to download
+	for _, filePath in ipairs(sharedFiles) do
+		if file.Exists(filePath, "LUA") then
+			AddCSLuaFile(filePath)
+		end
+	end
+	
 else 
-    include("realistic_police/client/cl_rpt_criminal.lua")
-    include("realistic_police/client/cl_rpt_listreport.lua")
-    include("realistic_police/client/cl_rpt_report.lua")
-    include("realistic_police/client/cl_rpt_firefox.lua")
-    include("realistic_police/client/cl_rpt_camera.lua")
-    include("realistic_police/client/cl_rpt_license.lua")
-    include("realistic_police/client/cl_rpt_cmd.lua")
-    include("realistic_police/client/cl_rpt_fining.lua")
-    include("realistic_police/client/cl_rpt_handcuff.lua")
-    
-    include("realistic_police/client/cl_rpt_notify.lua")
-
-    include("realistic_police/client/cl_rpt_main.lua")
-    include("realistic_police/client/cl_rpt_fonts.lua")
+	-- Load client files
+	local clientFiles = {
+		"realistic_police/client/cl_rpt_criminal.lua",
+		"realistic_police/client/cl_rpt_listreport.lua",
+		"realistic_police/client/cl_rpt_report.lua",
+		"realistic_police/client/cl_rpt_firefox.lua",
+		"realistic_police/client/cl_rpt_camera.lua",
+		"realistic_police/client/cl_rpt_license.lua",
+		"realistic_police/client/cl_rpt_cmd.lua",
+		"realistic_police/client/cl_rpt_fining.lua",
+		"realistic_police/client/cl_rpt_handcuff.lua",
+		"realistic_police/client/cl_rpt_notify.lua",
+		"realistic_police/client/cl_rpt_main.lua",
+		"realistic_police/client/cl_rpt_fonts.lua"
+	}
+	
+	for _, filePath in ipairs(clientFiles) do
+		if file.Exists(filePath, "LUA") then
+			include(filePath)
+		else
+			print("[REALISTIC_POLICE] ERROR: Client file not found - " .. filePath)
+		end
+	end
 end 
