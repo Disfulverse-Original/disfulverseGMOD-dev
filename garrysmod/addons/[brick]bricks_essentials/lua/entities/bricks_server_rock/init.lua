@@ -35,12 +35,12 @@ function ENT:HitRock( Damage, attacker )
 
 	self:SetRHealth( self:GetRHealth()-Damage )
 
-	if( self:GetStage() <= 1 and (self:GetRHealth()/100)*100 <= 50 ) then
+	if( self:GetStage() <= 1 and self:GetRHealth() <= 50 ) then
 		self:SetModel("models/2rek/brickwall/bwall_rock_1_phys_2.mdl")
 		self:PhysicsInit( SOLID_VPHYSICS )
 		self:GetPhysicsObject():EnableMotion( false )
 		self:SetStage( 2 )
-	elseif( self:GetStage() <= 2 and (self:GetRHealth()/100)*100 <= 0 ) then
+	elseif( self:GetStage() <= 2 and self:GetRHealth() <= 0 ) then
 		self:SetModel("models/2rek/brickwall/bwall_rock_1_phys_1.mdl")
 		self:PhysicsInit( SOLID_VPHYSICS )
 		self:GetPhysicsObject():EnableMotion( false )
