@@ -1,0 +1,15 @@
+# lua/tests/requirements.txt
+# Comprehensive DarkRP and GMod testing dependencies
+
+# ===== CORE DARKRP GAMEMODE =====
+FPtje/DarkRP@master
+# Main DarkRP gamemode - essential for testing DarkRP integration
+
+# ===== ESSENTIAL ADMIN MODS =====
+TeamUlysses/ulx@master
+TeamUlysses/ulib@master
+# ULX/ULib - Standard admin system, likely used by your server
+
+# ===== COMMON DARKRP ADDONS =====
+FPtje/darkrpmodification@master
+# DarkRP Modification addon for customizations
