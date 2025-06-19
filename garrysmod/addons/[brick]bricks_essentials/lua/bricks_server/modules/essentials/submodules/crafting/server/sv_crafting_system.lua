@@ -193,11 +193,6 @@ net.Receive( "BRS.Net.CraftCancel", function( len, ply )
 	net.Send( ply )
 end )
 
--- Constants for consistent proximity checks across the crafting system
-local ROCK_SPAWN_PLAYER_PROXIMITY = 50  -- Consistent with resource spawning logic
-local TREE_SPAWN_PLAYER_PROXIMITY = 50  -- Keep trees consistent 
-local GARBAGE_SPAWN_PLAYER_PROXIMITY = 50  -- Keep garbage consistent
-
 function BRICKS_SERVER.Func.RespawnRocks()
 	BRS_ROCKSPAWN_TIME = CurTime()+(BRICKS_SERVER.CONFIG.CRAFTING["Rock Respawn Time"] or 60)
 
@@ -212,40 +207,40 @@ function BRICKS_SERVER.Func.RespawnRocks()
 				local randomFloat = math.Rand( 0, 100 )
 				local previousPercent = 0
 				for k, v in pairs( BRICKS_SERVER.CONFIG.CRAFTING.RockTypes ) do
-					if( randomFloat >= previousPercent and randomFloat <= (previousPercent + v) ) then
+					if( randomFloat >= previousPercent and randomFloat < previousPercent+v ) then
 						rockType = k
 						break
+					else
+						previousPercent = previousPercent+v
 					end
-					previousPercent = previousPercent + v
 				end
-			end
 
-			-- BUG FIX: Use consistent proximity check radius with rock entity
-			local nearbyPlayers = false
-			for _, ply in ipairs(player.GetAll()) do
-				if IsValid(ply) and ply:GetPos():Distance(position) < ROCK_SPAWN_PLAYER_PROXIMITY then
-					nearbyPlayers = true
-					break
-				end
-			end
-
-			if not nearbyPlayers then
-				local RockEnt = ents.Create( "bricks_server_rock" )
-				if IsValid(RockEnt) then
-					RockEnt:SetPos( position )
-					RockEnt:SetAngles( angles )
-					RockEnt.rockType = rockType
-					RockEnt:Spawn()
-					
-					-- Validate entity spawned correctly
-					timer.Simple(0.1, function()
-						if not IsValid(RockEnt) or RockEnt:GetPos():Distance(position) > 100 then
-							print("[Brick's Server] WARNING: Rock entity spawned at invalid position")
-							if IsValid(RockEnt) then RockEnt:Remove() end
+				if( BRICKS_SERVER.CONFIG.CRAFTING.RockTypes[rockType or ""] ) then
+					local nearbyEnts = ents.FindInSphere( position, 5 )
+	
+					local dontSpawn = false
+					for k, v in pairs( nearbyEnts ) do
+						if( v:GetClass() == "bricks_server_rock" ) then
+							if( v:GetStage() == 3 ) then
+								v:SetModel("models/2rek/brickwall/bwall_rock_1_phys_3.mdl")
+								v:PhysicsInit( SOLID_VPHYSICS )
+								v:GetPhysicsObject():EnableMotion( false )
+								v:SetStage( 1 )
+								v:SetRHealth( 100 )
+								v:SetRockType( rockType )
+							end
+							dontSpawn = true
+							break
 						end
-					end)
-				else
-					print("[Brick's Server] ERROR: Failed to create rock entity at position " .. tostring(position))
+					end
+	
+					if( not dontSpawn ) then
+						local rockEntity = ents.Create( "bricks_server_rock" )
+						rockEntity:SetPos( position )
+						rockEntity:SetAngles( angles )
+						rockEntity.rockType = rockType
+						rockEntity:Spawn()
+					end
 				end
 			end
 		end
@@ -266,40 +261,35 @@ function BRICKS_SERVER.Func.RespawnTrees()
 				local randomFloat = math.Rand( 0, 100 )
 				local previousPercent = 0
 				for k, v in pairs( BRICKS_SERVER.CONFIG.CRAFTING.TreeTypes ) do
-					if( randomFloat >= previousPercent and randomFloat <= (previousPercent + v) ) then
+					if( randomFloat >= previousPercent and randomFloat < previousPercent+v ) then
 						treeType = k
 						break
+					else
+						previousPercent = previousPercent+v
 					end
-					previousPercent = previousPercent + v
 				end
-			end
 
-			-- Enhanced proximity check with consistent radius
-			local nearbyPlayers = false
-			for _, ply in ipairs(player.GetAll()) do
-				if IsValid(ply) and ply:GetPos():Distance(position) < TREE_SPAWN_PLAYER_PROXIMITY then
-					nearbyPlayers = true
-					break
-				end
-			end
-
-			if not nearbyPlayers then
-				local TreeEnt = ents.Create( "bricks_server_tree" )
-				if IsValid(TreeEnt) then
-					TreeEnt:SetPos( position )
-					TreeEnt:SetAngles( angles )
-					TreeEnt.treeType = treeType
-					TreeEnt:Spawn()
-					
-					-- Validate entity spawned correctly
-					timer.Simple(0.1, function()
-						if not IsValid(TreeEnt) or TreeEnt:GetPos():Distance(position) > 100 then
-							print("[Brick's Server] WARNING: Tree entity spawned at invalid position")
-							if IsValid(TreeEnt) then TreeEnt:Remove() end
+				if( BRICKS_SERVER.CONFIG.CRAFTING.TreeTypes[treeType or ""] ) then
+					local nearbyEnts = ents.FindInSphere( position, 10 )
+	
+					local dontSpawn = false
+					for k, v in pairs( nearbyEnts ) do
+						if( v:GetClass() == "bricks_server_tree" ) then
+							dontSpawn = true
+							break
+						elseif(v:GetClass() == "player" ) then
+							dontSpawn = true
+							break	
 						end
-					end)
-				else
-					print("[Brick's Server] ERROR: Failed to create tree entity at position " .. tostring(position))
+					end
+	
+					if( not dontSpawn ) then
+						local treeEntity = ents.Create( "bricks_server_tree" )
+						treeEntity:SetPos( position )
+						treeEntity:SetAngles( angles )
+						treeEntity.treeType = treeType
+						treeEntity:Spawn()
+					end
 				end
 			end
 		end
@@ -315,46 +305,24 @@ function BRICKS_SERVER.Func.RespawnGarbage()
 		local angles = Angle( tableString[4], tableString[5], tableString[6] )
 
 		if( position and angles ) then
-			local garbageType = ""
-			if( BRICKS_SERVER.CONFIG.CRAFTING.GarbageTypes ) then
-				local randomFloat = math.Rand( 0, 100 )
-				local previousPercent = 0
-				for k, v in pairs( BRICKS_SERVER.CONFIG.CRAFTING.GarbageTypes ) do
-					if( randomFloat >= previousPercent and randomFloat <= (previousPercent + v) ) then
-						garbageType = k
-						break
-					end
-					previousPercent = previousPercent + v
-				end
-			end
+			local nearbyEnts = ents.FindInSphere( position, 10 )
 
-			-- Enhanced proximity check with consistent radius
-			local nearbyPlayers = false
-			for _, ply in ipairs(player.GetAll()) do
-				if IsValid(ply) and ply:GetPos():Distance(position) < GARBAGE_SPAWN_PLAYER_PROXIMITY then
-					nearbyPlayers = true
+			local dontSpawn = false
+			for k, v in pairs( nearbyEnts ) do
+				if( v:GetClass() == "bricks_server_garbage" ) then
+					dontSpawn = true
 					break
+				elseif(v:GetClass() == "player" ) then
+					dontSpawn = true
+					break	
 				end
 			end
 
-			if not nearbyPlayers then
-				local GarbageEnt = ents.Create( "bricks_server_garbage" )
-				if IsValid(GarbageEnt) then
-					GarbageEnt:SetPos( position )
-					GarbageEnt:SetAngles( angles )
-					GarbageEnt.garbageType = garbageType
-					GarbageEnt:Spawn()
-					
-					-- Validate entity spawned correctly
-					timer.Simple(0.1, function()
-						if not IsValid(GarbageEnt) or GarbageEnt:GetPos():Distance(position) > 100 then
-							print("[Brick's Server] WARNING: Garbage entity spawned at invalid position")
-							if IsValid(GarbageEnt) then GarbageEnt:Remove() end
-						end
-					end)
-				else
-					print("[Brick's Server] ERROR: Failed to create garbage entity at position " .. tostring(position))
-				end
+			if( not dontSpawn ) then
+				local garbageEntity = ents.Create( "bricks_server_garbage" )
+				garbageEntity:SetPos( position+Vector( 0, 0, 5 ) )
+				garbageEntity:SetAngles( angles )
+				garbageEntity:Spawn()
 			end
 		end
 	end
