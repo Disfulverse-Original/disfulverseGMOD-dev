@@ -59,10 +59,59 @@ function ENT:HitRock( Damage, attacker )
 
 		if( BRICKS_SERVER.CONFIG.CRAFTING.Resources[ChosenResource] ) then
 			if( not BRICKS_SERVER.CONFIG.CRAFTING["Add Resources Directly To Inventory"] ) then
-				local resourceEnt = ents.Create( "bricks_server_resource_" .. string.Replace( string.lower( ChosenResource ), " ", "" ) )
-				if( IsValid( resourceEnt ) ) then
-					resourceEnt:SetPos( self:GetPos()+Vector( 0, 0, 50 ) )
-					resourceEnt:Spawn()
+				local spawnPos = self:GetPos() + Vector( 0, 0, 50 )
+				
+				if not isvector(spawnPos) or spawnPos:IsZero() then
+					print("[Brick's Server] WARNING: Invalid spawn position for resource entity, adding to inventory instead")
+					if IsValid( attacker ) and attacker:IsPlayer() then
+						local itemData = { "bricks_server_resource", (BRICKS_SERVER.CONFIG.CRAFTING.Resources[ChosenResource][1] or ""), ChosenResource }
+						attacker:BRS():AddInventoryItem( itemData, 1 )
+						local itemInfo = BRICKS_SERVER.Func.GetEntTypeField( itemData[1], "GetInfo" )( itemData )
+						DarkRP.notify( attacker, 1, 5, "Вы получили x1 " .. itemInfo[1] .. " из этого камня!" )
+					end
+				else
+					local nearbyPlayers = false
+					for _, ply in pairs(player.GetAll()) do
+						if IsValid(ply) and ply:GetPos():Distance(spawnPos) < 100 then
+							nearbyPlayers = true
+							break
+						end
+					end
+					
+					if nearbyPlayers then
+						if IsValid( attacker ) and attacker:IsPlayer() then
+							local itemData = { "bricks_server_resource", (BRICKS_SERVER.CONFIG.CRAFTING.Resources[ChosenResource][1] or ""), ChosenResource }
+							attacker:BRS():AddInventoryItem( itemData, 1 )
+							local itemInfo = BRICKS_SERVER.Func.GetEntTypeField( itemData[1], "GetInfo" )( itemData )
+							DarkRP.notify( attacker, 1, 5, "Вы получили x1 " .. itemInfo[1] .. " из этого камня!" )
+						end
+					else
+						local resourceEnt = ents.Create( "bricks_server_resource_" .. string.Replace( string.lower( ChosenResource ), " ", "" ) )
+						if( IsValid( resourceEnt ) ) then
+							resourceEnt:SetPos( spawnPos )
+							resourceEnt:Spawn()
+							
+							timer.Simple(0.1, function()
+								if IsValid(resourceEnt) then
+									local phys = resourceEnt:GetPhysicsObject()
+									if IsValid(phys) then
+										phys:Wake()
+										phys:SetVelocity(Vector(0, 0, 0))
+									end
+									
+									if resourceEnt:GetPos():IsZero() or resourceEnt:GetPos():Distance(spawnPos) > 200 then
+										resourceEnt:Remove()
+										if IsValid( attacker ) and attacker:IsPlayer() then
+											local itemData = { "bricks_server_resource", (BRICKS_SERVER.CONFIG.CRAFTING.Resources[ChosenResource][1] or ""), ChosenResource }
+											attacker:BRS():AddInventoryItem( itemData, 1 )
+											local itemInfo = BRICKS_SERVER.Func.GetEntTypeField( itemData[1], "GetInfo" )( itemData )
+											DarkRP.notify( attacker, 1, 5, "Вы получили x1 " .. itemInfo[1] .. " из этого камня!" )
+										end
+									end
+								end
+							end)
+						end
+					end
 				end
 			elseif( IsValid( attacker ) and attacker:IsPlayer() ) then
 

@@ -601,12 +601,6 @@ hook.Add("PostPlayerDraw" , "AAS:PostPlayerDraw", function(ply)
         if not isvector(itemTable.pos) or not isangle(itemTable.ang) then continue end
         if not isstring(itemTable.model) or not isvector(itemTable.scale) or not istable(itemTable.options) then continue end
 
-        local matrixPos = matrix:GetTranslation()
-        local matrixAng = matrix:GetAngles()
-        
-        if not isvector(matrixPos) or not isangle(matrixAng) then continue end
-        if matrixPos:IsZero() and matrixAng:IsZero() then continue end
-
         AAS.ClientTable["ItemsOffsetModel"] = AAS.ClientTable["ItemsOffsetModel"] or {}
         --[[ Custom model offset ]]
         local offset = AAS.ClientTable["ItemsOffsetModel"][itemTable.uniqueId] or {}
@@ -637,16 +631,8 @@ hook.Add("PostPlayerDraw" , "AAS:PostPlayerDraw", function(ply)
             scaleToSet = itemTable.scale
         end    
         
-        local success, newpos = pcall(AAS.ConvertVector, matrixPos, (posToSet + offsetPos), matrixAng)
-        if not success or not isvector(newpos) then continue end
-        
-        local success2, newang = pcall(AAS.ConvertAngle, matrixAng, (angToSet + offsetAng))
-        if not success2 or not isangle(newang) then continue end
-        
-        local distance = newpos:Distance(ply:GetPos())
-        if distance > 500 or newpos:IsZero() then continue end
-        
-        if not IsValid(v) or v:GetModel() == "models/error.mdl" then continue end
+        local newpos = AAS.ConvertVector(matrix:GetTranslation(), (posToSet + offsetPos), matrix:GetAngles())
+        local newang = AAS.ConvertAngle(matrix:GetAngles(), (angToSet + offsetAng))
         
         v:SetPos(newpos)
         v:SetAngles(newang)
@@ -654,11 +640,7 @@ hook.Add("PostPlayerDraw" , "AAS:PostPlayerDraw", function(ply)
         v.model = itemTable.model
 
         local mat = Matrix()
-        local finalScale = scaleToSet + (offsetScale / 50)
-        if finalScale.x <= 0 or finalScale.y <= 0 or finalScale.z <= 0 then
-            finalScale = Vector(1, 1, 1)
-        end
-        mat:Scale(finalScale)
+        mat:Scale(scaleToSet + (offsetScale / 50))
         v:EnableMatrix("RenderMultiply", mat)
 
         local skin = tonumber(itemTable.options.skin)

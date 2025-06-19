@@ -231,6 +231,9 @@ function BRICKS_SERVER.Func.RespawnRocks()
 							end
 							dontSpawn = true
 							break
+						elseif( v:GetClass() == "player" ) then
+							dontSpawn = true
+							break
 						end
 					end
 	
