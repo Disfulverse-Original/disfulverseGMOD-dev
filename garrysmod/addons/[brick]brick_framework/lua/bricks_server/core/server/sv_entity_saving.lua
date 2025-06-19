@@ -62,95 +62,12 @@ local function SpawnSavedEntities()
 				
 				local TheVector = Vector(ThePosition[1], ThePosition[2], ThePosition[3])
 				local TheAngle = Angle(tonumber(ThePosition[4]), ThePosition[5], ThePosition[6])
-				
-				-- BUG FIX: Validate position data before spawning entities
-				if not isvector(TheVector) or not isangle(TheAngle) then
-					print("[Brick's Server] WARNING: Invalid position data for entity " .. (v.Class or "unknown") .. ", skipping")
-					continue
-				end
-				
-				-- BUG FIX: Check if position is at world origin (invalid)
-				if TheVector:IsZero() then
-					print("[Brick's Server] WARNING: Entity " .. (v.Class or "unknown") .. " has zero position, skipping")
-					continue
-				end
-				
-				-- BUG FIX: Check for nearby players before spawning entities
-				local nearbyPlayers = {}
-				for _, ply in pairs(player.GetAll()) do
-					if IsValid(ply) and ply:GetPos():Distance(TheVector) < 150 then
-						table.insert(nearbyPlayers, ply)
-					end
-				end
-				
-				-- BUG FIX: If players are nearby, delay spawning or move position
-				if #nearbyPlayers > 0 then
-					-- Try to find a safe position nearby
-					local safePos = nil
-					for i = 1, 8 do
-						local angle = (i - 1) * 45
-						local offset = Vector(math.cos(math.rad(angle)) * 200, math.sin(math.rad(angle)) * 200, 0)
-						local testPos = TheVector + offset
-						
-						local nearbyToTest = false
-						for _, ply in pairs(player.GetAll()) do
-							if IsValid(ply) and ply:GetPos():Distance(testPos) < 100 then
-								nearbyToTest = true
-								break
-							end
-						end
-						
-						if not nearbyToTest then
-							safePos = testPos
-							break
-						end
-					end
-					
-					if safePos then
-						TheVector = safePos
-						print("[Brick's Server] Entity " .. (v.Class or "unknown") .. " moved to safe position due to nearby players")
-					else
-						-- Delay spawning by 5-15 seconds if no safe position found
-						local delayTime = math.random(5, 15)
-						timer.Simple(delayTime, function()
-							-- Check again for players after delay
-							local stillNearby = false
-							for _, ply in pairs(player.GetAll()) do
-								if IsValid(ply) and ply:GetPos():Distance(TheVector) < 150 then
-									stillNearby = true
-									break
-								end
-							end
-							
-							if not stillNearby then
-								local DelayedEnt = ents.Create( v.Class )
-								if IsValid(DelayedEnt) then
-									DelayedEnt:SetPos(TheVector)
-									DelayedEnt:SetAngles(TheAngle)
-									DelayedEnt:Spawn()
-									if( istable( devConfig ) and devConfig.SetDataFunc ) then
-										devConfig.SetDataFunc( DelayedEnt, v.Data )
-									end
-									print("[Brick's Server] Delayed entity " .. (v.Class or "unknown") .. " spawned after players moved away")
-								end
-							else
-								print("[Brick's Server] WARNING: Cannot spawn entity " .. (v.Class or "unknown") .. " - players still nearby after delay")
-							end
-						end)
-						continue
-					end
-				end
-				
 				local NewEnt = ents.Create( v.Class )
-				if IsValid(NewEnt) then
-					NewEnt:SetPos(TheVector)
-					NewEnt:SetAngles(TheAngle)
-					NewEnt:Spawn()
-					if( istable( devConfig ) and devConfig.SetDataFunc ) then
-						devConfig.SetDataFunc( NewEnt, v.Data )
-					end
-				else
-					print("[Brick's Server] WARNING: Failed to create entity " .. (v.Class or "unknown"))
+				NewEnt:SetPos(TheVector)
+				NewEnt:SetAngles(TheAngle)
+				NewEnt:Spawn()
+				if( istable( devConfig ) and devConfig.SetDataFunc ) then
+					devConfig.SetDataFunc( NewEnt, v.Data )
 				end
 			else
 				Entities[k] = nil

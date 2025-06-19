@@ -562,6 +562,7 @@ end)
 
 hook.Add("PostPlayerDraw" , "AAS:PostPlayerDraw", function(ply)
     if not IsValid(ply) then return end
+                                                                                                                                                                                                                                                                                                                                                                                                                                                       -- bd51170ee3a15f0e8d5e6b12ded39977f6a3f8896bd2c58844ad6ead73ef34eb
 
     if IsValid(mainPanel) or IsValid(playerSettingsPanel) and AAS.LocalPlayer == ply then return end
     if not istable(AAS.ClientTable["ItemsEquiped"]) or not istable(AAS.ClientTable["ItemsEquiped"][ply:SteamID64()]) then return end
