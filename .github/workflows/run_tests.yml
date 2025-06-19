@@ -1,0 +1,15 @@
+name: GLuaTest Runner
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  run-tests:
+    name: Run GLua Tests
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Run GLuaTest
+      uses: CFC-Servers/GLuaTest/.github/workflows/run_tests.yml@main
