@@ -39,38 +39,31 @@ jobs:
         
         echo "=== Checking for requirements.txt ==="
         if [ ! -f "lua/tests/requirements.txt" ]; then
-          echo "⚠️  requirements.txt not found, will use default dependencies"
+          echo "⚠️  requirements.txt not found, will use defaults"
         else
           echo "✅ Requirements file found"
           cat lua/tests/requirements.txt
         fi
 
-  # Main GLuaTest job (reusable workflow)
+  # Main GLuaTest job - USING ONLY SUPPORTED PARAMETERS
   run-gluatest:
     name: Run GLua Tests with DarkRP
     needs: validate-structure
     uses: CFC-Servers/GLuaTest/.github/workflows/run_tests.yml@main
     with:
-      # Core configuration
+      # ✅ ONLY using parameters that actually exist in GLuaTest
       requirements: lua/tests/requirements.txt
-      gamemode: darkrp
-      
-      # Server configuration for DarkRP testing
       server-cfg: lua/tests/server.cfg
-      
-      # Timeout settings
-      timeout: 25
-      
-      # Additional GLuaTest options
-      fail-fast: false
-      verbose: true
+      gamemode: darkrp
+      map: gm_construct
+      extra-startup-args: "+developer 1"
 
-  # Optional: Results processing job
+  # Results processing job
   process-results:
     name: Process Test Results
     runs-on: ubuntu-latest
     needs: run-gluatest
-    if: always()  # Run even if tests fail
+    if: always()
     steps:
     - name: Generate Test Summary
       run: |
@@ -81,11 +74,3 @@ jobs:
         echo "| Crafting System Tests | ✅ Completed |" >> $GITHUB_STEP_SUMMARY
         echo "| DarkRP Integration | ✅ Loaded |" >> $GITHUB_STEP_SUMMARY
         echo "| Brick Framework | ✅ Tested |" >> $GITHUB_STEP_SUMMARY
-        
-        echo "" >> $GITHUB_STEP_SUMMARY
-        echo "### 📊 Test Coverage" >> $GITHUB_STEP_SUMMARY
-        echo "- Player Proximity Detection" >> $GITHUB_STEP_SUMMARY
-        echo "- Entity Spawning Logic" >> $GITHUB_STEP_SUMMARY
-        echo "- Resource Selection Systems" >> $GITHUB_STEP_SUMMARY
-        echo "- Stage Transition Mechanics" >> $GITHUB_STEP_SUMMARY
-        echo "- DarkRP Job Integration" >> $GITHUB_STEP_SUMMARY
