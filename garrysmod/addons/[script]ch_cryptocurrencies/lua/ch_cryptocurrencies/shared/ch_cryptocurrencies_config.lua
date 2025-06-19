@@ -14,7 +14,7 @@ CH_CryptoCurrencies.Config.Language = "ru" -- Set the language of the script.
 CH_CryptoCurrencies.Config.NotificationTime = 8 -- Amount of seconds to show notifications
 CH_CryptoCurrencies.Config.DistanceTo3D2D = 60000 -- Distance between the player and the 3d2d to draw
 
-CH_CryptoCurrencies.Config.UseCryptoNPC = true -- Should the crypto NPC spawn? It allows for opening the crypto menu.
+CH_CryptoCurrencies.Config.UseCryptoNPC = false -- Should the crypto NPC spawn? It allows for opening the crypto menu.
 CH_CryptoCurrencies.Config.UseCryptoChatCommand = false -- Should the chat command be enabled to open the crypto menu?
 CH_CryptoCurrencies.Config.CryptoMenuChatCommand = "!cryptos" -- If enabled then this is the chat command to open the crypto menu.
 
