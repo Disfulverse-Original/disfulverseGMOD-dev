@@ -562,7 +562,6 @@ end)
 
 hook.Add("PostPlayerDraw" , "AAS:PostPlayerDraw", function(ply)
     if not IsValid(ply) then return end
-                                                                                                                                                                                                                                                                                                                                                                                                                                                       -- bd51170ee3a15f0e8d5e6b12ded39977f6a3f8896bd2c58844ad6ead73ef34eb
 
     if IsValid(mainPanel) or IsValid(playerSettingsPanel) and AAS.LocalPlayer == ply then return end
     if not istable(AAS.ClientTable["ItemsEquiped"]) or not istable(AAS.ClientTable["ItemsEquiped"][ply:SteamID64()]) then return end
@@ -602,6 +601,12 @@ hook.Add("PostPlayerDraw" , "AAS:PostPlayerDraw", function(ply)
         if not isvector(itemTable.pos) or not isangle(itemTable.ang) then continue end
         if not isstring(itemTable.model) or not isvector(itemTable.scale) or not istable(itemTable.options) then continue end
 
+        local matrixPos = matrix:GetTranslation()
+        local matrixAng = matrix:GetAngles()
+        
+        if not isvector(matrixPos) or not isangle(matrixAng) then continue end
+        if matrixPos:IsZero() and matrixAng:IsZero() then continue end
+
         AAS.ClientTable["ItemsOffsetModel"] = AAS.ClientTable["ItemsOffsetModel"] or {}
         --[[ Custom model offset ]]
         local offset = AAS.ClientTable["ItemsOffsetModel"][itemTable.uniqueId] or {}
@@ -632,8 +637,16 @@ hook.Add("PostPlayerDraw" , "AAS:PostPlayerDraw", function(ply)
             scaleToSet = itemTable.scale
         end    
         
-        local newpos = AAS.ConvertVector(matrix:GetTranslation(), (posToSet + offsetPos), matrix:GetAngles())
-        local newang = AAS.ConvertAngle(matrix:GetAngles(), (angToSet + offsetAng))
+        local success, newpos = pcall(AAS.ConvertVector, matrixPos, (posToSet + offsetPos), matrixAng)
+        if not success or not isvector(newpos) then continue end
+        
+        local success2, newang = pcall(AAS.ConvertAngle, matrixAng, (angToSet + offsetAng))
+        if not success2 or not isangle(newang) then continue end
+        
+        local distance = newpos:Distance(ply:GetPos())
+        if distance > 500 or newpos:IsZero() then continue end
+        
+        if not IsValid(v) or v:GetModel() == "models/error.mdl" then continue end
         
         v:SetPos(newpos)
         v:SetAngles(newang)
@@ -641,7 +654,11 @@ hook.Add("PostPlayerDraw" , "AAS:PostPlayerDraw", function(ply)
         v.model = itemTable.model
 
         local mat = Matrix()
-        mat:Scale(scaleToSet + (offsetScale / 50))
+        local finalScale = scaleToSet + (offsetScale / 50)
+        if finalScale.x <= 0 or finalScale.y <= 0 or finalScale.z <= 0 then
+            finalScale = Vector(1, 1, 1)
+        end
+        mat:Scale(finalScale)
         v:EnableMatrix("RenderMultiply", mat)
 
         local skin = tonumber(itemTable.options.skin)
