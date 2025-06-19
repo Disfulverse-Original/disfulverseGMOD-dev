@@ -16,35 +16,13 @@ permissions:
   checks: write
 
 jobs:
-  run-tests:
-    name: Run GLua Tests with DarkRP
+  # Basic validation job
+  validate-structure:
+    name: Validate Test Structure
     runs-on: ubuntu-latest
-    
-    # Add timeout to prevent hanging builds
-    timeout-minutes: 30
-    
-    strategy:
-      fail-fast: false
-      matrix:
-        # Test against multiple configurations if needed
-        test-config: ["standard"]
-        # Can add more configs like: ["standard", "minimal", "extended"]
-    
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
-      with:
-        fetch-depth: 0  # Full history for better debugging
-    
-    - name: Cache Dependencies
-      uses: actions/cache@v4
-      with:
-        path: |
-          ~/.cache/gluatest
-          /tmp/gluatest-cache
-        key: gluatest-deps-${{ hashFiles('lua/tests/requirements.txt') }}
-        restore-keys: |
-          gluatest-deps-
     
     - name: Validate Test Files
       run: |
@@ -66,40 +44,35 @@ jobs:
           echo "✅ Requirements file found"
           cat lua/tests/requirements.txt
         fi
-    
-    - name: Run GLuaTest with DarkRP
-      uses: CFC-Servers/GLuaTest/.github/workflows/run_tests.yml@main
-      with:
-        # Core configuration
-        requirements: lua/tests/requirements.txt
-        gamemode: darkrp
-        
-        # Server configuration for DarkRP testing
-        server-cfg: lua/tests/server.cfg
-        
-        # Workshop collections for additional content (optional)
-        # workshop-collection: "your-workshop-collection-id-here"
-        
-        # Timeout settings
-        timeout: 25
-        
-        # Additional GLuaTest options
-        fail-fast: false
-        verbose: true
-    
-    - name: Upload Test Results
-      uses: actions/upload-artifact@v4
-      if: always()  # Upload even if tests fail
-      with:
-        name: test-results-${{ matrix.test-config }}
-        path: |
-          test-results/
-          logs/
-          *.log
-        retention-days: 30
-    
+
+  # Main GLuaTest job (reusable workflow)
+  run-gluatest:
+    name: Run GLua Tests with DarkRP
+    needs: validate-structure
+    uses: CFC-Servers/GLuaTest/.github/workflows/run_tests.yml@main
+    with:
+      # Core configuration
+      requirements: lua/tests/requirements.txt
+      gamemode: darkrp
+      
+      # Server configuration for DarkRP testing
+      server-cfg: lua/tests/server.cfg
+      
+      # Timeout settings
+      timeout: 25
+      
+      # Additional GLuaTest options
+      fail-fast: false
+      verbose: true
+
+  # Optional: Results processing job
+  process-results:
+    name: Process Test Results
+    runs-on: ubuntu-latest
+    needs: run-gluatest
+    if: always()  # Run even if tests fail
+    steps:
     - name: Generate Test Summary
-      if: always()
       run: |
         echo "## 🧪 Test Results Summary" >> $GITHUB_STEP_SUMMARY
         echo "| Component | Status |" >> $GITHUB_STEP_SUMMARY
